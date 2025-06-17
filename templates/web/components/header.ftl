@@ -1,14 +1,12 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
-<link rel="stylesheet" href="${siteContext.staticAssetsUrl}/css/header/header.css" />
+
 
 <@crafter.header id="header">
   <div class="header">
-    <!-- Logo -->
+    
     <a href="/" class="logo">
       <@crafter.img $field="logo_s,logo_text_t" src=(contentModel.logo_s!"") alt=(contentModel.logo_text_t!"") border=0 />
     </a>
-
-    <!-- Navigation menu -->
     <ul class="nav-menu">
       <#list contentModel.navigationLinks_o![] as item>
         <li>
@@ -17,7 +15,7 @@
       </#list>
     </ul>
 
-    <!-- Language Switch -->
+    
     <div class="lang-switch">
       <div class="lang">
         <img src="${siteContext.staticAssetsUrl}/icons/flag-vn.png" alt="vi" />
