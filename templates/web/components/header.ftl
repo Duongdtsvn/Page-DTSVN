@@ -1,4 +1,5 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
+<link rel="stylesheet" href="${siteContext.staticAssetsUrl}/css/header/header.css" />
 
 <@crafter.header id="header">
   <div class="header">
