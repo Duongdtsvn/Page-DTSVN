@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DTSVN</title>
+      <link rel="stylesheet" href="/static-assets/css/main.css">
   <@crafter.head/>
 </head>
   <body >
