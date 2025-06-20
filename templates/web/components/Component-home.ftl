@@ -5,8 +5,8 @@
         <section class="section sec-hero">
             <div class="sec-hero__inner">
                 <div class="sec-hero__bg" data-bg-mb="url(${contentModel.cover_mobile_s!''})"
-                    data-bg-pc="url(${contentModel.cover_pc!''})"
-                    style="background-image: url(${contentModel.cover_pc!''});">
+                    data-bg-pc="url(${contentModel.cover_pc_s!''})"
+                    style="background-image: url(${contentModel.cover_pc_s!''});">
                 </div>
                 <div class="sec-hero__content">
                     <div class="container-custom">
