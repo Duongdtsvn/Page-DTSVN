@@ -173,7 +173,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value></value>
+							<value>home</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
