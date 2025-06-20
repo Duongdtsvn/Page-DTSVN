@@ -138,6 +138,11 @@
 							<value>false</value>
 							<type>boolean</type>
 						</property>
+						<property>
+							<name>escapeContent</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
 					</properties>
 					<constraints>
 						<constraint>
@@ -219,6 +224,11 @@
 							<value>/static-assets/images/</value>
 								<type>undefined</type>
 						</property>
+						<property>
+							<name>useSearch</name>
+							<value>false</value>
+								<type>boolean</type>
+						</property>
 					</properties>
 				</datasource>
 				<datasource>
@@ -235,48 +245,38 @@
 					</properties>
 				</datasource>
 				<datasource>
-					<type>components</type>
+					<type>shared-content</type>
 					<id>home</id>
 					<title>home</title>
 					<interface>item</interface>
 					<properties>
 						<property>
-							<name>allowEmbedded</name>
+							<name>enableCreateNew</name>
 							<value>true</value>
 								<type>boolean</type>
 						</property>
 						<property>
-							<name>allowShared</name>
+							<name>enableBrowseExisting</name>
 							<value>true</value>
 								<type>boolean</type>
 						</property>
 						<property>
-							<name>enableBrowse</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableSearch</name>
+							<name>enableSearchExisting</name>
 							<value>false</value>
 								<type>boolean</type>
 						</property>
 						<property>
-							<name>baseRepoPath</name>
-							<value>/site/components</value>
-								<type>string</type>
+							<name>repoPath</name>
+							<value>/site/components/home</value>
+								<type>content-path-input</type>
 						</property>
 						<property>
-							<name>baseBrowsePath</name>
-							<value>/site/components</value>
-								<type>string</type>
+							<name>browsePath</name>
+							<value>/site/components/home</value>
+								<type>content-path-input</type>
 						</property>
 						<property>
-							<name>contentTypes</name>
-							<value></value>
-								<type>contentTypes</type>
-						</property>
-						<property>
-							<name>tags</name>
+							<name>type</name>
 							<value></value>
 								<type>string</type>
 						</property>
