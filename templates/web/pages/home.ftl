@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DTSVN</title>
       <link rel="stylesheet" href="/static-assets/css/main.css">
+      <script src="/static-assets/js/functions.js"></script>
   <@crafter.head/>
 </head>
   <body >
