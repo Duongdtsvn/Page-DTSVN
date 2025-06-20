@@ -4,7 +4,7 @@
     <main class="page-content">
         <section class="section sec-hero">
             <div class="sec-hero__inner">
-                <div class="sec-hero__bg" data-bg-mb="url(${contentModel.cover_mobile!''})"
+                <div class="sec-hero__bg" data-bg-mb="url(${contentModel.cover_mobile_s!''})"
                     data-bg-pc="url(${contentModel.cover_pc!''})"
                     style="background-image: url(${contentModel.cover_pc!''});">
                 </div>
@@ -48,7 +48,7 @@
                                         <div class="fix">
                                             <span class="productFeatured__subtitle">${products.slogan_s!''}</span>
                                             <h3 class="productFeatured__title"><a
-                                                    href="https://dtsvn.net/node/67">${products.project_name_s!''}</a></h3>
+                                                    href="https://dtsvn.net/node/67">${products.product_name_s!''}</a></h3>
                                             <div class="productFeatured__btn">
                                                 <a href="https://dev.dtsvn.net/martech/" class="btn-text">Learn more
                                                     <span></span></a>
@@ -68,7 +68,7 @@
                 <div class="row">
                     <div class="col-md-8 col-lg-5 col-xl-7">
                         <div class="titlebox">
-                            <h2 class="titlebox__title fz-44">Thành viên liên kết triển khai</h2>
+                            <h2 class="titlebox__title fz-44">${contentModel.title5_s!''}</h2>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                 <div class="row">
                     <div class="col-md-8 col-lg-5 col-xl-7">
                         <div class="titlebox">
-                            <h2 class="titlebox__title fz-44">Đối tác tiêu biểu của chúng tôi</h2>
+                            <h2 class="titlebox__title fz-44">${contentModel.title6_s!''}</h2>
                         </div>
                     </div>
                 </div>
