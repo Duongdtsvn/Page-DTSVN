@@ -57,8 +57,8 @@
 	</item></achievements_o>
 	<createdDate>2025-06-20T03:12:22.359Z</createdDate>
 	<createdDate_dt>2025-06-20T03:12:22.359Z</createdDate_dt>
-	<lastModifiedDate>2025-06-23T10:06:53.337Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-23T10:06:53.337Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-06-23T10:08:30.456Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-23T10:08:30.456Z</lastModifiedDate_dt>
 	<leader_o item-list="true">	<item>	<name_s>Nguyễn Bá Chiến</name_s>
 	<avatar_leader_s>/static-assets/images/home/nbc.png</avatar_leader_s>
 	<position_s>ceo</position_s>
@@ -70,6 +70,14 @@
 	<detail_leader_o item-list="true">	<item>	<key>/site/components/home/e802a57d-0235-71d7-91d2-eddf2d7a8bc4.xml</key>
 	<value>Nguyễn Bá Chiến</value>
 	<include>/site/components/home/e802a57d-0235-71d7-91d2-eddf2d7a8bc4.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></detail_leader_o>
+	</item>	<item>	<name_s>Vũ Bảo Linh</name_s>
+	<avatar_leader_s>/static-assets/images/home/vbl.png</avatar_leader_s>
+	<position_s>Account Manager</position_s>
+	<detail_leader_o item-list="true">	<item datasource="abc">	<key>/site/components/home/2d5c84e6-41b7-c0f6-7638-f00580537b46.xml</key>
+	<value>Vũ Bảo Linh</value>
+	<include>/site/components/home/2d5c84e6-41b7-c0f6-7638-f00580537b46.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></detail_leader_o>
 	</item></leader_o>
