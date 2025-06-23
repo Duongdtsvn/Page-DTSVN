@@ -1273,7 +1273,7 @@
 				</field>
 				<field>
 					<type>node-selector</type>
-					<id>detal_leader_o</id>
+					<id>detail_leader_o</id>
 					<iceId></iceId>
 					<title>chi tiết lãnh đạo</title>
 					<description></description>
