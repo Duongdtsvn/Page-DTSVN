@@ -57,6 +57,15 @@
 	</item></achievements_o>
 	<createdDate>2025-06-20T03:12:22.359Z</createdDate>
 	<createdDate_dt>2025-06-20T03:12:22.359Z</createdDate_dt>
-	<lastModifiedDate>2025-06-20T03:12:22.359Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-20T03:12:22.359Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-06-23T09:35:49.834Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-23T09:35:49.834Z</lastModifiedDate_dt>
+	<leader_o item-list="true">	<item>	<name_s/>
+	<avatar_leader_s>/static-assets/images/home/427897394_910672503847496_7059292552948796701_n.jpg</avatar_leader_s>
+	<position_s>ceo</position_s>
+	<detal_leader_o item-list="true">	<item datasource="chititlnho">	<key>/site/components/home/e802a57d-0235-71d7-91d2-eddf2d7a8bc4.xml</key>
+	<value>detail leader</value>
+	<include>/site/components/home/e802a57d-0235-71d7-91d2-eddf2d7a8bc4.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></detal_leader_o>
+	</item></leader_o>
 </component>
