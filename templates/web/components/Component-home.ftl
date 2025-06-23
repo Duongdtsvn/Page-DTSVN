@@ -160,292 +160,105 @@
             </div>
         </section>
         <section class="section sec-teamLeader">
-        <div class="container-custom">
-          <div class="row">
-            <div class="col-xl-5">
-              <div class="titlebox">
-                <h2 class="titlebox__title fz-44">Đội ngũ lãnh đạo tại DTSVN</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="sec-teamLeader__content">
-            <!-- <div class="row">
-                    </div> -->
-            <div class="row">
-              <div class="col-6 col-lg-4 col-xl-2">
-                <a href="#popup-team" class="teambox btn-popupTeam">
-                  <div class="teambox__inner">
-                    <div class="teambox__img"></div>
-                    <div class="teambox__body">
-                      <h3 class="teambox__name">Nguyễn Bá Chiến</h3>
-                      <p class="teambox__text">CEO</p>
-                    </div>
-                    <div class="teambox__list">
-                      <ul class="">
-                        <li>
-                          <div class="item-inner">
-                            <span>01</span>
-                            <div class="row">
-                              <div class="col-xl-5">
-                                <h3>Trình độ <br>học vấn</h3>
-                              </div>
-                              <div class="col-xl-6 offset-xl-1">
-                                <p>Tốt nghiệp Đại học quốc gia Hà Nội</p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item-inner">
-                            <span>02</span>
-                            <div class="row">
-                              <div class="col-xl-5">
-                                <h3>Kinh nghiệm <br>làm việc</h3>
-                              </div>
-                              <div class="col-xl-6 offset-xl-1">
-                                <p>Kinh nghiệm hơn 20 năm trong lĩnh vực bán hàng và lãnh đạo kinh doanh với các công ty
-                                  công nghệ hàng đầu thế giới tại Việt Nam.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item-inner">
-                            <span>03</span>
-                            <div class="row">
-                              <div class="col-xl-5">
-                                <h3>Lĩnh vực <br>chuyên môn</h3>
-                              </div>
-                              <div class="col-xl-6 offset-xl-1">
-                                <p>Có kiến ​​thức vững chắc và đã được chứng minh trong việc chuyển đổi kỹ thuật số tập
-                                  trung vào dịch vụ Tài chính & Ngân hàng.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-lg-4 col-xl-2">
-                <a href="#popup-team" class="teambox btn-popupTeam">
-                  <div class="teambox__inner">
-                    <div class="teambox__img"
-                      style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/AnhLinh.jpg);">
-                    </div>
-                    <div class="teambox__body">
-                      <h3 class="teambox__name">Vũ Bảo Linh</h3>
-                      <p class="teambox__text">Account Manager</p>
-                    </div>
-                    <div class="teambox__list">
-                      <ul class="">
-                        <li>
-                          <div class="item-inner">
-                            <span>01</span>
-                            <div class="row">
-                              <div class="col-xl-5">
-                                <h3>Trình độ <br>học vấn</h3>
-                              </div>
-                              <div class="col-xl-6 offset-xl-1">
-                                <p>Tốt nghiệp Đại học khoa học xã hội và nhân văn - ĐHQGHN</p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item-inner">
-                            <span>02</span>
-                            <div class="row">
-                              <div class="col-xl-5">
-                                <h3>Kinh nghiệm <br>làm việc</h3>
-                              </div>
-                              <div class="col-xl-6 offset-xl-1">
-                                <p>Có kinh nghiệm xây dựng đội ngũ, phát triển kênh đối tác</p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item-inner">
-                            <span>03</span>
-                            <div class="row">
-                              <div class="col-xl-5">
-                                <h3>Lĩnh vực <br>chuyên môn</h3>
-                              </div>
-                              <div class="col-xl-6 offset-xl-1">
-                                <p>Xây dựng chuẩn hóa quy trình kinh doanh.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-lg-4 col-xl-2">
-                <a href="#popup-team" class="teambox btn-popupTeam">
-                  <div class="teambox__inner">
-                    <div class="teambox__img"
-                      style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/AnhThang.jpg);">
-                    </div>
-                    <div class="teambox__body">
-                      <h3 class="teambox__name">Ngô Đạt Thắng</h3>
-                      <p class="teambox__text">COO</p>
-                    </div>
-                    <div class="teambox__list">
-                      <ul class="">
-                        <li>
-                          <div class="item-inner">
-                            <span>01</span>
-                            <div class="row">
-                              <div class="col-xl-5">
-                                <h3>Trình độ <br>học vấn</h3>
-                              </div>
-                              <div class="col-xl-6 offset-xl-1">
-                                <p>Tốt nghiệp Đại học kinh tế quốc dân</p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item-inner">
-                            <span>02</span>
-                            <div class="row">
-                              <div class="col-xl-5">
-                                <h3>Kinh nghiệm <br>làm việc</h3>
-                              </div>
-                              <div class="col-xl-6 offset-xl-1">
-                                <p>Có kỹ năng về Tư vấn Kinh doanh, Quy trình Kinh doanh, Kỹ năng Phân tích, Cơ sở dữ
-                                  liệu Oracle, Quản lý Dự án và Huấn luyện</p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item-inner">
-                            <span>03</span>
-                            <div class="row">
-                              <div class="col-xl-5">
-                                <h3>Lĩnh vực <br>chuyên môn</h3>
-                              </div>
-                              <div class="col-xl-6 offset-xl-1">
-                                <p>Có kinh nghiệm và kiến ​​thức thực sự trong ngành ngân hàng.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-lg-4 col-xl-2">
-                <a href="#popup-team" class="teambox btn-popupTeam">
-                  <div class="teambox__inner">
-                    <div class="teambox__img"
-                      style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/anh_Nam.jpg);">
-                    </div>
-                    <div class="teambox__body">
-                      <h3 class="teambox__name">Vũ Thành Nam</h3>
-                      <p class="teambox__text">CTO</p>
-                    </div>
-                    <div class="teambox__list">
-                      <ul class="">
-                        <p>30 năm giảng dạy và làm việc trong lĩnh vực Giải pháp phần mềm, hiện tại là Tiến sĩ & Giám
-                          đốc Chương trình đào tạo HTTTQL tại HUST</p>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-lg-4 col-xl-2">
-                <a href="#popup-team" class="teambox btn-popupTeam">
-                  <div class="teambox__inner">
-                    <div class="teambox__img"
-                      style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/anh_Thinh.png);">
-                    </div>
-                    <div class="teambox__body">
-                      <h3 class="teambox__name">Lê Xuân Thịnh</h3>
-                      <p class="teambox__text">CFO</p>
-                    </div>
-                    <div class="teambox__list">
-                      <ul class="">
-                        <p>Hơn 15 năm kinh nghiệm làm Kế toán trưởng tại Công ty lĩnh vực Phần mềm</p>
-                      </ul>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-            </div>
-          </div>
+  <div class="container-custom">
+    <div class="row">
+      <div class="col-xl-5">
+        <div class="titlebox">
+          <h2 class="titlebox__title fz-44">Đội ngũ lãnh đạo tại DTSVN</h2>
         </div>
-      </section>
-      <div class="modal-team" id="popup-team">
-        <div class="modal-team__bg"></div>
-        <div class="modal-team__inner">
-            <div class="modal-team__content">
-                <span class="modal-team__close">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z" fill="black" />
-                    </svg>
-                </span>
-
-                <div class="modal-team__img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/teambox-1.jpg);"></div>
-                <div class="modal-team__body">
-                    <span class="modal-team__subtitle">Deputy CEO of Professional Service</span>
-                    <h2 class="modal-team__title">Trần Bá Trọng</h2>
-                    <div class="modal-team__grow"></div>
-                    <div class="modal-team__list">
-                        <ul class="">
-                            <li>
-                                <div class="item-inner">
-                                    <span>01</span>
-                                    <div class="row">
-                                        <div class="col-xl-5">
-                                            <h3>Trình độ <br>học vấn</h3>
-                                        </div>
-                                        <div class="col-xl-6 offset-xl-1">
-                                            <p>Tốt nghiệp Đại học khoa học xã hội và nhân văn - ĐHQGHN</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-inner">
-                                    <span>02</span>
-                                    <div class="row">
-                                        <div class="col-xl-5">
-                                            <h3>Kinh nghiệm <br>làm việc</h3>
-                                        </div>
-                                        <div class="col-xl-6 offset-xl-1">
-                                            <p>Có hơn 5 năm kinh Nghiêm triển khai trực tiếp các dự án lớn tại Ngân hàng</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-inner">
-                                    <span>03</span>
-                                    <div class="row">
-                                        <div class="col-xl-5">
-                                            <h3>Lĩnh vực <br>chuyên môn</h3>
-                                        </div>
-                                        <div class="col-xl-6 offset-xl-1">
-                                            <p>Trên 10 năm triển khai các hệ thống lớn và phức tạp cho khách hàng trong và ngoài nước.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="sec-teamLeader__content">
+      <div class="row">
+        <#if contentModel.leader_o.item?? && contentModel.leader_o.item?has_content>
+          <#list contentModel.leader_o.item as leader>
+            <div class="col-6 col-lg-4 col-xl-2">
+              <a href="#popup-team" class="teambox btn-popupTeam">
+                <div class="teambox__inner">
+                  <div class="teambox__img" style="background-image: url(${leader.avatar_leader_s!''});"></div>
+                  <div class="teambox__body">
+                    <h3 class="teambox__name">${leader.function_s!''}</h3>
+                    <p class="teambox__text">${leader.detail_s!''}</p>
+                  </div>
+                  <div class="teambox__list">
+                    <ul class="">
+                      <@crafter.renderComponentCollection $field="skills_o"/>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </#list>
+        </#if>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="modal-team" id="popup-team">
+  <div class="modal-team__bg"></div>
+  <div class="modal-team__inner">
+    <div class="modal-team__content">
+      <span class="modal-team__close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z"
+            fill="black" />
+        </svg>
+      </span>
+
+      <div class="modal-team__img"
+        style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/teambox-1.jpg);"></div>
+      <div class="modal-team__body">
+        <span class="modal-team__subtitle">Deputy CEO of Professional Service</span>
+        <h2 class="modal-team__title">Trần Bá Trọng</h2>
+        <div class="modal-team__grow"></div>
+        <div class="modal-team__list">
+          <ul class="">
+            <li>
+              <div class="item-inner">
+                <span>01</span>
+                <div class="row">
+                  <div class="col-xl-5">
+                    <h3>Trình độ <br>học vấn</h3>
+                  </div>
+                  <div class="col-xl-6 offset-xl-1">
+                    <p>Tốt nghiệp Đại học khoa học xã hội và nhân văn - ĐHQGHN</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-inner">
+                <span>02</span>
+                <div class="row">
+                  <div class="col-xl-5">
+                    <h3>Kinh nghiệm <br>làm việc</h3>
+                  </div>
+                  <div class="col-xl-6 offset-xl-1">
+                    <p>Có hơn 5 năm kinh Nghiêm triển khai trực tiếp các dự án lớn tại Ngân hàng</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-inner">
+                <span>03</span>
+                <div class="row">
+                  <div class="col-xl-5">
+                    <h3>Lĩnh vực <br>chuyên môn</h3>
+                  </div>
+                  <div class="col-xl-6 offset-xl-1">
+                    <p>Trên 10 năm triển khai các hệ thống lớn và phức tạp cho khách hàng trong và ngoài nước.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     </section>
         <section class="section sec-newUpdate">
             <div class="container-custom">
