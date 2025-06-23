@@ -8,10 +8,10 @@
       <span>${detail_leader.stt!''}</span>
       <div class="row">
         <div class="col-xl-5">
-          <h3>${detail_leader.title1_s!''}</h3>
+          <h3>${detail_leader.title9_s!''}</h3>
         </div>
         <div class="col-xl-6 offset-xl-1">
-          <p>${detail_leader.title2_s!''}</p>
+          <p>${detail_leader.title10_s!''}</p>
         </div>
       </div>
     </div>
