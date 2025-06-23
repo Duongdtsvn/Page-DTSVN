@@ -177,8 +177,8 @@
                 <div class="teambox__inner">
                   <div class="teambox__img" style="background-image: url(${leader.avatar_leader_s!''});"></div>
                   <div class="teambox__body">
-                    <h3 class="teambox__name">${leader.function_s!''}</h3>
-                    <p class="teambox__text">${leader.detail_s!''}</p>
+                    <h3 class="teambox__name">${leader.name_s!''}</h3>
+                    <p class="teambox__text">${leader.position_s!''}</p>
                   </div>
                   <div class="teambox__list">
                     <ul class="">
