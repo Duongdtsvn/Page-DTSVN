@@ -182,7 +182,7 @@
                   </div>
                   <div class="teambox__list">
                     <ul class="">
-                      <@crafter.renderComponentCollection $field="skills_o"/>
+                      <@crafter.renderComponentCollection $field="detail_leader_o"/>
                     </ul>
                   </div>
                 </div>
