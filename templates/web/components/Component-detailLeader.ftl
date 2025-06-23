@@ -1,3 +1,5 @@
+<#import "/templates/system/common/crafter.ftl" as crafter />
+
 
 <#if contentModel.detail_leader_o.item?? && contentModel.detail_leader_o.item?has_content>
   <#list contentModel.detail_leader_o.item as detail_leader>
