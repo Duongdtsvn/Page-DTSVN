@@ -1292,7 +1292,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>chititlnho</value>
+							<value>abc</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -1362,7 +1362,7 @@
 				</datasource>
 				<datasource>
 					<type>shared-content</type>
-					<id>chititlnho</id>
+					<id>abc</id>
 					<title>chi tiết lãnh đạo</title>
 					<interface>item</interface>
 					<properties>
