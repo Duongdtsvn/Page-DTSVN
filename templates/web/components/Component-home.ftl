@@ -214,46 +214,8 @@
         <div class="modal-team__grow"></div>
         <div class="modal-team__list">
           <ul class="">
-            <li>
-              <div class="item-inner">
-                <span>01</span>
-                <div class="row">
-                  <div class="col-xl-5">
-                    <h3></h3>
-                  </div>
-                  <div class="col-xl-6 offset-xl-1">
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-inner">
-                <span>02</span>
-                <div class="row">
-                  <div class="col-xl-5">
-                    <h3></h3>
-                  </div>
-                  <div class="col-xl-6 offset-xl-1">
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-inner">
-                <span>03</span>
-                <div class="row">
-                  <div class="col-xl-5">
-                    <h3>Lĩnh vực <br>chuyên môn</h3>
-                  </div>
-                  <div class="col-xl-6 offset-xl-1">
-                    <p>Trên 10 năm triển khai các hệ thống lớn và phức tạp cho khách hàng trong và ngoài nước.</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
+<@crafter.renderComponentCollection model=leader.detail_leader_o />
+            </ul>
         </div>
       </div>
     </div>
