@@ -219,10 +219,10 @@
                 <span>01</span>
                 <div class="row">
                   <div class="col-xl-5">
-                    <h3>Trình độ <br>học vấn</h3>
+                    <h3></h3>
                   </div>
                   <div class="col-xl-6 offset-xl-1">
-                    <p>Tốt nghiệp Đại học khoa học xã hội và nhân văn - ĐHQGHN</p>
+                    <p></p>
                   </div>
                 </div>
               </div>
@@ -232,10 +232,10 @@
                 <span>02</span>
                 <div class="row">
                   <div class="col-xl-5">
-                    <h3>Kinh nghiệm <br>làm việc</h3>
+                    <h3></h3>
                   </div>
                   <div class="col-xl-6 offset-xl-1">
-                    <p>Có hơn 5 năm kinh Nghiêm triển khai trực tiếp các dự án lớn tại Ngân hàng</p>
+                    <p></p>
                   </div>
                 </div>
               </div>
