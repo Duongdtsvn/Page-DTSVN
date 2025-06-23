@@ -172,7 +172,7 @@
 				</field>
 				<field>
 					<type>input</type>
-					<id>title1_s</id>
+					<id>title9_s</id>
 					<iceId></iceId>
 					<title>chức năng</title>
 					<description></description>
@@ -220,7 +220,7 @@
 				</field>
 				<field>
 					<type>input</type>
-					<id>title2_s</id>
+					<id>title10_s</id>
 					<iceId></iceId>
 					<title>chi tiết</title>
 					<description></description>
