@@ -214,8 +214,46 @@
         <div class="modal-team__grow"></div>
         <div class="modal-team__list">
           <ul class="">
-<@crafter.renderComponentCollection model=leader.detail_leader_o />
-            </ul>
+            <li>
+              <div class="item-inner">
+                <span>01</span>
+                <div class="row">
+                  <div class="col-xl-5">
+                    <h3>Trình độ <br>học vấn</h3>
+                  </div>
+                  <div class="col-xl-6 offset-xl-1">
+                    <p>Tốt nghiệp Đại học khoa học xã hội và nhân văn - ĐHQGHN</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-inner">
+                <span>02</span>
+                <div class="row">
+                  <div class="col-xl-5">
+                    <h3>Kinh nghiệm <br>làm việc</h3>
+                  </div>
+                  <div class="col-xl-6 offset-xl-1">
+                    <p>Có hơn 5 năm kinh Nghiêm triển khai trực tiếp các dự án lớn tại Ngân hàng</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-inner">
+                <span>03</span>
+                <div class="row">
+                  <div class="col-xl-5">
+                    <h3>Lĩnh vực <br>chuyên môn</h3>
+                  </div>
+                  <div class="col-xl-6 offset-xl-1">
+                    <p>Trên 10 năm triển khai các hệ thống lớn và phức tạp cho khách hàng trong và ngoài nước.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
