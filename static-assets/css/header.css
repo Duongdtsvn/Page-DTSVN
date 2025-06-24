@@ -124,7 +124,7 @@
     position: fixed;
     top: 60px;
     left: 0;
-    width: 100%;
+    width: 66.67%; /* Set to 2/3 of the screen width */
     height: calc(100vh - 60px);
     background-color: #fff;
     z-index: 999;
