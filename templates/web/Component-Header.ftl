@@ -1,3 +1,4 @@
+<#import "/templates/system/common/crafter.ftl" as crafter />
 
 
 <body class="home">
@@ -103,7 +104,6 @@
     </div>
   </div>
   <!-- End Header -->
-<script src="header.js"></script>
 </body>
 
 </html>
