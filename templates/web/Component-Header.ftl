@@ -77,29 +77,7 @@
             <li><a href="/en">English</a></li>
           </ul>
         </nav>
-        <hr>
-        <ul class="nav-mobile__info">
-          <div>
-            <li>
-              <small>Phone</small>
-              <p><a href="tel:(+84) 912 363 824">(+84) 912 363 824</a></p>
-            </li>
-            <li>
-              <small>Địa chỉ</small>
-              <p>Số 116 Trung Liệt, phường Trung Liệt, quận Đống Đa, Hà Nội<br>08:30 - 17:45, từ thứ 2 đến thứ 7</p>
-            </li>
-          </div>
-          <div>
-            <li>
-              <small>Email</small>
-              <p><a href="mailto:info@dtsvn.net">info@dtsvn.net</a></p>
-            </li>
-            <li>
-              <small>Website</small>
-              <p><a href="https://dtsvn.net">https://dtsvn.net</a></p>
-            </li>
-          </div>
-        </ul>
+        
       </div>
     </div>
   </div>
