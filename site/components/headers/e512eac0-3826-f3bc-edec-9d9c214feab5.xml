@@ -9,10 +9,10 @@
 	<file-name>e512eac0-3826-f3bc-edec-9d9c214feab5.xml</file-name>
 	<folder-name/>
 	<internal-name>menu cấp 2</internal-name>
-	<menu_c2_o item-list="true">	<item>	<menu_s/>
+	<menu_c2_o item-list="true">	<item>	<menu_s>test</menu_s>
 	</item></menu_c2_o>
 	<createdDate>2025-06-25T03:12:39.396Z</createdDate>
 	<createdDate_dt>2025-06-25T03:12:39.396Z</createdDate_dt>
-	<lastModifiedDate>2025-06-25T03:12:39.396Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-25T03:12:39.396Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-06-25T03:22:53.463Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-25T03:22:53.463Z</lastModifiedDate_dt>
 </component>
