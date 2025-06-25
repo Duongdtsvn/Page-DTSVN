@@ -321,7 +321,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value></value>
+							<value>thnhvin</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
