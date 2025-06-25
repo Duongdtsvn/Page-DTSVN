@@ -12,8 +12,8 @@
 	<folder-name/>
 	<createdDate>2017-01-31T16:18:14.000Z</createdDate>
 	<createdDate_dt>2017-01-31T16:18:14.000Z</createdDate_dt>
-	<lastModifiedDate>2025-06-24T08:59:40.667Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-24T08:59:40.667Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-06-25T03:35:52.107Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-25T03:35:52.107Z</lastModifiedDate_dt>
 	<title_t>Editorial</title_t>
 	<disabled>false</disabled>
 	<home_o item-list="true">	<item>	<key>/site/components/home/67818315-5397-246d-8b2a-b930ffc34193.xml</key>
@@ -26,4 +26,9 @@
 	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></header_o>
+	<footer_o item-list="true">	<item datasource="footer">	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
 </page>
