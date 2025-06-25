@@ -42,7 +42,7 @@
             <#list contentModel.menu_o.item as menu>
             <li class="nav-has-submenu">
               <a href="/services">${menu.menu_s!''}</a>
-               <@crafter.renderComponentCollection model=menu_c2_o />
+               <@crafter.renderComponentCollection $model=menu_c2_o />
             </li>
             </#list>
             </#if>
