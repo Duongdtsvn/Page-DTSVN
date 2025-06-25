@@ -38,18 +38,16 @@
 
         <nav class="nav-desktop">
           <ul class="nav-list">
-            <li><a href="/">Trang chủ</a></li>
-            <li><a href="/about">Giới thiệu</a></li>
+            <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
+            <#list contentModel.menu_o.item as menu>
             <li class="nav-has-submenu">
-              <a href="/services">Dịch vụ</a>
+              <a href="/services">${menu.menu_s!''}</a>
               <ul class="nav-submenu">
-                <li><a href="/services/web-development">Phát triển website</a></li>
-                <li><a href="/services/mobile-app">Ứng dụng di động</a></li>
-                <li><a href="/services/seo">SEO</a></li>
+                <@crafter.renderComponentCollection model=menu_c2_o />
               </ul>
             </li>
-            <li><a href="/contact">Liên hệ</a></li>
-            <li><a href="/en">English</a></li>
+            </#list>
+            </#if>
           </ul>
         </nav>
       </div>
@@ -63,18 +61,16 @@
       <div class="nav-mobile__content">
         <nav class="nav-mobile__menu">
           <ul class="nav-list">
-            <li><a href="/">Trang chủ</a></li>
-            <li><a href="/about">Giới thiệu</a></li>
+            <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
+            <#list contentModel.menu_o.item as menu>
             <li class="nav-has-submenu">
-              <a href="/services">Dịch vụ</a>
+              <a href="/services">${menu.menu_s!''}</a>
               <ul class="nav-submenu">
-                <li><a href="/services/web-development">Phát triển website</a></li>
-                <li><a href="/services/mobile-app">Ứng dụng di động</a></li>
-                <li><a href="/services/seo">SEO</a></li>
+                <@crafter.renderComponentCollection model=menu_c2_o />
               </ul>
             </li>
-            <li><a href="/contact">Liên hệ</a></li>
-            <li><a href="/en">English</a></li>
+            </#list>
+            </#if>
           </ul>
         </nav>
         
