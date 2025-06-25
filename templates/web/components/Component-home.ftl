@@ -63,7 +63,9 @@
             </div>
         </section>
         
-        <@crafter.renderComponent component=contentModel.member_o />
+        <#if contentModel.member_o??>
+  <@crafter.renderComponent component=contentModel.member_o />
+</#if>
 
 
         <section class="section sec-clientList" style="padding-top: 0px !important">
