@@ -443,7 +443,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value></value>
+							<value>snphm</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
