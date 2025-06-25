@@ -62,7 +62,7 @@
                 </div>
             </div>
         </section>
-        <@crafter.renderComponentCollection $field="member_o" $model=member />
+        <@crafter.renderComponentCollection $field="member_o" />
 
 
 
