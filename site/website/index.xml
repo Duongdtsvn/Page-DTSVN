@@ -12,12 +12,12 @@
 	<folder-name/>
 	<createdDate>2017-01-31T16:18:14.000Z</createdDate>
 	<createdDate_dt>2017-01-31T16:18:14.000Z</createdDate_dt>
-	<lastModifiedDate>2025-06-25T07:48:25.928Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-25T07:48:25.928Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-06-25T08:51:43.479Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-25T08:51:43.479Z</lastModifiedDate_dt>
 	<title_t>Editorial</title_t>
 	<disabled>false</disabled>
 	<home_o item-list="true">	<item>	<key>/site/components/home/67818315-5397-246d-8b2a-b930ffc34193.xml</key>
-	<value>Home</value>
+	<value>67818315-5397-246d-8b2a-b930ffc34193.xml</value>
 	<include>/site/components/home/67818315-5397-246d-8b2a-b930ffc34193.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></home_o>
@@ -36,4 +36,9 @@
 	<include>/site/components/af81c1ad-1803-d0cd-44c3-83f691775c1b.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></member_o>
+	<banner_home_o item-list="true">	<item datasource="banner">	<key>/site/components/bfd2c2a3-254f-6181-7258-26e4cbddf685.xml</key>
+	<value>Banner Home</value>
+	<include>/site/components/bfd2c2a3-254f-6181-7258-26e4cbddf685.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></banner_home_o>
 </page>
