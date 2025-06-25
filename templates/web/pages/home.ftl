@@ -47,6 +47,7 @@
   <@crafter.body_top/>
   <@crafter.renderComponentCollection $field="header_o"/>
         <@crafter.renderComponentCollection $field="home_o"/>
+        <@crafter.renderComponentCollection $field="member_o"/>
         <@crafter.renderComponentCollection $field="footer_o"/>
   <@crafter.body_bottom/>
   <script src="/static-assets/js/header.js"></script>
