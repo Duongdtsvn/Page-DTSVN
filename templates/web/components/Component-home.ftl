@@ -63,9 +63,8 @@
             </div>
         </section>
         
-        <#if contentModel.member_o??>
-  <@crafter.renderComponent component=contentModel.member_o />
-</#if>
+                <@crafter.renderComponentCollection $field="member_o"/>
+
 
 
         <section class="section sec-clientList" style="padding-top: 0px !important">
