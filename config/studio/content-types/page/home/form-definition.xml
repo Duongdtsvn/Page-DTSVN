@@ -318,9 +318,9 @@
 				</field>
 				<field>
 					<type>node-selector</type>
-					<id>footer_o</id>
+					<id>products_o</id>
 					<iceId></iceId>
-					<title>Footer</title>
+					<title>sản phẩm</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -337,7 +337,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>footer</value>
+							<value>snphm</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -424,9 +424,9 @@
 				</field>
 				<field>
 					<type>node-selector</type>
-					<id>products_o</id>
+					<id>footer_o</id>
 					<iceId></iceId>
-					<title>sản phẩm</title>
+					<title>Footer</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -443,7 +443,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>snphm</value>
+							<value>footer</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
