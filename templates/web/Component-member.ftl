@@ -1,3 +1,5 @@
+<#import "/templates/system/common/crafter.ftl" as crafter />
+
 <section class="section sec-clientList">
     <div class="container-custom">
         <div class="row">
@@ -12,7 +14,7 @@
                 <#if contentModel.member_o.item?? && contentModel.member_o.item?has_content>
                     <#list contentModel.member_o.item as member>
                         <div class="col-4 col-md-3 col-xl-3">
-                            <a class="clientbox" href="${contentModel.title5_s!'#'}">
+                            <a class="clientbox" href="${contentModel.url_s!'#'}">
                                 <div class="clientbox__inner">
                                     <@crafter.img $field="image_s" src=(member.image_member_s!"") alt="" />
                                 </div>
