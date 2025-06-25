@@ -39,13 +39,16 @@
         <nav class="nav-desktop">
           <ul class="nav-list">
             <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
-            <#list contentModel.menu_o.item as menu>
-            <li class="nav-has-submenu">
-              <a href="/services">${menu.menu_s!''}</a>
-              <@crafter.renderComponentCollection model=menu_c2_o />
-            </li>
-            </#list>
-            </#if>
+  <#list contentModel.menu_o.item as menu>
+    <li class="nav-has-submenu">
+      <a href="/services">${menu.menu_s!''}</a>
+      <#if menu.menu_c2_o?? && menu.menu_c2_o?has_content>
+        <@crafter.renderComponentCollection model=menu.menu_c2_o />
+      </#if>
+    </li>
+  </#list>
+</#if>
+
           </ul>
         </nav>
       </div>
