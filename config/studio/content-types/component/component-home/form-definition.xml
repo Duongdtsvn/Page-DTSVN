@@ -321,7 +321,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>thnhvin</value>
+							<value></value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -1326,38 +1326,48 @@
 					</properties>
 				</datasource>
 				<datasource>
-					<type>shared-content</type>
+					<type>components</type>
 					<id>thnhvin</id>
 					<title>thành viên</title>
 					<interface>item</interface>
 					<properties>
 						<property>
-							<name>enableCreateNew</name>
+							<name>allowEmbedded</name>
 							<value>true</value>
 								<type>boolean</type>
 						</property>
 						<property>
-							<name>enableBrowseExisting</name>
+							<name>allowShared</name>
 							<value>true</value>
 								<type>boolean</type>
 						</property>
 						<property>
-							<name>enableSearchExisting</name>
+							<name>enableBrowse</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableSearch</name>
 							<value>false</value>
 								<type>boolean</type>
 						</property>
 						<property>
-							<name>repoPath</name>
+							<name>baseRepoPath</name>
 							<value>/site/components</value>
-								<type>content-path-input</type>
+								<type>string</type>
 						</property>
 						<property>
-							<name>browsePath</name>
+							<name>baseBrowsePath</name>
 							<value>/site/components</value>
-								<type>content-path-input</type>
+								<type>string</type>
 						</property>
 						<property>
-							<name>type</name>
+							<name>contentTypes</name>
+							<value>/component/component-member</value>
+								<type>contentTypes</type>
+						</property>
+						<property>
+							<name>tags</name>
 							<value></value>
 								<type>string</type>
 						</property>
