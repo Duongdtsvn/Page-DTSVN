@@ -63,8 +63,7 @@
             </div>
         </section>
         
-        <@crafter.renderComponentCollection $field="member_o" $model=member />
-
+        <@crafter.renderComponent component=contentModel.member_o />
 
 
         <section class="section sec-clientList" style="padding-top: 0px !important">
