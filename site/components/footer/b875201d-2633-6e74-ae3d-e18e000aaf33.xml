@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/component-footer</content-type>
+	<display-template>/templates/web/Component-Footer.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>b875</objectGroupId>
+	<objectId>b875201d-2633-6e74-ae3d-e18e000aaf33</objectId>
+	<internal-name>footer</internal-name>
+	<file-name>b875201d-2633-6e74-ae3d-e18e000aaf33.xml</file-name>
+	<folder-name/>
+	<createdDate>2025-06-25T03:36:02.225Z</createdDate>
+	<createdDate_dt>2025-06-25T03:36:02.225Z</createdDate_dt>
+	<lastModifiedDate>2025-06-25T03:36:02.225Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-25T03:36:02.225Z</lastModifiedDate_dt>
+</component>
