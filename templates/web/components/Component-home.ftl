@@ -28,7 +28,7 @@
             </div>
         </section>
 
-<section class="section sec-productFeatured">
+        <section class="section sec-productFeatured">
             <div class="container-custom">
                 <div class="row">
                     <div class="col-md-8 col-xl-5">
@@ -63,6 +63,7 @@
             </div>
         </section>
         
+        <@crafter.renderComponentCollection $field="member_o" $model=member />
 
 
 
