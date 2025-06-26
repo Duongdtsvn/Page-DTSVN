@@ -12,8 +12,8 @@
 	<folder-name/>
 	<createdDate>2017-01-31T16:18:14.000Z</createdDate>
 	<createdDate_dt>2017-01-31T16:18:14.000Z</createdDate_dt>
-	<lastModifiedDate>2025-06-25T09:47:31.511Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-25T09:47:31.511Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-06-26T03:05:12.883Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-26T03:05:12.883Z</lastModifiedDate_dt>
 	<title_t>Editorial</title_t>
 	<disabled>false</disabled>
 	<home_o item-list="true">	<item>	<key>/site/components/home/67818315-5397-246d-8b2a-b930ffc34193.xml</key>
@@ -46,4 +46,9 @@
 	<include>/site/components/f19480d0-1451-fc91-06d0-0b44d23f2342.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></products_o>
+	<partner_o item-list="true">	<item datasource="doitac">	<key>/site/components/80dfe4db-54f9-9a02-f028-42e260b6eae2.xml</key>
+	<value>Đối tác</value>
+	<include>/site/components/80dfe4db-54f9-9a02-f028-42e260b6eae2.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></partner_o>
 </page>
