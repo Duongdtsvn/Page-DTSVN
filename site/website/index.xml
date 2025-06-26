@@ -12,8 +12,8 @@
 	<folder-name/>
 	<createdDate>2017-01-31T16:18:14.000Z</createdDate>
 	<createdDate_dt>2017-01-31T16:18:14.000Z</createdDate_dt>
-	<lastModifiedDate>2025-06-26T03:22:14.129Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-26T03:22:14.129Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-06-26T03:50:58.415Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-26T03:50:58.415Z</lastModifiedDate_dt>
 	<title_t>Editorial</title_t>
 	<disabled>false</disabled>
 	<home_o item-list="true">	<item>	<key>/site/components/home/67818315-5397-246d-8b2a-b930ffc34193.xml</key>
@@ -56,4 +56,9 @@
 	<include>/site/components/home/560010b3-6901-2eaa-9b5b-5aba9e071bdb.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></motto_o>
+	<achievements_o item-list="true">	<item datasource="thnhtu">	<key>/site/components/8770ee00-bc20-15c1-00f3-53b1470eef8f.xml</key>
+	<value>Thành tựu</value>
+	<include>/site/components/8770ee00-bc20-15c1-00f3-53b1470eef8f.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></achievements_o>
 </page>
