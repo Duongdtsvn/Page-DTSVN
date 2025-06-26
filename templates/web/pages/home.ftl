@@ -50,6 +50,7 @@
          <@crafter.renderComponentCollection $field="products_o"/>
                   <@crafter.renderComponentCollection $field="member_o"/>
 <@crafter.renderComponentCollection $field="partner_o"/>
+<@crafter.renderComponentCollection $field="motto_o"/>
         <@crafter.renderComponentCollection $field="footer_o"/>
   <@crafter.body_bottom/>
   <script src="/static-assets/js/header.js"></script>
