@@ -496,7 +496,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value></value>
+							<value>doitac</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
