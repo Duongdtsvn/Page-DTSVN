@@ -7,7 +7,7 @@
                         <div class="col-xl-7 col-xxxl-5">
                             <div class="titlebox">
                                 <span class="titlebox__subtitle">${contentModel.title_s!''}</span>
-                                <h2 class="titlebox__title">${contentModel.software_developer_s!''}</h2>
+                                <h2 class="titlebox__title">${contentModel.subtitle_s!''}</h2>
                             </div>
                         </div>
                     </div>
