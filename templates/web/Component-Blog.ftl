@@ -26,7 +26,8 @@
                             <h3 class="postMin__title"><a href="#">${blog_all.title_s!''}</a></h3>
                             <ul class="postMin__meta">
                               <li>${blog_all.date_s!''}</li>
-                              <li><a href="#">${blog_all.blog_update_s!''}</a></li>
+                              <li><a href="#">
+                                Tin tức cập nhật</a></li>
                             </ul>
                           </div>
                         </div>
