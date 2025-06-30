@@ -7,7 +7,7 @@
       <div class="partnershipsBox__header">
         <div class="row">
           <div class="col-xl-6 order-xl-2">
-            <div class="item-img" style="background-image: url(${contentModel.subtitle_s!''});"></div>
+            <div class="item-img" style="background-image: url(${contentModel.image_s!''});"></div>
           </div>
           <div class="col-xl-6 order-xl-1">
             <div class="item-content">
