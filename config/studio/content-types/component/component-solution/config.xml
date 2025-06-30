@@ -1,5 +1,5 @@
 <content-type name="/component/component-solution" is-wcm-type="true">
-	<label>Component -Solution</label>
+	<label>Component -client</label>
 	<form>/component/component-solution</form>
 	<form-path>simple</form-path>
 	<model-instance-path>NOT-USED-BY-SIMPLE-FORM-ENGINE</model-instance-path>
