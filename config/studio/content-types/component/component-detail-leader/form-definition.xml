@@ -103,7 +103,7 @@
 				</field>
 				<field>
 					<type>repeat</type>
-					<id>detail_leader_o</id>
+					<id>detail_o</id>
 					<iceId></iceId>
 					<title>chi tiết lãnh đạo</title>
 					<description></description>
@@ -124,7 +124,7 @@
 					<fields>
 				<field>
 					<type>input</type>
-					<id>stt_s</id>
+					<id>number_s</id>
 					<iceId></iceId>
 					<title>Stt</title>
 					<description></description>
@@ -172,7 +172,7 @@
 				</field>
 				<field>
 					<type>input</type>
-					<id>title9_s</id>
+					<id>title_s</id>
 					<iceId></iceId>
 					<title>chức năng</title>
 					<description></description>
@@ -220,7 +220,7 @@
 				</field>
 				<field>
 					<type>input</type>
-					<id>title10_s</id>
+					<id>subtitle_s</id>
 					<iceId></iceId>
 					<title>chi tiết</title>
 					<description></description>
