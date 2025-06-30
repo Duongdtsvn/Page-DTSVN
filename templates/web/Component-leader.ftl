@@ -19,8 +19,8 @@
                 <div class="teambox__inner">
                   <div class="teambox__img" style="background-image: url('assets/img/AnhChien.jpg');"></div>
                   <div class="teambox__body">
-                    <h3 class="teambox__name">Nguyễn Bá Chiến</h3>
-                    <p class="teambox__text">CEO</p>
+                    <h3 class="teambox__name">${teambox_list.name_s!''}</h3>
+                    <p class="teambox__text">${teambox_list.position_s!''}</p>
                   </div>
                   <@crafter.renderComponentCollection $field="teambox_list_o" />
                 </div>
