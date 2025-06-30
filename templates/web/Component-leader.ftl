@@ -17,7 +17,7 @@
             <div class="col-6 col-lg-4 col-xl-2">
               <a href="#popup-team" class="teambox btn-popupTeam">
                 <div class="teambox__inner">
-                  <div class="teambox__img" style="background-image: url('assets/img/AnhChien.jpg');"></div>
+                  <div class="teambox__img" style="background-image: url(${contentModel.name_s!''});"></div>
                   <div class="teambox__body">
                     <h3 class="teambox__name">${teambox_list.name_s!''}</h3>
                     <p class="teambox__text">${teambox_list.position_s!''}</p>
