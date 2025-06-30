@@ -52,6 +52,8 @@
 <@crafter.renderComponentCollection $field="partner_o"/>
 <@crafter.renderComponentCollection $field="motto_o"/>
 <@crafter.renderComponentCollection $field="achievements_o"/>
+<@crafter.renderComponentCollection $field="blog_o"/>
+
         <@crafter.renderComponentCollection $field="footer_o"/>
   <@crafter.body_bottom/>
   <script src="/static-assets/js/header.js"></script>
