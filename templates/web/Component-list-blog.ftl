@@ -6,7 +6,7 @@
       <div class="col-md-6 col-lg-4">
         <div class="blog">
           <div class="blog__inner">
-            <a class="blog__img" href="#" style="background-image: url(${project.subtitle1_s!''});">
+            <a class="blog__img" href="#" style="background-image: url(${project.image_s!''});">
               <img src="assets/img/blog-img-1.jpg" alt="">
             </a>
             <div class="blog__body">
