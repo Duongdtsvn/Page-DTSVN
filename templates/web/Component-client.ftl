@@ -12,12 +12,12 @@
     </div>
     <div class="clientList">
       <div class="row">
-        <#if contentModel.solution_o.item?? && contentModel.solution_o.item?has_content>
-          <#list contentModel.solution_o.item as solution>
+        <#if contentModel.client_o.item?? && contentModel.client_o.item?has_content>
+          <#list contentModel.client_o.item as client>
             <div class="col-4 col-md-3 col-xl-2">
               <a class="clientbox">
                 <div class="clientbox__inner">
-                  <@crafter.img $field="image_s" src=(solution.image_s!"") alt="" />
+                  <@crafter.img $field="image_s" src=(client.image_s!"") alt="" />
                 </div>
               </a>
             </div>
