@@ -11,14 +11,10 @@
 	<folder-name/>
 	<createdDate>2025-06-30T07:05:08.313Z</createdDate>
 	<createdDate_dt>2025-06-30T07:05:08.313Z</createdDate_dt>
-	<lastModifiedDate>2025-06-30T07:43:50.066Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-30T07:43:50.066Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-06-30T07:52:36.467Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-30T07:52:36.467Z</lastModifiedDate_dt>
 	<teambox_list_o item-list="true">	<item>	<name_s>Nguyễn Bá Chiến</name_s>
 	<position_s>CEO</position_s>
-	<teambox_list_o item-list="true">	<item datasource="detail_leader">	<key>/site/components/3de0ffd4-78c8-a24d-5dd2-e13d9c6d6e0e.xml</key>
-	<value>Nguyễn Bá Chiến</value>
-	<include>/site/components/3de0ffd4-78c8-a24d-5dd2-e13d9c6d6e0e.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></teambox_list_o>
+	<teambox_list_o item-list="true"/>
 	</item></teambox_list_o>
 </component>
