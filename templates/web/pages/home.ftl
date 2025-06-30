@@ -28,7 +28,39 @@
   <@crafter.renderComponentCollection $field="footer_o" />
   <@crafter.body_bottom />
   <script src="/static-assets/js/header.js"></script>
-  <script src="/static-assets/js/functions.js"></script>
+  <script >
+  function popupTeamJs() {
+        var item = $('.btn-popupTeam'),
+            bg = $('.modal-team__bg'),
+            close = $('.modal-team__close');
+
+        item.on('click', function(e) {
+            e.preventDefault();
+
+            var self = $(this),
+            getName = self.find('.teambox__name').text(),
+            getPosition= self.find('.teambox__text').text(),
+            getImage = self.find('.teambox__img').attr('style'),
+            getList = self.find('.teambox__list').html(),
+            getId = self.attr('href');
+
+            $(getId).find('.modal-team__img').attr('style', getImage);
+            $(getId).find('.modal-team__subtitle').text(getPosition);
+            $(getId).find('.modal-team__title').text(getName);
+            $(getId).find('.modal-team__list').html(getList);
+            $(getId).addClass('show');
+        });
+
+        bg.on('click', function() {
+            $(this).closest('.modal-team').removeClass('show');
+        });
+
+        close.on('click', function() {
+            $(this).closest('.modal-team').removeClass('show');
+        });
+    }
+    popupTeamJs();
+  </script>
 </body>
 
 </html>
