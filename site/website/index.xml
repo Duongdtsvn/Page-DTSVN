@@ -12,8 +12,8 @@
 	<folder-name/>
 	<createdDate>2017-01-31T16:18:14.000Z</createdDate>
 	<createdDate_dt>2017-01-31T16:18:14.000Z</createdDate_dt>
-	<lastModifiedDate>2025-06-26T03:50:58.415Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-26T03:50:58.415Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-06-30T04:14:41.659Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-30T04:14:41.659Z</lastModifiedDate_dt>
 	<title_t>Editorial</title_t>
 	<disabled>false</disabled>
 	<home_o item-list="true">	<item>	<key>/site/components/home/67818315-5397-246d-8b2a-b930ffc34193.xml</key>
@@ -61,4 +61,9 @@
 	<include>/site/components/8770ee00-bc20-15c1-00f3-53b1470eef8f.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></achievements_o>
+	<blog_o item-list="true">	<item datasource="blog">	<key>/site/e5753c46-bed5-95ce-e39e-219ce01e47be.xml</key>
+	<value>list tin tức</value>
+	<include>/site/e5753c46-bed5-95ce-e39e-219ce01e47be.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></blog_o>
 </page>
