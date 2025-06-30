@@ -22,7 +22,11 @@
                     <h3 class="teambox__name">${teambox_list.name_s!''}</h3>
                     <p class="teambox__text">${teambox_list.position_s!''}</p>
                   </div>
-                  <@crafter.renderComponent model=teambox_list />
+                  <div class="teambox__list">
+                    <ul>
+                      <@crafter.renderComponentCollection model="teambox_list_o" />
+                    </ul>
+                  </div>
                 </div>
               </a>
             </div>
