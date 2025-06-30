@@ -12,8 +12,8 @@
 	<folder-name/>
 	<createdDate>2017-01-31T16:18:14.000Z</createdDate>
 	<createdDate_dt>2017-01-31T16:18:14.000Z</createdDate_dt>
-	<lastModifiedDate>2025-06-30T04:14:41.659Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-30T04:14:41.659Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-06-30T07:04:57.705Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-06-30T07:04:57.705Z</lastModifiedDate_dt>
 	<title_t>Editorial</title_t>
 	<disabled>false</disabled>
 	<home_o item-list="true">	<item>	<key>/site/components/home/67818315-5397-246d-8b2a-b930ffc34193.xml</key>
@@ -66,4 +66,14 @@
 	<include>/site/e5753c46-bed5-95ce-e39e-219ce01e47be.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></blog_o>
+	<leader_o item-list="true">	<item datasource="leader">	<key>/site/components/c3de65d4-ede1-90a4-8b76-fd7d53a4dafc.xml</key>
+	<value>ban lãnh đạo</value>
+	<include>/site/components/c3de65d4-ede1-90a4-8b76-fd7d53a4dafc.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></leader_o>
+	<pobup_o item-list="true">	<item datasource="pobup">	<key>/site/components/be77cab9-bd66-7f28-2dc5-eedfdaac06e1.xml</key>
+	<value>pobup</value>
+	<include>/site/components/be77cab9-bd66-7f28-2dc5-eedfdaac06e1.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></pobup_o>
 </page>
