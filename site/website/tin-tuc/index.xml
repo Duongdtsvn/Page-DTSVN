@@ -19,8 +19,8 @@
 	</item></banner_blog_o>
 	<createdDate>2025-07-01T07:43:56.153Z</createdDate>
 	<createdDate_dt>2025-07-01T07:43:56.153Z</createdDate_dt>
-	<lastModifiedDate>2025-07-01T07:47:53.218Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-01T07:47:53.218Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-01T07:49:59.158Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-01T07:49:59.158Z</lastModifiedDate_dt>
 	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
 	<value>header</value>
 	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
@@ -31,4 +31,9 @@
 	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></footer_o>
+	<list_blog_o item-list="true">	<item datasource="listtintc">	<key>/site/components/61adf18c-b102-fc1d-9fcc-7e442bd6287e.xml</key>
+	<value>danh sách tin tức</value>
+	<include>/site/components/61adf18c-b102-fc1d-9fcc-7e442bd6287e.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></list_blog_o>
 </page>
