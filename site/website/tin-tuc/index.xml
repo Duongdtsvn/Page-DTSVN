@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page>
 	<content-type>/page/blog</content-type>
-	<display-template>/templates/web/Blog.ftl</display-template>
+	<display-template>/templates/web/pages/Blog.ftl</display-template>
 	<no-template-required/>
 	<merge-strategy>inherit-levels</merge-strategy>
 	<objectGroupId>1cfe</objectGroupId>
@@ -19,8 +19,8 @@
 	</item></banner_blog_o>
 	<createdDate>2025-07-01T07:43:56.153Z</createdDate>
 	<createdDate_dt>2025-07-01T07:43:56.153Z</createdDate_dt>
-	<lastModifiedDate>2025-07-01T07:49:59.158Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-01T07:49:59.158Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-01T08:10:56.570Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-01T08:10:56.570Z</lastModifiedDate_dt>
 	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
 	<value>header</value>
 	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
