@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/component-list-blog</content-type>
+	<display-template>/templates/web/Component-list-blog.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>61ad</objectGroupId>
+	<objectId>61adf18c-b102-fc1d-9fcc-7e442bd6287e</objectId>
+	<internal-name>danh sách tin tức</internal-name>
+	<file-name>61adf18c-b102-fc1d-9fcc-7e442bd6287e.xml</file-name>
+	<folder-name/>
+	<list_blog_o item-list="true">	<item>	<title1_s>Thấy gì từ những yêu cầu bắt buộc (Mandatory) của </title1_s>
+	<date_s>27/06/2025</date_s>
+	<image_s>/static-assets/images/116903.jpg</image_s>
+	</item></list_blog_o>
+	<createdDate>2025-07-01T07:50:10.083Z</createdDate>
+	<createdDate_dt>2025-07-01T07:50:10.083Z</createdDate_dt>
+	<lastModifiedDate>2025-07-01T07:50:10.083Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-01T07:50:10.083Z</lastModifiedDate_dt>
+</component>
