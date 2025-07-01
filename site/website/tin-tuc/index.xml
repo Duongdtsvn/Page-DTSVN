@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/blog</content-type>
+	<display-template>/templates/web/Blog.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>1cfe</objectGroupId>
+	<objectId>1cfe65f5-b7e9-75cd-5b25-bb42b96cb73d</objectId>
+	<internal-name>Tin tức</internal-name>
+	<navLabel>Tin tức</navLabel>
+	<file-name>index.xml</file-name>
+	<folder-name>tin-tuc</folder-name>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<banner_blog_o item-list="true">	<item datasource="bannerblog">	<key>/site/components/6aa1a625-3329-381a-6fe9-d62bf1ef4c92.xml</key>
+	<value>Banner tin tức</value>
+	<include>/site/components/6aa1a625-3329-381a-6fe9-d62bf1ef4c92.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></banner_blog_o>
+	<createdDate>2025-07-01T07:43:56.153Z</createdDate>
+	<createdDate_dt>2025-07-01T07:43:56.153Z</createdDate_dt>
+	<lastModifiedDate>2025-07-01T07:43:56.153Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-01T07:43:56.153Z</lastModifiedDate_dt>
+</page>
