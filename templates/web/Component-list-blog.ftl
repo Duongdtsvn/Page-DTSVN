@@ -1,5 +1,15 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
 
+<nav class="nav-cat">
+    <ul>
+        <li><a href="/category/tin-tuc">Tất cả tin bài</a></li>
+        <li><a href="/category/thoi-su">Tin kinh doanh</a></li>
+        <li><a href="/category/the-thao">Tin công nghệ</a></li>
+        <li><a href="/category/giai-tri">DTSVN tuyển dụng</a></li>
+        <li><a href="/category/giai-tri">Business Analytics</a></li>
+        <li><a href="/category/giai-tri">Blog</a></li>
+    </ul>
+</nav>
 <div class="row">
   <#if contentModel.list_blog_o.item?? && contentModel.list_blog_o.item?has_content>
     <#list contentModel.list_blog_o.item as list_blog>
