@@ -11,14 +11,10 @@
 	<folder-name/>
 	<createdDate>2025-07-01T07:50:10.083Z</createdDate>
 	<createdDate_dt>2025-07-01T07:50:10.083Z</createdDate_dt>
-	<lastModifiedDate>2025-07-02T08:42:11.803Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-02T08:42:11.803Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-02T08:48:48.355Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-02T08:48:48.355Z</lastModifiedDate_dt>
 	<list_tab_o item-list="true">	<item>	<name_tab_s>test</name_tab_s>
-	<content_tab_o item-list="true">	<item datasource="listccblog">	<key>/site/components/74973664-fe5a-2e1b-4875-ce19b3183347.xml</key>
-	<value>test</value>
-	<include>/site/components/74973664-fe5a-2e1b-4875-ce19b3183347.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></content_tab_o>
+	<content_tab_o item-list="true"/>
 	</item>	<item>	<name_tab_s>test</name_tab_s>
 	<content_tab_o item-list="true">	<item datasource="listccblog">	<key>/site/components/51ab71bb-500b-ec93-87b6-ac882b090a75.xml</key>
 	<value>test</value>
