@@ -1,34 +1,13 @@
-import org.craftercms.sites.editorial.SearchHelper
-import java.util.HashSet
+import org.craftercms.sites.editorial.BlogtSearchHelper
 
-def searchHelper = new SearchHelper(searchClient, urlTransformationService)
+// Lấy số lượng bài tuyển dụng cần hiển thị
+def categoryKey = contentModel.category_s
+def maxItems = contentModel.max_item_i
 
-def maxArticles = contentModel.max_articles_i ?: 12
+// Không cần lọc theo category, do đó không cần truyền giá trị cho categoryKey.
+def blogHelper = newBlogSearchHelper(searchClient, urlTransformationService)
+def blog = recruitmentHelper.getAllBlog(null, 0, maxItems)
 
-// Lấy category từ query string (?category=...)
-def category = urlTransformationService.getRequestParameters()?.get("category")?.get(0)
-if (!category || category == "all") {
-  category = null
-}
+// Gán kết quả vào template model để hiển thị ra giao diện
+templateModel.blog = blog
 
-// Tạo query cho bài viết
-def query = 'content-type:"article"'
-if (category) {
-  query += ' AND category_s:"' + category + '"'
-}
-
-// Lấy danh sách bài viết
-def result = searchHelper.search(query, 0, maxArticles)
-templateModel.articles = result.documents
-templateModel.selectedCategory = category
-
-// Lấy danh sách tất cả category có trong bài viết
-def allCategories = new HashSet()
-def allResult = searchHelper.search('content-type:"article"', 0, 1000)
-allResult.documents.each { doc ->
-  def cat = doc.get("category_s")
-  if (cat) {
-    allCategories.add(cat)
-  }
-}
-templateModel.categories = allCategories
