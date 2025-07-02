@@ -359,7 +359,7 @@
 				<field>
 					<type>dropdown</type>
 					<id>categories_s</id>
-					<iceId></iceId>
+					<iceId>blog</iceId>
 					<title>danh mục blog</title>
 					<description></description>
 					<defaultValue></defaultValue>
@@ -392,7 +392,7 @@
 				<field>
 					<type>numeric-input</type>
 					<id>max_item_i</id>
-					<iceId></iceId>
+					<iceId>blog</iceId>
 					<title>giới hạn item</title>
 					<description></description>
 					<defaultValue></defaultValue>
