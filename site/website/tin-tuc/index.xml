@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/blog</content-type>
+	<display-template>/templates/web/pages/Blog.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>a606</objectGroupId>
+	<objectId>a606772d-e8d6-d66e-b348-34cb2a8339a1</objectId>
+	<internal-name>blog</internal-name>
+	<navLabel>blog</navLabel>
+	<file-name>index.xml</file-name>
+	<folder-name>tin-tuc</folder-name>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
+	<banner_blog_o item-list="true">	<item>	<key>/site/components/6aa1a625-3329-381a-6fe9-d62bf1ef4c92.xml</key>
+	<value>Banner tin tức</value>
+	<include>/site/components/6aa1a625-3329-381a-6fe9-d62bf1ef4c92.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></banner_blog_o>
+	<list_blog_o item-list="true">	<item>	<key>/site/components/61adf18c-b102-fc1d-9fcc-7e442bd6287e.xml</key>
+	<value>danh sách tin tức</value>
+	<include>/site/components/61adf18c-b102-fc1d-9fcc-7e442bd6287e.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></list_blog_o>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
+	<createdDate>2025-07-02T08:03:30.081Z</createdDate>
+	<createdDate_dt>2025-07-02T08:03:30.081Z</createdDate_dt>
+	<lastModifiedDate>2025-07-02T08:03:30.081Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-02T08:03:30.081Z</lastModifiedDate_dt>
+</page>
