@@ -367,7 +367,7 @@
 					<properties>
 						<property>
 							<name>datasource</name>
-							<value>listtintc</value>
+							<value>danhmcblog</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -587,6 +587,24 @@
 						</property>
 						<property>
 							<name>type</name>
+							<value></value>
+								<type>string</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>simpleTaxonomy</type>
+					<id>danhmcblog</id>
+					<title>danh mục blog</title>
+					<interface>item</interface>
+					<properties>
+						<property>
+							<name>dataType</name>
+							<value>[{&quot;value&quot;:&quot;value&quot;,&quot;label&quot;:&quot;&quot;,&quot;selected&quot;:true},{&quot;value&quot;:&quot;value_s&quot;,&quot;label&quot;:&quot;String&quot;,&quot;selected&quot;:false},{&quot;value&quot;:&quot;value_i&quot;,&quot;label&quot;:&quot;Integer&quot;,&quot;selected&quot;:false},{&quot;value&quot;:&quot;value_f&quot;,&quot;label&quot;:&quot;Float&quot;,&quot;selected&quot;:false},{&quot;value&quot;:&quot;value_dt&quot;,&quot;label&quot;:&quot;Date&quot;,&quot;selected&quot;:false},{&quot;value&quot;:&quot;value_html&quot;,&quot;label&quot;:&quot;Data Type&quot;,&quot;selected&quot;:false}]</value>
+								<type>dropdown</type>
+						</property>
+						<property>
+							<name>componentPath</name>
 							<value></value>
 								<type>string</type>
 						</property>
