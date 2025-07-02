@@ -176,7 +176,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value></value>
+							<value>listccblog</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
