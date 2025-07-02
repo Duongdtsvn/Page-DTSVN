@@ -7,13 +7,10 @@
           <img src="${article.image_s!'/static-assets/images/placeholder.jpg'}" alt="">
         </div>
         <div class="blog__body">
-          <h3 class="blog__title">${article.title!''}</h3>
+          <h3 class="blog__title">${article.title_s!''}</h3>
           <ul class="postMin__meta">
-            <li>${article.date_dt?string("dd/MM/yyyy")}</li>
+            <li>${article.date_s!''}</li>
           </ul>
-          <#if article.summary??>
-            <p class="blog__summary">${article.summary}</p>
-          </#if>
         </div>
       </div>
     </div>
