@@ -11,13 +11,9 @@
 	<internal-name>header</internal-name>
 	<createdDate>2025-06-24T08:58:33.346Z</createdDate>
 	<createdDate_dt>2025-06-24T08:58:33.346Z</createdDate_dt>
-	<lastModifiedDate>2025-07-02T04:00:38.047Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-02T04:00:38.047Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-02T07:51:53.079Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-02T07:51:53.079Z</lastModifiedDate_dt>
 	<menu_o item-list="true">	<item>	<menu_s>Giới Thiệu</menu_s>
-	<menu_c2_o item-list="true">	<item>	<key>/site/components/headers/e512eac0-3826-f3bc-edec-9d9c214feab5.xml</key>
-	<value>e512eac0-3826-f3bc-edec-9d9c214feab5.xml</value>
-	<include>/site/components/headers/e512eac0-3826-f3bc-edec-9d9c214feab5.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></menu_c2_o>
+	<menu_c2_o item-list="true"/>
 	</item></menu_o>
 </component>
