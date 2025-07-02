@@ -9,21 +9,16 @@
 	<internal-name>danh sách tin tức</internal-name>
 	<file-name>61adf18c-b102-fc1d-9fcc-7e442bd6287e.xml</file-name>
 	<folder-name/>
-	<list_blog_o item-list="true">	<item>	<title1_s>Thấy gì từ những yêu cầu bắt buộc (Mandatory) của </title1_s>
-	<date_s>27/06/2025</date_s>
-	<image_s>/static-assets/images/116903.jpg</image_s>
-	</item>	<item>	<image_s/>
-	<title1_s>Ứng dụng của AI trong bảo mật thông tin Tài chính</title1_s>
-	<date_s>24/06/2025</date_s>
-	</item>	<item>	<image_s/>
-	<title1_s>Giải pháp ngăn chặn gian lận bằng AI trong ngân hà</title1_s>
-	<date_s>23/06/2025</date_s>
-	</item>	<item>	<image_s/>
-	<title1_s>Những rủi ro gian lận mà Ngân hàng đối mặt trong h</title1_s>
-	<date_s>20/06/2025</date_s>
-	</item></list_blog_o>
 	<createdDate>2025-07-01T07:50:10.083Z</createdDate>
 	<createdDate_dt>2025-07-01T07:50:10.083Z</createdDate_dt>
-	<lastModifiedDate>2025-07-01T08:18:41.060Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-01T08:18:41.060Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-02T04:11:55.897Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-02T04:11:55.897Z</lastModifiedDate_dt>
+	<title1_s>a</title1_s>
+	<date_s>12</date_s>
+	<categories_o>	<item>	<key>Tin kinh doanh</key>
+	<value_smv>Tin kinh doanh</value_smv>
+	</item></categories_o>
+	<image_s>/static-assets/images/strawberries.jpg</image_s>
+	<max_item_i>12</max_item_i>
+	<category_s>Tin kinh doanh</category_s>
 </component>
