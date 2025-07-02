@@ -1,13 +1,14 @@
-import org.craftercms.sites.editorial.BlogtSearchHelper
+import org.craftercms.sites.editorial.BlogSearchHelper  // ✅ đúng tên
 
-// Lấy số lượng bài tuyển dụng cần hiển thị
+// Lấy tham số từ contentModel
 def categoryKey = contentModel.category_s
-def maxItems = contentModel.max_item_i
+def maxItems = contentModel.max_item_i ?: 10
 
-// Không cần lọc theo category, do đó không cần truyền giá trị cho categoryKey.
-def blogHelper = newBlogSearchHelper(searchClient, urlTransformationService)
-def blog = recruitmentHelper.getAllBlog(null, 0, maxItems)
+// Tạo instance của helper
+def blogHelper = new BlogSearchHelper(searchClient, urlTransformationService)
 
-// Gán kết quả vào template model để hiển thị ra giao diện
-templateModel.blog = blog
+// Gọi đúng tên hàm từ class
+def blogs = blogHelper.getAllBlogs(categoryKey, 0, maxItems)
 
+// Đưa vào templateModel để dùng ở FTL
+templateModel.blogs = blogs
