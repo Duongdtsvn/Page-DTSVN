@@ -1,3 +1,5 @@
+<#import "/templates/system/common/crafter.ftl" as crafter />
+
 <#if contentModel.category_s?has_content>
   <#if articles?? && articles?has_content>
     <#list articles as article>
