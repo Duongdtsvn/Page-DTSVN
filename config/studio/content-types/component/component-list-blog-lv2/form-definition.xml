@@ -246,7 +246,7 @@
 			<fields>
 				<field>
 					<type>dropdown</type>
-					<id>category_s</id>
+					<id>categories_s</id>
 					<iceId></iceId>
 					<title>category</title>
 					<description></description>
