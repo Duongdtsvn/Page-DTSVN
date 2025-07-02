@@ -1,12 +1,13 @@
-import org.craftercms.sites.editorial.BlogSearchHelper
+import org.craftercms.sites.editorial.SearchHelper
 
-// Lấy số lượng bài tuyển dụng cần hiển thị
-def categoryKey = contentModel.category_s
-def maxItems = contentModel.max_item_i
+def searchHelper = new SearchHelper(searchClient, urlTransformationService)
+def category = contentModel.category_s
+def maxArticles = contentModel.max_articles_i ?: 6
 
-// Không cần lọc theo category, do đó không cần truyền giá trị cho categoryKey.
-def blogHelper = new BlogSearchHelper(searchClient, urlTransformationService)
-def blog = blogHelper.getAllBlog(null, 0, maxItems)
+def query = 'content-type:"article"'
+if (category) {
+  query += ' AND category_s:"' + category + '"'
+}
 
-// Gán kết quả vào template model để hiển thị ra giao diện
-templateModel.blog = blog
+def results = searchHelper.search(query, 0, maxArticles)
+templateModel.articles = results.documents
