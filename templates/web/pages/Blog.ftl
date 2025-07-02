@@ -15,7 +15,6 @@
 
 <body>
     <@crafter.body_top />
-    <@crafter.renderComponentCollection $field="header_o" />
 
     <main class="page-content">
         <@crafter.renderComponentCollection $field="banner_blog_o" />
