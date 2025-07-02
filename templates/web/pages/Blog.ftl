@@ -15,16 +15,7 @@
 
 <body>
     <@crafter.body_top />
-    <@crafter.renderComponentCollection $field="header_o" />
-    <main class="page-content">
-        <@crafter.renderComponentCollection $field="banner_blog_o" />
-        <section class="section sec-blogPage">
-            <div class="container-custom">
-                <@crafter.renderComponentCollection $field="list_blog_o" />
-            </div>
-        </section>
-    </main>
-    <@crafter.renderComponentCollection $field="footer_o" />
+    
     <@crafter.body_bottom />
     <script src="/static-assets/js/header.js"></script>
 </body>
