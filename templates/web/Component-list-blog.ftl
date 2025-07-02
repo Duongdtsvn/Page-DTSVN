@@ -3,12 +3,12 @@
 <@crafter.body>
   <nav class="nav-cat">
     <ul>
-      <li>Tất cả tin bài</li>
-      <li>Tin kinh doanh</li>
-      <li>Tin công nghệ</li>
-      <li>DTSVN tuyển dụng</li>
-      <li>Business Analytics</li>
-      <li>Blog</li>
+      <li><a>Tất cả tin bài</a></li>
+      <li><a>Tin kinh doanh</a></li>
+      <li><a>Tin công nghệ</a></li>
+      <li><a>DTSVN tuyển dụng</a></li>
+      <li><a>Business Analytics</a></li>
+      <li><a>Blog</a></li>
     </ul>
   </nav>
   <div class="row">
