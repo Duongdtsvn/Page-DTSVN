@@ -27,7 +27,6 @@
     </main>
     <@crafter.renderComponentCollection $field="footer_o" />
     <@crafter.body_bottom />
-    </section>
     <script src="/static-assets/js/header.js"></script>
 </body>
 
