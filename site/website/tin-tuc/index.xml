@@ -12,11 +12,7 @@
 	<folder-name>tin-tuc</folder-name>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
-	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
-	<value>header</value>
-	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></header_o>
+	<header_o item-list="true"/>
 	<banner_blog_o item-list="true">	<item>	<key>/site/components/6aa1a625-3329-381a-6fe9-d62bf1ef4c92.xml</key>
 	<value>Banner tin tức</value>
 	<include>/site/components/6aa1a625-3329-381a-6fe9-d62bf1ef4c92.xml</include>
@@ -34,6 +30,6 @@
 	</item></footer_o>
 	<createdDate>2025-07-02T08:03:30.081Z</createdDate>
 	<createdDate_dt>2025-07-02T08:03:30.081Z</createdDate_dt>
-	<lastModifiedDate>2025-07-02T08:03:30.081Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-02T08:03:30.081Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-02T08:05:19.474Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-02T08:05:19.474Z</lastModifiedDate_dt>
 </page>
