@@ -17,7 +17,7 @@
     <@crafter.body_top />
     
     <@crafter.body_bottom />
-    <script src="/static-assets/js/header.js"></script>
+    
 </body>
 
 </html>
