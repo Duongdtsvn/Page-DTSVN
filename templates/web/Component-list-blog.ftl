@@ -1,7 +1,6 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
 
-<section class="section sec-blogPage">
-    <div class="container-custom">
+
     <nav class="nav-cat">
         <#if contentModel.list_tab_o.item?has_content>
             <ul class="nav nav-tabs">
@@ -31,5 +30,3 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
