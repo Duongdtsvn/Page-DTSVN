@@ -1,4 +1,18 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
+<#if categories?? && categories?size gt 0>
+  <nav class="nav-cat">
+    <ul>
+      <li><a href="?category=all"
+        <#if selectedCategory?default("all") == "all">class="active"</#if>>Tất cả</a></li>
+      <#list categories?sort as cat>
+        <li>
+          <a href="?category=${cat}" <#if selectedCategory == cat>class="active"</#if>>${cat}</a>
+        </li>
+      </#list>
+    </ul>
+  </nav>
+</#if>
+
 
 <#if articles?? && articles?has_content>
   <#list articles as article>
