@@ -11,14 +11,8 @@
 	<folder-name/>
 	<createdDate>2025-07-01T07:50:10.083Z</createdDate>
 	<createdDate_dt>2025-07-01T07:50:10.083Z</createdDate_dt>
-	<lastModifiedDate>2025-07-02T04:11:55.897Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-02T04:11:55.897Z</lastModifiedDate_dt>
-	<title1_s>a</title1_s>
-	<date_s>12</date_s>
-	<categories_o>	<item>	<key>Tin kinh doanh</key>
-	<value_smv>Tin kinh doanh</value_smv>
-	</item></categories_o>
-	<image_s>/static-assets/images/strawberries.jpg</image_s>
-	<max_item_i>12</max_item_i>
-	<category_s>Tin kinh doanh</category_s>
+	<lastModifiedDate>2025-07-02T08:19:18.248Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-02T08:19:18.248Z</lastModifiedDate_dt>
+	<list_tab_o item-list="true">	<item>	<name_tab_s>test</name_tab_s>
+	</item></list_tab_o>
 </component>
