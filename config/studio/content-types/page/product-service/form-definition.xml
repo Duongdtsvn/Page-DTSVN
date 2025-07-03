@@ -349,6 +349,59 @@
 						</constraint>
 					</constraints>
 				</field>
+				<field>
+					<type>node-selector</type>
+					<id>reasons_choosing_o</id>
+					<iceId></iceId>
+					<title>Lý do chọn DTSVN</title>
+					<description></description>
+					<defaultValue></defaultValue>
+					<help></help>
+					<properties>
+						<property>
+							<name>minSize</name>
+							<value></value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>maxSize</name>
+							<value></value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>itemManager</name>
+							<value>ldochnDTSVN</value>
+							<type>datasource:item</type>
+						</property>
+						<property>
+							<name>readonly</name>
+							<value></value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>disableFlattening</name>
+							<value></value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>useSingleValueFilename</name>
+							<value></value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>useMVS</name>
+							<value></value>
+							<type>boolean</type>
+						</property>
+					</properties>
+					<constraints>
+						<constraint>
+							<name>allowDuplicates</name>
+							<value><![CDATA[]]></value>
+							<type>boolean</type>
+						</constraint>
+					</constraints>
+				</field>
 			</fields>
 		</section>
 	</sections>
@@ -499,6 +552,19 @@
 						</property>
 						<property>
 							<name>type</name>
+							<value></value>
+								<type>string</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>embedded-content</type>
+					<id>ldochnDTSVN</id>
+					<title>Lý do chọn DTSVN</title>
+					<interface>item</interface>
+					<properties>
+						<property>
+							<name>contentType</name>
 							<value></value>
 								<type>string</type>
 						</property>
