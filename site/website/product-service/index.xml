@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-03T04:03:25.788Z</createdDate>
 	<createdDate_dt>2025-07-03T04:03:25.788Z</createdDate_dt>
-	<lastModifiedDate>2025-07-03T04:55:23.516Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-03T04:55:23.516Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-03T08:33:59.062Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-03T08:33:59.062Z</lastModifiedDate_dt>
 	<product_orientation_o item-list="true">	<item datasource="nhhngsnphm">	<key>/site/components/26ee3a14-72a0-b342-3c8a-d4d7023f49e6.xml</key>
 	<value>Định hướng sản phẩm</value>
 	<include>/site/components/26ee3a14-72a0-b342-3c8a-d4d7023f49e6.xml</include>
@@ -36,4 +36,37 @@
 	<include>/site/components/78e23124-112a-70b5-e03b-4b8fe5c6f052.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></software_development_o>
+	<reasons_choosing_o item-list="true">	<item datasource="ldochnDTSVN" inline="true">	<key>d0a61220-2e94-92c2-c4f6-e85a3335a70a</key>
+	<value>Lý do chọn DTSVN</value>
+<component id="d0a61220-2e94-92c2-c4f6-e85a3335a70a">
+	<content-type>/component/component-reasons-choosing-dtsvn</content-type>
+	<display-template>/templates/web/Component-reasons-choosing-DTSVN.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>d0a6</objectGroupId>
+	<objectId>d0a61220-2e94-92c2-c4f6-e85a3335a70a</objectId>
+	<internal-name>Lý do chọn DTSVN</internal-name>
+	<title_s>Lý do lựa chọn DTSVN</title_s>
+	<subtitle_s>DTSVN đã thành công trong việc xây dựng phần mềm đáp ứng cho mọi tổ chức tín dụng. Hóa giải nhiều trở ngại, tiết kiệm chi phí, lợi nhuận tăng cao.</subtitle_s>
+	<file-name>d0a61220-2e94-92c2-c4f6-e85a3335a70a.xml</file-name>
+	<folder-name/>
+	<reasons_choosing_o item-list="true">	<item>	<title_s>Phản hồi và xử lý lỗi nhanh</title_s>
+	<subtitle_s>Phản hồi và giải quyết nhanh chóng các lỗi về hệ thống ngay khi khách hàng gặp phải, bằng cả onsite và offsite.</subtitle_s>
+	</item>	<item>	<title_s>Đội ngũ giàu kinh nghiệm</title_s>
+	<subtitle_s>Chúng tôi có đội ngũ chuyên gia kinh nghiệm nhiều năm trong lĩnh vực phần mềm ngành tài chính, ngân hàng.</subtitle_s>
+	</item>	<item>	<title_s>Hiểu rõ về nghiệp vụ</title_s>
+	<subtitle_s>Chúng tôi thiết kế, đánh giá và xây dựng hệ thống công nghệ từ sự hiểu biết thấu đáo về yêu cầu quản lý của bạn</subtitle_s>
+	</item>	<item>	<title_s>Giao tiếp vô cùng dễ hiểu</title_s>
+	<subtitle_s>Mọi thắc mắc của bạn sẽ được đội ngũ kỹ thuật sẽ trả lời, giải thích cặn kẽ cho bạn hiểu tường tận.</subtitle_s>
+	</item>	<item>	<title_s>Giải pháp tất cả trong một</title_s>
+	<subtitle_s>Xử lý tất cả các khía cạnh cơ sở hạ tầng CNTT, bao gồm phần cứng, phần mềm và các nhu cầu công nghệ khác.</subtitle_s>
+	</item>	<item>	<title_s>100% đảm bảo hài lòng</title_s>
+	<subtitle_s>Các dịch vụ của chúng tôi sẽ làm cho bạn hạnh phúc, mang lại giá trị cho bạn, đảm bảo bạn sẽ thấy hài lòng.</subtitle_s>
+	</item></reasons_choosing_o>
+	<createdDate>2025-07-03T08:34:11.318Z</createdDate>
+	<createdDate_dt>2025-07-03T08:34:11.318Z</createdDate_dt>
+	<lastModifiedDate>2025-07-03T08:34:11.318Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-03T08:34:11.318Z</lastModifiedDate_dt>
+</component>
+	</item></reasons_choosing_o>
 </page>
