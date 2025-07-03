@@ -14,7 +14,6 @@
   ~ You should have received a copy of the GNU General Public License
   ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
-
 <!--
     This file configures the list of configurations available in the SiteConfig section for this site/blueprint.
 
@@ -37,7 +36,7 @@
     - samplePath: the path to a sample file to help the user update the file
 -->
 <config>
-    <version>4.0.3</version>
+    <version>4.2-t</version>
     <files>
         <file>
             <module>studio</module>
