@@ -17,6 +17,7 @@
   <@crafter.body_top />
   <@crafter.renderComponentCollection $field="header_o" />
   <@crafter.renderComponentCollection $field="product_orientation_o" />
+  <@crafter.renderComponentCollection $field="reasons_choosing_o" />
   <@crafter.renderComponentCollection $field="software_development_o" />
   <@crafter.renderComponentCollection $field="footer_o" />
   <@crafter.body_bottom />
