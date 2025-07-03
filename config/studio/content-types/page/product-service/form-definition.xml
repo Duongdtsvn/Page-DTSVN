@@ -245,7 +245,7 @@
 				</field>
 				<field>
 					<type>node-selector</type>
-					<id>product_orientation</id>
+					<id>product_orientation_o</id>
 					<iceId></iceId>
 					<title>định hướng sản phẩm</title>
 					<description></description>
