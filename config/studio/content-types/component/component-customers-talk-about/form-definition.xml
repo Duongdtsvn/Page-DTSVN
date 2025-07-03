@@ -89,7 +89,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1751533679749</title>
+			<title>Default Section Title 1751535736441</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
@@ -205,7 +205,7 @@
 						</property>
 						<property>
 							<name>maxlength</name>
-							<value>50</value>
+							<value>5000</value>
 							<type>int</type>
 						</property>
 						<property>
