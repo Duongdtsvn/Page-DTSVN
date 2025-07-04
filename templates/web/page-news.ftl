@@ -94,7 +94,12 @@
                                         <ul class="postMin__meta">
                                             <#if news.created_date??>
                                                 <li>
-                                                    ${news.created_date?datetime?string("dd/MM/yyyy HH:mm", "Asia/Bangkok")}
+                                                    <#-- Kiểm tra kiểu dữ liệu của created_date -->
+                                                    <#if news.created_date?is_date>
+                                                        ${news.created_date?string("dd/MM/yyyy HH:mm")}
+                                                    <#else>
+                                                        ${news.created_date!''}
+                                                    </#if>
                                                 </li>
                                             </#if>
                                             <#if news.categories?? && (news.categories?size > 0)>
