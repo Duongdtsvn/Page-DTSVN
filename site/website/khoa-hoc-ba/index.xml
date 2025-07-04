@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page>
 	<content-type>/page/course-ba</content-type>
-	<display-template/>
+	<display-template>/templates/web/pages/CourseBA.ftl</display-template>
 	<no-template-required>true</no-template-required>
 	<merge-strategy>inherit-levels</merge-strategy>
 	<objectGroupId>4319</objectGroupId>
@@ -24,6 +24,6 @@
 	</item></footer_o>
 	<createdDate>2025-07-04T04:27:44.021Z</createdDate>
 	<createdDate_dt>2025-07-04T04:27:44.021Z</createdDate_dt>
-	<lastModifiedDate>2025-07-04T04:27:44.021Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-04T04:27:44.021Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-04T04:41:27.931Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-04T04:41:27.931Z</lastModifiedDate_dt>
 </page>
