@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/static-assets/css/main.css?site=${siteContext.siteName}"/>
+    <link rel="stylesheet" href="/static-assets/css/main.css?site=${siteContext.siteName!''}"/>
     <@crafter.head />
   </head>
   <body>
@@ -36,9 +36,9 @@
                         <div class="col-md-4">
                             <select name="category" class="form-control">
                                 <option value="">Tất cả danh mục</option>
-                                <#if categories??>
+                                <#if categories?? && (categories?size > 0)>
                                     <#list categories as cat>
-                                        <option value="${cat}" <#if currentCategory == cat>selected</#if>>${cat}</option>
+                                        <option value="${cat!''}" <#if (currentCategory!'') == (cat!'')>selected</#if>>${cat!''}</option>
                                     </#list>
                                 </#if>
                             </select>
@@ -53,52 +53,59 @@
             <!-- Navigation danh mục -->
             <nav class="nav-cat">
                 <ul>
-                    <li><a href="?page=1" class="<#if !currentCategory?? || currentCategory == "">active</#if>">Tất cả tin bài</a></li>
-                    <#if categories??>
+                    <li>
+                        <a href="?page=1" class="<#if !(currentCategory??) || (currentCategory!'') == ''>active</#if>">Tất cả tin bài</a>
+                    </li>
+                    <#if categories?? && (categories?size > 0)>
                         <#list categories as cat>
-                            <li><a href="?category=${cat}&page=1" class="<#if currentCategory == cat>active</#if>">${cat}</a></li>
+                            <li>
+                                <a href="?category=${cat!''}&page=1" class="<#if (currentCategory!'') == (cat!'')>active</#if>">${cat!''}</a>
+                            </li>
                         </#list>
                     </#if>
                 </ul>
             </nav>
 
             <!-- Hiển thị kết quả tìm kiếm -->
-            <#if searchTerm?? && searchTerm != "">
+            <#if searchTerm?? && (searchTerm!'') != "">
                 <div class="search-results mb-3">
-                    <p>Tìm thấy <strong>${totalItems}</strong> kết quả cho "<strong>${searchTerm}</strong>"</p>
+                    <p>Tìm thấy <strong>${totalItems!0}</strong> kết quả cho "<strong>${searchTerm!''}</strong>"</p>
                 </div>
             </#if>
 
             <div class="row">
-                <#if newsItems?? && newsItems?size gt 0>
+                <#if newsItems?? && (newsItems?size > 0)>
                     <#list newsItems as news>
                         <div class="col-md-6 col-lg-4">
                             <div class="blog">
                                 <div class="blog__inner">
-                                    <a class="blog__img" href="${news.url}">
-                                        <@crafter.img
-                                            $model=news
-                                            $field="img_main_s"
-                                            src=(news.img_main_s?? && news.img_main_s?length > 0)?then(news.img_main_s, "/static-assets/images/news/default-news.jpg")
-                                            alt=news.title!"" />
+                                    <a class="blog__img" href="${news.url!''}" style="background-image: url('${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/default-news.jpg')}');">
+                                        <img src="${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/default-news.jpg')}" alt="${news.title!''}">
                                     </a>
                                     <div class="blog__body">
                                         <h3 class="blog__title">
-                                            <a href="${news.url}">${news.title}</a>
+                                            <a href="${news.url!''}">${news.title!''}</a>
                                         </h3>
-                                        <#if news.highlight??>
+                                        <#if news.highlight?? && (news.highlight!'') != ''>
                                             <div class="blog__excerpt">
-                                                <p>${news.highlight}</p>
+                                                <p>${news.highlight!''}</p>
                                             </div>
                                         </#if>
                                         <ul class="postMin__meta">
                                             <#if news.created_date??>
-                                                <li>${news.created_date?string("dd/MM/yyyy HH:mm")}</li>
+                                                <li>
+                                                    <#-- Kiểm tra kiểu dữ liệu của created_date -->
+                                                    <#if news.created_date?is_date>
+                                                        ${news.created_date?string("dd/MM/yyyy HH:mm")}
+                                                    <#else>
+                                                        ${news.created_date!''}
+                                                    </#if>
+                                                </li>
                                             </#if>
-                                            <#if news.categories?? && news.categories?size gt 0>
+                                            <#if news.categories?? && (news.categories?size > 0)>
                                                 <li>
                                                     <#list news.categories as category>
-                                                        <span class="badge badge-secondary">${category}</span>
+                                                        <span class="badge badge-secondary">${category!''}</span>
                                                     </#list>
                                                 </li>
                                             </#if>
@@ -119,50 +126,50 @@
             </div>
 
             <!-- Phân trang -->
-            <#if totalPages?? && totalPages gt 1>
+            <#if totalPages?? && (totalPages > 1)>
                 <div class="pagination">
                     <nav class="navigation pagination" aria-label="Phân trang bài viết">
                         <h2 class="screen-reader-text">Phân trang bài viết</h2>
                         <div class="nav-links">
                             <#-- Nút Previous -->
-                            <#if hasPrevPage>
-                                <a class="prev page-numbers" href="?page=${currentPage - 1}<#if searchTerm?? && searchTerm != "">&q=${searchTerm}</#if><#if currentCategory?? && currentCategory != "">&category=${currentCategory}</#if>">← Previous</a>
+                            <#if hasPrevPage?? && hasPrevPage>
+                                <a class="prev page-numbers" href="?page=${(currentPage!1) - 1}<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">← Previous</a>
                             </#if>
 
                             <#-- Hiển thị các trang -->
-                            <#if pageNumbers??>
+                            <#if pageNumbers?? && (pageNumbers?size > 0)>
                                 <#-- Hiển thị dấu ... nếu có trang trước startPage -->
-                                <#if pageNumbers?first gt 1>
-                                    <#if pageNumbers?first gt 2>
-                                        <a class="page-numbers" href="?page=1<#if searchTerm?? && searchTerm != "">&q=${searchTerm}</#if><#if currentCategory?? && currentCategory != "">&category=${currentCategory}</#if>">1</a>
+                                <#if pageNumbers?first?number gt 1>
+                                    <#if pageNumbers?first?number gt 2>
+                                        <a class="page-numbers" href="?page=1<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">1</a>
                                         <span class="page-numbers dots">…</span>
                                     <#else>
-                                        <a class="page-numbers" href="?page=1<#if searchTerm?? && searchTerm != "">&q=${searchTerm}</#if><#if currentCategory?? && currentCategory != "">&category=${currentCategory}</#if>">1</a>
+                                        <a class="page-numbers" href="?page=1<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">1</a>
                                     </#if>
                                 </#if>
 
                                 <#list pageNumbers as pageNum>
-                                    <#if pageNum == currentPage>
+                                    <#if (pageNum?number) == (currentPage!1)?number>
                                         <span aria-current="page" class="page-numbers current">${pageNum}</span>
                                     <#else>
-                                        <a class="page-numbers" href="?page=${pageNum}<#if searchTerm?? && searchTerm != "">&q=${searchTerm}</#if><#if currentCategory?? && currentCategory != "">&category=${currentCategory}</#if>">${pageNum}</a>
+                                        <a class="page-numbers" href="?page=${pageNum}<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">${pageNum}</a>
                                     </#if>
                                 </#list>
 
                                 <#-- Hiển thị dấu ... nếu có trang sau endPage -->
-                                <#if pageNumbers?last lt totalPages>
-                                    <#if pageNumbers?last lt totalPages - 1>
+                                <#if pageNumbers?last?number lt (totalPages!1)?number>
+                                    <#if pageNumbers?last?number lt (totalPages!1)?number - 1>
                                         <span class="page-numbers dots">…</span>
-                                        <a class="page-numbers" href="?page=${totalPages}<#if searchTerm?? && searchTerm != "">&q=${searchTerm}</#if><#if currentCategory?? && currentCategory != "">&category=${currentCategory}</#if>">${totalPages}</a>
+                                        <a class="page-numbers" href="?page=${totalPages!1}<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">${totalPages!1}</a>
                                     <#else>
-                                        <a class="page-numbers" href="?page=${totalPages}<#if searchTerm?? && searchTerm != "">&q=${searchTerm}</#if><#if currentCategory?? && currentCategory != "">&category=${currentCategory}</#if>">${totalPages}</a>
+                                        <a class="page-numbers" href="?page=${totalPages!1}<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">${totalPages!1}</a>
                                     </#if>
                                 </#if>
                             </#if>
 
                             <#-- Nút Next -->
-                            <#if hasNextPage>
-                                <a class="next page-numbers" href="?page=${currentPage + 1}<#if searchTerm?? && searchTerm != "">&q=${searchTerm}</#if><#if currentCategory?? && currentCategory != "">&category=${currentCategory}</#if>">Next →</a>
+                            <#if hasNextPage?? && hasNextPage>
+                                <a class="next page-numbers" href="?page=${(currentPage!1) + 1}<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">Next →</a>
                             </#if>
                         </div>
                     </nav>
@@ -170,9 +177,11 @@
             </#if>
 
             <!-- Thông tin phân trang -->
-            <#if totalItems?? && totalItems gt 0>
+            <#if totalItems?? && (totalItems > 0)>
                 <div class="pagination-info text-center mt-3">
-                    <p>Hiển thị ${((currentPage - 1) * itemsPerPage) + 1} - ${(currentPage * itemsPerPage < totalItems)?then(currentPage * itemsPerPage, totalItems)} trong tổng số ${totalItems} tin tức</p>
+                    <#assign fromItem = (((currentPage!1) - 1) * (itemsPerPage!12)) + 1 />
+                    <#assign toItem = ((currentPage!1) * (itemsPerPage!12) < (totalItems!0))?then((currentPage!1) * (itemsPerPage!12), (totalItems!0)) />
+                    <p>Hiển thị ${fromItem} - ${toItem} trong tổng số ${totalItems!0} tin tức</p>
                 </div>
             </#if>
         </div>
