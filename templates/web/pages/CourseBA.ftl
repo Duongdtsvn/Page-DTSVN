@@ -16,6 +16,7 @@
 <body>
   <@crafter.body_top />
   <@crafter.renderComponentCollection $field="header_o" />
+  <@crafter.renderComponentCollection $field="who_studies_o" />
   <@crafter.renderComponentCollection $field="footer_o" />
   <@crafter.body_bottom />
 </body>
