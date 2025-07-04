@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/course-ba</content-type>
+	<display-template/>
+	<no-template-required>true</no-template-required>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>4319</objectGroupId>
+	<objectId>4319d8ed-864c-8178-f7da-ba8e3c376045</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>khoa-hoc-ba</folder-name>
+	<internal-name>Khóa học BA</internal-name>
+	<navLabel>Khóa học BA</navLabel>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
+	<createdDate>2025-07-04T04:27:44.021Z</createdDate>
+	<createdDate_dt>2025-07-04T04:27:44.021Z</createdDate_dt>
+	<lastModifiedDate>2025-07-04T04:27:44.021Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-04T04:27:44.021Z</lastModifiedDate_dt>
+</page>
