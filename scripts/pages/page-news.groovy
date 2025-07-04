@@ -61,8 +61,12 @@ def categories = []
 allNews.each { news ->
     if (news.categories) {
         news.categories.each { cat ->
-            if (!categories.contains(cat)) {
-                categories << cat
+            def catKey = cat
+            if (cat instanceof Map && cat.containsKey('key')) {
+                catKey = cat.key
+            }
+            if (!categories.contains(catKey)) {
+                categories << catKey
             }
         }
     }
