@@ -94,7 +94,7 @@
                                         <ul class="postMin__meta">
                                             <#if news.created_date??>
                                                 <li>
-                                                    ${news.created_date?datetime?string("dd/MM/yyyy HH:mm")}
+                                                    ${news.created_date?datetime?string("dd/MM/yyyy HH:mm", "Asia/Bangkok")}
                                                 </li>
                                             </#if>
                                             <#if news.categories?? && (news.categories?size > 0)>
