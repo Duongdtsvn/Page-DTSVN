@@ -27,27 +27,30 @@ import org.apache.commons.lang3.StringUtils
 import org.craftercms.engine.service.UrlTransformationService
 import org.craftercms.search.opensearch.client.OpenSearchClientWrapper
 
-class SearchHelper {
+class Searchnews {
 
-  static final String ARTICLE_CONTENT_TYPE = "/page/article"
-  static final List<String> ARTICLE_SEARCH_FIELDS = [
-    'subject_t^1.5',
-    'sections_o.item.section_html^1.0'
+  static final String ITEM_NEW_CONTENT_TYPE = "/page/item-new"
+  static final String LIST_BLOG_PATH = "/site/website/list-blog"
+  static final List<String> ITEM_NEW_SEARCH_FIELDS = [
+    'title_vi_s^2.0',
+    'content_vi_html^1.0',
+    'title_en_s^1.5',
+    'content_en_html^1.0'
   ]
-  static final String[] HIGHLIGHT_FIELDS = ["subject_t", "sections_o.item.section_html"]
+  static final String[] HIGHLIGHT_FIELDS = ["title_vi_s", "content_vi_html", "title_en_s", "content_en_html"]
   static final int DEFAULT_START = 0
-  static final int DEFAULT_ROWS = 10
+  static final int DEFAULT_ROWS = 50
   static final String MULTIPLE_VALUES_SEARCH_ANALYZER = Analyzer.Kind.Whitespace.jsonValue()
 
   OpenSearchClientWrapper searchClient
   UrlTransformationService urlTransformationService
 
-  SearchHelper(OpenSearchClientWrapper searchClient, UrlTransformationService urlTransformationService) {
+  Searchnews(OpenSearchClientWrapper searchClient, UrlTransformationService urlTransformationService) {
     this.searchClient = searchClient
     this.urlTransformationService = urlTransformationService
   }
 
-  def search(userTerm, categories, start = DEFAULT_START, rows = DEFAULT_ROWS) {
+  def searchNews(userTerm, categories, start = DEFAULT_START, rows = DEFAULT_ROWS) {
     def query = new BoolQuery.Builder()
 
     // Filter by content-type
@@ -55,13 +58,22 @@ class SearchHelper {
       .match(m -> m
         .field("content-type")
         .query(v -> v
-          .stringValue(ARTICLE_CONTENT_TYPE)
+          .stringValue(ITEM_NEW_CONTENT_TYPE)
         )
       )
     )
+
+    // Filter by path to only get items from /list-blog directory
+    query.filter(q -> q
+      .wildcard(w -> w
+        .field("localId")
+        .value("*" + LIST_BLOG_PATH + "*")
+      )
+    )
+
     if (categories) {
       // Filter by categories
-      query.filter(getFieldQueryWithMultipleValues("categories_o.item.key", categories))
+      query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
     }
 
     if (userTerm) {
@@ -72,7 +84,7 @@ class SearchHelper {
         query.must(q -> q
           .multiMatch(m -> m
             .query(matcher.group(2))
-            .fields(ARTICLE_SEARCH_FIELDS)
+            .fields(ITEM_NEW_SEARCH_FIELDS)
             .fuzzyTranspositions(false)
             .autoGenerateSynonymsPhraseQuery(false)
           )
@@ -92,7 +104,7 @@ class SearchHelper {
           .should(q -> q
             .multiMatch(m -> m
               .query(userTerm)
-              .fields(ARTICLE_SEARCH_FIELDS)
+              .fields(ITEM_NEW_SEARCH_FIELDS)
               .type(TextQueryType.PhrasePrefix)
               .boost(1.5f)
             )
@@ -101,7 +113,7 @@ class SearchHelper {
           .should(q -> q
             .multiMatch(m -> m
               .query(userTerm)
-              .fields(ARTICLE_SEARCH_FIELDS)
+              .fields(ITEM_NEW_SEARCH_FIELDS)
             )
           )
       }
@@ -115,60 +127,9 @@ class SearchHelper {
       .from(start)
       .size(rows)
       .highlight(highlighter.build())
-    )
-
-    def result = searchClient.search(request, Map)
-
-    if (result) {
-      return processUserSearchResults(result)
-    } else {
-      return []
-    }
-  }
-
-  def searchArticles(featured, categories, segments, start = DEFAULT_START, rows = DEFAULT_ROWS, additionalCriteria = null) {
-    SearchRequest request = SearchRequest.of(r -> r
-      .query(q -> q
-        .bool(b -> {
-          b.filter(f -> f
-            .match(m -> m
-              .field("content-type")
-              .query(v -> v
-                .stringValue(ARTICLE_CONTENT_TYPE)
-              )
-            )
-          )
-          if (featured) {
-            b.filter(f -> f
-              .term(t -> t
-                .field("featured_b")
-                .value(v -> v
-                  .booleanValue(true)
-                )
-              )
-            )
-          }
-          if (categories) {
-            b.filter(getFieldQueryWithMultipleValues("categories_o.item.key", categories))
-          }
-          if (segments) {
-            b.filter(getFieldQueryWithMultipleValues("segments_o.item.key", segments))
-          }
-          if (additionalCriteria) {
-            b.filter(f -> f
-              .queryString(s -> s
-                .query(additionalCriteria)
-              )
-            )
-          }
-          return b
-        })
-      )
-      .from(start)
-      .size(rows)
       .sort(s -> s
         .field(f -> f
-          .field("date_dt")
+          .field("createdDate_dt")
           .order(SortOrder.Desc)
         )
       )
@@ -177,68 +138,195 @@ class SearchHelper {
     def result = searchClient.search(request, Map)
 
     if (result) {
-      return processArticleListingResults(result)
+      return processNewsSearchResults(result)
     } else {
       return []
     }
   }
 
-  private def processUserSearchResults(result) {
-    def articles = []
+  def getAllNews(start = DEFAULT_START, rows = DEFAULT_ROWS) {
+    def query = new BoolQuery.Builder()
+
+    // Filter by content-type
+    query.filter(q -> q
+      .match(m -> m
+        .field("content-type")
+        .query(v -> v
+          .stringValue(ITEM_NEW_CONTENT_TYPE)
+        )
+      )
+    )
+
+    // Filter by path to only get items from /list-blog directory
+    query.filter(q -> q
+      .wildcard(w -> w
+        .field("localId")
+        .value("*" + LIST_BLOG_PATH + "*")
+      )
+    )
+
+    SearchRequest request = SearchRequest.of(r -> r
+      .query(query.build()._toQuery())
+      .from(start)
+      .size(rows)
+      .sort(s -> s
+        .field(f -> f
+          .field("createdDate_dt")
+          .order(SortOrder.Desc)
+        )
+      )
+    )
+
+    def result = searchClient.search(request, Map)
+
+    if (result) {
+      return processNewsListingResults(result)
+    } else {
+      return []
+    }
+  }
+
+  def getNewsByCategory(categories, start = DEFAULT_START, rows = DEFAULT_ROWS) {
+    def query = new BoolQuery.Builder()
+
+    // Filter by content-type
+    query.filter(q -> q
+      .match(m -> m
+        .field("content-type")
+        .query(v -> v
+          .stringValue(ITEM_NEW_CONTENT_TYPE)
+        )
+      )
+    )
+
+    // Filter by path to only get items from /list-blog directory
+    query.filter(q -> q
+      .wildcard(w -> w
+        .field("localId")
+        .value("*" + LIST_BLOG_PATH + "*")
+      )
+    )
+
+    if (categories) {
+      // Filter by categories
+      query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
+    }
+
+    SearchRequest request = SearchRequest.of(r -> r
+      .query(query.build()._toQuery())
+      .from(start)
+      .size(rows)
+      .sort(s -> s
+        .field(f -> f
+          .field("createdDate_dt")
+          .order(SortOrder.Desc)
+        )
+      )
+    )
+
+    def result = searchClient.search(request, Map)
+
+    if (result) {
+      return processNewsListingResults(result)
+    } else {
+      return []
+    }
+  }
+
+  private def processNewsSearchResults(result) {
+    def news = []
     def hits = result.hits().hits()
 
     if (hits) {
       hits.each {hit ->
         def doc = hit.source()
-        def article = [:]
-            article.id = doc.objectId
-            article.objectId = doc.objectId
-            article.path = doc.localId
-            article.title = doc.title_t
-            article.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
+        def newsItem = [:]
+        newsItem.id = doc.objectId
+        newsItem.objectId = doc.objectId
+        newsItem.path = doc.localId
+        newsItem.title = doc.title_vi_s ?: doc.title_en_s
+        newsItem.title_vi = doc.title_vi_s
+        newsItem.title_en = doc.title_en_s
+        newsItem.content_vi = doc.content_vi_html
+        newsItem.content_en = doc.content_en_html
+        newsItem.internal_name = doc.internal_name
+        newsItem.nav_label = doc.navLabel
+        newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
+        newsItem.created_date = doc.createdDate_dt
+        newsItem.last_modified_date = doc.lastModifiedDate_dt
 
-        if (hit.highlight()) {
-          def articleHighlights = hit.highlight().values()
-          if (articleHighlights) {
-              def highlightValues = []
-
-              articleHighlights.each { value ->
-                  highlightValues.addAll(value)
-              }
-
-              article.highlight = StringUtils.join(highlightValues, "... ")
-              article.highlight = StringUtils.strip(article.highlight)
+        // Extract categories
+        if (doc.categorys_o && doc.categorys_o.item) {
+          newsItem.categories = []
+          if (doc.categorys_o.item instanceof List) {
+            doc.categorys_o.item.each { category ->
+              newsItem.categories << category.key
+            }
+          } else {
+            newsItem.categories << doc.categorys_o.item.key
           }
         }
 
-        articles << article
+        if (hit.highlight()) {
+          def newsHighlights = hit.highlight().values()
+          if (newsHighlights) {
+            def highlightValues = []
+
+            newsHighlights.each { value ->
+              highlightValues.addAll(value)
+            }
+
+            newsItem.highlight = StringUtils.join(highlightValues, "... ")
+            newsItem.highlight = StringUtils.strip(newsItem.highlight)
+          }
+        }
+
+        news << newsItem
       }
     }
 
-    return articles
+    return news
   }
 
-  private def processArticleListingResults(result) {
-    def articles = []
+  private def processNewsListingResults(result) {
+    def news = []
     def documents = result.hits().hits()*.source()
 
     if (documents) {
       documents.each {doc ->
-        def article = [:]
-        article.id = doc.objectId
-        article.objectId = doc.objectId
-        article.path = doc.localId
-        article.storeUrl = doc.localId
-        article.title = doc.subject_t
-        article.summary = doc.summary_t
-        article.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
-        article.image = doc.image_s
+        def newsItem = [:]
+        newsItem.id = doc.objectId
+        newsItem.objectId = doc.objectId
+        newsItem.path = doc.localId
+        newsItem.storeUrl = doc.localId
+        newsItem.title = doc.title_vi_s ?: doc.title_en_s
+        newsItem.title_vi = doc.title_vi_s
+        newsItem.title_en = doc.title_en_s
+        newsItem.content_vi = doc.content_vi_html
+        newsItem.content_en = doc.content_en_html
+        newsItem.internal_name = doc.internal_name
+        newsItem.nav_label = doc.navLabel
+        newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
+        newsItem.created_date = doc.createdDate_dt
+        newsItem.last_modified_date = doc.lastModifiedDate_dt
 
-        articles << article
+        // Extract categories
+        if (doc.categorys_o && doc.categorys_o.item) {
+          newsItem.categories = []
+          if (doc.categorys_o.item instanceof List) {
+            doc.categorys_o.item.each { category ->
+              newsItem.categories << category.key
+            }
+          } else {
+            newsItem.categories << doc.categorys_o.item.key
+          }
+        }
+
+        news << newsItem
       }
     }
 
-    return articles
+    return news
   }
 
   private Query getFieldQueryWithMultipleValues(field, values) {
