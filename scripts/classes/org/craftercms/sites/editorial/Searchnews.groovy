@@ -26,7 +26,8 @@ import org.opensearch.client.opensearch.core.search.Highlight
 import org.apache.commons.lang3.StringUtils
 import org.craftercms.engine.service.UrlTransformationService
 import org.craftercms.search.opensearch.client.OpenSearchClientWrapper
-import java.time.*
+import java.time.ZonedDateTime
+import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
 class Searchnews {
@@ -254,18 +255,8 @@ class Searchnews {
         newsItem.internal_name = doc.internal_name
         newsItem.nav_label = doc.navLabel
         newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
-        if (doc.createdDate_dt) {
-            def utcDate = doc.createdDate_dt
-            if (!(utcDate instanceof ZonedDateTime)) {
-                utcDate = ZonedDateTime.ofInstant(utcDate.toInstant(), ZoneId.of("UTC"))
-            }
-            def hanoiDate = utcDate.withZoneSameInstant(ZoneId.of("Asia/Bangkok"))
-            def formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
-            newsItem.created_date = hanoiDate.format(formatter)
-        } else {
-            newsItem.created_date = ""
-        }
-        newsItem.last_modified_date = doc.lastModifiedDate_dt
+        newsItem.created_date = convertToHanoiTime(doc.createdDate_dt)
+        newsItem.last_modified_date = convertToHanoiTime(doc.lastModifiedDate_dt)
         newsItem.img_main_s = doc.img_main_s
 
         // Extract categories
@@ -320,18 +311,8 @@ class Searchnews {
         newsItem.internal_name = doc.internal_name
         newsItem.nav_label = doc.navLabel
         newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
-        if (doc.createdDate_dt) {
-            def utcDate = doc.createdDate_dt
-            if (!(utcDate instanceof ZonedDateTime)) {
-                utcDate = ZonedDateTime.ofInstant(utcDate.toInstant(), ZoneId.of("UTC"))
-            }
-            def hanoiDate = utcDate.withZoneSameInstant(ZoneId.of("Asia/Bangkok"))
-            def formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
-            newsItem.created_date = hanoiDate.format(formatter)
-        } else {
-            newsItem.created_date = ""
-        }
-        newsItem.last_modified_date = doc.lastModifiedDate_dt
+        newsItem.created_date = convertToHanoiTime(doc.createdDate_dt)
+        newsItem.last_modified_date = convertToHanoiTime(doc.lastModifiedDate_dt)
         newsItem.img_main_s = doc.img_main_s
 
         // Extract categories
@@ -373,6 +354,16 @@ class Searchnews {
         .analyzer(MULTIPLE_VALUES_SEARCH_ANALYZER)
       )
     );
+  }
+
+  private def convertToHanoiTime(date) {
+    if (!date) return null
+    try {
+      def utc = (date instanceof String) ? ZonedDateTime.parse(date) : date
+      return utc.withZoneSameInstant(ZoneId.of("Asia/Bangkok"))
+    } catch (Exception e) {
+      return date
+    }
   }
 
 }
