@@ -7,9 +7,9 @@
 	<objectGroupId>12ac</objectGroupId>
 	<objectId>12ac4f17-f6ba-95e7-6e68-224380891379</objectId>
 	<items item-list="true">	<item>	<key>Tin kinh doanh</key>
-	<value>Tin kinh doanh</value>
+	<value>Business-News</value>
 	</item>	<item>	<key>Tin công nghệ</key>
-	<value>Tin công nghệ</value>
+	<value>Technology-News</value>
 	</item>	<item>	<key>DTSVN Tuyển dụng</key>
 	<value>DTSVN Tuyển dụng</value>
 	</item>	<item>	<key>Business Analytics</key>
@@ -22,6 +22,6 @@
 	<folder-name/>
 	<createdDate>2025-07-04T03:44:06.223Z</createdDate>
 	<createdDate_dt>2025-07-04T03:44:06.223Z</createdDate_dt>
-	<lastModifiedDate>2025-07-04T03:44:06.223Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-04T03:44:06.223Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-04T08:22:21.624Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-04T08:22:21.624Z</lastModifiedDate_dt>
 </component>
