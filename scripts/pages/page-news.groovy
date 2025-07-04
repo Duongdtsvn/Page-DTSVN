@@ -6,38 +6,40 @@ def searchNews = new Searchnews(searchClient, urlTransformationService)
 
 // Lấy tham số từ URL
 def page = params.page ? params.page.toInteger() : 1
-def searchTerm = params.q ?: ""
-def category = params.category ?: ""
+// Lấy tab đang chọn qua param tab (là key của item_s_s)
+def selectedTab = params.tab ?: null
 def itemsPerPage = 12
 
 // Tính toán offset cho phân trang
 def start = (page - 1) * itemsPerPage
 
+def tabs = []
+if (contentModel.list_category_o?? && contentModel.list_category_o.item) {
+    def items = contentModel.list_category_o.item
+    if (items instanceof List) {
+        tabs = items
+    } else {
+        tabs = [items]
+    }
+}
+
+def currentTab = null
+if (tabs && tabs.size() > 0) {
+    if (selectedTab) {
+        currentTab = tabs.find { it.item_s_s == selectedTab }
+    }
+    if (!currentTab) {
+        currentTab = tabs[0]
+        selectedTab = currentTab.item_s_s
+    }
+}
+
 // Lấy dữ liệu tin tức
 def newsItems = []
 def totalItems = 0
-
-if (searchTerm) {
-    // Tìm kiếm theo từ khóa
-    def categories = category ? [category] : null
-    newsItems = searchNews.searchNews(searchTerm, categories, start, itemsPerPage)
-    
-    // Để lấy tổng số items, chúng ta cần thực hiện một query khác
-    def allResults = searchNews.searchNews(searchTerm, categories, 0, 1000) // Lấy tất cả để đếm
-    totalItems = allResults.size()
-} else if (category) {
-    // Lọc theo danh mục
-    newsItems = searchNews.getNewsByCategory([category], start, itemsPerPage)
-    
-    // Lấy tổng số items theo danh mục
-    def allResults = searchNews.getNewsByCategory([category], 0, 1000)
-    totalItems = allResults.size()
-} else {
-    // Lấy tất cả tin tức
-    newsItems = searchNews.getAllNews(start, itemsPerPage)
-    
-    // Lấy tổng số items
-    def allResults = searchNews.getAllNews(0, 1000)
+if (currentTab) {
+    newsItems = searchNews.getNewsByCategoryKey(currentTab.item_s_s, start, itemsPerPage)
+    def allResults = searchNews.getNewsByCategoryKey(currentTab.item_s_s, 0, 1000)
     totalItems = allResults.size()
 }
 
@@ -61,18 +63,17 @@ def categories = []
 allNews.each { news ->
     if (news.categories) {
         news.categories.each { cat ->
-            def catKey = cat
-            if (cat instanceof Map && cat.containsKey('key')) {
-                catKey = cat.key
-            }
-            if (!categories.contains(catKey)) {
-                categories << catKey
+            if (!categories.contains(cat)) {
+                categories << cat
             }
         }
     }
 }
 
 // Đưa dữ liệu vào template model
+templateModel.tabs = tabs
+templateModel.currentTab = currentTab
+templateModel.selectedTab = selectedTab
 templateModel.newsItems = newsItems
 templateModel.totalItems = totalItems
 templateModel.currentPage = page
@@ -80,7 +81,7 @@ templateModel.totalPages = totalPages
 templateModel.hasNextPage = hasNextPage
 templateModel.hasPrevPage = hasPrevPage
 templateModel.pageNumbers = pageNumbers
-templateModel.searchTerm = searchTerm
-templateModel.currentCategory = category
+templateModel.searchTerm = ""
+templateModel.currentCategory = ""
 templateModel.categories = categories
 templateModel.itemsPerPage = itemsPerPage
