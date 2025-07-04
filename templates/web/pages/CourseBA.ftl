@@ -4,25 +4,25 @@
 <html lang="en" class="demo">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DTSVN</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="/static-assets/css/header.css">
-  <link rel="stylesheet" href="/static-assets/css/main.css">
-  <@crafter.head />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTSVN</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/static-assets/css/header.css">
+    <link rel="stylesheet" href="/static-assets/css/main.css">
+    <@crafter.head />
 </head>
 
 <body>
-  <@crafter.body_top />
-  <div class="page-wrapper">
-  <main class="page-content">
-  <@crafter.renderComponentCollection $field="header_o" />
-  <@crafter.renderComponentCollection $field="who_studies_o" />
-  <@crafter.renderComponentCollection $field="footer_o" />
-  </main>
-  </div>
-  <@crafter.body_bottom />
+    <@crafter.body_top />
+
+    <main class="page-content">
+        <@crafter.renderComponentCollection $field="header_o" />
+        <@crafter.renderComponentCollection $field="who_studies_o" />
+        <@crafter.renderComponentCollection $field="footer_o" />
+    </main>
+
+    <@crafter.body_bottom />
 </body>
 
 </html>
