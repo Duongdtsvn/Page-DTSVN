@@ -111,7 +111,7 @@
 					<type>image-picker</type>
 					<id>icon_s</id>
 					<iceId></iceId>
-					<title>icon </title>
+					<title>icon</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -207,7 +207,7 @@
 					<type>input</type>
 					<id>title_s</id>
 					<iceId></iceId>
-					<title>tiêu đề </title>
+					<title>tiêu đề</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
