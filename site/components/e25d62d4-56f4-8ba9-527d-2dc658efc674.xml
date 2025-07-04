@@ -9,13 +9,13 @@
 	<internal-name>Khóa học này dành cho ai</internal-name>
 	<file-name>e25d62d4-56f4-8ba9-527d-2dc658efc674.xml</file-name>
 	<folder-name/>
-	<who_studies_o item-list="true">	<item>	<number_s/>
-	<title_s/>
-	<subtitle_s/>
-	<icon_s/>
+	<who_studies_o item-list="true">	<item>	<number_s>01</number_s>
+	<title_s>Sinh Viên &amp; Fresher BA</title_s>
+	<subtitle_s>Sinh viên năm 3, năm 4 hoặc mới tốt nghiệp CĐ/ĐH chuyên ngành Tài chính - Ngân hàng; hoặc có đã có kiến thức nền tảng về nghiệp vụ của Ngân hàng đang muốn tìm hiểu cơ hội nghề nghiệp trong Ngành.</subtitle_s>
+	<icon_s>/static-assets/images/1-gear.png</icon_s>
 	</item></who_studies_o>
 	<createdDate>2025-07-04T04:46:06.021Z</createdDate>
 	<createdDate_dt>2025-07-04T04:46:06.021Z</createdDate_dt>
-	<lastModifiedDate>2025-07-04T04:46:06.021Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-04T04:46:06.021Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-04T04:47:13.177Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-04T04:47:13.177Z</lastModifiedDate_dt>
 </component>
