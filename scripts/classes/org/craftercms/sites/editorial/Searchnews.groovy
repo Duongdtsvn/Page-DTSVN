@@ -255,8 +255,8 @@ class Searchnews {
         newsItem.internal_name = doc.internal_name
         newsItem.nav_label = doc.navLabel
         newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
-        newsItem.created_date = convertToHanoiTime(doc.createdDate_dt)
-        newsItem.last_modified_date = convertToHanoiTime(doc.lastModifiedDate_dt)
+        newsItem.created_date = convertToHanoiTimeString(doc.createdDate_dt)
+        newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)
         newsItem.img_main_s = doc.img_main_s
 
         // Extract categories
@@ -311,8 +311,8 @@ class Searchnews {
         newsItem.internal_name = doc.internal_name
         newsItem.nav_label = doc.navLabel
         newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
-        newsItem.created_date = convertToHanoiTime(doc.createdDate_dt)
-        newsItem.last_modified_date = convertToHanoiTime(doc.lastModifiedDate_dt)
+        newsItem.created_date = convertToHanoiTimeString(doc.createdDate_dt)
+        newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)
         newsItem.img_main_s = doc.img_main_s
 
         // Extract categories
@@ -356,13 +356,14 @@ class Searchnews {
     );
   }
 
-  private def convertToHanoiTime(date) {
-    if (!date) return null
+  private def convertToHanoiTimeString(date) {
+    if (!date) return ""
     try {
       def utc = (date instanceof String) ? ZonedDateTime.parse(date) : date
-      return utc.withZoneSameInstant(ZoneId.of("Asia/Bangkok"))
+      def hanoi = utc.withZoneSameInstant(ZoneId.of("Asia/Bangkok"))
+      return hanoi.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))
     } catch (Exception e) {
-      return date
+      return ""
     }
   }
 
