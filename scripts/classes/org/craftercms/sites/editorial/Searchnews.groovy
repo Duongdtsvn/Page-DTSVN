@@ -27,6 +27,7 @@ import org.apache.commons.lang3.StringUtils
 import org.craftercms.engine.service.UrlTransformationService
 import org.craftercms.search.opensearch.client.OpenSearchClientWrapper
 import java.time.*
+import java.time.format.DateTimeFormatter
 
 class Searchnews {
 
@@ -259,9 +260,10 @@ class Searchnews {
                 utcDate = ZonedDateTime.ofInstant(utcDate.toInstant(), ZoneId.of("UTC"))
             }
             def hanoiDate = utcDate.withZoneSameInstant(ZoneId.of("Asia/Bangkok"))
-            newsItem.created_date = hanoiDate
+            def formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
+            newsItem.created_date = hanoiDate.format(formatter)
         } else {
-            newsItem.created_date = null
+            newsItem.created_date = ""
         }
         newsItem.last_modified_date = doc.lastModifiedDate_dt
         newsItem.img_main_s = doc.img_main_s
@@ -324,9 +326,10 @@ class Searchnews {
                 utcDate = ZonedDateTime.ofInstant(utcDate.toInstant(), ZoneId.of("UTC"))
             }
             def hanoiDate = utcDate.withZoneSameInstant(ZoneId.of("Asia/Bangkok"))
-            newsItem.created_date = hanoiDate
+            def formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
+            newsItem.created_date = hanoiDate.format(formatter)
         } else {
-            newsItem.created_date = null
+            newsItem.created_date = ""
         }
         newsItem.last_modified_date = doc.lastModifiedDate_dt
         newsItem.img_main_s = doc.img_main_s
