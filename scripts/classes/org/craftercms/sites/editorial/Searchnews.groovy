@@ -236,6 +236,58 @@ class Searchnews {
     }
   }
 
+  def getNewsByCategoryKey(categoryKey, start = DEFAULT_START, rows = DEFAULT_ROWS) {
+    def query = new BoolQuery.Builder()
+
+    // Filter by content-type
+    query.filter(q -> q
+      .match(m -> m
+        .field("content-type")
+        .query(v -> v
+          .stringValue(ITEM_NEW_CONTENT_TYPE)
+        )
+      )
+    )
+
+    // Filter by path to only get items from /list-blog directory
+    query.filter(q -> q
+      .wildcard(w -> w
+        .field("localId")
+        .value("*" + LIST_BLOG_PATH + "*")
+      )
+    )
+
+    // Filter by category key (item_s_s)
+    if (categoryKey) {
+      query.filter(q -> q
+        .match(m -> m
+          .field("categorys_o.item.key")
+          .query(v -> v.stringValue(categoryKey))
+        )
+      )
+    }
+
+    SearchRequest request = SearchRequest.of(r -> r
+      .query(query.build()._toQuery())
+      .from(start)
+      .size(rows)
+      .sort(s -> s
+        .field(f -> f
+          .field("createdDate_dt")
+          .order(SortOrder.Desc)
+        )
+      )
+    )
+
+    def result = searchClient.search(request, Map)
+
+    if (result) {
+      return processNewsListingResults(result)
+    } else {
+      return []
+    }
+  }
+
   private def processNewsSearchResults(result) {
     def news = []
     def hits = result.hits().hits()
