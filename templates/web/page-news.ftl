@@ -72,11 +72,12 @@
             <div class="row">
                 <#if newsItems?? && newsItems?size gt 0>
                     <#list newsItems as news>
+                        <#assign imgSrc = (news.img_main_s?? && news.img_main_s?length > 0) ? news.img_main_s : '/static-assets/images/news/default-news.jpg'>
                         <div class="col-md-6 col-lg-4">
                             <div class="blog">
                                 <div class="blog__inner">
-                                    <a class="blog__img" href="${news.url}" style="background-image: url(/static-assets/images/news/default-news.jpg);">
-                                        <img src="/static-assets/images/news/default-news.jpg" alt="${news.title}">
+                                    <a class="blog__img" href="${news.url}" style="background-image: url(${imgSrc});">
+                                        <img src="${imgSrc}" alt="${news.title}">
                                     </a>
                                     <div class="blog__body">
                                         <h3 class="blog__title">
