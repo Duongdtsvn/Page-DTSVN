@@ -254,6 +254,7 @@ class Searchnews {
         newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
         newsItem.created_date = doc.createdDate_dt
         newsItem.last_modified_date = doc.lastModifiedDate_dt
+        newsItem.img_main_s = doc.img_main_s
 
         // Extract categories
         if (doc.categorys_o && doc.categorys_o.item) {
@@ -309,6 +310,7 @@ class Searchnews {
         newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
         newsItem.created_date = doc.createdDate_dt
         newsItem.last_modified_date = doc.lastModifiedDate_dt
+        newsItem.img_main_s = doc.img_main_s
 
         // Extract categories
         if (doc.categorys_o && doc.categorys_o.item) {
