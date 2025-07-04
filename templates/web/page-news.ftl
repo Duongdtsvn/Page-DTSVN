@@ -53,13 +53,10 @@
             <!-- Navigation danh mục -->
             <nav class="nav-cat">
                 <ul>
-                    <li>
-                        <a href="?page=1" class="<#if !(currentCategory??) || (currentCategory!'') == ''>active</#if>">Tất cả tin bài</a>
-                    </li>
-                    <#if categories?? && (categories?size > 0)>
-                        <#list categories as cat>
+                    <#if tabs?? && (tabs?size > 0)>
+                        <#list tabs as tab>
                             <li>
-                                <a href="?category=${cat!''}&page=1" class="<#if (currentCategory!'') == (cat!'')>active</#if>">${cat!''}</a>
+                                <a href="?tab=${tab.item_s_s!''}&page=1" class="<#if (selectedTab!'') == (tab.item_s_s!'')>active</#if>">${tab.title_category_s!''}</a>
                             </li>
                         </#list>
                     </#if>
@@ -119,7 +116,7 @@
                     <div class="col-12">
                         <div class="text-center py-5">
                             <h3>Không tìm thấy tin tức nào</h3>
-                            <p>Vui lòng thử lại với từ khóa khác hoặc chọn danh mục khác.</p>
+                            <p>Vui lòng thử lại với tab khác.</p>
                         </div>
                     </div>
                 </#if>
@@ -131,45 +128,36 @@
                     <nav class="navigation pagination" aria-label="Phân trang bài viết">
                         <h2 class="screen-reader-text">Phân trang bài viết</h2>
                         <div class="nav-links">
-                            <#-- Nút Previous -->
                             <#if hasPrevPage?? && hasPrevPage>
-                                <a class="prev page-numbers" href="?page=${(currentPage!1) - 1}<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">← Previous</a>
+                                <a class="prev page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) - 1}">← Previous</a>
                             </#if>
-
-                            <#-- Hiển thị các trang -->
                             <#if pageNumbers?? && (pageNumbers?size > 0)>
-                                <#-- Hiển thị dấu ... nếu có trang trước startPage -->
                                 <#if pageNumbers?first?number gt 1>
                                     <#if pageNumbers?first?number gt 2>
-                                        <a class="page-numbers" href="?page=1<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">1</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1">1</a>
                                         <span class="page-numbers dots">…</span>
                                     <#else>
-                                        <a class="page-numbers" href="?page=1<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">1</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1">1</a>
                                     </#if>
                                 </#if>
-
                                 <#list pageNumbers as pageNum>
                                     <#if (pageNum?number) == (currentPage!1)?number>
                                         <span aria-current="page" class="page-numbers current">${pageNum}</span>
                                     <#else>
-                                        <a class="page-numbers" href="?page=${pageNum}<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">${pageNum}</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${pageNum}">${pageNum}</a>
                                     </#if>
                                 </#list>
-
-                                <#-- Hiển thị dấu ... nếu có trang sau endPage -->
                                 <#if pageNumbers?last?number lt (totalPages!1)?number>
                                     <#if pageNumbers?last?number lt (totalPages!1)?number - 1>
                                         <span class="page-numbers dots">…</span>
-                                        <a class="page-numbers" href="?page=${totalPages!1}<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">${totalPages!1}</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}">${totalPages!1}</a>
                                     <#else>
-                                        <a class="page-numbers" href="?page=${totalPages!1}<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">${totalPages!1}</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}">${totalPages!1}</a>
                                     </#if>
                                 </#if>
                             </#if>
-
-                            <#-- Nút Next -->
                             <#if hasNextPage?? && hasNextPage>
-                                <a class="next page-numbers" href="?page=${(currentPage!1) + 1}<#if searchTerm?? && (searchTerm!'') != "">&q=${searchTerm!''}</#if><#if currentCategory?? && (currentCategory!'') != "">&category=${currentCategory!''}</#if>">Next →</a>
+                                <a class="next page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) + 1}">Next →</a>
                             </#if>
                         </div>
                     </nav>
