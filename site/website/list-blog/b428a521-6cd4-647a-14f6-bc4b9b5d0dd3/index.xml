@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page>
-	<savedAsDraft>true</savedAsDraft>
 	<content-type>/page/item-new</content-type>
 	<display-template>/templates/web/item-news.ftl</display-template>
 	<no-template-required/>
@@ -11,7 +10,7 @@
 	<folder-name>b428a521-6cd4-647a-14f6-bc4b9b5d0dd3</folder-name>
 	<internal-name>Ngân hàng, doanh nghiệp tài chính cần chuẩn bị những gì để đáp ứng các “yêu cầu bắt buộc” từ NHNN?</internal-name>
 	<navLabel>Ngân hàng, doanh nghiệp tài chính cần chuẩn bị những gì để đáp ứng các “yêu cầu bắt buộc” từ NHNN?</navLabel>
-	<title_vi_s/>
+	<title_vi_s>Ngân hàng, doanh nghiệp tài chính cần chuẩn bị những gì để đáp ứng các “yêu cầu bắt buộc” từ NHNN?</title_vi_s>
 	<title_en_s/>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
