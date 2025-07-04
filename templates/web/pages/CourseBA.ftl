@@ -20,6 +20,7 @@
         <@crafter.renderComponentCollection $field="header_o" />
         <@crafter.renderComponentCollection $field="banner_o" />
         <@crafter.renderComponentCollection $field="who_studies_o" />
+        <@crafter.renderComponentCollection $field="target_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
 <script src="/static-assets/js/function.css"></script>
