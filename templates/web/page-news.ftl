@@ -16,7 +16,7 @@
             <div class="sec-pageTitle__content">
                 <div class="container-custom">
                     <div class="row">
-                        <div class="col-md-8 col-lg-7 col-xl-6">
+                        <div class="col-md-8 col-lg-7 col-xl-6">  
                             <h1 class="sec-pageTitle__title fz-52"> Tin tức cập nhật</h1>
                         </div>
                     </div>
@@ -26,49 +26,19 @@
     </section>
     <section class="section sec-blogPage">
         <div class="container-custom">
-            <!-- Form tìm kiếm -->
-            <div class="search-form mb-4">
-                <form method="GET" action="">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input type="text" name="q" value="${searchTerm!''}" placeholder="Tìm kiếm tin tức..." class="form-control">
-                        </div>
-                        <div class="col-md-4">
-                            <select name="category" class="form-control">
-                                <option value="">Tất cả danh mục</option>
-                                <#if categories?? && (categories?size > 0)>
-                                    <#list categories as cat>
-                                        <option value="${cat!''}" <#if (currentCategory!'') == (cat!'')>selected</#if>>${cat!''}</option>
-                                    </#list>
-                                </#if>
-                            </select>
-                        </div>
-                        <div class="col-md-2">
-                            <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
 
             <!-- Navigation danh mục -->
             <nav class="nav-cat">
                 <ul>
-                    <#if tabs?? && (tabs?size > 0)>
-                        <#list tabs as tab>
+                    <#if contentModel.list_category_o?? && contentModel.list_category_o?has_content>
+                        <#list contentModel.list_category_o.item as category>
                             <li>
-                                <a href="?tab=${tab.item_s_s!''}&page=1" class="<#if (selectedTab!'') == (tab.item_s_s!'')>active</#if>">${tab.title_category_s!''}</a>
+                                <a href="?tab=${category.item_s_s!''}" class="<#if (selectedTab!'') == (category.item_s_s!'')>active</#if>">${category.title_category_s!''}</a>
                             </li>
                         </#list>
                     </#if>
                 </ul>
             </nav>
-
-            <!-- Hiển thị kết quả tìm kiếm -->
-            <#if searchTerm?? && (searchTerm!'') != "">
-                <div class="search-results mb-3">
-                    <p>Tìm thấy <strong>${totalItems!0}</strong> kết quả cho "<strong>${searchTerm!''}</strong>"</p>
-                </div>
-            </#if>
 
             <div class="row">
                 <#if newsItems?? && (newsItems?size > 0)>
