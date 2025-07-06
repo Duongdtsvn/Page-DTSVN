@@ -15,7 +15,7 @@ def start = (page - 1) * itemsPerPage
 
 // Lấy danh sách categories từ contentModel
 def tabs = []
-if (contentModel.list_category_o?? && contentModel.list_category_o.item) {
+if (contentModel.list_category_o && contentModel.list_category_o.item) {
     def items = contentModel.list_category_o.item
     if (items instanceof List) {
         tabs = items
