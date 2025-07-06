@@ -18,34 +18,29 @@
 <translation-config>
 
     <!-- List of codes for the supported locales -->
-    <!--
     <localeCodes>
-        <localeCode>en_us</localeCode>
+        <localeCode>vi</localeCode>
+        <localeCode>en</localeCode>
     </localeCodes>
-    -->
 
     <!-- The code of the default locale for all new content -->
-    <!--
-    <defaultLocaleCode>en_us</defaultLocaleCode>
-    -->
+    <defaultLocaleCode>vi</defaultLocaleCode>
 
     <!-- Indicates if the default locale should be used when none of the resolvers can find a locale -->
-    <!--
     <fallbackToDefaultLocale>true</fallbackToDefaultLocale>
-    -->
 
     <!-- List of locale resolvers -->
-    <!--
     <localeResolvers>
-    -->
-        <!-- List of locale resolvers, will be executed in the same order until one returns a locale -->
-        <!--
         <localeResolver>
             <type>urlPattern</type>
             <mappings>
                 <mapping>
+                    <pattern>.+/vi</pattern>
+                    <localeCode>vi</localeCode>
+                </mapping>
+                <mapping>
                     <pattern>.+/en</pattern>
-                    <localeCode>en_us</localeCode>
+                    <localeCode>en</localeCode>
                 </mapping>
             </mappings>
         </localeResolver>
@@ -60,6 +55,5 @@
             <script>/scripts/locale.groovy</script>
         </localeResolver>
     </localeResolvers>
-    -->
 
 </translation-config>
