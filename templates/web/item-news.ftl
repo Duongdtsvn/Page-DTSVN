@@ -21,10 +21,6 @@
                     <li><a href="/"> Trang chủ </a></li>
                     <li><span>TIN TỨC</span></li>
                 </ul>
-                <div class="language-switcher" role="group" aria-label="Chọn ngôn ngữ">
-                    <a href="#" class="lang-btn active" role="button" aria-pressed="true" aria-label="Tiếng Việt">VN</a>
-                    <a href="#" class="lang-btn" role="button" aria-pressed="false" aria-label="English">EN</a>
-                </div>
             </div>
             <div class="sec-pageTitle__content">
                 <div class="container-custom">
@@ -34,7 +30,7 @@
                             <h1 class="sec-pageTitle__title fz-52" data-lang="en" style="display: none;">${contentModel.title_en_s!''}</h1>
                         </div>
                         <div class="col-md-3 col-xl-6">
-                            <div class="sec-pageTitle__share">
+                            <div class="sec-pageTitle__share" style="display: flex; align-items: center; gap: 16px; justify-content: flex-end;">
                                 <a href="#" class="btn-share">Chia sẻ
                                     <span>
                                         <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,6 +38,10 @@
                                         </svg>
                                     </span>
                                 </a>
+                                <div class="language-switcher" role="group" aria-label="Chọn ngôn ngữ">
+                                    <a href="#" class="lang-btn active" role="button" aria-pressed="true" aria-label="Tiếng Việt">VN</a>
+                                    <a href="#" class="lang-btn" role="button" aria-pressed="false" aria-label="English">EN</a>
+                                </div>
                             </div>
                         </div>
                     </div>
