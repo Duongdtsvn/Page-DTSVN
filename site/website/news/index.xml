@@ -25,6 +25,16 @@
 	<orderDefault_f>-1</orderDefault_f>
 	<createdDate>2025-07-04T03:54:54.893Z</createdDate>
 	<createdDate_dt>2025-07-04T03:54:54.893Z</createdDate_dt>
-	<lastModifiedDate>2025-07-04T03:54:54.893Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-04T03:54:54.893Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-06T08:41:25.627Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-06T08:41:25.627Z</lastModifiedDate_dt>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
 </page>
