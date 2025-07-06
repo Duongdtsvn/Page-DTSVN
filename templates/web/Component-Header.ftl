@@ -47,6 +47,11 @@
             </#if>
           </ul>
         </nav>
+
+        <div class="nav-lang-switcher">
+          <button id="lang-switch-btn" class="lang-btn active">VN</button>
+          <button id="lang-switch-btn" class="lang-btn">EN</button>
+        </div>
       </div>
     </div>
   </header>
