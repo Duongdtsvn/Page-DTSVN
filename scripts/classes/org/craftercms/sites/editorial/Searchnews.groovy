@@ -75,7 +75,7 @@ class Searchnews {
     )
 
     if (categories) {
-      // Filter by categories
+      // Filter by categories using key field
       query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
     }
 
@@ -211,7 +211,7 @@ class Searchnews {
     )
 
     if (categories) {
-      // Filter by categories
+      // Filter by categories using key field
       query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
     }
 
@@ -257,7 +257,7 @@ class Searchnews {
       )
     )
 
-    // Filter by category key (item_s_s)
+    // Filter by category key (key field)
     if (categoryKey) {
       query.filter(q -> q
         .match(m -> m
@@ -311,7 +311,7 @@ class Searchnews {
         newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)
         newsItem.img_main_s = doc.img_main_s
 
-        // Extract categories
+        // Extract categories using key field
         if (doc.categorys_o && doc.categorys_o.item) {
           newsItem.categories = []
           if (doc.categorys_o.item instanceof List) {
@@ -367,7 +367,7 @@ class Searchnews {
         newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)
         newsItem.img_main_s = doc.img_main_s
 
-        // Extract categories
+        // Extract categories using key field
         if (doc.categorys_o && doc.categorys_o.item) {
           newsItem.categories = []
           if (doc.categorys_o.item instanceof List) {
