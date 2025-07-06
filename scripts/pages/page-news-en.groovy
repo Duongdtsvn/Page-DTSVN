@@ -20,6 +20,15 @@ if (contentModel.list_category_o && contentModel.list_category_o.item) {
     tabs = (items instanceof List) ? items : [items]
 }
 
+// Tạo mapping từ taxonomy key sang value để tìm kiếm
+def categoryMapping = [
+    'Business-News': 'Tin kinh doanh',
+    'Technology-News': 'Tin công nghệ',
+    'DTSVN Tuyển dụng': 'DTSVN Tuyển dụng',
+    'Business Analytics': 'Business Analytics',
+    'Blog': 'Blog'
+]
+
 // Lấy dữ liệu tin tức dựa trên category được chọn
 def newsItems = []
 def totalItems = 0
@@ -28,11 +37,15 @@ if (selectedTab == 'all') {
     newsItems = searchNews.getAllNews(start, itemsPerPage)
     totalItems = searchNews.getAllNews(0, 1000).size()
 } else {
+    // Tìm category tương ứng với selectedTab
     def currentCategory = tabs.find { it.item_s_s == selectedTab }
     if (currentCategory) {
-        def categoryKey = currentCategory.item_s_s
-        newsItems = searchNews.getNewsByCategoryKey(categoryKey, start, itemsPerPage)
-        totalItems = searchNews.getNewsByCategoryKey(categoryKey, 0, 1000).size()
+        // Chuyển đổi từ taxonomy key sang value để tìm kiếm
+        def categoryKey = categoryMapping[currentCategory.item_s_s]
+        if (categoryKey) {
+            newsItems = searchNews.getNewsByCategoryKey(categoryKey, start, itemsPerPage)
+            totalItems = searchNews.getNewsByCategoryKey(categoryKey, 0, 1000).size()
+        }
     }
 }
 
