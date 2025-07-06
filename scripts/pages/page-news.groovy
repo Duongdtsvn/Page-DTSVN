@@ -40,7 +40,12 @@ if (tabs && tabs.size() > 0) {
 def newsItems = []
 def totalItems = 0
 
-if (currentCategory) {
+if (!selectedTab || selectedTab == 'all') {
+    // Lấy tất cả bài viết
+    newsItems = searchNews.getAllNews(start, itemsPerPage)
+    def allResults = searchNews.getAllNews(0, 1000)
+    totalItems = allResults.size()
+} else if (currentCategory) {
     // Sử dụng category.item_s_s để lọc tin tức
     // item_s_s chứa key của category từ taxonomy
     def categoryKey = currentCategory.item_s_s
