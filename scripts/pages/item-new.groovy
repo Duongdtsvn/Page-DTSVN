@@ -1,1 +1,0 @@
-templateModel.locale = locale ?: "vi"
