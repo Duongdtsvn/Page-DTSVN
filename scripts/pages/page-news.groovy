@@ -17,21 +17,7 @@ def start = (page - 1) * itemsPerPage
 def tabs = []
 if (contentModel.list_category_o && contentModel.list_category_o.item) {
     def items = contentModel.list_category_o.item
-    if (items instanceof List) {
-        tabs = items
-    } else {
-        tabs = [items]
-    }
-}
-
-// Xác định category hiện tại
-def currentCategory = null
-if (tabs && tabs.size() > 0 && selectedTab != 'all') {
-    currentCategory = tabs.find { it.item_s_s == selectedTab }
-    if (!currentCategory) {
-        currentCategory = tabs[0]
-        selectedTab = currentCategory.item_s_s
-    }
+    tabs = (items instanceof List) ? items : [items]
 }
 
 // Lấy dữ liệu tin tức dựa trên category được chọn
@@ -40,15 +26,14 @@ def totalItems = 0
 
 if (selectedTab == 'all') {
     newsItems = searchNews.getAllNews(start, itemsPerPage)
-    def allResults = searchNews.getAllNews(0, 1000)
-    totalItems = allResults.size()
-} else if (currentCategory) {
-    // Sử dụng category.item_s_s để lọc tin tức
-    // item_s_s chứa key của category từ taxonomy
-    def categoryKey = currentCategory.item_s_s
-    newsItems = searchNews.getNewsByCategoryKey(categoryKey, start, itemsPerPage)
-    def allResults = searchNews.getNewsByCategoryKey(categoryKey, 0, 1000)
-    totalItems = allResults.size()
+    totalItems = searchNews.getAllNews(0, 1000).size()
+} else {
+    def currentCategory = tabs.find { it.item_s_s == selectedTab }
+    if (currentCategory) {
+        def categoryKey = currentCategory.item_s_s
+        newsItems = searchNews.getNewsByCategoryKey(categoryKey, start, itemsPerPage)
+        totalItems = searchNews.getNewsByCategoryKey(categoryKey, 0, 1000).size()
+    }
 }
 
 // Tính toán phân trang
@@ -67,7 +52,6 @@ for (int i = startPage; i <= endPage; i++) {
 
 // Đưa dữ liệu vào template model
 templateModel.tabs = tabs
-templateModel.currentTab = currentCategory
 templateModel.selectedTab = selectedTab
 templateModel.newsItems = newsItems
 templateModel.totalItems = totalItems
@@ -76,6 +60,4 @@ templateModel.totalPages = totalPages
 templateModel.hasNextPage = hasNextPage
 templateModel.hasPrevPage = hasPrevPage
 templateModel.pageNumbers = pageNumbers
-templateModel.searchTerm = ""
-templateModel.currentCategory = currentCategory?.item_s_s ?: ""
 templateModel.itemsPerPage = itemsPerPage
