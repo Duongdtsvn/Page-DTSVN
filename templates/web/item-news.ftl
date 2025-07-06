@@ -2,12 +2,18 @@
 <!doctype html>
 <html lang="en">
   <head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DTSVN-NEWS</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="/static-assets/css/header.css">
     <link rel="stylesheet" href="/static-assets/css/main.css?site=${siteContext.siteName}"/>
     <link rel="stylesheet" href="/static-assets/css/language-switcher.css"/>
     <@crafter.head />
   </head>
   <body>
     <@crafter.body_top />
+    <@crafter.renderComponentCollection $field="header_o"/>
     <section class="section sec-pageTitle style-blogDetail style-2">
         <div class="sec-pageTitle__wrap">
             <div class="sec-pageTitle__header">
@@ -149,6 +155,7 @@
         </div>
 
     </section>
+    <@crafter.renderComponentCollection $field="footer_o"/>
     <script src="/static-assets/js/language-switcher.js"></script>
     <@crafter.body_bottom />
   </body>
