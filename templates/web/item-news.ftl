@@ -13,12 +13,10 @@
                 <li><a href="/"> Trang chủ </a></li>
                 <li><span>TIN TỨC</span></li>
             </ul>
-            <div class="dropdown-menu dropdown-menu-right dropdown-menu-auto mt-1">
-                                <ul class="link-list-plain">
-                                  <li><a href="#">EN</a></li>
-                                  <li><a href="#">VN</a></li>
-                                </ul>
-                              </div>
+            <ul class="sec-pageTitle__breadcrumbn">
+                <li><a href="#">EN</a></li>
+                <li><a href="#">VN</a></li>
+            </ul>
             <div class="sec-pageTitle__content">
                 <div class="container-custom">
                     <div class="row align-items-end">
