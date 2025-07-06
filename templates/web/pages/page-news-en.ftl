@@ -55,8 +55,8 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="blog">
                                 <div class="blog__inner">
-                                    <a class="blog__img" href="${news.url!''}" style="background-image: url('${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/default-news.jpg')}');">
-                                        <img src="${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/default-news.jpg')}" alt="${news.title!''}">
+                                    <a class="blog__img" href="${news.url!''}" style="background-image: url('${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/new1000.jpg')}');">
+                                        <img src="${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/new1000.jpg')}" alt="${news.title!''}">
                                     </a>
                                     <div class="blog__body">
                                         <h3 class="blog__title">
@@ -94,8 +94,8 @@
                 <#else>
                     <div class="col-12">
                         <div class="text-center py-5">
-                            <h3>Không tìm thấy tin tức nào</h3>
-                            <p>Vui lòng thử lại với tab khác.</p>
+                            <h3>No news found</h3>
+                            <p>Please try another tab.</p>
                         </div>
                     </div>
                 </#if>
@@ -104,8 +104,8 @@
             <!-- Phân trang -->
             <#if totalPages?? && (totalPages > 1)>
                 <div class="pagination">
-                    <nav class="navigation pagination" aria-label="Phân trang bài viết">
-                        <h2 class="screen-reader-text">Phân trang bài viết</h2>
+                    <nav class="navigation pagination" aria-label="News pagination">
+                        <h2 class="screen-reader-text">News pagination</h2>
                         <div class="nav-links">
                             <#if hasPrevPage?? && hasPrevPage>
                                 <a class="prev page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) - 1}">← Previous</a>
@@ -148,7 +148,7 @@
                 <div class="pagination-info text-center mt-3">
                     <#assign fromItem = (((currentPage!1) - 1) * (itemsPerPage!12)) + 1 />
                     <#assign toItem = ((currentPage!1) * (itemsPerPage!12) < (totalItems!0))?then((currentPage!1) * (itemsPerPage!12), (totalItems!0)) />
-                    <p>Hiển thị ${fromItem} - ${toItem} trong tổng số ${totalItems!0} tin tức</p>
+                    <p>Showing ${fromItem} - ${toItem} of ${totalItems!0} news articles</p>
                 </div>
             </#if>
         </div>
