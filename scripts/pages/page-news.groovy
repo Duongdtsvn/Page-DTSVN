@@ -7,7 +7,7 @@ def searchNews = new Searchnews(searchClient, urlTransformationService)
 // Lấy tham số từ URL
 def page = params.page ? params.page.toInteger() : 1
 // Lấy tab đang chọn qua param tab (là key của category)
-def selectedTab = params.tab ?: null
+def selectedTab = params.tab ?: 'all'
 def itemsPerPage = 12
 
 // Tính toán offset cho phân trang
@@ -26,10 +26,8 @@ if (contentModel.list_category_o && contentModel.list_category_o.item) {
 
 // Xác định category hiện tại
 def currentCategory = null
-if (tabs && tabs.size() > 0) {
-    if (selectedTab) {
-        currentCategory = tabs.find { it.item_s_s == selectedTab }
-    }
+if (tabs && tabs.size() > 0 && selectedTab != 'all') {
+    currentCategory = tabs.find { it.item_s_s == selectedTab }
     if (!currentCategory) {
         currentCategory = tabs[0]
         selectedTab = currentCategory.item_s_s
@@ -40,8 +38,7 @@ if (tabs && tabs.size() > 0) {
 def newsItems = []
 def totalItems = 0
 
-if (!selectedTab || selectedTab == 'all') {
-    // Lấy tất cả bài viết
+if (selectedTab == 'all') {
     newsItems = searchNews.getAllNews(start, itemsPerPage)
     def allResults = searchNews.getAllNews(0, 1000)
     totalItems = allResults.size()
