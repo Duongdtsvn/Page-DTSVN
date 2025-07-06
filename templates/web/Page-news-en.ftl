@@ -78,13 +78,13 @@
                                                     </#if>
                                                 </li>
                                             </#if>
-                                            <#if news.categories?? && (news.categories?size > 0)>
+                                            <#--  <#if news.categories?? && (news.categories?size > 0)>
                                                 <li>
                                                     <#list news.categories as category>
                                                         <span class="badge badge-secondary">${category!''}</span>
                                                     </#list>
                                                 </li>
-                                            </#if>
+                                            </#if>  -->
                                         </ul>
                                     </div>
                                 </div>
