@@ -1,34 +1,56 @@
+<#-- Import thư viện Crafter CMS để sử dụng các component và macro -->
 <#import "/templates/system/common/crafter.ftl" as crafter />
+
 <!doctype html>
 <html lang="en">
   <head>
+      <#-- Thiết lập meta charset và viewport cho responsive -->
       <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DTSVN-NEWS</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="/static-assets/css/header.css">
-    <link rel="stylesheet" href="/static-assets/css/main.css?site=${siteContext.siteName}"/>
-    <link rel="stylesheet" href="/static-assets/css/language-switcher.css"/>
-    <@crafter.head />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>DTSVN-NEWS</title>
+      
+      <#-- Load jQuery library cho JavaScript -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
+      <#-- Import các file CSS cho styling -->
+      <link rel="stylesheet" href="/static-assets/css/header.css">
+      <link rel="stylesheet" href="/static-assets/css/main.css?site=${siteContext.siteName}"/>
+      <link rel="stylesheet" href="/static-assets/css/language-switcher.css"/>
+      
+      <#-- Render head component từ Crafter CMS -->
+      <@crafter.head />
   </head>
   <body>
+    <#-- Render body top component -->
     <@crafter.body_top />
+    
+    <#-- Render header component collection -->
     <@crafter.renderComponentCollection $field="header_o"/>
+    
+    <#-- Section hiển thị tiêu đề trang và breadcrumb -->
     <section class="section sec-pageTitle style-blogDetail style-2">
         <div class="sec-pageTitle__wrap">
+            <#-- Breadcrumb navigation -->
             <ul class="sec-pageTitle__breadcrumb">
                 <li><a href="/"> Trang chủ </a></li>
                 <li><span>TIN TỨC</span></li>
             </ul>
+            
             <div class="sec-pageTitle__content">
                 <div class="container-custom">
                     <div class="row align-items-end">
+                        <#-- Cột hiển thị tiêu đề bài viết -->
                         <div class="col-md-9 col-xl-6">
+                            <#-- Tiêu đề tiếng Việt -->
                             <h1 class="sec-pageTitle__title fz-52" data-lang="vi">${contentModel.title_vi_s!''}</h1>
+                            <#-- Tiêu đề tiếng Anh (ẩn mặc định) -->
                             <h1 class="sec-pageTitle__title fz-52" data-lang="en" style="display: none;">${contentModel.title_en_s!''}</h1>
                         </div>
+                        
+                        <#-- Cột hiển thị nút chia sẻ và language switcher -->
                         <div class="col-md-3 col-xl-6">
                             <div class="sec-pageTitle__share" style="display: flex; align-items: center; gap: 16px; justify-content: flex-end;">
+                                <#-- Nút chia sẻ với icon SVG -->
                                 <a href="#" class="btn-share">Chia sẻ
                                     <span>
                                         <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,6 +58,8 @@
                                         </svg>
                                     </span>
                                 </a>
+                                
+                                <#-- Language switcher cho chuyển đổi ngôn ngữ -->
                                 <div class="language-switcher" role="group" aria-label="Chọn ngôn ngữ">
                                     <a href="#" class="lang-btn active" role="button" aria-pressed="true" aria-label="Tiếng Việt">VN</a>
                                     <a href="#" class="lang-btn" role="button" aria-pressed="false" aria-label="English">EN</a>
@@ -47,6 +71,8 @@
             </div>
         </div>
     </section>
+    
+    <#-- Section chính hiển thị nội dung bài viết -->
     <section class="section sec-blogDetail">
         <div class="container-custom">
             <div class="row">
@@ -54,12 +80,17 @@
                     <div class="sec-blogDetail__content stickyJs">
                         <div class="row">
                             <div class="col-xl-8 col-xxxl-7">
+                                <#-- Nội dung bài viết tiếng Việt -->
                                 <div class="entry-text" data-lang="vi">
                                     ${contentModel.content_vi_html!''}
                                 </div>
+                                
+                                <#-- Nội dung bài viết tiếng Anh (ẩn mặc định) -->
                                 <div class="entry-text" data-lang="en" style="display: none;">
                                     ${contentModel.content_en_html!''}
                                 </div>
+                                
+                                <#-- Các nút chia sẻ mạng xã hội -->
                                 <div class="entry-share">
                                     <span>Chia sẻ: <a> </a></span>
                                     <a href="#"><img src="assets/img/icon-facebook.svg" alt=""></a>
@@ -69,11 +100,12 @@
                                     <a href="#"><img src="assets/img/icon-discord.svg" alt=""></a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <#-- Section form liên hệ -->
             <div class="row">
                 <div class="col-xxxl-10 offset-xxxl-1">
                     <div class="sec-blogDetail__content stickyJs">
@@ -83,6 +115,9 @@
                                     <br>
                                     <h3 class="sec-contactPage__title">Gửi thông điệp tới DTSVN</h3>
                                     
+                                    <#-- Form liên hệ sử dụng Contact Form 7 -->
+                                    <div class="wpcf7 js" id="wpcf7-f6-o1" lang="vi" dir="ltr">
+                                        <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
 <div class="wpcf7 js" id="wpcf7-f6-o1" lang="vi" dir="ltr">
 <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
 <form action="/ngan-hang-doanh-nghiep-tai-chinh-can-chuan-bi-nhung-gi-de-dap-ung-cac-yeu-cau-bat-buoc-tu-nhnn/#wpcf7-f6-o1" method="post" class="wpcf7-form init" aria-label="Form liên hệ" novalidate="novalidate" data-status="init">
