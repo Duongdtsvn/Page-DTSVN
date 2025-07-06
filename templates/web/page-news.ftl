@@ -7,6 +7,7 @@
   </head>
   <body>
     <@crafter.body_top />
+    <@crafter.renderComponentCollection $field="header_o"/>
     <section class="section sec-pageTitle style-2 style-doitac">
         <div class="sec-pageTitle__wrap">
             <ul class="sec-pageTitle__breadcrumb">
@@ -147,6 +148,7 @@
             </#if>
         </div>
     </section>
+    <@crafter.renderComponentCollection $field="footer_o"/>
     <@crafter.body_bottom />
   </body>
 </html>
