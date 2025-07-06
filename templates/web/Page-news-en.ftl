@@ -1,20 +1,29 @@
+<#-- Import thư viện Crafter CMS để sử dụng các component và function -->
 <#import "/templates/system/common/crafter.ftl" as crafter />
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DTSVN-NEWS</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="/static-assets/css/header.css">
-  <link rel="stylesheet" href="/static-assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTSVN-NEWS</title>
+    <!-- Load jQuery để hỗ trợ JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Load CSS cho header và main layout -->
+    <link rel="stylesheet" href="/static-assets/css/header.css">
+    <link rel="stylesheet" href="/static-assets/css/main.css">
+    <!-- Render các meta tags và SEO từ Crafter CMS -->
     <@crafter.head />
   </head>
   <body>
+    <!-- Render các script và tracking code từ Crafter CMS -->
     <@crafter.body_top />
+    <!-- Render component header từ content model -->
     <@crafter.renderComponentCollection $field="header_o"/>
+    
+    <!-- Section hiển thị tiêu đề trang và breadcrumb -->
     <section class="section sec-pageTitle style-2 style-doitac">
         <div class="sec-pageTitle__wrap">
+            <!-- Breadcrumb navigation -->
             <ul class="sec-pageTitle__breadcrumb">
                 <li><a href="#">Home</a></li>
                 <li><span>News</span></li>
@@ -23,6 +32,7 @@
                 <div class="container-custom">
                     <div class="row">
                         <div class="col-md-8 col-lg-7 col-xl-6">  
+                            <!-- Hiển thị tiêu đề trang từ content model -->
                             <h1 class="sec-pageTitle__title fz-52">${contentModel["internal-name"]!''}</h1>
                         </div>
                     </div>
@@ -30,15 +40,19 @@
             </div>
         </div>
     </section>
+    
+    <!-- Section chính chứa danh sách tin tức -->
     <section class="section sec-blogPage">
         <div class="container-custom">
 
-            <!-- Navigation danh mục -->
+            <!-- Navigation menu để lọc tin tức theo danh mục -->
             <nav class="nav-cat">
                 <ul>
+                    <!-- Tab "Featured news" luôn hiển thị -->
                     <li>
                         <a href="?tab=all" class="<#if (selectedTab!'') == 'all'>active</#if>">Featured news</a>
                     </li>
+                    <!-- Render các tab danh mục từ content model -->
                     <#if contentModel.list_category_o?? && contentModel.list_category_o?has_content>
                         <#list contentModel.list_category_o.item as category>
                             <li>
@@ -49,28 +63,35 @@
                 </ul>
             </nav>
 
+            <!-- Grid hiển thị danh sách tin tức -->
             <div class="row">
+                <#-- Kiểm tra có tin tức để hiển thị không -->
                 <#if newsItems?? && (newsItems?size > 0)>
+                    <#-- Loop qua từng tin tức -->
                     <#list newsItems as news>
                         <div class="col-md-6 col-lg-4">
                             <div class="blog">
                                 <div class="blog__inner">
+                                    <!-- Link và hình ảnh tin tức -->
                                     <a class="blog__img" href="${news.url!''}" style="background-image: url('${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/new1000.jpg')}');">
                                         <img src="${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/new1000.jpg')}" alt="${news.title!''}">
                                     </a>
                                     <div class="blog__body">
+                                        <!-- Tiêu đề tin tức -->
                                         <h3 class="blog__title">
                                             <a href="${news.url!''}">${news.title_en!''}</a>
                                         </h3>
+                                        <!-- Hiển thị highlight nếu có -->
                                         <#if news.highlight?? && (news.highlight!'') != ''>
                                             <div class="blog__excerpt">
                                                 <p>${news.highlight!''}</p>
                                             </div>
                                         </#if>
+                                        <!-- Meta information: ngày tạo -->
                                         <ul class="postMin__meta">
                                             <#if news.created_date??>
                                                 <li>
-                                                    <#-- Kiểm tra kiểu dữ liệu của created_date -->
+                                                    <#-- Kiểm tra và format ngày tháng -->
                                                     <#if news.created_date?is_date>
                                                         ${news.created_date?string("dd/MM/yyyy HH:mm")}
                                                     <#else>
@@ -78,6 +99,7 @@
                                                     </#if>
                                                 </li>
                                             </#if>
+                                            <#-- Comment: Hiển thị categories nếu cần -->
                                             <#--  <#if news.categories?? && (news.categories?size > 0)>
                                                 <li>
                                                     <#list news.categories as category>
@@ -92,6 +114,7 @@
                         </div>
                     </#list>
                 <#else>
+                    <!-- Hiển thị thông báo khi không có tin tức -->
                     <div class="col-12">
                         <div class="text-center py-5">
                             <h3>No news found</h3>
@@ -101,16 +124,19 @@
                 </#if>
             </div>
 
-            <!-- Phân trang -->
+            <!-- Phân trang - chỉ hiển thị khi có nhiều hơn 1 trang -->
             <#if totalPages?? && (totalPages > 1)>
                 <div class="pagination">
                     <nav class="navigation pagination" aria-label="News pagination">
                         <h2 class="screen-reader-text">News pagination</h2>
                         <div class="nav-links">
+                            <!-- Nút Previous -->
                             <#if hasPrevPage?? && hasPrevPage>
                                 <a class="prev page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) - 1}">← Previous</a>
                             </#if>
+                            <!-- Hiển thị các số trang -->
                             <#if pageNumbers?? && (pageNumbers?size > 0)>
+                                <!-- Hiển thị trang đầu nếu cần -->
                                 <#if pageNumbers?first?number gt 1>
                                     <#if pageNumbers?first?number gt 2>
                                         <a class="page-numbers" href="?tab=${selectedTab!''}&page=1">1</a>
@@ -119,6 +145,7 @@
                                         <a class="page-numbers" href="?tab=${selectedTab!''}&page=1">1</a>
                                     </#if>
                                 </#if>
+                                <!-- Loop qua các số trang -->
                                 <#list pageNumbers as pageNum>
                                     <#if (pageNum?number) == (currentPage!1)?number>
                                         <span aria-current="page" class="page-numbers current">${pageNum}</span>
@@ -126,6 +153,7 @@
                                         <a class="page-numbers" href="?tab=${selectedTab!''}&page=${pageNum}">${pageNum}</a>
                                     </#if>
                                 </#list>
+                                <!-- Hiển thị trang cuối nếu cần -->
                                 <#if pageNumbers?last?number lt (totalPages!1)?number>
                                     <#if pageNumbers?last?number lt (totalPages!1)?number - 1>
                                         <span class="page-numbers dots">…</span>
@@ -135,6 +163,7 @@
                                     </#if>
                                 </#if>
                             </#if>
+                            <!-- Nút Next -->
                             <#if hasNextPage?? && hasNextPage>
                                 <a class="next page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) + 1}">Next →</a>
                             </#if>
@@ -143,7 +172,7 @@
                 </div>
             </#if>
 
-            <!-- Thông tin phân trang -->
+            <!-- Thông tin phân trang - hiển thị số lượng tin tức -->
             <#if totalItems?? && (totalItems > 0)>
                 <div class="pagination-info text-center mt-3">
                     <#assign fromItem = (((currentPage!1) - 1) * (itemsPerPage!12)) + 1 />
