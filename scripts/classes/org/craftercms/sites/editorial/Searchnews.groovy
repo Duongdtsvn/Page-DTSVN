@@ -16,6 +16,7 @@
 
 package org.craftercms.sites.editorial
 
+// Import các thư viện cần thiết cho OpenSearch và xử lý dữ liệu
 import org.opensearch.client.opensearch._types.SortOrder
 import org.opensearch.client.opensearch._types.query_dsl.BoolQuery
 import org.opensearch.client.opensearch._types.query_dsl.Query
@@ -30,33 +31,69 @@ import java.time.ZonedDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
+/**
+ * Class Searchnews - Quản lý tìm kiếm và lấy dữ liệu tin tức từ OpenSearch
+ * Chức năng chính: tìm kiếm tin tức, lấy tất cả tin tức, lọc theo danh mục
+ */
 class Searchnews {
 
+  // ===== CÁC HẰNG SỐ CẤU HÌNH =====
+  // Định nghĩa loại nội dung tin tức để lọc dữ liệu
   static final String ITEM_NEW_CONTENT_TYPE = "/page/item-new"
+  
+  // Đường dẫn thư mục chứa tin tức/blog
   static final String LIST_BLOG_PATH = "/site/website/list-blog"
+  
+  // Các trường dữ liệu để tìm kiếm với độ ưu tiên khác nhau
+  // ^2.0 = độ ưu tiên cao nhất, ^1.5 = ưu tiên trung bình, ^1.0 = ưu tiên thấp
   static final List<String> ITEM_NEW_SEARCH_FIELDS = [
-    'title_vi_s^2.0',
-    'content_vi_html^1.0',
-    'title_en_s^1.5',
-    'content_en_html^1.0'
+    'title_vi_s^2.0',      // Tiêu đề tiếng Việt (ưu tiên cao nhất)
+    'content_vi_html^1.0', // Nội dung tiếng Việt
+    'title_en_s^1.5',      // Tiêu đề tiếng Anh (ưu tiên trung bình)
+    'content_en_html^1.0'  // Nội dung tiếng Anh
   ]
+  
+  // Các trường sẽ được highlight (làm nổi bật) khi tìm kiếm
   static final String[] HIGHLIGHT_FIELDS = ["title_vi_s", "content_vi_html", "title_en_s", "content_en_html"]
-  static final int DEFAULT_START = 0
-  static final int DEFAULT_ROWS = 50
+  
+  // Cấu hình mặc định cho phân trang
+  static final int DEFAULT_START = 0    // Vị trí bắt đầu mặc định
+  static final int DEFAULT_ROWS = 50    // Số lượng kết quả mặc định
+  
+  // Bộ phân tích từ khóa cho tìm kiếm nhiều giá trị
   static final String MULTIPLE_VALUES_SEARCH_ANALYZER = Analyzer.Kind.Whitespace.jsonValue()
 
+  // ===== CÁC SERVICE CẦN THIẾT =====
+  // Client để kết nối và tương tác với OpenSearch
   OpenSearchClientWrapper searchClient
+  
+  // Service để chuyển đổi URL từ store URL sang render URL
   UrlTransformationService urlTransformationService
 
+  /**
+   * Constructor - Khởi tạo class với các service cần thiết
+   * @param searchClient - Client kết nối OpenSearch
+   * @param urlTransformationService - Service chuyển đổi URL
+   */
   Searchnews(OpenSearchClientWrapper searchClient, UrlTransformationService urlTransformationService) {
     this.searchClient = searchClient
     this.urlTransformationService = urlTransformationService
   }
 
+  /**
+   * Tìm kiếm tin tức với từ khóa và danh mục
+   * @param userTerm - Từ khóa tìm kiếm của người dùng
+   * @param categories - Danh mục cần lọc
+   * @param start - Vị trí bắt đầu (mặc định 0)
+   * @param rows - Số lượng kết quả (mặc định 50)
+   * @return Danh sách tin tức phù hợp
+   */
   def searchNews(userTerm, categories, start = DEFAULT_START, rows = DEFAULT_ROWS) {
+    // Tạo query bool để kết hợp nhiều điều kiện tìm kiếm
     def query = new BoolQuery.Builder()
 
-    // Filter by content-type
+    // ===== BƯỚC 1: LỌC THEO LOẠI NỘI DUNG =====
+    // Chỉ lấy các document có content-type là tin tức
     query.filter(q -> q
       .match(m -> m
         .field("content-type")
@@ -66,7 +103,8 @@ class Searchnews {
       )
     )
 
-    // Filter by path to only get items from /list-blog directory
+    // ===== BƯỚC 2: LỌC THEO ĐƯỜNG DẪN =====
+    // Chỉ lấy tin tức từ thư mục /list-blog
     query.filter(q -> q
       .wildcard(w -> w
         .field("localId")
@@ -74,45 +112,51 @@ class Searchnews {
       )
     )
 
+    // ===== BƯỚC 3: LỌC THEO DANH MỤC (NẾU CÓ) =====
+    // Nếu người dùng chọn danh mục cụ thể, thêm filter theo danh mục
     if (categories) {
-      // Filter by categories using key field
       query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
     }
 
+    // ===== BƯỚC 4: XỬ LÝ TỪ KHÓA TÌM KIẾM =====
     if (userTerm) {
-      // Check if the user is requesting an exact match with quotes
+      // Kiểm tra xem người dùng có yêu cầu tìm kiếm chính xác với dấu ngoặc kép không
+      // Ví dụ: "từ khóa chính xác" sẽ tìm kiếm cụm từ này
       def matcher = userTerm =~ /.*("([^"]+)").*/
       if (matcher.matches()) {
-        // Using must excludes any doc that doesn't match with the input from the user
+        // Sử dụng MUST để bắt buộc phải có kết quả khớp với cụm từ trong ngoặc kép
         query.must(q -> q
           .multiMatch(m -> m
-            .query(matcher.group(2))
+            .query(matcher.group(2))  // Lấy phần text trong ngoặc kép
             .fields(ITEM_NEW_SEARCH_FIELDS)
             .fuzzyTranspositions(false)
             .autoGenerateSynonymsPhraseQuery(false)
           )
         )
 
-        // Remove the exact match to continue processing the user input
+        // Xóa phần tìm kiếm chính xác để tiếp tục xử lý phần còn lại
         userTerm = StringUtils.remove(userTerm, matcher.group(1))
       } else {
-        // Exclude docs that do not have any optional matches
+        // Nếu không có ngoặc kép, yêu cầu ít nhất 1 từ khóa phải khớp
         query.minimumShouldMatch("1")
       }
 
+      // ===== BƯỚC 5: XỬ LÝ PHẦN TỪ KHÓA CÒN LẠI =====
       if (userTerm) {
-        // Using should makes it optional and each additional match will increase the score of the doc
+        // Sử dụng SHOULD để tạo tìm kiếm tùy chọn
+        // Mỗi match thêm sẽ tăng điểm của document
         query
-          // Search for phrase matches including a wildcard at the end and increase the score for this match
+          // Tìm kiếm phrase match với wildcard ở cuối (boost 1.5)
+          // Ví dụ: "tin tức" sẽ tìm "tin tức", "tin tức mới", "tin tức công nghệ"
           .should(q -> q
             .multiMatch(m -> m
               .query(userTerm)
               .fields(ITEM_NEW_SEARCH_FIELDS)
               .type(TextQueryType.PhrasePrefix)
-              .boost(1.5f)
+              .boost(1.5f)  // Tăng điểm cho kết quả này
             )
           )
-          // Search for matches on individual terms
+          // Tìm kiếm match trên các từ riêng lẻ
           .should(q -> q
             .multiMatch(m -> m
               .query(userTerm)
@@ -122,9 +166,11 @@ class Searchnews {
       }
     }
 
+    // Cấu hình highlight để làm nổi bật từ khóa tìm kiếm
     def highlighter = new Highlight.Builder();
     HIGHLIGHT_FIELDS.each{ field -> highlighter.fields(field, f -> f ) }
 
+    // Tạo request tìm kiếm với các tham số
     SearchRequest request = SearchRequest.of(r -> r
       .query(query.build()._toQuery())
       .from(start)
@@ -133,24 +179,33 @@ class Searchnews {
       .sort(s -> s
         .field(f -> f
           .field("createdDate_dt")
-          .order(SortOrder.Desc)
+          .order(SortOrder.Desc)  // Sắp xếp theo ngày tạo giảm dần
         )
       )
     )
 
+    // Thực hiện tìm kiếm và xử lý kết quả
     def result = searchClient.search(request, Map)
 
     if (result) {
-      return processNewsSearchResults(result)
+      return processNewsSearchResults(result)  // Xử lý kết quả tìm kiếm với highlight
     } else {
       return []
     }
   }
 
+  /**
+   * Lấy tất cả tin tức (không có filter tìm kiếm)
+   * @param start - Vị trí bắt đầu
+   * @param rows - Số lượng kết quả
+   * @return Danh sách tất cả tin tức
+   */
   def getAllNews(start = DEFAULT_START, rows = DEFAULT_ROWS) {
     def query = new BoolQuery.Builder()
 
-    // Filter by content-type
+    
+    // ===== PHẦN 1: LỌC THEO LOẠI NỘI DUNG VÀ ĐƯỜNG DẪN =====
+    // Lọc để chỉ lấy các bài viết có content-type là tin tức
     query.filter(q -> q
       .match(m -> m
         .field("content-type")
@@ -160,7 +215,7 @@ class Searchnews {
       )
     )
 
-    // Filter by path to only get items from /list-blog directory
+    // Lọc theo đường dẫn - chỉ lấy các bài viết từ thư mục /list-blog
     query.filter(q -> q
       .wildcard(w -> w
         .field("localId")
@@ -168,6 +223,9 @@ class Searchnews {
       )
     )
 
+    // ===== PHẦN 2: TẠO REQUEST TÌM KIẾM =====
+    // Tạo yêu cầu tìm kiếm với các tham số: từ vị trí start, lấy rows kết quả
+    // và sắp xếp theo ngày tạo giảm dần (mới nhất lên đầu)
     SearchRequest request = SearchRequest.of(r -> r
       .query(query.build()._toQuery())
       .from(start)
@@ -180,19 +238,29 @@ class Searchnews {
       )
     )
 
+    // ===== PHẦN 3: THỰC HIỆN TÌM KIẾM VÀ TRẢ VỀ KẾT QUẢ =====
+    // Gọi API tìm kiếm và xử lý kết quả
     def result = searchClient.search(request, Map)
 
     if (result) {
-      return processNewsListingResults(result)
+      return processNewsListingResults(result)  // Xử lý và trả về danh sách tin tức
     } else {
-      return []
+      return []  // Trả về mảng rỗng nếu không có kết quả
     }
   }
 
+  /**
+   * Lấy tin tức theo danh mục (categories)
+   * @param categories - Danh sách các danh mục cần lọc
+   * @param start - Vị trí bắt đầu (mặc định 0)
+   * @param rows - Số lượng kết quả (mặc định 10)
+   * @return Danh sách tin tức theo danh mục
+   */
   def getNewsByCategory(categories, start = DEFAULT_START, rows = DEFAULT_ROWS) {
     def query = new BoolQuery.Builder()
 
-    // Filter by content-type
+    // ===== PHẦN 1: LỌC THEO LOẠI NỘI DUNG VÀ ĐƯỜNG DẪN =====
+    // Lọc để chỉ lấy các bài viết có content-type là tin tức
     query.filter(q -> q
       .match(m -> m
         .field("content-type")
@@ -202,7 +270,7 @@ class Searchnews {
       )
     )
 
-    // Filter by path to only get items from /list-blog directory
+    // Lọc theo đường dẫn - chỉ lấy các bài viết từ thư mục /list-blog
     query.filter(q -> q
       .wildcard(w -> w
         .field("localId")
@@ -210,11 +278,13 @@ class Searchnews {
       )
     )
 
+    // ===== PHẦN 2: LỌC THEO DANH MỤC =====
+    // Nếu có danh mục được chỉ định, thêm điều kiện lọc theo danh mục
     if (categories) {
-      // Filter by categories using key field
       query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
     }
 
+    // ===== PHẦN 3: TẠO REQUEST VÀ THỰC HIỆN TÌM KIẾM =====
     SearchRequest request = SearchRequest.of(r -> r
       .query(query.build()._toQuery())
       .from(start)
@@ -236,10 +306,18 @@ class Searchnews {
     }
   }
 
+  /**
+   * Lấy tin tức theo key của danh mục (một danh mục cụ thể)
+   * @param categoryKey - Key của danh mục cần lọc
+   * @param start - Vị trí bắt đầu (mặc định 0)
+   * @param rows - Số lượng kết quả (mặc định 10)
+   * @return Danh sách tin tức theo key danh mục
+   */
   def getNewsByCategoryKey(categoryKey, start = DEFAULT_START, rows = DEFAULT_ROWS) {
     def query = new BoolQuery.Builder()
 
-    // Filter by content-type
+    // ===== PHẦN 1: LỌC THEO LOẠI NỘI DUNG VÀ ĐƯỜNG DẪN =====
+    // Lọc để chỉ lấy các bài viết có content-type là tin tức
     query.filter(q -> q
       .match(m -> m
         .field("content-type")
@@ -249,7 +327,7 @@ class Searchnews {
       )
     )
 
-    // Filter by path to only get items from /list-blog directory
+    // Lọc theo đường dẫn - chỉ lấy các bài viết từ thư mục /list-blog
     query.filter(q -> q
       .wildcard(w -> w
         .field("localId")
@@ -257,7 +335,8 @@ class Searchnews {
       )
     )
 
-    // Filter by category key (key field)
+    // ===== PHẦN 2: LỌC THEO KEY DANH MỤC =====
+    // Nếu có categoryKey được chỉ định, thêm điều kiện lọc theo key danh mục
     if (categoryKey) {
       query.filter(q -> q
         .match(m -> m
@@ -267,6 +346,7 @@ class Searchnews {
       )
     }
 
+    // ===== PHẦN 3: TẠO REQUEST VÀ THỰC HIỆN TÌM KIẾM =====
     SearchRequest request = SearchRequest.of(r -> r
       .query(query.build()._toQuery())
       .from(start)
@@ -288,6 +368,11 @@ class Searchnews {
     }
   }
 
+  /**
+   * Xử lý kết quả tìm kiếm tin tức (có highlight từ khóa)
+   * @param result - Kết quả tìm kiếm từ Elasticsearch
+   * @return Danh sách tin tức đã được xử lý
+   */
   private def processNewsSearchResults(result) {
     def news = []
     def hits = result.hits().hits()
@@ -296,10 +381,12 @@ class Searchnews {
       hits.each {hit ->
         def doc = hit.source()
         def newsItem = [:]
+        
+        // ===== PHẦN 1: LẤY THÔNG TIN CƠ BẢN CỦA TIN TỨC =====
         newsItem.id = doc.objectId
         newsItem.objectId = doc.objectId
         newsItem.path = doc.localId
-        newsItem.title = doc.title_vi_s ?: doc.title_en_s
+        newsItem.title = doc.title_vi_s ?: doc.title_en_s  // Ưu tiên tiếng Việt, nếu không có thì dùng tiếng Anh
         newsItem.title_vi = doc.title_vi_s
         newsItem.title_en = doc.title_en_s
         newsItem.content_vi = doc.content_vi_html
@@ -311,108 +398,167 @@ class Searchnews {
         newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)
         newsItem.img_main_s = doc.img_main_s
 
-        // Extract categories using key field
+        // ===== PHẦN 2: XỬ LÝ DANH MỤC =====
+        // Trích xuất danh mục từ trường categorys_o.item.key
+        // ===== PHẦN 1: XỬ LÝ DANH MỤC (CATEGORIES) =====
+        // Kiểm tra xem tin tức có thông tin danh mục không
         if (doc.categorys_o && doc.categorys_o.item) {
+          // Khởi tạo mảng rỗng để lưu danh sách danh mục
           newsItem.categories = []
+          
+          // Kiểm tra xem danh mục có phải là danh sách nhiều item không
           if (doc.categorys_o.item instanceof List) {
+            // Nếu có nhiều danh mục (dạng list) - duyệt qua từng danh mục
             doc.categorys_o.item.each { category ->
+              // Thêm key của danh mục vào danh sách
               newsItem.categories << category.key
             }
           } else {
+            // Nếu chỉ có 1 danh mục duy nhất - thêm trực tiếp
             newsItem.categories << doc.categorys_o.item.key
           }
         }
 
+        // ===== PHẦN 2: XỬ LÝ HIGHLIGHT (LÀM NỔI BẬT TỪ KHÓA TÌM KIẾM) =====
+        // Kiểm tra xem có highlight từ khóa tìm kiếm không
         if (hit.highlight()) {
+          // Lấy tất cả các giá trị highlight từ kết quả tìm kiếm
           def newsHighlights = hit.highlight().values()
           if (newsHighlights) {
+            // Khởi tạo mảng để lưu tất cả các đoạn highlight
             def highlightValues = []
 
+            // Duyệt qua từng loại highlight (title, content, etc.)
             newsHighlights.each { value ->
+              // Thêm tất cả các đoạn highlight vào mảng
               highlightValues.addAll(value)
             }
 
+            // Nối các đoạn highlight bằng dấu "..." và loại bỏ khoảng trắng thừa
             newsItem.highlight = StringUtils.join(highlightValues, "... ")
             newsItem.highlight = StringUtils.strip(newsItem.highlight)
           }
         }
 
+        // Thêm tin tức đã xử lý vào danh sách kết quả
         news << newsItem
       }
     }
 
+    // Trả về danh sách tin tức đã được xử lý
     return news
   }
 
+  /**
+   * Xử lý kết quả danh sách tin tức (không có highlight)
+   * @param result - Kết quả tìm kiếm từ Elasticsearch
+   * @return Danh sách tin tức đã được xử lý
+   */
   private def processNewsListingResults(result) {
+    // Khởi tạo mảng rỗng để lưu danh sách tin tức
     def news = []
+    // Lấy tất cả các document từ kết quả tìm kiếm
     def documents = result.hits().hits()*.source()
 
+    // Kiểm tra xem có document nào không
     if (documents) {
+      // Duyệt qua từng document (tin tức)
       documents.each {doc ->
+        // Khởi tạo object rỗng để lưu thông tin tin tức
         def newsItem = [:]
-        newsItem.id = doc.objectId
-        newsItem.objectId = doc.objectId
-        newsItem.path = doc.localId
-        newsItem.storeUrl = doc.localId
-        newsItem.title = doc.title_vi_s ?: doc.title_en_s
-        newsItem.title_vi = doc.title_vi_s
-        newsItem.title_en = doc.title_en_s
-        newsItem.content_vi = doc.content_vi_html
-        newsItem.content_en = doc.content_en_html
-        newsItem.internal_name = doc.internal_name
-        newsItem.nav_label = doc.navLabel
-        newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
-        newsItem.created_date = convertToHanoiTimeString(doc.createdDate_dt)
-        newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)
-        newsItem.img_main_s = doc.img_main_s
+        
+        // ===== PHẦN 1: LẤY THÔNG TIN CƠ BẢN CỦA TIN TỨC =====
+        newsItem.id = doc.objectId                    // ID của tin tức
+        newsItem.objectId = doc.objectId              // ID object
+        newsItem.path = doc.localId                   // Đường dẫn file
+        newsItem.storeUrl = doc.localId               // URL gốc trong store
+        newsItem.title = doc.title_vi_s ?: doc.title_en_s  // Tiêu đề (ưu tiên tiếng Việt)
+        newsItem.title_vi = doc.title_vi_s            // Tiêu đề tiếng Việt
+        newsItem.title_en = doc.title_en_s            // Tiêu đề tiếng Anh
+        newsItem.content_vi = doc.content_vi_html     // Nội dung tiếng Việt
+        newsItem.content_en = doc.content_en_html     // Nội dung tiếng Anh
+        newsItem.internal_name = doc.internal_name    // Tên nội bộ
+        newsItem.nav_label = doc.navLabel             // Nhãn navigation
+        newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)  // URL hiển thị
+        newsItem.created_date = convertToHanoiTimeString(doc.createdDate_dt)      // Ngày tạo (giờ Hà Nội)
+        newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)  // Ngày sửa cuối
+        newsItem.img_main_s = doc.img_main_s          // Hình ảnh chính
 
-        // Extract categories using key field
+        // ===== PHẦN 2: XỬ LÝ DANH MỤC =====
+        // Trích xuất danh mục từ trường categorys_o.item.key
         if (doc.categorys_o && doc.categorys_o.item) {
           newsItem.categories = []
           if (doc.categorys_o.item instanceof List) {
+            // Nếu có nhiều danh mục (dạng list) - duyệt qua từng danh mục
             doc.categorys_o.item.each { category ->
               newsItem.categories << category.key
             }
           } else {
+            // Nếu chỉ có 1 danh mục duy nhất - thêm trực tiếp
             newsItem.categories << doc.categorys_o.item.key
           }
         }
 
+        // Thêm tin tức đã xử lý vào danh sách kết quả
         news << newsItem
       }
     }
 
+    // Trả về danh sách tin tức đã được xử lý
     return news
   }
 
+  /**
+   * Tạo query tìm kiếm với nhiều giá trị cho một trường
+   * @param field - Tên trường cần tìm kiếm
+   * @param values - Giá trị cần tìm (có thể là array, list, hoặc string)
+   * @return Query object để tìm kiếm
+   */
   private Query getFieldQueryWithMultipleValues(field, values) {
+    // ===== PHẦN 1: CHUẨN HÓA DỮ LIỆU ĐẦU VÀO =====
+    // Kiểm tra nếu values là array thì chuyển thành List
     if (values.class.isArray()) {
       values = values as List
     }
 
+    // Kiểm tra nếu values là Iterable (List, Set, etc.) thì nối thành string
     if (values instanceof Iterable) {
       values = StringUtils.join((Iterable)values, " ") as String
     } else {
+      // Nếu không phải Iterable thì chuyển thành String
       values = values as String
     }
 
+    // ===== PHẦN 2: TẠO QUERY TÌM KIẾM =====
+    // Tạo query match với analyzer đặc biệt để xử lý nhiều giá trị
     return Query.of(q -> q
       .match(m -> m
-        .field(field)
+        .field(field)                    // Trường cần tìm kiếm
         .query(v -> v
-          .stringValue(values)
+          .stringValue(values)           // Giá trị cần tìm
         )
-        .analyzer(MULTIPLE_VALUES_SEARCH_ANALYZER)
+        .analyzer(MULTIPLE_VALUES_SEARCH_ANALYZER)  // Sử dụng analyzer đặc biệt
       )
     );
   }
 
+  /**
+   * Chuyển đổi thời gian từ UTC sang giờ Hà Nội
+   * @param date - Thời gian cần chuyển đổi (có thể là String hoặc ZonedDateTime)
+   * @return String thời gian theo định dạng dd/MM/yyyy HH:mm (giờ Hà Nội)
+   */
   private def convertToHanoiTimeString(date) {
+    // Kiểm tra nếu date rỗng thì trả về chuỗi rỗng
     if (!date) return ""
+    
     try {
+      // ===== PHẦN 1: CHUYỂN ĐỔI THỜI GIAN =====
+      // Nếu date là String thì parse thành ZonedDateTime, nếu không thì dùng trực tiếp
       def utc = (date instanceof String) ? ZonedDateTime.parse(date) : date
+      
+      // Chuyển từ UTC sang múi giờ Hà Nội (Asia/Bangkok)
       def hanoi = utc.withZoneSameInstant(ZoneId.of("Asia/Bangkok"))
+      
       return hanoi.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))
     } catch (Exception e) {
       return ""
