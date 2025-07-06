@@ -16,8 +16,8 @@
     <section class="section sec-pageTitle style-2 style-doitac">
         <div class="sec-pageTitle__wrap">
             <ul class="sec-pageTitle__breadcrumb">
-                <li><a href="#">Trang chủ</a></li>
-                <li><span>Tin tức</span></li>
+                <li><a href="#">Home</a></li>
+                <li><span>News</span></li>
             </ul>
             <div class="sec-pageTitle__content">
                 <div class="container-custom">
@@ -37,7 +37,7 @@
             <nav class="nav-cat">
                 <ul>
                     <li>
-                        <a href="?tab=all" class="<#if (selectedTab!'') == 'all'>active</#if>">Tất cả tin bài</a>
+                        <a href="?tab=all" class="<#if (selectedTab!'') == 'all'>active</#if>">Featured news</a>
                     </li>
                     <#if contentModel.list_category_o?? && contentModel.list_category_o?has_content>
                         <#list contentModel.list_category_o.item as category>
