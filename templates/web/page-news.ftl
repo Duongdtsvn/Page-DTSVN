@@ -31,7 +31,7 @@
             <nav class="nav-cat">
                 <ul>
                     <li>
-                        <a href="?tab=all" class="<#if (selectedTab!'' == 'all' || selectedTab!'' == '')>active</#if>">Tất cả tin bài</a>
+                        <a href="?tab=all" class="<#if (selectedTab!'' == 'all') || !(selectedTab?has_content)>active</#if>">Tất cả tin bài</a>
                     </li>
                     <#if contentModel.list_category_o?? && contentModel.list_category_o?has_content>
                         <#list contentModel.list_category_o.item as category>
