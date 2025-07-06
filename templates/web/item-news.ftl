@@ -16,12 +16,10 @@
     <@crafter.renderComponentCollection $field="header_o"/>
     <section class="section sec-pageTitle style-blogDetail style-2">
         <div class="sec-pageTitle__wrap">
-            <div class="sec-pageTitle__header">
-                <ul class="sec-pageTitle__breadcrumb">
-                    <li><a href="/"> Trang chủ </a></li>
-                    <li><span>TIN TỨC</span></li>
-                </ul>
-            </div>
+            <ul class="sec-pageTitle__breadcrumb">
+                <li><a href="/"> Trang chủ </a></li>
+                <li><span>TIN TỨC</span></li>
+            </ul>
             <div class="sec-pageTitle__content">
                 <div class="container-custom">
                     <div class="row align-items-end">
