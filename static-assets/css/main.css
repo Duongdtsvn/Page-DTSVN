@@ -2187,6 +2187,44 @@ progress {
     }
 }
 
+/* Language Switcher Styles */
+.nav-lang-switcher {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: #2B6BB2;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 6px 18px;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.2s, color 0.2s;
+    border-left: 1px solid #e0e0e0;
+}
+
+.lang-btn:first-child {
+    border-radius: 4px 0 0 4px;
+    border-left: none;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+    background: #2B6BB2;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .nav-lang-switcher {
+        display: none;
+    }
+}
+
 @media (min-width: 1600px) {
     .col-xxxl {
         -webkit-box-flex: 1;
