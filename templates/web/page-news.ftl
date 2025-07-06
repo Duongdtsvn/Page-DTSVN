@@ -17,7 +17,7 @@
                 <div class="container-custom">
                     <div class="row">
                         <div class="col-md-8 col-lg-7 col-xl-6">  
-                            <h1 class="sec-pageTitle__title fz-52">${contentModel.internal-name!''}</h1>
+                            <h1 class="sec-pageTitle__title fz-52">${contentModel["internal-name"]!''}</h1>
                         </div>
                     </div>
                 </div>
