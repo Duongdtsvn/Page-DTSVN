@@ -55,8 +55,8 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="blog">
                                 <div class="blog__inner">
-                                    <a class="blog__img" href="${news.url!''}" style="background-image: url('${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/default-news.jpg')}');">
-                                        <img src="${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/default-news.jpg')}" alt="${news.title!''}">
+                                    <a class="blog__img" href="${news.url!''}" style="background-image: url('${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/new1000.jpg')}');">
+                                        <img src="${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/new1000.jpg')}" alt="${news.title!''}">
                                     </a>
                                     <div class="blog__body">
                                         <h3 class="blog__title">
@@ -78,13 +78,13 @@
                                                     </#if>
                                                 </li>
                                             </#if>
-                                            <#--  <#if news.categories?? && (news.categories?size > 0)>
+                                            <#if news.categories?? && (news.categories?size > 0)>
                                                 <li>
                                                     <#list news.categories as category>
                                                         <span class="badge badge-secondary">${category!''}</span>
                                                     </#list>
                                                 </li>
-                                            </#if>  -->
+                                            </#if>
                                         </ul>
                                     </div>
                                 </div>
