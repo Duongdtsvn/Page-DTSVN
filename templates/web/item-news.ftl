@@ -13,10 +13,6 @@
                 <li><a href="/"> Trang chủ </a></li>
                 <li><span>TIN TỨC</span></li>
             </ul>
-            <ul class="sec-pageTitle__breadcrumbn">
-                <li><a href="#">EN</a></li>
-                <li><a href="#">VN</a></li>
-            </ul>
             <div class="sec-pageTitle__content">
                 <div class="container-custom">
                     <div class="row align-items-end">
@@ -40,6 +36,10 @@
             </div>
         </div>
     </section>
+    <ul class="sec-pageTitle__breadcrumb">
+        <li><a href="#">EN</a></li>
+        <li><a href="#">VN</a></li>
+    </ul>
     <section class="section sec-blogDetail">
         <div class="container-custom">
             <div class="row">
