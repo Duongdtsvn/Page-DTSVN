@@ -8,12 +8,24 @@
   <body>
     <@crafter.body_top />
 
-    <!-- Nút chuyển đổi ngôn ngữ -->
+    <!-- Nút chuyển đổi ngôn ngữ thông minh -->
+    <#assign currentUrl = request.requestURI>
+    <#if locale == "en">
+      <#assign viUrl = currentUrl?replace('/en', '/vi')>
+      <#if viUrl == currentUrl>
+        <#assign viUrl = '/vi' + currentUrl>
+      </#if>
+    <#else>
+      <#assign enUrl = currentUrl?replace('/vi', '/en')>
+      <#if enUrl == currentUrl>
+        <#assign enUrl = '/en' + currentUrl>
+      </#if>
+    </#if>
     <div style="text-align:right; margin: 10px 0;">
-      <#if locale == "vi">
-        <a href="${request.requestURI?replace('/vi','/en')}">English</a>
+      <#if locale == "en">
+        <a href="${viUrl}">Tiếng Việt</a>
       <#else>
-        <a href="${request.requestURI?replace('/en','/vi')}">Tiếng Việt</a>
+        <a href="${enUrl}">English</a>
       </#if>
     </div>
 
@@ -27,11 +39,11 @@
                 <div class="container-custom">
                     <div class="row align-items-end">
                         <div class="col-md-9 col-xl-6">
-                            <#if locale == "vi">
-                              <h1 class="sec-pageTitle__title fz-52">${contentModel.title_vi_s!''}</h1>
-                            <#else>
-                              <h1 class="sec-pageTitle__title fz-52">${contentModel.title_en_s!''}</h1>
-                            </#if>
+                          <#if locale == "en">
+                            <h1 class="sec-pageTitle__title fz-52">${contentModel.title_en_s!contentModel.title_vi_s!''}</h1>
+                          <#else>
+                            <h1 class="sec-pageTitle__title fz-52">${contentModel.title_vi_s!contentModel.title_en_s!''}</h1>
+                          </#if>
                         </div>
                         <div class="col-md-3 col-xl-6">
                             <div class="sec-pageTitle__share">
@@ -56,13 +68,15 @@
                     <div class="sec-blogDetail__content stickyJs">
                         <div class="row">
                             <div class="col-xl-8 col-xxxl-7">
+                              <#if locale == "en">
                                 <div class="entry-text">
-                                  <#if locale == "vi">
-                                    ${contentModel.content_vi_html!''}
-                                  <#else>
-                                    ${contentModel.content_en_html!''}
-                                  </#if>
+                                  ${contentModel.content_en_html!contentModel.content_vi_html!''}
                                 </div>
+                              <#else>
+                                <div class="entry-text">
+                                  ${contentModel.content_vi_html!contentModel.content_en_html!''}
+                                </div>
+                              </#if>
                                 <div class="entry-text">
                                     <br>
                                     <h3 class="sec-contactPage__title">Gửi thông điệp tới DTSVN</h3>
