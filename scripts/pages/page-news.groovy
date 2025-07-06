@@ -6,13 +6,14 @@ def searchNews = new Searchnews(searchClient, urlTransformationService)
 
 // Lấy tham số từ URL
 def page = params.page ? params.page.toInteger() : 1
-// Lấy tab đang chọn qua param tab (là key của item_s_s)
+// Lấy tab đang chọn qua param tab (là key của category)
 def selectedTab = params.tab ?: null
 def itemsPerPage = 12
 
 // Tính toán offset cho phân trang
 def start = (page - 1) * itemsPerPage
 
+// Lấy danh sách categories từ contentModel
 def tabs = []
 if (contentModel.list_category_o?? && contentModel.list_category_o.item) {
     def items = contentModel.list_category_o.item
@@ -23,23 +24,28 @@ if (contentModel.list_category_o?? && contentModel.list_category_o.item) {
     }
 }
 
-def currentTab = null
+// Xác định category hiện tại
+def currentCategory = null
 if (tabs && tabs.size() > 0) {
     if (selectedTab) {
-        currentTab = tabs.find { it.item_s_s == selectedTab }
+        currentCategory = tabs.find { it.item_s_s == selectedTab }
     }
-    if (!currentTab) {
-        currentTab = tabs[0]
-        selectedTab = currentTab.item_s_s
+    if (!currentCategory) {
+        currentCategory = tabs[0]
+        selectedTab = currentCategory.item_s_s
     }
 }
 
-// Lấy dữ liệu tin tức
+// Lấy dữ liệu tin tức dựa trên category được chọn
 def newsItems = []
 def totalItems = 0
-if (currentTab) {
-    newsItems = searchNews.getNewsByCategoryKey(currentTab.item_s_s, start, itemsPerPage)
-    def allResults = searchNews.getNewsByCategoryKey(currentTab.item_s_s, 0, 1000)
+
+if (currentCategory) {
+    // Sử dụng category.item_s_s để lọc tin tức
+    // item_s_s chứa key của category từ taxonomy
+    def categoryKey = currentCategory.item_s_s
+    newsItems = searchNews.getNewsByCategoryKey(categoryKey, start, itemsPerPage)
+    def allResults = searchNews.getNewsByCategoryKey(categoryKey, 0, 1000)
     totalItems = allResults.size()
 }
 
@@ -57,22 +63,9 @@ for (int i = startPage; i <= endPage; i++) {
     pageNumbers << i
 }
 
-// Lấy danh sách danh mục để hiển thị trong navigation
-def allNews = searchNews.getAllNews(0, 1000)
-def categories = []
-allNews.each { news ->
-    if (news.categories) {
-        news.categories.each { cat ->
-            if (!categories.contains(cat)) {
-                categories << cat
-            }
-        }
-    }
-}
-
 // Đưa dữ liệu vào template model
 templateModel.tabs = tabs
-templateModel.currentTab = currentTab
+templateModel.currentTab = currentCategory
 templateModel.selectedTab = selectedTab
 templateModel.newsItems = newsItems
 templateModel.totalItems = totalItems
@@ -82,6 +75,5 @@ templateModel.hasNextPage = hasNextPage
 templateModel.hasPrevPage = hasPrevPage
 templateModel.pageNumbers = pageNumbers
 templateModel.searchTerm = ""
-templateModel.currentCategory = ""
-templateModel.categories = categories
+templateModel.currentCategory = currentCategory?.item_s_s ?: ""
 templateModel.itemsPerPage = itemsPerPage
