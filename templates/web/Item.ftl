@@ -15,17 +15,17 @@
   <link rel="stylesheet" href="/static-assets/css/main.css?site=${siteContext.siteName}"/>
   <link rel="stylesheet" href="/static-assets/css/language-switcher.css"/>
 
-  <#-- Render head component từ Crafter CMS -->
-  <@crafter.head />
-</head>
-<body>
-  <@crafter.body_top />
   <#-- Header: chỉ hiển thị 1 header theo ngôn ngữ -->
   <@crafter.renderComponentCollection $field="header_VN_o"/>
   <#--  
     <@crafter.renderComponentCollection $field="header_VN_o" data-lang="vi"/>
     <@crafter.renderComponentCollection $field="header_EN_o" data-lang="en" style="display:none;"/>
   -->
+  <#-- Render head component từ Crafter CMS -->
+  <@crafter.head />
+</head>
+<body>
+  <@crafter.body_top />
   <main class="page-content">
     <section class="section sec-pageTitle style-blogDetail style-2">
       <div class="sec-pageTitle__wrap">
