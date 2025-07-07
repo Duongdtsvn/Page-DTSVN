@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-04T04:27:44.021Z</createdDate>
 	<createdDate_dt>2025-07-04T04:27:44.021Z</createdDate_dt>
-	<lastModifiedDate>2025-07-04T08:51:26.492Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-04T08:51:26.492Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T02:16:35.712Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T02:16:35.712Z</lastModifiedDate_dt>
 	<who_studies_o item-list="true">	<item datasource="khahcnydnhchoai">	<key>/site/components/e25d62d4-56f4-8ba9-527d-2dc658efc674.xml</key>
 	<value>Khóa học này dành cho ai</value>
 	<include>/site/components/e25d62d4-56f4-8ba9-527d-2dc658efc674.xml</include>
@@ -51,4 +51,9 @@
 	<include>/site/components/a17b1030-9478-84a0-8830-24e8d6604e5d.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></course_information_o>
+	<result_o item-list="true">	<item datasource="ktqukhahc">	<key>/site/components/efeb6b9b-4d75-70bf-0cc7-3effdc17513d.xml</key>
+	<value>Kết quả bạn nhận được sau khi học xong khóa học</value>
+	<include>/site/components/efeb6b9b-4d75-70bf-0cc7-3effdc17513d.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></result_o>
 </page>
