@@ -38,7 +38,7 @@
                         </div>
                         <div class="col-md-4 col-xxxl-3 d-none d-md-block">
                             <div class="footer__widget">
-                                <h3 class="item-title">Công ty thành viên</h3>
+                                <h3 class="item-title">${contentModel.member_company_s!''}</h3>
                                 <ul class="footer__list">
                                     <#if contentModel.member_company_o.item?? && contentModel.member_company_o.item?has_content>
                                         <#list contentModel.member_company_o.item as member_company>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="col-md-2 col-lg-3 col-xl-3 d-none d-md-block">
                             <div class="footer__widget">
-                                <h3 class="item-title">Kết nối</h3>
+                                <h3 class="item-title">${contentModel.social_network_s!''}</h3>
                                 <ul class="footer__list">
                                     <#if contentModel.social_network_o.item?? && contentModel.social_network_o.item?has_content>
                                         <#list contentModel.social_network_o.item as social_network>
