@@ -25,13 +25,6 @@ if (contentModel.list_category_o && contentModel.list_category_o.item) {
 
 // Tạo bảng mapping để chuyển đổi từ taxonomy key sang giá trị thực tế để tìm kiếm
 // Ví dụ: 'Business-News' key sẽ được map sang 'Tin kinh doanh' để tìm kiếm
-def categoryMapping = [
-    'Business-News': 'Tin kinh doanh',
-    'Technology-News': 'Tin công nghệ',
-    'DTSVN Tuyển dụng': 'DTSVN Tuyển dụng',
-    'Business Analytics': 'Business Analytics',
-    'Blog': 'Blog'
-]
 
 // Khởi tạo biến để lưu trữ danh sách tin tức và tổng số tin tức
 def newsItems = []
