@@ -20,7 +20,7 @@
   <@crafter.renderComponentCollection $field="solution_o" />
   <@crafter.renderComponentCollection $field="strengths_o" />
   <@crafter.renderComponentCollection $field="achievements_o" />
-  <@crafter.renderComponentCollection $field="motto_o" />
+  <@crafter.renderComponentCollection $field="leader_o" />
   <@crafter.renderComponentCollection $field="achievements_o" />
   <@crafter.renderComponentCollection $field="leader_o" />
   <@crafter.renderComponentCollection $field="pobup_o" />
