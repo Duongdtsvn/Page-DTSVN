@@ -42,8 +42,7 @@
           </a>
         </div>
 
-        <!-- Hamburger Menu Button - Nút menu cho mobile -->
-        <button class="nav-toggle">☰</button>
+       
 
         <!-- Desktop Navigation Menu - Menu điều hướng cho desktop -->
         <nav class="nav-desktop">
@@ -64,6 +63,8 @@
           <button id="lang-switch-btn" class="lang-btn active">VN</button>
           <button id="lang-switch-btn" class="lang-btn">EN</button>
         </div>
+         <!-- Hamburger Menu Button - Nút menu cho mobile -->
+        <button class="nav-toggle">☰</button>
       </div>
     </div>
   </header>
