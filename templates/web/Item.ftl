@@ -92,10 +92,10 @@
             </div>
           </div>
         </div>
-        <div data-lang="vi">
+        <div class="row" data-lang="vi">
           <@crafter.renderComponentCollection $field="contact_VN_o"/>
         </div>
-        <div data-lang="en" style="display:none;">
+        <div class="row" data-lang="en" style="display:none;">
           <@crafter.renderComponentCollection $field="contact_EN_o"/>
         </div>
       </div>
