@@ -52,7 +52,7 @@
             <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
             <#list contentModel.menu_o.item as menu>
             <li class="nav-has-submenu">
-              <a href="/services">${menu.menu_s!''}</a>
+              <a href="${menu.link_s!''}">${menu.menu_s!''}</a>
             </li>
             </#list>
             </#if>
