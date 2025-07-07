@@ -1,23 +1,2 @@
 version: "1.0"
-plugins:
-- id: "org.craftercms.plugin.contactform"
-  version:
-    major: 1
-    minor: 0
-    patch: 18
-  type: "site"
-  pluginUrl: "https://github.com/craftercms/contact-form-plugin"
-  installationDate: "2025-07-07T07:31:58.006735018Z"
-  files:
-  - path: "scripts/classes/plugins/org/craftercms/plugin/contactform/FormHandler.groovy"
-  - path: "scripts/classes/plugins/org/craftercms/plugin/contactform/DefaultFormHandler.groovy"
-  - path: "config/studio/content-types/component/plugins/org/craftercms/plugin/contactform/contact-form/thumbnail.png"
-  - path: "config/studio/content-types/component/plugins/org/craftercms/plugin/contactform/contact-form/form-definition.xml"
-  - path: "config/studio/content-types/component/plugins/org/craftercms/plugin/contactform/contact-form/controller.groovy"
-  - path: "config/studio/content-types/component/plugins/org/craftercms/plugin/contactform/contact-form/config.xml"
-  - path: "scripts/controllers/plugins/org/craftercms/plugin/contactform/contactform.post.groovy"
-  - path: "templates/plugins/org/craftercms/plugin/contactform/thanks.ftl"
-  - path: "templates/plugins/org/craftercms/plugin/contactform/contact-form.ftl"
-  - path: "static-assets/plugins/org/craftercms/plugin/contactform/js/validate-form.js"
-  - path: "static-assets/plugins/org/craftercms/plugin/contactform/css/contact-form.css"
-  config: []
+plugins: []
