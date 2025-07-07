@@ -92,8 +92,12 @@
             </div>
           </div>
         </div>
-        <@crafter.renderComponentCollection $field="contact_VN_o" data-lang="vi"/>
-        <@crafter.renderComponentCollection $field="contact_EN_o" data-lang="en" style="display:none;"/>
+        <div data-lang="vi">
+          <@crafter.renderComponentCollection $field="contact_VN_o"/>
+        </div>
+        <div data-lang="en" style="display:none;">
+          <@crafter.renderComponentCollection $field="contact_EN_o"/>
+        </div>
       </div>
     </section>
   </main>
