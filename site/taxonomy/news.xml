@@ -6,9 +6,9 @@
 	<merge-strategy>inherit-levels</merge-strategy>
 	<objectGroupId>12ac</objectGroupId>
 	<objectId>12ac4f17-f6ba-95e7-6e68-224380891379</objectId>
-	<items item-list="true">	<item>	<key>Tin kinh doanh</key>
+	<items item-list="true">	<item>	<key>Business-News</key>
 	<value>Tin kinh doanh</value>
-	</item>	<item>	<key>Tin công nghệ</key>
+	</item>	<item>	<key>Technology-News</key>
 	<value>Tin công nghệ</value>
 	</item>	<item>	<key>DTSVN Tuyển dụng</key>
 	<value>DTSVN Tuyển dụng</value>
@@ -22,6 +22,6 @@
 	<folder-name/>
 	<createdDate>2025-07-04T03:44:06.223Z</createdDate>
 	<createdDate_dt>2025-07-04T03:44:06.223Z</createdDate_dt>
-	<lastModifiedDate>2025-07-04T03:44:06.223Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-04T03:44:06.223Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-04T08:24:11.684Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-04T08:24:11.684Z</lastModifiedDate_dt>
 </component>
