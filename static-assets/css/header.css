@@ -125,7 +125,7 @@ body {
   display: none;
   position: fixed;
   top: 60px;
-  left: 0;
+  right:0;
   width: 66.67%;
   /* Set to 2/3 of the screen width */
   height: calc(100vh - 60px);
