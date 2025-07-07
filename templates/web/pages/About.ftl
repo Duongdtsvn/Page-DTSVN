@@ -16,7 +16,7 @@
 <body>
   <@crafter.body_top />
   <@crafter.renderComponentCollection $field="header_o" />
-  <@crafter.renderComponentCollection $field="banner_home_o" />
+  <@crafter.renderComponentCollection $field="banner_o" />
   <@crafter.renderComponentCollection $field="products_o" />
   <@crafter.renderComponentCollection $field="member_o" />
   <@crafter.renderComponentCollection $field="partner_o" />
