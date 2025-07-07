@@ -14,9 +14,27 @@
 	<products_o item-list="true">	<item>	<slogan_s>DTSVN - CEP</slogan_s>
 	<url_s>https://dtsvn.net/martech/</url_s>
 	<product_name_s>Dịch vụ vận hành Martech</product_name_s>
+	</item>	<item>	<slogan_s>DTSVN - CDxP</slogan_s>
+	<url_s/>
+	<product_name_s>Dịch vụ Vận hành và Quản lý Nền tảng CDxP</product_name_s>
+	</item>	<item>	<slogan_s>DTSVN – iDB</slogan_s>
+	<url_s/>
+	<product_name_s>Kênh giao dịch số tài chính thông minh (iDB)</product_name_s>
+	</item>	<item>	<slogan_s>DTSVN - DIGITAL ONE – D DO</slogan_s>
+	<url_s/>
+	<product_name_s>Phần mềm Quầy giao dịch số (D DO)</product_name_s>
+	</item>	<item>	<slogan_s>DTSVN – DOCUMENT FORM (D-DF)</slogan_s>
+	<url_s/>
+	<product_name_s>Phần mềm quản lý hồ sơ biểu mẫu cho bank</product_name_s>
+	</item>	<item>	<slogan_s>Smart Sale</slogan_s>
+	<url_s/>
+	<product_name_s>Phần mềm quản lý kinh doanh cho bank</product_name_s>
+	</item>	<item>	<slogan_s>DTSVN – (D-ECS)</slogan_s>
+	<url_s/>
+	<product_name_s>Phần mềm cảnh báo rủi ro nợ sớm và theo dõi nhắc nợ</product_name_s>
 	</item></products_o>
 	<createdDate>2025-06-25T09:47:40.404Z</createdDate>
 	<createdDate_dt>2025-06-25T09:47:40.404Z</createdDate_dt>
-	<lastModifiedDate>2025-06-25T09:47:40.404Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-25T09:47:40.404Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T07:44:43.316Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T07:44:43.316Z</lastModifiedDate_dt>
 </component>
