@@ -2,11 +2,11 @@
 
     <div class="col-xxxl-10 offset-xxxl-1">
         <div class="sec-blogDetail__content stickyJs">
-            <div class="row justify-content-center">
+            <div class="row">
                 <div class="col-xl-8 col-xxxl-7">
                     <div class="entry-text">
                         <br>
-                        <h3 class="sec-contactPage__title text-center">${list_tab.name_tab_s!''}</h3>
+                        <h3 class="sec-contactPage__title text-center">${contentModel.name_label_s!''}</h3>
                         <div class="wpcf7 js" id="wpcf7-f6-o1" lang="vi" dir="ltr">
                             <div class="screen-reader-response">
                                 <p role="status" aria-live="polite" aria-atomic="true"></p>
