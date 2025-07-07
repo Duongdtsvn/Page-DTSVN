@@ -33,9 +33,9 @@
                   <a href="#">
                     <div class="item__inner">
                       <div class="fix">
-                        <span class="item__number"></span>
+                        <span class="item__number">${solutionn.title_s!''}</span>
                         <div class="translate" style="--y: 100px">
-                          <h3 class="item__title">${solutionn.title_s!''}</h3>
+                          <h3 class="item__title">${solutionn.subtitle_s!''}</h3>
                         </div>
                       </div>
                     </div>
