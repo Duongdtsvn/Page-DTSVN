@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-07T03:42:51.585Z</createdDate>
 	<createdDate_dt>2025-07-07T03:42:51.585Z</createdDate_dt>
-	<lastModifiedDate>2025-07-07T04:49:36.407Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-07T04:49:36.407Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T04:52:44.329Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T04:52:44.329Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</key>
 	<value>Banner Giới thiệu</value>
 	<include>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</include>
@@ -51,4 +51,9 @@
 	<include>/site/components/c3de65d4-ede1-90a4-8b76-fd7d53a4dafc.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></leader_o>
+	<member_o item-list="true">	<item>	<key>/site/components/af81c1ad-1803-d0cd-44c3-83f691775c1b.xml</key>
+	<value>thành viên</value>
+	<include>/site/components/af81c1ad-1803-d0cd-44c3-83f691775c1b.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></member_o>
 </page>
