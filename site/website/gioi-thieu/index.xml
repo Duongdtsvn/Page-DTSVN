@@ -24,11 +24,16 @@
 	</item></footer_o>
 	<createdDate>2025-07-07T03:42:51.585Z</createdDate>
 	<createdDate_dt>2025-07-07T03:42:51.585Z</createdDate_dt>
-	<lastModifiedDate>2025-07-07T03:48:05.607Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-07T03:48:05.607Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T03:52:20.901Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T03:52:20.901Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</key>
 	<value>Banner Giới thiệu</value>
 	<include>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></banner_o>
+	<solution_o item-list="true">	<item datasource="dTSVNCUNGCPTRNBGIIPHP">	<key>/site/components/b47ab75f-f4c6-d533-64d2-979c32819300.xml</key>
+	<value>DTSVN CUNG CẤP TRỌN BỘ GIẢI PHÁP</value>
+	<include>/site/components/b47ab75f-f4c6-d533-64d2-979c32819300.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></solution_o>
 </page>
