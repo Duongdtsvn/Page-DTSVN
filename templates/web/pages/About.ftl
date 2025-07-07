@@ -23,7 +23,7 @@
   <@crafter.renderComponentCollection $field="leader_o" />
   <@crafter.renderComponentCollection $field="member_o" />
   <@crafter.renderComponentCollection $field="leader_o" />
-  <@crafter.renderComponentCollection $field="pobup_o" />
+  <@crafter.renderComponentCollection $field="client_o" />
   <@crafter.renderComponentCollection $field="blog_o" />
   <@crafter.renderComponentCollection $field="footer_o" />
   <@crafter.body_bottom />
