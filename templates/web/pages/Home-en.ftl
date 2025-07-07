@@ -61,6 +61,7 @@
     }
     popupTeamJs();
   </script>
+  <script src='/static-assets/js/function.js' > </script>
 </body>
 
 </html>
