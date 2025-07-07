@@ -6,7 +6,7 @@
                 <div class="col-xl-8 col-xxxl-7">
                     <div class="entry-text">
                         <br>
-                        <h3 class="sec-contactPage__title text-center">${contentModel.name_label_s!''}</h3>
+                        <h3 class="sec-contactPage__title text-center">${contentModel.title_main_s!''}</h3>
                         <div class="wpcf7 js" id="wpcf7-f6-o1" lang="vi" dir="ltr">
                             <div class="screen-reader-response">
                                 <p role="status" aria-live="polite" aria-atomic="true"></p>
