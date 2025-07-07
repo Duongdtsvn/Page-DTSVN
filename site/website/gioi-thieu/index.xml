@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-07T03:42:51.585Z</createdDate>
 	<createdDate_dt>2025-07-07T03:42:51.585Z</createdDate_dt>
-	<lastModifiedDate>2025-07-07T04:47:36.985Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-07T04:47:36.985Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T04:49:36.407Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T04:49:36.407Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</key>
 	<value>Banner Giới thiệu</value>
 	<include>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</include>
@@ -46,4 +46,9 @@
 	<include>/site/components/8770ee00-bc20-15c1-00f3-53b1470eef8f.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></achievements_o>
+	<leader_o item-list="true">	<item>	<key>/site/components/c3de65d4-ede1-90a4-8b76-fd7d53a4dafc.xml</key>
+	<value>ban lãnh đạo</value>
+	<include>/site/components/c3de65d4-ede1-90a4-8b76-fd7d53a4dafc.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></leader_o>
 </page>
