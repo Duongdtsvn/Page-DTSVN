@@ -22,7 +22,6 @@
   <@crafter.renderComponentCollection $field="achievements_o" />
   <@crafter.renderComponentCollection $field="leader_o" />
   <@crafter.renderComponentCollection $field="member_o" />
-  <@crafter.renderComponentCollection $field="leader_o" />
   <@crafter.renderComponentCollection $field="client_o" />
   <@crafter.renderComponentCollection $field="blog_o" />
   <@crafter.renderComponentCollection $field="footer_o" />
