@@ -9,7 +9,7 @@
 	<internal-name>Product-Service</internal-name>
 	<navLabel>Product-Service</navLabel>
 	<file-name>index.xml</file-name>
-	<folder-name>product-service</folder-name>
+	<folder-name>sanpham-dichvu</folder-name>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
 	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-03T04:03:25.788Z</createdDate>
 	<createdDate_dt>2025-07-03T04:03:25.788Z</createdDate_dt>
-	<lastModifiedDate>2025-07-03T09:39:05.070Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-03T09:39:05.070Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T03:06:53.352Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T03:06:53.352Z</lastModifiedDate_dt>
 	<product_orientation_o item-list="true">	<item datasource="nhhngsnphm">	<key>/site/components/26ee3a14-72a0-b342-3c8a-d4d7023f49e6.xml</key>
 	<value>Định hướng sản phẩm</value>
 	<include>/site/components/26ee3a14-72a0-b342-3c8a-d4d7023f49e6.xml</include>
