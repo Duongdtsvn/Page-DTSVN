@@ -55,7 +55,7 @@
 	</div>
 	<div class="col-md-12">
 		<div class="form-btn">
-			<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Gửi thông tin"><span class="wpcf7-spinner"></span>
+			<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="${contentModel.label_button_s!''}"><span class="wpcf7-spinner"></span>
 			</p>
 		</div>
 	</div>
