@@ -1,6 +1,5 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
 
-<div class="row justify-content-center">
     <div class="col-xxxl-10 offset-xxxl-1">
         <div class="sec-blogDetail__content stickyJs">
             <div class="row justify-content-center">
@@ -76,4 +75,3 @@
             </div>
         </div>
     </div>
-</div>
