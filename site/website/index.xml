@@ -12,8 +12,8 @@
 	<folder-name/>
 	<createdDate>2017-01-31T16:18:14.000Z</createdDate>
 	<createdDate_dt>2017-01-31T16:18:14.000Z</createdDate_dt>
-	<lastModifiedDate>2025-07-07T07:49:47.482Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-07T07:49:47.482Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T07:51:04.683Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T07:51:04.683Z</lastModifiedDate_dt>
 	<title_t>Editorial</title_t>
 	<disabled>false</disabled>
 	<home_o item-list="true">	<item>	<key>/site/components/home/67818315-5397-246d-8b2a-b930ffc34193.xml</key>
@@ -46,9 +46,9 @@
 	<include>/site/components/f19480d0-1451-fc91-06d0-0b44d23f2342.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></products_o>
-	<partner_o item-list="true">	<item>	<key>/site/components/2ad96b85-2a40-350a-83b6-081b2576d202.xml</key>
-	<value>Đối tác tiêu biểu của DTSVN</value>
-	<include>/site/components/2ad96b85-2a40-350a-83b6-081b2576d202.xml</include>
+	<partner_o item-list="true">	<item>	<key>/site/components/80dfe4db-54f9-9a02-f028-42e260b6eae2.xml</key>
+	<value>Đối tác</value>
+	<include>/site/components/80dfe4db-54f9-9a02-f028-42e260b6eae2.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></partner_o>
 	<motto_o item-list="true">	<item datasource="phngcham">	<key>/site/components/home/560010b3-6901-2eaa-9b5b-5aba9e071bdb.xml</key>
