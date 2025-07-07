@@ -11,6 +11,46 @@
 	<folder-name/>
 	<createdDate>2025-06-25T03:36:02.225Z</createdDate>
 	<createdDate_dt>2025-06-25T03:36:02.225Z</createdDate_dt>
-	<lastModifiedDate>2025-06-25T03:36:02.225Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-25T03:36:02.225Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T18:26:55.716Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T18:26:55.716Z</lastModifiedDate_dt>
+	<address_s>Số 2 ngõ 7 Thái Hà, Phường Trung Liệt, Đống Đa, Hà Nội 08:30 - 17:45, từ thứ 2 đến thứ 7</address_s>
+	<logo_dtsvn_s>/static-assets/images/logo-footer.png</logo_dtsvn_s>
+	<contact_information_o item-list="true">	<item>	<information_1_s>Điện thoại</information_1_s>
+	<information_2_s>(+84) 912 363 824</information_2_s>
+	</item>	<item>	<information_1_s>Email</information_1_s>
+	<information_2_s>info@dtsvn.net</information_2_s>
+	</item>	<item>	<information_1_s>Website</information_1_s>
+	<information_2_s>https://dtsvn.net</information_2_s>
+	</item></contact_information_o>
+	<member_company_o item-list="true">	<item>	<link_o/>
+	<name_company_s>Beau Agency </name_company_s>
+	</item>	<item>	<link_o/>
+	<name_company_s>MATE </name_company_s>
+	</item>	<item>	<link_o/>
+	<name_company_s>ENTERPRISENAO </name_company_s>
+	</item>	<item>	<link_o/>
+	<name_company_s>DTI</name_company_s>
+	</item></member_company_o>
+	<social_network_o item-list="true">	<item>	<link_o/>
+	<name_social_s>Facebook </name_social_s>
+	</item>	<item>	<link_o/>
+	<name_social_s>Zalo </name_social_s>
+	</item>	<item>	<link_o/>
+	<name_social_s>Youtube</name_social_s>
+	</item>	<item>	<link_o/>
+	<name_social_s>LinkedIn</name_social_s>
+	</item></social_network_o>
+	<menu_footer_o item-list="true">	<item>	<link_o/>
+	<menu_s>Giới thiệu </menu_s>
+	</item>	<item>	<link_o/>
+	<menu_s>Sản phẩm - Đối tác</menu_s>
+	</item>	<item>	<link_o/>
+	<menu_s>Liên hệ</menu_s>
+	</item>	<item>	<link_o/>
+	<menu_s>Tin tức</menu_s>
+	</item>	<item>	<link_o/>
+	<menu_s>Nhà đầu tư</menu_s>
+	</item>	<item>	<link_o/>
+	<menu_s>Khảo sát </menu_s>
+	</item></menu_footer_o>
 </component>
