@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/component-header</content-type>
+	<display-template>/templates/web/Component-Header.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>a0b5</objectGroupId>
+	<objectId>a0b58cea-7ec0-fedc-c515-4effaa2a1811</objectId>
+	<internal-name>Header-en</internal-name>
+	<file-name>a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</file-name>
+	<folder-name/>
+	<menu_o item-list="true">	<item>	<menu_s>About</menu_s>
+	<link_s/>
+	<menu_c2_o item-list="true"/>
+	</item>	<item>	<menu_s>Products-Service</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s/>
+	</item>	<item>	<menu_s>BA course</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s/>
+	</item>	<item>	<menu_s>Investors</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s/>
+	</item>	<item>	<menu_s>Digital Transformation</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s/>
+	</item>	<item>	<menu_s>Partners</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s/>
+	</item>	<item>	<menu_s>News</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s/>
+	</item>	<item>	<menu_s>Projects</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s/>
+	</item></menu_o>
+	<createdDate>2025-07-07T08:53:50.134Z</createdDate>
+	<createdDate_dt>2025-07-07T08:53:50.134Z</createdDate_dt>
+	<lastModifiedDate>2025-07-07T08:53:50.134Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T08:53:50.134Z</lastModifiedDate_dt>
+</component>
