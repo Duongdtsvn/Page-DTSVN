@@ -7,7 +7,7 @@
                             <div class="col-xl-8 col-xxxl-7">
                                 <div class="entry-text">
                                     <br>
-                                    <h3 class="sec-contactPage__title">Gửi thông điệp tới DTSVN</h3>
+                                    <h3 class="sec-contactPage__title">${list_tab.name_tab_s!''}</h3>
                                     
 <div class="wpcf7 js" id="wpcf7-f6-o1" lang="vi" dir="ltr">
 <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
@@ -20,34 +20,36 @@
 <input type="hidden" name="_wpcf7_container_post" value="0">
 <input type="hidden" name="_wpcf7_posted_data_hash" value="">
 </div>
+<#if contentModel.list_input_o.item?has_content>
+    <#list contentModel.list_input_o.item as form>
 <div class="row">
 	<div class="col-md-6">
 		<div class="form-item">
-			<p><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="name" aria-required="true" aria-invalid="false" placeholder="Họ và tên*" value="" type="text" name="your-name"></span>
+			<p><span class="wpcf7-form-control-wrap" data-name="${form.fied_name_s!''}"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="name" aria-required="true" aria-invalid="false" placeholder="${form.label_name_s!''}*" value="" type="text" name="${form.fied_name_s!''}"></span> //your-name
 			</p>
 		</div>
 	</div>
 	<div class="col-md-6">
 		<div class="form-item">
-			<p><span class="wpcf7-form-control-wrap" data-name="company-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="company" aria-required="true" aria-invalid="false" placeholder="Công ty*" value="" type="text" name="company-name"></span>
+			<p><span class="wpcf7-form-control-wrap" data-name="${form.fied_name_s!''}"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="company" aria-required="true" aria-invalid="false" placeholder="${form.label_name_s!''}*" value="" type="text" name="${form.fied_name_s!''}"></span> //company-name
 			</p>
 		</div>
 	</div>
 	<div class="col-md-6">
 		<div class="form-item">
-			<p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autocomplete="email" aria-required="true" aria-invalid="false" placeholder="Email*" value="" type="email" name="your-email"></span>
+			<p><span class="wpcf7-form-control-wrap" data-name="${form.fied_name_s!''}"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autocomplete="email" aria-required="true" aria-invalid="false" placeholder="${form.label_name_s!''}*" value="" type="email" name="${form.fied_name_s!''}"></span> //your-email
 			</p>
 		</div>
 	</div>
 	<div class="col-md-6">
 		<div class="form-item">
-			<p><span class="wpcf7-form-control-wrap" data-name="phone-number"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="phone" aria-required="true" aria-invalid="false" placeholder="Số điện thoại*" value="" type="text" name="phone-number"></span>
+			<p><span class="wpcf7-form-control-wrap" data-name="${form.fied_name_s!''}"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="phone" aria-required="true" aria-invalid="false" placeholder="${form.label_name_s!''}*" value="" type="text" name="${form.fied_name_s!''}"></span> //phone-number
 			</p>
 		</div>
 	</div>
 	<div class="col-md-12">
 		<div class="form-item">
-			<p><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Nội dung tin nhắn*" name="your-message"></textarea></span>
+			<p><span class="wpcf7-form-control-wrap" data-name="${form.fied_name_s!''}"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="${form.label_name_s!''}*" name="${form.fied_name_s!''}"></textarea></span> //your-message
 			</p>
 		</div>
 	</div>
@@ -57,7 +59,10 @@
 			</p>
 		</div>
 	</div>
-</div><div class="wpcf7-response-output" aria-hidden="true"></div>
+</div>
+</#list>
+</#if>
+<div class="wpcf7-response-output" aria-hidden="true"></div>
 </form>
 </div>
                                 </div>
