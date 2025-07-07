@@ -8,14 +8,19 @@
 	<objectId>8db2f60d-a400-0802-91b8-7cee9365cdc3</objectId>
 	<list_input_o item-list="true">	<item>	<label_name_s>Full Name</label_name_s>
 	<fied_name_s>your-name</fied_name_s>
+	<autocomplete_s>name</autocomplete_s>
 	</item>	<item>	<label_name_s>Company</label_name_s>
 	<fied_name_s>company-name</fied_name_s>
+	<autocomplete_s>company</autocomplete_s>
 	</item>	<item>	<label_name_s>Email</label_name_s>
 	<fied_name_s>your-email</fied_name_s>
+	<autocomplete_s>email</autocomplete_s>
 	</item>	<item>	<label_name_s>Phone</label_name_s>
 	<fied_name_s>phone-number</fied_name_s>
+	<autocomplete_s>phone</autocomplete_s>
 	</item>	<item>	<label_name_s>Message</label_name_s>
 	<fied_name_s>your-message</fied_name_s>
+	<autocomplete_s/>
 	</item></list_input_o>
 	<internal-name>Contact form - EN</internal-name>
 	<title_main_s>Send a Message to DTSVN</title_main_s>
@@ -24,7 +29,7 @@
 	<folder-name/>
 	<createdDate>2025-07-07T07:59:26.121Z</createdDate>
 	<createdDate_dt>2025-07-07T07:59:26.121Z</createdDate_dt>
-	<lastModifiedDate>2025-07-07T08:03:17.672Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-07T08:03:17.672Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T08:10:59.344Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T08:10:59.344Z</lastModifiedDate_dt>
 	<label_share_s>Share</label_share_s>
 </component>
