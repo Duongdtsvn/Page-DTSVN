@@ -67,7 +67,7 @@
 </div>
                                 </div>
                                 <div class="entry-share">
-                                    <span>Chia sẻ:</span>
+                                    <span>${contentModel.label_share_s!''}:</span>
                                     <a href="http://www.facebook.com/sharer.php?u=https://dtsvn.net/dtsvn-d-ecs-phan-mem-canh-bao-rui-ro-no-som-va-theo-doi-nhac-no/&amp;p[title]=Phát triển phần mềm thẩm định dữ liệu, phần mềm web-based">
                                         <img src="https://dtsvn.net/wp-content/themes/dtsvn-hello-elementor/assets/img/icon-facebook.svg" alt="">
                                     </a>
