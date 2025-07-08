@@ -23,16 +23,6 @@ if (contentModel.list_category_o && contentModel.list_category_o.item) {
     tabs = (items instanceof List) ? items : [items]
 }
 
-// Tạo bảng mapping để chuyển đổi từ taxonomy key sang giá trị thực tế để tìm kiếm
-// Ví dụ: 'Business-News' key sẽ được map sang 'Tin kinh doanh' để tìm kiếm
-def categoryMapping = [
-    'Business-News': 'Tin kinh doanh',
-    'Technology-News': 'Tin công nghệ',
-    'DTSVN Tuyển dụng': 'DTSVN Tuyển dụng',
-    'Business Analytics': 'Business Analytics',
-    'Blog': 'Blog'
-]
-
 // Khởi tạo biến để lưu trữ danh sách tin tức và tổng số tin tức
 def newsItems = []
 def totalItems = 0
@@ -46,8 +36,9 @@ if (selectedTab == 'all') {
     // Nếu chọn category cụ thể, tìm category tương ứng trong danh sách tabs
     def currentCategory = tabs.find { it.item_s_s == selectedTab }
     if (currentCategory) {
-        // Chuyển đổi từ taxonomy key sang giá trị thực tế để tìm kiếm
-        def categoryKey = categoryMapping[currentCategory.item_s_s]
+        // Sử dụng trực tiếp giá trị item_s_s để tìm kiếm
+        // Vì item_s_s đã chứa giá trị thực tế cần tìm kiếm
+        def categoryKey = currentCategory.item_s_s
         if (categoryKey) {
             // Lấy tin tức theo category và tính tổng số
             newsItems = searchNews.getNewsByCategoryKey(categoryKey, start, itemsPerPage)
