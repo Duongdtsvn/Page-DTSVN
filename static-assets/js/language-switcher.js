@@ -6,37 +6,27 @@ class LanguageSwitcher {
     constructor() {
         // Tìm tất cả các nút chuyển đổi ngôn ngữ trên trang
         this.langButtons = document.querySelectorAll('.lang-btn');
-        // Lấy ngôn ngữ từ URL (.en ở cuối path) hoặc mặc định 'vi'
-        this.currentLang = this.detectLanguageFromUrl();
+        // Lấy ngôn ngữ từ query string ?lang=en hoặc ?lang=vi, mặc định 'vi'
+        this.currentLang = this.detectLanguageFromQuery();
         // Khởi tạo component
         this.init();
     }
 
-    detectLanguageFromUrl() {
-        // Kiểm tra nếu URL có .en ở cuối path (trước query/hash)
-        const path = window.location.pathname;
-        if (/\.en$/.test(path)) {
-            return 'en';
-        }
+    detectLanguageFromQuery() {
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang');
+        if (lang === 'en') return 'en';
         return 'vi';
     }
 
     updateUrlForLanguage(lang) {
         const url = new URL(window.location.href);
-        let path = url.pathname;
         if (lang === 'en') {
-            if (!/\.en$/.test(path)) {
-                path += '.en';
-            }
+            url.searchParams.set('lang', 'en');
         } else {
-            // Nếu là tiếng Việt, loại bỏ .en ở cuối nếu có
-            path = path.replace(/\.en$/, '');
+            url.searchParams.delete('lang');
         }
-        // Chỉ thay đổi nếu khác
-        if (path !== url.pathname) {
-            url.pathname = path;
-            window.history.replaceState({}, '', url.toString());
-        }
+        window.history.replaceState({}, '', url.toString());
     }
 
     init() {
@@ -184,9 +174,10 @@ class LanguageSwitcher {
         this.switchContent(this.currentLang);
 
         // Tìm và thiết lập trạng thái ban đầu cho nút VN
-        const initialButton = Array.from(this.langButtons).find(btn =>
-            btn.textContent === 'VN'
-        );
+        const initialButton = Array.from(this.langButtons).find(btn => {
+            const btnLang = btn.textContent === 'VN' ? 'vi' : 'en';
+            return btnLang === this.currentLang;
+        });
 
         if (initialButton) {
             this.updateButtonStates(initialButton);
