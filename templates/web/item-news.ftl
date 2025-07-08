@@ -1,12 +1,8 @@
 <#-- Import thư viện Crafter CMS để sử dụng các component và macro -->
 <#import "/templates/system/common/crafter.ftl" as crafter />
 
-<#-- Detect language from URL path --><#assign requestUri = (request?has_content && request.requestURI?has_content)?then(request.requestURI, "") />
-<#assign isEnglish = requestUri?ends_with('.en') />
-<#assign lang = isEnglish?string('en', 'vi') />
-
 <!doctype html>
-<html lang="${lang}">
+<html lang="en">
   <head>
       <#-- Thiết lập meta charset và viewport cho responsive -->
       <meta charset="UTF-8">
@@ -46,11 +42,9 @@
                         <#-- Cột hiển thị tiêu đề bài viết -->
                         <div class="col-md-9 col-xl-6">
                             <#-- Tiêu đề tiếng Việt -->
-                            <#if lang == 'vi'>
-                              <h1 class="sec-pageTitle__title fz-52" data-lang="vi">${contentModel.title_vi_s!''}</h1>
-                            <#else>
-                              <h1 class="sec-pageTitle__title fz-52" data-lang="en">${contentModel.title_en_s!''}</h1>
-                            </#if>
+                            <h1 class="sec-pageTitle__title fz-52" data-lang="vi">${contentModel.title_vi_s!''}</h1>
+                            <#-- Tiêu đề tiếng Anh (ẩn mặc định) -->
+                            <h1 class="sec-pageTitle__title fz-52" data-lang="en" style="display: none;">${contentModel.title_en_s!''}</h1>
                         </div>
                         
                         <#-- Cột hiển thị nút chia sẻ và language switcher -->
@@ -66,11 +60,15 @@
                                 </a>
                                 
                                 <#-- Language switcher cho chuyển đổi ngôn ngữ -->
+                                <#-- Detect current language from URL -->
+                                <#assign currentUrl = request.requestURI />
+                                <#assign isEnglish = currentUrl?ends_with('.en') />
+                                <#-- Generate URLs for each language -->
+                                <#assign viUrl = currentUrl?replace('.en', '', 'r') />
+                                <#assign enUrl = viUrl + '.en' />
                                 <div class="language-switcher" role="group" aria-label="Chọn ngôn ngữ">
-                                    <#-- Build correct href for each language -->
-                                    <#assign baseUrl = requestUri?replace('\.en$', '') />
-                                    <a href="${baseUrl}" class="lang-btn${lang == 'vi'?string(' active','')}" role="button" aria-pressed="${lang == 'vi'?string('true','false')}" aria-label="Tiếng Việt">VN</a>
-                                    <a href="${baseUrl}.en" class="lang-btn${lang == 'en'?string(' active','')}" role="button" aria-pressed="${lang == 'en'?string('true','false')}" aria-label="English">EN</a>
+                                    <a href="${viUrl}" class="lang-btn${!isEnglish?string(' active','')}" role="button" aria-pressed="${!isEnglish?string('true','false')}" aria-label="Tiếng Việt">VN</a>
+                                    <a href="${enUrl}" class="lang-btn${isEnglish?string(' active','')}" role="button" aria-pressed="${isEnglish?string('true','false')}" aria-label="English">EN</a>
                                 </div>
                             </div>
                         </div>
@@ -89,15 +87,14 @@
                         <div class="row">
                             <div class="col-xl-8 col-xxxl-7">
                                 <#-- Nội dung bài viết tiếng Việt -->
-                                <#if lang == 'vi'>
-                                  <div class="entry-text" data-lang="vi">
-                                      ${contentModel.content_vi_html!''}
-                                  </div>
-                                <#else>
-                                  <div class="entry-text" data-lang="en">
-                                      ${contentModel.content_en_html!''}
-                                  </div>
-                                </#if>
+                                <div class="entry-text" data-lang="vi">
+                                    ${contentModel.content_vi_html!''}
+                                </div>
+                                
+                                <#-- Nội dung bài viết tiếng Anh (ẩn mặc định) -->
+                                <div class="entry-text" data-lang="en" style="display: none;">
+                                    ${contentModel.content_en_html!''}
+                                </div>
                                 
                                 <#-- Các nút chia sẻ mạng xã hội -->
                                 <div class="entry-share">
