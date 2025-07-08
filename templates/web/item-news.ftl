@@ -1,14 +1,16 @@
-<#-- Xác định URL gốc và ngôn ngữ hiện tại -->
-<#assign requestPath   = siteContext.requestPath />
-<#assign basePath      = requestPath?replace("\\.en$", "") />
-<#assign currentLang   = (requestPath?ends_with('.en'))? then('en','vi') />
+<#-- Xác định URL request và ngôn ngữ -->
+<#assign requestPath = siteContext.requestPath />
+<#-- Loại bỏ suffix “.en” nếu có, dùng replace_re để hỗ trợ regex -->
+<#assign basePath    = requestPath?replace_re("\\.en$", "") />
+<#-- Kiểm tra nếu path kết thúc bằng “.en” thì ngôn ngữ là en, ngược lại là vi -->
+<#assign currentLang = (requestPath?matches(".*\\.en$"))? then("en","vi") />
 
 <!doctype html>
 <html lang="${currentLang}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${currentLang == 'en'? 'News - DTSVN' : 'Tin tức - DTSVN'}</title>
+    <title>${currentLang == "en"? "News - DTSVN" : "Tin tức - DTSVN"}</title>
 
     <!-- CSS chung -->
     <link rel="stylesheet" href="/static-assets/css/header.css">
@@ -44,7 +46,7 @@
               <div class="col-md-3 col-xl-6">
                 <div class="sec-pageTitle__share" style="display: flex; align-items: center; gap: 16px; justify-content: flex-end;">
                   <a href="#" class="btn-share">Chia sẻ
-                    <span>…SVG…</span>
+                    <span><!-- SVG icon --></span>
                   </a>
                   <div class="language-switcher" role="group" aria-label="Chọn ngôn ngữ">
                     <a href="${basePath}"
