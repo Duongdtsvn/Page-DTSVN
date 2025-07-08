@@ -12,6 +12,14 @@
       <#-- Load jQuery library cho JavaScript -->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       
+      <#-- Detect language from URL and set JS variable -->
+      <script>
+        // Detect if URL ends with .en (before query/hash)
+        var initialLang = (window.location.pathname.match(/\.en(\/)?$/)) ? 'en' : 'vi';
+        window.initialLang = initialLang;
+        document.documentElement.setAttribute('data-initial-lang', initialLang);
+      </script>
+      
       <#-- Import các file CSS cho styling -->
       <link rel="stylesheet" href="/static-assets/css/header.css">
       <link rel="stylesheet" href="/static-assets/css/main.css?site=${siteContext.siteName}"/>
@@ -28,7 +36,7 @@
     <@crafter.renderComponentCollection $field="header_o"/>
     
     <#-- Section hiển thị tiêu đề trang và breadcrumb -->
-    <section class="section sec-pageTitle style-blogDetail style-2">
+    <section class="section sec-pageTitle style-blogDetail style-2" data-initial-lang="${initialLang!}">
         <div class="sec-pageTitle__wrap">
             <#-- Breadcrumb navigation -->
             <ul class="sec-pageTitle__breadcrumb">
@@ -60,14 +68,9 @@
                                 </a>
                                 
                                 <#-- Language switcher cho chuyển đổi ngôn ngữ -->
-                                <#-- Lấy URL gốc của trang hiện tại -->
-                                <#assign currentUrl = contentModel.url?default(siteItem.url) />
-                                <#assign isEnglish = request.requestURI?ends_with('.en') />
-                                <#assign viUrl = currentUrl?replace('.en', '', 'r') />
-                                <#assign enUrl = viUrl + '.en' />
                                 <div class="language-switcher" role="group" aria-label="Chọn ngôn ngữ">
-                                    <a href="${viUrl}" class="lang-btn${!isEnglish?string(' active','')}" role="button" aria-pressed="${!isEnglish?string('true','false')}">VN</a>
-                                    <a href="${enUrl}" class="lang-btn${isEnglish?string(' active','')}" role="button" aria-pressed="${isEnglish?string('true','false')}">EN</a>
+                                    <a href="#" class="lang-btn active" role="button" aria-pressed="true" aria-label="Tiếng Việt">VN</a>
+                                    <a href="#" class="lang-btn" role="button" aria-pressed="false" aria-label="English">EN</a>
                                 </div>
                             </div>
                         </div>
@@ -195,6 +198,12 @@
     </section>
     <@crafter.renderComponentCollection $field="footer_o"/>
     <script src="/static-assets/js/language-switcher.js"></script>
+    <script>
+      // Pass initialLang to language switcher if needed
+      if (window.languageSwitcher) {
+        window.languageSwitcher.switchToLanguage(window.initialLang);
+      }
+    </script>
     <@crafter.body_bottom />
   </body>
 </html>
