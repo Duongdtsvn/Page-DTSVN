@@ -60,15 +60,14 @@
                                 </a>
                                 
                                 <#-- Language switcher cho chuyển đổi ngôn ngữ -->
-                                <#-- Detect current language from URL -->
-                                <#assign currentUrl = request.requestURI />
-                                <#assign isEnglish = currentUrl?ends_with('.en') />
-                                <#-- Generate URLs for each language -->
+                                <#-- Lấy URL gốc của trang hiện tại -->
+                                <#assign currentUrl = contentModel.url?default(siteItem.url) />
+                                <#assign isEnglish = request.requestURI?ends_with('.en') />
                                 <#assign viUrl = currentUrl?replace('.en', '', 'r') />
                                 <#assign enUrl = viUrl + '.en' />
                                 <div class="language-switcher" role="group" aria-label="Chọn ngôn ngữ">
-                                    <a href="${viUrl}" class="lang-btn${!isEnglish?string(' active','')}" role="button" aria-pressed="${!isEnglish?string('true','false')}" aria-label="Tiếng Việt">VN</a>
-                                    <a href="${enUrl}" class="lang-btn${isEnglish?string(' active','')}" role="button" aria-pressed="${isEnglish?string('true','false')}" aria-label="English">EN</a>
+                                    <a href="${viUrl}" class="lang-btn${!isEnglish?string(' active','')}" role="button" aria-pressed="${!isEnglish?string('true','false')}">VN</a>
+                                    <a href="${enUrl}" class="lang-btn${isEnglish?string(' active','')}" role="button" aria-pressed="${isEnglish?string('true','false')}">EN</a>
                                 </div>
                             </div>
                         </div>
