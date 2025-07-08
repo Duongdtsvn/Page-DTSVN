@@ -394,6 +394,7 @@ class Searchnews {
         newsItem.internal_name = doc.internal_name
         newsItem.nav_label = doc.navLabel
         newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
+        newsItem.url_en = newsItem.url + (newsItem.url.contains('?') ? '&' : '?') + 'lang=en'
         newsItem.created_date = convertToHanoiTimeString(doc.createdDate_dt)
         newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)
         newsItem.img_main_s = doc.img_main_s
@@ -480,6 +481,7 @@ class Searchnews {
         newsItem.internal_name = doc.internal_name    // Tên nội bộ
         newsItem.nav_label = doc.navLabel             // Nhãn navigation
         newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)  // URL hiển thị
+        newsItem.url_en = newsItem.url + (newsItem.url.contains('?') ? '&' : '?') + 'lang=en'
         newsItem.created_date = convertToHanoiTimeString(doc.createdDate_dt)      // Ngày tạo (giờ Hà Nội)
         newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)  // Ngày sửa cuối
         newsItem.img_main_s = doc.img_main_s          // Hình ảnh chính
