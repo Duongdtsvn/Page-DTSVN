@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/investors</content-type>
+	<display-template>/templates/web/pages/Investors.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>ca66</objectGroupId>
+	<objectId>ca669f7d-ba60-5fc0-f6f7-dea3064b0829</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>investors</folder-name>
+	<internal-name>Nhà đầu tư</internal-name>
+	<navLabel>Nhà đầu tư</navLabel>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
+	<banner_o item-list="true"/>
+	<createdDate>2025-07-08T09:23:46.225Z</createdDate>
+	<createdDate_dt>2025-07-08T09:23:46.225Z</createdDate_dt>
+	<lastModifiedDate>2025-07-08T09:23:46.225Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-08T09:23:46.225Z</lastModifiedDate_dt>
+</page>
