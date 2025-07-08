@@ -12,18 +12,6 @@
       <#-- Load jQuery library cho JavaScript -->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       
-      <#-- Detect language from URL server-side -->
-      <#assign isEn = (request.requestURI?ends_with('.en') || request.requestURI?matches('.*\\.en/.*'))>
-      <#assign lang = isEn?string('en', 'vi')>
-      
-      <#-- Detect language from URL and set JS variable -->
-      <script>
-        // Set initialLang from server-side detection
-        var initialLang = "${lang}";
-        window.initialLang = initialLang;
-        document.documentElement.setAttribute('data-initial-lang', initialLang);
-      </script>
-      
       <#-- Import các file CSS cho styling -->
       <link rel="stylesheet" href="/static-assets/css/header.css">
       <link rel="stylesheet" href="/static-assets/css/main.css?site=${siteContext.siteName}"/>
@@ -40,7 +28,7 @@
     <@crafter.renderComponentCollection $field="header_o"/>
     
     <#-- Section hiển thị tiêu đề trang và breadcrumb -->
-    <section class="section sec-pageTitle style-blogDetail style-2" data-initial-lang="${initialLang!}">
+    <section class="section sec-pageTitle style-blogDetail style-2">
         <div class="sec-pageTitle__wrap">
             <#-- Breadcrumb navigation -->
             <ul class="sec-pageTitle__breadcrumb">
@@ -54,9 +42,9 @@
                         <#-- Cột hiển thị tiêu đề bài viết -->
                         <div class="col-md-9 col-xl-6">
                             <#-- Tiêu đề tiếng Việt -->
-                            <h1 class="sec-pageTitle__title fz-52" data-lang="vi" style="${lang == 'vi'?then('', 'display:none;')}">${contentModel.title_vi_s!''}</h1>
+                            <h1 class="sec-pageTitle__title fz-52" data-lang="vi"<#if .request.requestURI?ends_with('.en')> style="display: none;"</#if>>${contentModel.title_vi_s!''}</h1>
                             <#-- Tiêu đề tiếng Anh (ẩn mặc định) -->
-                            <h1 class="sec-pageTitle__title fz-52" data-lang="en" style="${lang == 'en'?then('', 'display:none;')}">${contentModel.title_en_s!''}</h1>
+                            <h1 class="sec-pageTitle__title fz-52" data-lang="en"<#if !.request.requestURI?ends_with('.en')> style="display: none;"</#if>>${contentModel.title_en_s!''}</h1>
                         </div>
                         
                         <#-- Cột hiển thị nút chia sẻ và language switcher -->
@@ -93,21 +81,21 @@
                         <div class="row">
                             <div class="col-xl-8 col-xxxl-7">
                                 <#-- Nội dung bài viết tiếng Việt -->
-                                <div class="entry-text" data-lang="vi" style="${lang == 'vi'?then('', 'display:none;')}">
+                                <div class="entry-text" data-lang="vi"<#if .request.requestURI?ends_with('.en')> style="display: none;"</#if>>
                                     ${contentModel.content_vi_html!''}
                                 </div>
                                 
                                 <#-- Nội dung bài viết tiếng Anh (ẩn mặc định) -->
-                                <div class="entry-text" data-lang="en" style="${lang == 'en'?then('', 'display:none;')}">
+                                <div class="entry-text" data-lang="en"<#if !.request.requestURI?ends_with('.en')> style="display: none;"</#if>>
                                     ${contentModel.content_en_html!''}
                                 </div>
                                 
                                 <#-- Các nút chia sẻ mạng xã hội -->
                                 <div class="entry-share">
                                     <span>Chia sẻ: <a> </a></span>
-                                    <a href="#"><img src="assets/img/icon-facebook.svg" alt=""></a>
+                                    <a href="http://www.facebook.com/sharer.php?u=${.request.requestURL?url}" target="_blank"><img src="assets/img/icon-facebook.svg" alt=""></a>
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=${.request.requestURL?url}" target="_blank"><img src="assets/img/icon-linkedin.svg" alt=""></a>
                                     <a href="#"><img src="assets/img/icon-pinterest.svg" alt=""></a>
-                                    <a href="#"><img src="assets/img/icon-linkedin.svg" alt=""></a>
                                     <a href="#"><img src="assets/img/icon-skype.svg" alt=""></a>
                                     <a href="#"><img src="assets/img/icon-discord.svg" alt=""></a>
                                 </div>
@@ -184,10 +172,10 @@
                                 </div>
                                 <div class="entry-share">
                                     <span>Chia sẻ:</span>
-                                    <a href="http://www.facebook.com/sharer.php?u=https://dtsvn.net/ngan-hang-doanh-nghiep-tai-chinh-can-chuan-bi-nhung-gi-de-dap-ung-cac-yeu-cau-bat-buoc-tu-nhnn/&amp;p[title]=Phát triển phần mềm thẩm định dữ liệu, phần mềm web-based">
+                                    <a href="http://www.facebook.com/sharer.php?u=${.request.requestURL?url}" target="_blank">
                                         <img src="https://dtsvn.net/wp-content/themes/dtsvn-hello-elementor/assets/img/icon-facebook.svg" alt="">
                                     </a>
-                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://dtsvn.net/ngan-hang-doanh-nghiep-tai-chinh-can-chuan-bi-nhung-gi-de-dap-ung-cac-yeu-cau-bat-buoc-tu-nhnn/">
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=${.request.requestURL?url}" target="_blank">
                                         <img src="https://dtsvn.net/wp-content/themes/dtsvn-hello-elementor/assets/img/icon-linkedin.svg" alt="">
                                     </a>
                                 </div>
@@ -202,12 +190,6 @@
     </section>
     <@crafter.renderComponentCollection $field="footer_o"/>
     <script src="/static-assets/js/language-switcher.js"></script>
-    <script>
-      // Pass initialLang to language switcher if needed
-      if (window.languageSwitcher) {
-        window.languageSwitcher.switchToLanguage(window.initialLang);
-      }
-    </script>
     <@crafter.body_bottom />
   </body>
 </html>
