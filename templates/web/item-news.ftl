@@ -93,8 +93,8 @@
                                 <#-- Các nút chia sẻ mạng xã hội -->
                                 <div class="entry-share">
                                     <span>Chia sẻ: <a> </a></span>
-                                    <a href="http://www.facebook.com/sharer.php?u=${.request.requestURL?url}" target="_blank"><img src="assets/img/icon-facebook.svg" alt=""></a>
-                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=${.request.requestURL?url}" target="_blank"><img src="assets/img/icon-linkedin.svg" alt=""></a>
+                                    <a id="share-facebook" target="_blank"><img src="assets/img/icon-facebook.svg" alt=""></a>
+                                    <a id="share-linkedin" target="_blank"><img src="assets/img/icon-linkedin.svg" alt=""></a>
                                     <a href="#"><img src="assets/img/icon-pinterest.svg" alt=""></a>
                                     <a href="#"><img src="assets/img/icon-skype.svg" alt=""></a>
                                     <a href="#"><img src="assets/img/icon-discord.svg" alt=""></a>
@@ -172,10 +172,10 @@
                                 </div>
                                 <div class="entry-share">
                                     <span>Chia sẻ:</span>
-                                    <a href="http://www.facebook.com/sharer.php?u=${.request.requestURL?url}" target="_blank">
+                                    <a id="share-facebook2" target="_blank">
                                         <img src="https://dtsvn.net/wp-content/themes/dtsvn-hello-elementor/assets/img/icon-facebook.svg" alt="">
                                     </a>
-                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=${.request.requestURL?url}" target="_blank">
+                                    <a id="share-linkedin2" target="_blank">
                                         <img src="https://dtsvn.net/wp-content/themes/dtsvn-hello-elementor/assets/img/icon-linkedin.svg" alt="">
                                     </a>
                                 </div>
@@ -193,8 +193,14 @@
     <script>
   document.addEventListener('DOMContentLoaded', function() {
     var url = window.location.href;
-    document.getElementById('share-facebook').href = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent(url);
-    document.getElementById('share-linkedin').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
+    var fb1 = document.getElementById('share-facebook');
+    var li1 = document.getElementById('share-linkedin');
+    var fb2 = document.getElementById('share-facebook2');
+    var li2 = document.getElementById('share-linkedin2');
+    if(fb1) fb1.href = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent(url);
+    if(li1) li1.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
+    if(fb2) fb2.href = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent(url);
+    if(li2) li2.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
   });
 </script>
     <@crafter.body_bottom />
