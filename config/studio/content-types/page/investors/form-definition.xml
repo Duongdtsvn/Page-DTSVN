@@ -140,7 +140,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1751967076358</title>
+			<title>Default Section Title 1751967291787</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
@@ -302,7 +302,7 @@
 						</property>
 						<property>
 							<name>imageManager</name>
-							<value></value>
+							<value>select,upload</value>
 							<type>datasource:image</type>
 						</property>
 						<property>
