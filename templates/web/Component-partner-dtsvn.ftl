@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-8 col-lg-6 col-xl-6">
         <div class="titlebox">
-          <h2 class="titlebox__title fz-44">Đối tác tiêu biểu của DTSVN</h2>
+          <h2 class="titlebox__title fz-44">$(contentModel.title_s!"")</h2>
         </div>
       </div>
     </div>
