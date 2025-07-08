@@ -20,7 +20,7 @@
                                         <div class="translate" data-translate=".featurebox__text" style="--y: 90px">
                                             <span class="featurebox__number">${why_choose.number_s!''}</span>
                                             <h3 class="featurebox__title">${why_choose.title_s!''}</h3>
-                                            <p class="featurebox__text">${why_choose.subtitle_s!''}</p>
+                                            <p class="featurebox__text" style="visibility: visible;">${why_choose.subtitle_s!''}</p>
                                         </div>
                                     </div>
                                 </div>
