@@ -173,10 +173,18 @@
 }
 
 /* ===== CHUYỂN ĐỔI NỘI DUNG THEO NGÔN NGỮ ===== */
-/* Luôn hiển thị entry-text và title nếu có */
-.entry-text,
-.sec-pageTitle__title {
+/* Ẩn nội dung tiếng Anh mặc định */
+.entry-text[data-lang="en"],
+.sec-pageTitle__title[data-lang="en"] {
+    display: none;
+    /* Ẩn hoàn toàn */
+}
+
+/* Hiển thị nội dung tiếng Việt mặc định */
+.entry-text[data-lang="vi"],
+.sec-pageTitle__title[data-lang="vi"] {
     display: block;
+    /* Hiển thị bình thường */
 }
 
 /* ===== THIẾT KẾ RESPONSIVE ===== */
