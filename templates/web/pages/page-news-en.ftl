@@ -55,12 +55,12 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="blog">
                                 <div class="blog__inner">
-                                    <a class="blog__img" href="${news.url!''}" style="background-image: url('${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/new1000.jpg')}');">
+                                    <a class="blog__img" href="${news.url_en!''}" style="background-image: url('${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/new1000.jpg')}');">
                                         <img src="${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/new1000.jpg')}" alt="${news.title!''}">
                                     </a>
                                     <div class="blog__body">
                                         <h3 class="blog__title">
-                                            <a href="${news.url!''}">${news.title_en!''}</a>
+                                            <a href="${news.url_en!''}">${news.title_en!''}</a>
                                         </h3>
                                         <#if news.highlight?? && (news.highlight!'') != ''>
                                             <div class="blog__excerpt">

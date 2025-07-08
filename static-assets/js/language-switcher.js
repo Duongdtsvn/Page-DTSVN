@@ -6,10 +6,27 @@ class LanguageSwitcher {
     constructor() {
         // Tìm tất cả các nút chuyển đổi ngôn ngữ trên trang
         this.langButtons = document.querySelectorAll('.lang-btn');
-        // Ngôn ngữ mặc định là tiếng Việt
-        this.currentLang = 'vi';
+        // Lấy ngôn ngữ từ query string ?lang=en hoặc ?lang=vi, mặc định 'vi'
+        this.currentLang = this.detectLanguageFromQuery();
         // Khởi tạo component
         this.init();
+    }
+
+    detectLanguageFromQuery() {
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang');
+        if (lang === 'en') return 'en';
+        return 'vi';
+    }
+
+    updateUrlForLanguage(lang) {
+        const url = new URL(window.location.href);
+        if (lang === 'en') {
+            url.searchParams.set('lang', 'en');
+        } else {
+            url.searchParams.delete('lang');
+        }
+        window.history.replaceState({}, '', url.toString());
     }
 
     init() {
@@ -69,6 +86,9 @@ class LanguageSwitcher {
 
         // Cập nhật tiêu đề trang
         this.updatePageTitle(newLang);
+
+        // Cập nhật URL khi chuyển ngôn ngữ
+        this.updateUrlForLanguage(newLang);
 
         // Phát sự kiện tùy chỉnh cho các component khác
         this.dispatchLanguageChangeEvent(newLang);
@@ -154,13 +174,16 @@ class LanguageSwitcher {
         this.switchContent(this.currentLang);
 
         // Tìm và thiết lập trạng thái ban đầu cho nút VN
-        const initialButton = Array.from(this.langButtons).find(btn =>
-            btn.textContent === 'VN'
-        );
+        const initialButton = Array.from(this.langButtons).find(btn => {
+            const btnLang = btn.textContent === 'VN' ? 'vi' : 'en';
+            return btnLang === this.currentLang;
+        });
 
         if (initialButton) {
             this.updateButtonStates(initialButton);
         }
+        // Đảm bảo URL đúng với ngôn ngữ hiện tại khi load trang
+        this.updateUrlForLanguage(this.currentLang);
     }
 
     // Phương thức public để lấy ngôn ngữ hiện tại
