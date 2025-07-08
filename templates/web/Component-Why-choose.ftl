@@ -4,13 +4,13 @@
     <div class="container-custom">
         <div class="sec-strength__wrap">
             <div class="titlebox">
-                <span class="titlebox__title fz-44 w-50">${contentModel.title_s!''}</span>
-                <h2 class="titlebox__title fz-44 w-50" >${contentModel.subtitle_s!''}</h2>
+                <span class="titlebox__title fz-44 ">${contentModel.title_s!''}</span>
+                <h2 class="titlebox__title fz-44 " >${contentModel.subtitle_s!''}</h2>
             </div>
             <div class="sec-strength__list owl-carousel">
                 <#if contentModel.why_choose_o.item?? && contentModel.why_choose_o.item?has_content>
                     <#list contentModel.why_choose_o.item as why_choose>
-                        <div class="item item-2">
+                        <div class="item">
                             <div class="featurebox">
                                 <div class="featurebox__inner">
                                     <span class="featurebox__icon"><img
