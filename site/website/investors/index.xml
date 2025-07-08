@@ -12,14 +12,26 @@
 	<navLabel>Nhà đầu tư</navLabel>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
-	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
-	<value>Header-en</value>
-	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></header_o>
-	<banner_o item-list="true"/>
+	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/f4c47142-396d-bc7b-41a1-4bc5eb08211f.xml</key>
+	<value>banner nhà đầu tư</value>
+	<include>/site/components/f4c47142-396d-bc7b-41a1-4bc5eb08211f.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></banner_o>
 	<createdDate>2025-07-08T09:23:46.225Z</createdDate>
 	<createdDate_dt>2025-07-08T09:23:46.225Z</createdDate_dt>
-	<lastModifiedDate>2025-07-08T09:23:46.225Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-08T09:23:46.225Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-08T09:31:38.460Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-08T09:31:38.460Z</lastModifiedDate_dt>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
+	<investors_o item-list="true">	<item>	<title_s/>
+	<image_s/>
+	</item></investors_o>
 </page>
