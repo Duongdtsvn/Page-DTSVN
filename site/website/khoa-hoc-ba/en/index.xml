@@ -54,6 +54,11 @@
 	<folder-name>en</folder-name>
 	<createdDate>2025-07-08T06:51:54.472Z</createdDate>
 	<createdDate_dt>2025-07-08T06:51:54.472Z</createdDate_dt>
-	<lastModifiedDate>2025-07-08T06:51:54.472Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-08T06:51:54.472Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-08T08:44:14.871Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-08T08:44:14.871Z</lastModifiedDate_dt>
+	<lecturer_o item-list="true">	<item datasource="gingvin">	<key>/site/components/71e6e9b4-7955-1782-ae52-a0397929690e.xml</key>
+	<value>giảng viên en</value>
+	<include>/site/components/71e6e9b4-7955-1782-ae52-a0397929690e.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></lecturer_o>
 </page>
