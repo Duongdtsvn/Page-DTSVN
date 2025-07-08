@@ -19,7 +19,7 @@
                               <div class="translate" data-translate=".featurebox__text" style="--y: 90px">
                                   <span class="featurebox__number">${who_studies.number_s!''}</span>
                                   <h3 class="featurebox__title">${who_studies.title_s!''}</h3>
-                                  <p class="featurebox__text">${who_studies.subtitle_s!''}</p>
+                                  <p class="featurebox__text" style="visibility: visible;">${who_studies.subtitle_s!''}</p>
                               </div>
                           </div>
                       </div>
