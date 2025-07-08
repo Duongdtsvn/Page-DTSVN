@@ -12,10 +12,14 @@
       <#-- Load jQuery library cho JavaScript -->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       
+      <#-- Detect language from URL server-side -->
+      <#assign isEn = (request.requestURI?ends_with('.en') || request.requestURI?matches('.*\\.en/.*'))>
+      <#assign lang = isEn?string('en', 'vi')>
+      
       <#-- Detect language from URL and set JS variable -->
       <script>
-        // Detect if URL ends with .en (before query/hash)
-        var initialLang = (window.location.pathname.match(/\.en(\/)?$/)) ? 'en' : 'vi';
+        // Set initialLang from server-side detection
+        var initialLang = "${lang}";
         window.initialLang = initialLang;
         document.documentElement.setAttribute('data-initial-lang', initialLang);
       </script>
@@ -50,9 +54,9 @@
                         <#-- Cột hiển thị tiêu đề bài viết -->
                         <div class="col-md-9 col-xl-6">
                             <#-- Tiêu đề tiếng Việt -->
-                            <h1 class="sec-pageTitle__title fz-52" data-lang="vi">${contentModel.title_vi_s!''}</h1>
+                            <h1 class="sec-pageTitle__title fz-52" data-lang="vi" style="${lang == 'vi'?then('', 'display:none;')}">${contentModel.title_vi_s!''}</h1>
                             <#-- Tiêu đề tiếng Anh (ẩn mặc định) -->
-                            <h1 class="sec-pageTitle__title fz-52" data-lang="en" style="display: none;">${contentModel.title_en_s!''}</h1>
+                            <h1 class="sec-pageTitle__title fz-52" data-lang="en" style="${lang == 'en'?then('', 'display:none;')}">${contentModel.title_en_s!''}</h1>
                         </div>
                         
                         <#-- Cột hiển thị nút chia sẻ và language switcher -->
@@ -89,12 +93,12 @@
                         <div class="row">
                             <div class="col-xl-8 col-xxxl-7">
                                 <#-- Nội dung bài viết tiếng Việt -->
-                                <div class="entry-text" data-lang="vi">
+                                <div class="entry-text" data-lang="vi" style="${lang == 'vi'?then('', 'display:none;')}">
                                     ${contentModel.content_vi_html!''}
                                 </div>
                                 
                                 <#-- Nội dung bài viết tiếng Anh (ẩn mặc định) -->
-                                <div class="entry-text" data-lang="en" style="display: none;">
+                                <div class="entry-text" data-lang="en" style="${lang == 'en'?then('', 'display:none;')}">
                                     ${contentModel.content_en_html!''}
                                 </div>
                                 
