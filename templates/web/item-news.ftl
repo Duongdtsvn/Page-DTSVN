@@ -2,7 +2,7 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
 
 <#-- Detect language from URL path --><#assign requestUri = (request?has_content && request.requestURI?has_content)?then(request.requestURI, "") />
-<#assign isEnglish = requestUri?ends_with('/en') || requestUri?ends_with('/en/') />
+<#assign isEnglish = requestUri?ends_with('.en') />
 <#assign lang = isEnglish?string('en', 'vi') />
 
 <!doctype html>
@@ -68,9 +68,9 @@
                                 <#-- Language switcher cho chuyển đổi ngôn ngữ -->
                                 <div class="language-switcher" role="group" aria-label="Chọn ngôn ngữ">
                                     <#-- Build correct href for each language -->
-                                    <#assign baseUrl = requestUri?replace('/en/?$', '') />
+                                    <#assign baseUrl = requestUri?replace('\.en$', '') />
                                     <a href="${baseUrl}" class="lang-btn${lang == 'vi'?string(' active','')}" role="button" aria-pressed="${lang == 'vi'?string('true','false')}" aria-label="Tiếng Việt">VN</a>
-                                    <a href="${baseUrl?ends_with('/')?then(baseUrl + 'en', baseUrl + '/en')}" class="lang-btn${lang == 'en'?string(' active','')}" role="button" aria-pressed="${lang == 'en'?string('true','false')}" aria-label="English">EN</a>
+                                    <a href="${baseUrl}.en" class="lang-btn${lang == 'en'?string(' active','')}" role="button" aria-pressed="${lang == 'en'?string('true','false')}" aria-label="English">EN</a>
                                 </div>
                             </div>
                         </div>
