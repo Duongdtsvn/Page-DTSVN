@@ -1,11 +1,11 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
 
-<section class="section sec-strength pb-0">
+<section class="section sec-strength">
     <div class="container-custom">
         <div class="sec-strength__wrap">
             <div class="titlebox">
-                <span class="titlebox__title fz-32 ">${contentModel.title_s!''}</span>
-                <h2 class="titlebox__title fz-32 " >${contentModel.subtitle_s!''}</h2>
+                <span class="titlebox__title">${contentModel.title_s!''}</span>
+                <h2 class="titlebox__title fz-44" >${contentModel.subtitle_s!''}</h2>
             </div>
             <div class="sec-strength__list owl-carousel">
                 <#if contentModel.why_choose_o.item?? && contentModel.why_choose_o.item?has_content>
