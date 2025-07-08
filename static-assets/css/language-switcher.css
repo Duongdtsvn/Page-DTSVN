@@ -250,26 +250,29 @@
 /* Animation for language switching */
 .entry-text,
 .sec-pageTitle__title {
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, display 0s linear 0.3s;
+    opacity: 1;
 }
 
 .entry-text.fade-out,
 .sec-pageTitle__title.fade-out {
     opacity: 0;
-    pointer-events: none;
     transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .entry-text.fade-in,
 .sec-pageTitle__title.fade-in {
     opacity: 1;
     transition: opacity 0.3s ease;
+    pointer-events: auto;
 }
 
-/* Ensure smooth display toggling for language switch */
-[data-lang] {
-    will-change: opacity, display;
-    transition: opacity 0.3s ease;
+/* Đảm bảo chỉ hiển thị đúng ngôn ngữ khi có style inline display:none */
+.entry-text[style*="display: none"],
+.sec-pageTitle__title[style*="display: none"] {
+    opacity: 0 !important;
+    pointer-events: none;
 }
 
 /* High contrast mode support */
