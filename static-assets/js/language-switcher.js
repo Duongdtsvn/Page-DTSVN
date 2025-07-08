@@ -6,10 +6,37 @@ class LanguageSwitcher {
     constructor() {
         // Tìm tất cả các nút chuyển đổi ngôn ngữ trên trang
         this.langButtons = document.querySelectorAll('.lang-btn');
-        // Ngôn ngữ mặc định là tiếng Việt
-        this.currentLang = (window.initialLang || 'vi');
+        // Phát hiện ngôn ngữ từ URL
+        this.currentLang = this.detectLanguageFromUrl();
         // Khởi tạo component
         this.init();
+    }
+
+    detectLanguageFromUrl() {
+        // Kiểm tra nếu URL kết thúc bằng .en (trước query/hash)
+        const path = window.location.pathname;
+        if (/\.en($|[/?#])/.test(path)) {
+            return 'en';
+        }
+        return 'vi';
+    }
+
+    updateUrlForLanguage(lang) {
+        let path = window.location.pathname;
+        let search = window.location.search;
+        let hash = window.location.hash;
+        if (lang === 'en') {
+            if (!/\.en($|[/?#])/.test(path)) {
+                // Thêm .en vào cuối path (trước query/hash)
+                path = path.replace(/(\/)?$/, '.en$1');
+            }
+        } else {
+            // Bỏ .en nếu có
+            path = path.replace(/\.en($|[/?#])/, '$1');
+        }
+        // Cập nhật URL mà không reload trang
+        const newUrl = path + search + hash;
+        window.history.replaceState({}, '', newUrl);
     }
 
     init() {
@@ -70,8 +97,8 @@ class LanguageSwitcher {
         // Cập nhật tiêu đề trang
         this.updatePageTitle(newLang);
 
-        // Cập nhật URL mà không reload trang
-        this.updateUrl(newLang);
+        // Cập nhật URL khi đổi ngôn ngữ
+        this.updateUrlForLanguage(newLang);
 
         // Phát sự kiện tùy chỉnh cho các component khác
         this.dispatchLanguageChangeEvent(newLang);
@@ -143,21 +170,6 @@ class LanguageSwitcher {
         document.title = titles[lang] || document.title;
     }
 
-    updateUrl(lang) {
-        // Lấy pathname hiện tại
-        let path = window.location.pathname;
-        // Nếu chuyển sang tiếng Anh và chưa có .en ở cuối, thêm vào
-        if (lang === 'en' && !/\.en(\/)?$/.test(path)) {
-            // Thêm .en trước query/hash
-            let newPath = path.replace(/(\/)?$/, '.en$1');
-            window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
-        } else if (lang === 'vi' && /\.en(\/)?$/.test(path)) {
-            // Nếu chuyển sang tiếng Việt và có .en, loại bỏ .en
-            let newPath = path.replace(/\.en(\/)?$/, '$1');
-            window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
-        }
-    }
-
     dispatchLanguageChangeEvent(lang) {
         // Tạo sự kiện tùy chỉnh để thông báo cho các component khác
         const event = new CustomEvent('languageChanged', {
@@ -168,20 +180,18 @@ class LanguageSwitcher {
     }
 
     initializeLanguage() {
-        // Thiết lập ngôn ngữ ban đầu
+        // Hiển thị nội dung theo ngôn ngữ phát hiện từ URL
         this.switchContent(this.currentLang);
-
-        // Tìm và thiết lập trạng thái ban đầu cho nút phù hợp với currentLang
+        // Tìm và thiết lập trạng thái ban đầu cho nút
         const initialButton = Array.from(this.langButtons).find(btn => {
-            const buttonLang = btn.textContent === 'VN' ? 'vi' : 'en';
-            return buttonLang === this.currentLang;
+            if (this.currentLang === 'vi') return btn.textContent === 'VN';
+            return btn.textContent === 'EN';
         });
-
         if (initialButton) {
             this.updateButtonStates(initialButton);
         }
-        // Đảm bảo URL đúng với ngôn ngữ ban đầu
-        this.updateUrl(this.currentLang);
+        // Đảm bảo URL đúng với ngôn ngữ hiện tại khi load trang
+        this.updateUrlForLanguage(this.currentLang);
     }
 
     // Phương thức public để lấy ngôn ngữ hiện tại
