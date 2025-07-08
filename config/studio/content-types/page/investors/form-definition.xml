@@ -140,7 +140,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1751966244396</title>
+			<title>Default Section Title 1751967076358</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
@@ -165,7 +165,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>header,footer</value>
+							<value>header</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -218,7 +218,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value></value>
+							<value>footer</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -254,7 +254,7 @@
 					<type>repeat</type>
 					<id>investors_o</id>
 					<iceId></iceId>
-					<title>list nhà đầu </title>
+					<title>list nhà đầu</title>
 					<description></description>
 					<minOccurs>0</minOccurs>
 					<maxOccurs>*</maxOccurs>
