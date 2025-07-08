@@ -9,7 +9,7 @@
 	<properties>		<property>
 			<name>display-template</name>
 			<label>Display Template</label>
-			<value></value>
+			<value>/templates/web/pages/CDS-Consulting.ftl</value>
 			<type>template</type>
 		</property>
 		<property>
@@ -140,7 +140,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1751969129508</title>
+			<title>Default Section Title 1751969512904</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
