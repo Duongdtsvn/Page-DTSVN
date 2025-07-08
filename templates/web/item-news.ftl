@@ -42,9 +42,9 @@
                         <#-- Cột hiển thị tiêu đề bài viết -->
                         <div class="col-md-9 col-xl-6">
                             <#-- Tiêu đề tiếng Việt -->
-                            <h1 class="sec-pageTitle__title fz-52" data-lang="vi"<#if .request.requestURI?ends_with('.en')> style="display: none;"</#if>>${contentModel.title_vi_s!''}</h1>
+                            <h1 class="sec-pageTitle__title fz-52" data-lang="vi">${contentModel.title_vi_s!''}</h1>
                             <#-- Tiêu đề tiếng Anh (ẩn mặc định) -->
-                            <h1 class="sec-pageTitle__title fz-52" data-lang="en"<#if !.request.requestURI?ends_with('.en')> style="display: none;"</#if>>${contentModel.title_en_s!''}</h1>
+                            <h1 class="sec-pageTitle__title fz-52" data-lang="en" style="display: none;">${contentModel.title_en_s!''}</h1>
                         </div>
                         
                         <#-- Cột hiển thị nút chia sẻ và language switcher -->
@@ -81,12 +81,12 @@
                         <div class="row">
                             <div class="col-xl-8 col-xxxl-7">
                                 <#-- Nội dung bài viết tiếng Việt -->
-                                <div class="entry-text" data-lang="vi"<#if .request.requestURI?ends_with('.en')> style="display: none;"</#if>>
+                                <div class="entry-text" data-lang="vi">
                                     ${contentModel.content_vi_html!''}
                                 </div>
                                 
                                 <#-- Nội dung bài viết tiếng Anh (ẩn mặc định) -->
-                                <div class="entry-text" data-lang="en"<#if !.request.requestURI?ends_with('.en')> style="display: none;"</#if>>
+                                <div class="entry-text" data-lang="en" style="display: none;">
                                     ${contentModel.content_en_html!''}
                                 </div>
                                 
@@ -190,6 +190,13 @@
     </section>
     <@crafter.renderComponentCollection $field="footer_o"/>
     <script src="/static-assets/js/language-switcher.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var url = window.location.href;
+    document.getElementById('share-facebook').href = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent(url);
+    document.getElementById('share-linkedin').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
+  });
+</script>
     <@crafter.body_bottom />
   </body>
 </html>
