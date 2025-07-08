@@ -186,7 +186,7 @@
 					<type>input</type>
 					<id>subtitle3_s</id>
 					<iceId></iceId>
-					<title>nội dung dòng </title>
+					<title>nội dung dòng</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -405,7 +405,7 @@
 						</property>
 						<property>
 							<name>imageManager</name>
-							<value></value>
+							<value>upload,select</value>
 							<type>datasource:image</type>
 						</property>
 						<property>
