@@ -1,9 +1,9 @@
-<#-- Xác định URL request và ngôn ngữ -->
+<#-- Xác định URL request và ngôn ngữ hiện tại -->
 <#assign requestPath = siteContext.requestPath />
-<#-- Loại bỏ suffix “.en” nếu có, dùng replace_re để hỗ trợ regex -->
-<#assign basePath    = requestPath?replace_re("\\.en$", "") />
-<#-- Kiểm tra nếu path kết thúc bằng “.en” thì ngôn ngữ là en, ngược lại là vi -->
-<#assign currentLang = (requestPath?matches(".*\\.en$"))? then("en","vi") />
+<#-- Dùng replace_re để xoá chính xác suffix “.en” nếu có -->
+<#assign basePath    = requestPath?replace_re("\\\\.en$", "") />
+<#-- Kiểm tra xem URL có kết thúc bằng “.en” không -->
+<#assign currentLang = (requestPath?matches(".*\\\\.en$"))? then("en","vi") />
 
 <!doctype html>
 <html lang="${currentLang}">
@@ -35,67 +35,29 @@
             <div class="row align-items-end">
               <div class="col-md-9 col-xl-6">
                 <h1 class="sec-pageTitle__title fz-52" data-lang="vi"
-                    style="display: ${currentLang == 'vi'? 'block':'none'};">
+                    style="display: ${currentLang == 'vi'? 'block':'none'}">
                   ${contentModel.title_vi_s!''}
                 </h1>
                 <h1 class="sec-pageTitle__title fz-52" data-lang="en"
-                    style="display: ${currentLang == 'en'? 'block':'none'};">
+                    style="display: ${currentLang == 'en'? 'block':'none'}">
                   ${contentModel.title_en_s!''}
                 </h1>
               </div>
               <div class="col-md-3 col-xl-6">
-                <div class="sec-pageTitle__share" style="display: flex; align-items: center; gap: 16px; justify-content: flex-end;">
+                <div class="sec-pageTitle__share"
+                     style="display:flex;align-items:center;gap:16px;justify-content:flex-end;">
                   <a href="#" class="btn-share">Chia sẻ
-                    <span><!-- SVG icon --></span>
+                    <span><!-- SVG icon ở đây --></span>
                   </a>
                   <div class="language-switcher" role="group" aria-label="Chọn ngôn ngữ">
                     <a href="${basePath}"
                        class="lang-btn ${currentLang == 'vi'? 'active':''}"
                        aria-pressed="${currentLang == 'vi'}"
-                       aria-label="Tiếng Việt">VN</a>
+                       aria-label="Tiếng Việt">
+                      VN
+                    </a>
                     <a href="${basePath}.en"
                        class="lang-btn ${currentLang == 'en'? 'active':''}"
                        aria-pressed="${currentLang == 'en'}"
-                       aria-label="English">EN</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Nội dung bài viết -->
-    <section class="section sec-blogDetail">
-      <div class="container-custom">
-        <div class="sec-blogDetail__content stickyJs">
-          <div class="row">
-            <div class="col-xl-8 col-xxxl-7">
-              <div class="entry-text" data-lang="vi"
-                   style="display: ${currentLang == 'vi'? 'block':'none'};">
-                ${contentModel.content_vi_html!''}
-              </div>
-              <div class="entry-text" data-lang="en"
-                   style="display: ${currentLang == 'en'? 'block':'none'};">
-                ${contentModel.content_en_html!''}
-              </div>
-              <div class="entry-share">
-                <span>Chia sẻ:</span>
-                <a href="#"><img src="assets/img/icon-facebook.svg" alt=""></a>
-                <a href="#"><img src="assets/img/icon-pinterest.svg" alt=""></a>
-                <a href="#"><img src="assets/img/icon-linkedin.svg" alt=""></a>
-                <a href="#"><img src="assets/img/icon-skype.svg" alt=""></a>
-                <a href="#"><img src="assets/img/icon-discord.svg" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <@crafter.renderComponentCollection $field="footer_o"/>
-    <script src="/static-assets/js/language-switcher.js"></script>
-    <@crafter.body_bottom />
-  </body>
-</html>
+                       aria-label="English">
+                      EN
