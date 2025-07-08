@@ -13,9 +13,9 @@ class LanguageSwitcher {
     }
 
     detectLanguageFromUrl() {
-        // Check if URL ends with /en or /en/
+        // Check if URL ends with .en
         const path = window.location.pathname;
-        if (path.match(/\/en\/?$/)) {
+        if (path.match(/\.en$/)) {
             return 'en';
         }
         return 'vi';
@@ -178,23 +178,17 @@ class LanguageSwitcher {
     updateUrlForLanguage(lang) {
         let path = window.location.pathname;
         if (lang === 'en') {
-            if (!path.match(/\/en\/?$/)) {
-                if (path.endsWith('/')) {
-                    path = path + 'en';
-                } else {
-                    path = path + '/en';
-                }
+            if (!path.match(/\.en$/)) {
+                path = path + '.en';
             }
         } else {
-            // Remove /en or /en/ at the end
-            path = path.replace(/\/en\/?$/, '/');
-            // Remove trailing slash if not root
-            if (path.length > 1 && path.endsWith('/')) {
-                path = path.slice(0, -1);
-            }
+            // Remove .en at the end
+            path = path.replace(/\.en$/, '');
         }
-        // Reload page with new URL
-        window.location.pathname = path;
+        // Only update if different
+        if (window.location.pathname !== path) {
+            window.location.pathname = path;
+        }
     }
 
     // Phương thức public để lấy ngôn ngữ hiện tại
