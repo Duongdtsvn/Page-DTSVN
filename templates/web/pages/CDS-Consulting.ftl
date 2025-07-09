@@ -20,63 +20,35 @@
         <@crafter.renderComponentCollection $field="header_o" />
         <@crafter.renderComponentCollection $field="banner_o" />
         <@crafter.renderComponentCollection $field="why_choose_o" />
-        <section class="section sec-vision">
-    <div class="bg" style="background-image: url(assets/img/vision-bg.jpg);"></div>
+        <#-- Defining the vision section challenges -->
+<section class="section sec-vision">
+    <div class="bg" style="background-image: url(${contentModel.vision_background_image_s!''});"></div>
     <div class="container-custom">
         <div class="row">
             <div class="col-xl-7 col-xxl-6 col-xxxl-5">
-                <h2 class="item-quote">Những vấn đề & thách thức khi chuyển đổi số</h2>
-                <p class="item__text" style="color: white;">Doanh nghiệp của bạn có đang gặp phải những khó khăn dưới đây khi Chuyển đổi số không?</p>
+                <h2 class="item-quote">${contentModel.vision_title_s!''}</h2>
+                <p class="item__text" style="color: white;">${contentModel.vision_description_s!''}</p>
             </div>
         </div>
         <div class="row">
             <div class="col-xl-8 offset-xl-4 col-xxl-6 offset-xxl-6">
                 <div class="sec-vision__list">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="item">
-                                <label class="item__label">
-                                    <input type="checkbox">
-                                    <h3 class="item__title">Năng suất làm việc suy giảm</h3>
-                                    <div class="item__content">
-                                        <p class="item__text">Nhiều công việc không tên, các công việc thủ công khiến nhân sự trong Doanh nghiệp mất thời gian giải quyết, không tập trung được cho các công việc quan trọng.</p>
+                        <#if contentModel.vision_challenges_o.item?? && contentModel.vision_challenges_o.item?has_content>
+                            <#list contentModel.vision_challenges_o.item as challenge>
+                                <div class="col-lg-6">
+                                    <div class="item">
+                                        <label class="item__label">
+                                            <input type="checkbox">
+                                            <h3 class="item__title">${challenge.title_s!''}</h3>
+                                            <div class="item__content">
+                                                <p class="item__text">${challenge.description_s!''}</p>
+                                            </div>
+                                        </label>
                                     </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="item">
-                                <label class="item__label">
-                                    <input type="checkbox">
-                                    <h3 class="item__title">Quy trình làm việc phức tạp</h3>
-                                    <div class="item__content">
-                                        <p class="item__text">Quy trình không đồng bộ thống nhất giữa các phòng ban, các phòng ban bị động trong công việc khiến hiệu quả vận hành Doanh nghiệp giảm sút.</p>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="item">
-                                <label class="item__label">
-                                    <input type="checkbox">
-                                    <h3 class="item__title">Dữ liệu phân tán không đồng nhất</h3>
-                                    <div class="item__content">
-                                        <p class="item__text">Quản lý dữ liệu theo cách thủ công truyền thống và không được thống nhất dẫn đến sự thiếu minh bạch và chậm chạp trong việc ra các quyết định kịp thời cho Doanh nghiệp.</p>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="item">
-                                <label class="item__label">
-                                    <input type="checkbox">
-                                    <h3 class="item__title">Hiệu quả kinh doanh giảm sút</h3>
-                                    <div class="item__content">
-                                        <p class="item__text">Khách hàng mất đàn hứng thú và không còn quay lại với Doanh nghiệp vì không có phương thức chăm sóc khách hàng thường xuyên, liên tục.</p>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
+                                </div>
+                            </#list>
+                        </#if>
                     </div>
                 </div>
             </div>
@@ -84,156 +56,82 @@
     </div>
 </section>
 
+<#-- Defining the strength section service packages -->
 <section class="section sec-strength">
     <div class="container-custom">
         <div class="sec-strength__wrap">
             <div class="sec-strength__list owl-carousel">
-            <div class="titlebox item">
-                <h2 class="titlebox__title fz-44">Các gói dịch vụ tư vấn chuyển đổi số tại DTSVN</h2>
-            </div>
-                <div class="item">
-                    <div class="featurebox" style="border: 1px solid #E3E5EA">
-                        <div class="featurebox__inner">
-                            <span class="featurebox__icon"><img src="assets/img/featurebox-icon-1.svg" alt=""></span>
-                            <div class="featurebox__body">
-                                <div class="translate" data-translate=".featurebox__text" style="--y: 90px">
-                                    <span class="featurebox__number">01</span>
-                                    <h3 class="featurebox__title">Tư vấn cơ bản</h3>
-                                    <p class="featurebox__text"style="visibility: visible;">Dành cho doanh nghiệp mới bắt đầu có mong muốn chuyển đổi số<br>✔️Đánh giá mức độ sẵn sàng và trưởng thành số<br>✔️Đánh giá mức độ văn hóa số<br>✔️Xây dựng danh mục ưu tiên, sáng kiến số<br>✔️Xây dựng chiến lược và lộ trình Chuyển đổi số</p>
+                <div class="titlebox item">
+                    <h2 class="titlebox__title fz-44">${contentModel.strength_title_s!''}</h2>
+                </div>
+                <#if contentModel.service_packages_o.item?? && contentModel.service_packages_o.item?has_content>
+                    <#list contentModel.service_packages_o.item as service>
+                        <div class="item">
+                            <div class="featurebox" style="border: 1px solid #E3E5EA">
+                                <div class="featurebox__inner">
+                                    <span class="featurebox__icon"><img src="${service.icon_s!''}" alt=""></span>
+                                    <div class="featurebox__body">
+                                        <div class="translate" data-translate=".featurebox__text" style="--y: 90px">
+                                            <span class="featurebox__number">${service.number_s!''}</span>
+                                            <h3 class="featurebox__title">${service.title_s!''}</h3>
+                                            <p class="featurebox__text" style="visibility: visible;">${service.description_html!''}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="featurebox" style="border: 1px solid #E3E5EA">
-                        <div class="featurebox__inner">
-                            <span class="featurebox__icon"><img src="assets/img/featurebox-icon-2.svg" alt=""></span>
-                            <div class="featurebox__body">
-                                <div class="translate" data-translate=".featurebox__text" style="--y: 90px">
-                                    <span class="featurebox__number">02</span>
-                                    <h3 class="featurebox__title">Tư vấn chuyên sâu</h3>
-                                    <p class="featurebox__text">Dành cho doanh nghiệp muốn tối ưu hạ tầng chuyển đổi số<br>✔️Đánh giá để xuất tối ưu hóa hạ tầng CNTT<br>✔️Chuyển đổi mô hình kinh doanh theo định hướng số<br>✔️Tối ưu vận hành cho Doanh nghiệp<br>✔️Xây dựng chiến lược khách hàng trong môi trường số</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="featurebox" style="border: 1px solid #E3E5EA">
-                        <div class="featurebox__inner">
-                            <span class="featurebox__icon"><img src="assets/img/featurebox-icon-3.svg" alt=""></span>
-                            <div class="featurebox__body">
-                                <div class="translate" data-translate=".featurebox__text" style="--y: 90px">
-                                    <span class="featurebox__number">03</span>
-                                    <h3 class="featurebox__title">Tư vấn nâng cao</h3>
-                                    <p class="featurebox__text">Dành cho doanh nghiệp muốn phát triển chuyển đổi số toàn diện <br> Trao đổi trực tiếp 1:1 để chúng tôi hiểu rõ được nhu cầu chuyển đổi số cho doanh nghiệp của bạn</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </#list>
+                </#if>
             </div>
         </div>
     </div>
 </section>
+
+<#-- Defining the team leader section -->
 <section class="section sec-teamLeader">
     <div class="container-custom">
         <div class="row">
             <div class="col-xl-5">
                 <div class="titlebox">
-                    <h2 class="titlebox__title fz-44">Ban chuyên gia tư vấn Chuyển đổi số tại DTSVN</h2>
-                    <p class="titlebox__text">Với đội ngũ chuyên gia hơn 10 năm kinh nghiệm trong lĩnh vực Chuyển đổi số và sử dụng các phương pháp tiếp cận tiên tiến, DTSVN cam kết đồng hành cùng doanh nghiệp trên hành trình Chuyển đổi số, giúp tối ưu hóa hoạt động và nâng cao hiệu quả kinh doanh.</p>
+                    <h2 class="titlebox__title fz-44">${contentModel.team_title_s!''}</h2>
+                    <p class="titlebox__text">${contentModel.team_description_s!''}</p>
                 </div>
             </div>
         </div>
         <div class="sec-teamLeader__content">
             <div class="row">
-                <div class="col-6 col-lg-4 col-xl-3">
-                    <a href="#popup-team" class="teambox btn-popupTeam">
-                        <div class="teambox__inner">
-                            <div class="teambox__img" style="background-image: url(assets/img/AnhChien.jpg);"></div>
-                            <div class="teambox__body">
-                                <h3 class="teambox__name">Nguyễn Bá Chiến</h3>
-                                <p class="teambox__text">CEO</p>
-                            </div>
-                            <div class="teambox__list">
-                                <ul>
-                                    <li>
-                                        <div class="item-inner">
-                                            <div class="row">
-                                                <div class="col-xl-12 offset-xl-1">
-                                                    <p>- Chủ tịch kiêm Tổng Giám đốc Công ty Cổ phần Giải pháp Chuyển đổi số Việt Nam DTSVN.</p>
-                                                    <p>- Nguyên Giám đốc Kinh doanh khối Tài chính – Ngân hàng tại Tập đoàn Công nghệ CMC Corporation.</p>
-                                                    <p>- Chuyên gia tư vấn chuyển đổi số và giải pháp tài chính 4.0 trong lĩnh vực Tài chính – Ngân hàng.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                <#if contentModel.team_members_o.item?? && contentModel.team_members_o.item?has_content>
+                    <#list contentModel.team_members_o.item as member>
+                        <div class="col-6 col-lg-4 col-xl-3">
+                            <a href="#popup-team" class="teambox btn-popupTeam">
+                                <div class="teambox__inner">
+                                    <div class="teambox__img" style="background-image: url(${member.image_s!''});"></div>
+                                    <div class="teambox__body">
+                                        <h3 class="teambox__name">${member.name_s!''}</h3>
+                                        <p class="teambox__text">${member.position_s!''}</p>
+                                    </div>
+                                    <div class="teambox__list">
+                                        <ul>
+                                            <#if member.experience_o.item?? && member.experience_o.item?has_content>
+                                                <#list member.experience_o.item as exp>
+                                                    <li>
+                                                        <div class="item-inner">
+                                                            <div class="row">
+                                                                <div class="col-xl-12 offset-xl-1">
+                                                                    <p>${exp.detail_s!''}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </#list>
+                                            </#if>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-
-                <div class="col-6 col-lg-4 col-xl-3">
-                    <a href="#popup-team" class="teambox btn-popupTeam">
-                        <div class="teambox__inner">
-                            <div class="teambox__img" style="background-image: url(assets/img/thaoPT.jpg);"></div>
-                            <div class="teambox__body">
-                                <h3 class="teambox__name">Nguyễn Thị Hương Thảo</h3>
-                                <p class="teambox__text">Head Consultant</p>
-                            </div>
-                            <div class="teambox__list">
-                                <ul>
-                                    <li>
-                                        <div class="item-inner">
-                                            <div class="row">
-                                                <div class="col-xl-12 offset-xl-1">
-                                                    <p>- 16 năm kinh nghiệm tư vấn và triển khai chuyển đổi số trong lĩnh vực tài chính, ngân hàng.</p>
-                                                    <p>- Trưởng bộ phận sản phẩm và dịch vụ kỹ thuật số tại VPBank Securities</p>
-                                                    <p>- Trưởng bộ phận số hóa ngân hàng bán lẻ tại OCB</p>
-                                                    <p>- Tư vấn trưởng tại Công ty Cổ phần Giải pháp Chuyển đổi số Việt Nam DTSVN</p>
-                                                    <p>- Giám đốc chương trình cải tiến quy trình cho vay bán lẻ và dự án cho vay thế chấp kỹ thuật số tại OCB</p>
-                                                    <p>- Chuyên gia đào tạo về chuyển đổi số, chuyển đổi Agile tại MBBank, OCB, VNPT, Rạng Đông, SAVIS….</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-6 col-lg-4 col-xl-3">
-                    <a href="#popup-team" class="teambox btn-popupTeam">
-                        <div class="teambox__inner">
-                            <div class="teambox__img" style="background-image: url(assets/img/namCTO.jpg);"></div>
-                            <div class="teambox__body">
-                                <h3 class="teambox__name">Vũ Thành Nam</h3>
-                                <p class="teambox__text">CTO</p>
-                            </div>
-                            <div class="teambox__list">
-                                <ul>
-                                    <li>
-                                        <div class="item-inner">
-                                            <div class="row">
-                                                <div class="col-xl-12 offset-xl-1">
-                                                    <p>- 30 năm giảng dạy và làm việc trong lĩnh vực công nghệ và giải pháp phần mềm.</p>
-                                                    <p>- Giảng viên/ Trưởng bộ môn Toán-Tin – Đại học Bách Khoa Hà Nội</p>
-                                                    <p>- Giám đốc Công nghệ tại Công ty Cổ phần Giải pháp Chuyển đổi số Việt Nam DTSVN</p>
-                                                    <p>- Kỹ sư hệ thống/ Kiến trúc sư hệ thống kiêm chuyên gia tư vấn giải pháp tại Tập đoàn Công nghệ CMC Corporation</p>
-                                                    <p>- Chuyên môn về an ninh thông tin, điện toán đám mây, an toàn máy tính, blockchain và IOT.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    </#list>
+                </#if>
             </div>
         </div>
     </div>
