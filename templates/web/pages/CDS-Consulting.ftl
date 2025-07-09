@@ -20,11 +20,6 @@
         <@crafter.renderComponentCollection $field="header_o" />
         <@crafter.renderComponentCollection $field="banner_o" />
         <@crafter.renderComponentCollection $field="who_studies_o" />
-        <@crafter.renderComponentCollection $field="target_o" />
-        <@crafter.renderComponentCollection $field="why_choose_o" />
-        <@crafter.renderComponentCollection $field="result_o" />
-        <@crafter.renderComponentCollection $field="course_information_o" />
-        <@crafter.renderComponentCollection $field="lecturer_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
 <script src="/static-assets/js/function.css"></script>
