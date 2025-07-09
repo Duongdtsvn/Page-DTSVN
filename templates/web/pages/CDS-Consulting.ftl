@@ -87,10 +87,10 @@
 <section class="section sec-strength">
     <div class="container-custom">
         <div class="sec-strength__wrap">
-            <div class="titlebox">
-                <h2 class="titlebox__title fz-44 w-50">Các gói dịch vụ tư vấn chuyển đổi số tại DTSVN</h2>
-            </div>
             <div class="sec-strength__list owl-carousel">
+            <div class="titlebox item">
+                <h2 class="titlebox__title fz-44">Các gói dịch vụ tư vấn chuyển đổi số tại DTSVN</h2>
+            </div>
                 <div class="item">
                     <div class="featurebox" style="border: 1px solid #E3E5EA">
                         <div class="featurebox__inner">
@@ -99,7 +99,7 @@
                                 <div class="translate" data-translate=".featurebox__text" style="--y: 90px">
                                     <span class="featurebox__number">01</span>
                                     <h3 class="featurebox__title">Tư vấn cơ bản</h3>
-                                    <p class="featurebox__text">Dành cho doanh nghiệp mới bắt đầu có mong muốn chuyển đổi số<br>✔️Đánh giá mức độ sẵn sàng và trưởng thành số<br>✔️Đánh giá mức độ văn hóa số<br>✔️Xây dựng danh mục ưu tiên, sáng kiến số<br>✔️Xây dựng chiến lược và lộ trình Chuyển đổi số</p>
+                                    <p class="featurebox__text"style="visibility: visible;">Dành cho doanh nghiệp mới bắt đầu có mong muốn chuyển đổi số<br>✔️Đánh giá mức độ sẵn sàng và trưởng thành số<br>✔️Đánh giá mức độ văn hóa số<br>✔️Xây dựng danh mục ưu tiên, sáng kiến số<br>✔️Xây dựng chiến lược và lộ trình Chuyển đổi số</p>
                                 </div>
                             </div>
                         </div>
