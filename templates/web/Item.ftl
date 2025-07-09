@@ -16,9 +16,12 @@
   <link rel="stylesheet" href="/static-assets/css/language-switcher.css"/>
 
   <#-- Header: chỉ hiển thị 1 header theo ngôn ngữ -->
-  
-    <@crafter.renderComponentCollection $field="header_VN_o" data-lang="vi"/>
-    <@crafter.renderComponentCollection $field="header_EN_o" data-lang="en" style="display:none;"/>
+  <div data-lang="vi">
+    <@crafter.renderComponentCollection $field="header_VN_o"/>
+  </div>
+  <div data-lang="en" style="display:none;">
+    <@crafter.renderComponentCollection $field="header_EN_o"/>
+  </div>
   
   <#-- Render head component từ Crafter CMS -->
   <@crafter.head />
@@ -30,7 +33,7 @@
       <div class="sec-pageTitle__wrap">
         <ul class="sec-pageTitle__breadcrumb">
           <li><a href="/"> Trang chủ </a></li>
-          <li><span>Sản phẩm</span></li>
+          <li><span>Dự án</span></li>
         </ul>
         <div class="sec-pageTitle__content">
           <div class="container-custom">
@@ -101,8 +104,12 @@
     </section>
   </main>
   
-    <@crafter.renderComponentCollection $field="footer_VN_o" data-lang="vi"/>
-    <@crafter.renderComponentCollection $field="footer_EN_o" data-lang="en" style="display:none;"/>
+  <div data-lang="vi">
+    <@crafter.renderComponentCollection $field="footer_VN_o"/>
+  </div>
+  <div data-lang="en" style="display:none;">
+    <@crafter.renderComponentCollection $field="footer_EN_o"/>
+  </div>
 
   <script src="/static-assets/js/language-switcher.js"></script>
   <@crafter.body_bottom />
