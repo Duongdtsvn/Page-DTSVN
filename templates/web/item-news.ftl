@@ -31,12 +31,14 @@
   <main class="page-content">
     <section class="section sec-pageTitle style-blogDetail style-2">
       <div class="sec-pageTitle__wrap">
-        <ul class="sec-pageTitle__breadcrumb">
-          <li><a href="/" data-lang="vi"> Trang chủ </a></li>
-          <li><a href="/en" data-lang="en" style="display:none;"> Home </a></li>
-          <li><span data-lang="vi">Sản phẩm</span></li>
-          <li><span data-lang="en" style="display:none;">Product</span></li>
-        </ul>
+        <ul class="sec-pageTitle__breadcrumb" data-lang="vi">
+                <li><a href="/"> Trang chủ </a></li>
+                <li><span>Tin tức</span></li>
+            </ul>
+        <ul class="sec-pageTitle__breadcrumb" data-lang="en" style="display:none;">
+                <li><a href="/en"> Home </a></li>
+                <li><span>News</span></li>
+            </ul>
         <div class="sec-pageTitle__content">
           <div class="container-custom">
             <div class="row align-items-end">
