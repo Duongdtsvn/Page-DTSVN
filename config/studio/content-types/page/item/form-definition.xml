@@ -1010,7 +1010,7 @@
 					<properties>
 						<property>
 							<name>repoPath</name>
-							<value></value>
+							<value>/static-assets/video</value>
 								<type>string</type>
 						</property>
 					</properties>
@@ -1023,7 +1023,7 @@
 					<properties>
 						<property>
 							<name>repoPath</name>
-							<value></value>
+							<value>/static-assets/video</value>
 								<type>string</type>
 						</property>
 						<property>
