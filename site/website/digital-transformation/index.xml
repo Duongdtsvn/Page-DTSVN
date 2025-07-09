@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-09T07:12:51.427Z</createdDate>
 	<createdDate_dt>2025-07-09T07:12:51.427Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T15:46:31.074Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T15:46:31.074Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T15:49:39.531Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T15:49:39.531Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</key>
 	<value>banner tư vấn chuyển đổi số</value>
 	<include>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</include>
@@ -39,17 +39,17 @@
 	<service_packages_o item-list="true">	<item>	<icon_s/>
 	<number_s>01</number_s>
 	<title_s>Tư vấn cơ bản</title_s>
-	<description_html>&lt;p&gt;D&amp;agrave;nh cho doanh nghiệp mới bắt đầu c&amp;oacute; mong muốn chuyển đổi số&lt;br /&gt;✔️Đ&amp;aacute;nh gi&amp;aacute; mức độ sẵn s&amp;agrave;ng v&amp;agrave; trưởng th&amp;agrave;nh số&lt;br /&gt;✔️Đ&amp;aacute;nh gi&amp;aacute; mức độ văn h&amp;oacute;a số&lt;br /&gt;✔️X&amp;acirc;y dựng danh mục ưu ti&amp;ecirc;n, s&amp;aacute;ng kiến số&lt;br /&gt;✔️X&amp;acirc;y dựng chiến lược v&amp;agrave; lộ tr&amp;igrave;nh Chuyển đổi số&lt;/p&gt;</description_html>
+	<description_html>&lt;p&gt;D&amp;agrave;nh cho doanh nghiệp mới bắt đầu c&amp;oacute; mong muốn chuyển đổi số&amp;lt;br&amp;gt;✔️Đ&amp;aacute;nh gi&amp;aacute; mức độ sẵn s&amp;agrave;ng v&amp;agrave; trưởng th&amp;agrave;nh số&amp;lt;br&amp;gt;✔️Đ&amp;aacute;nh gi&amp;aacute; mức độ văn h&amp;oacute;a số&amp;lt;br&amp;gt;✔️X&amp;acirc;y dựng danh mục ưu ti&amp;ecirc;n, s&amp;aacute;ng kiến số&amp;lt;br&amp;gt;✔️X&amp;acirc;y dựng chiến lược v&amp;agrave; lộ tr&amp;igrave;nh Chuyển đổi số&lt;/p&gt;</description_html>
 	<disableFlattening>false</disableFlattening>
 	</item>	<item>	<icon_s/>
 	<number_s>02</number_s>
 	<title_s>Tư vấn chuyên sâu</title_s>
-	<description_html/>
+	<description_html>&lt;p&gt;D&amp;agrave;nh cho doanh nghiệp muốn tối ưu hạ tầng chuyển đổi số&amp;lt;br&amp;gt;✔️Đ&amp;aacute;nh gi&amp;aacute; để xuất tối ưu h&amp;oacute;a hạ tầng CNTT&amp;lt;br&amp;gt;✔️Chuyển đổi m&amp;ocirc; h&amp;igrave;nh kinh doanh theo định hướng số&amp;lt;br&amp;gt;✔️Tối ưu vận h&amp;agrave;nh cho Doanh nghiệp&amp;lt;br&amp;gt;✔️X&amp;acirc;y dựng chiến lược kh&amp;aacute;ch h&amp;agrave;ng trong m&amp;ocirc;i trường số&lt;/p&gt;</description_html>
 	<disableFlattening>false</disableFlattening>
 	</item>	<item>	<icon_s/>
 	<number_s>03</number_s>
 	<title_s>Tư vấn nâng cao</title_s>
-	<description_html/>
+	<description_html>&lt;p&gt;D&amp;agrave;nh cho doanh nghiệp muốn ph&amp;aacute;t triển chuyển đổi số to&amp;agrave;n diện &amp;lt;br&amp;gt; Trao đổi trực tiếp 1:1 để ch&amp;uacute;ng t&amp;ocirc;i hiểu r&amp;otilde; được nhu cầu chuyển đổi số cho doanh nghiệp của bạn&lt;/p&gt;</description_html>
 	<disableFlattening>false</disableFlattening>
 	</item></service_packages_o>
 	<member_o item-list="true">	<item datasource="thnhvinlinkttrinkhai">	<key>/site/components/f49573a0-4a3c-c550-4d29-466711e18a31.xml</key>
