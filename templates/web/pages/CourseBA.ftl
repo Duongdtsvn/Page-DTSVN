@@ -24,7 +24,6 @@
         <@crafter.renderComponentCollection $field="why_choose_o" />
         <@crafter.renderComponentCollection $field="result_o" />
         <@crafter.renderComponentCollection $field="course_information_o" />
-        <@crafter.renderComponentCollection $field="lecturer_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
 <script src="/static-assets/js/function.css"></script>
