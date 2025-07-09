@@ -305,7 +305,7 @@
         <@crafter.renderComponentCollection $field="member_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
-<script src="/static-assets/js/function.css"></script>
+<script src="/static-assets/js/function.js"></script>
     <@crafter.body_bottom />
 </body>
 
