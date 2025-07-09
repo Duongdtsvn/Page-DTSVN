@@ -354,7 +354,7 @@
 						</property>
 						<property>
 							<name>videoManager</name>
-							<value></value>
+							<value>uploadvideo,selectvideo</value>
 							<type>datasource:video</type>
 						</property>
 						<property>
@@ -631,7 +631,7 @@
 						</property>
 						<property>
 							<name>videoManager</name>
-							<value></value>
+							<value>uploadvideo,selectvideo</value>
 							<type>datasource:video</type>
 						</property>
 						<property>
