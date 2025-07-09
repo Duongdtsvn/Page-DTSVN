@@ -12815,7 +12815,7 @@ html.mobile.landscape .menuMobile__info li + li {
     position: relative;
   }
   .sec-strength__wrap .titlebox {
-    position: absolute;
+   
     top: 0;
     left: 0;
     width: 45%;
