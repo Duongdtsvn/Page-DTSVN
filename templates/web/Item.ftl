@@ -30,7 +30,7 @@
       <div class="sec-pageTitle__wrap">
         <ul class="sec-pageTitle__breadcrumb">
           <li><a href="/"> Trang chủ </a></li>
-          <li><span>Dự án</span></li>
+          <li><span>Sản phẩm</span></li>
         </ul>
         <div class="sec-pageTitle__content">
           <div class="container-custom">
