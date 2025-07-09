@@ -6,10 +6,10 @@
 	<merge-strategy>inherit-levels</merge-strategy>
 	<objectGroupId>542d</objectGroupId>
 	<objectId>542d4015-4ca1-7225-9a88-7e8f34d6b989</objectId>
-	<internal-name>Products-Service-en</internal-name>
+	<internal-name>Products-Service-en (Copy 3)</internal-name>
 	<navLabel>Products-Service-en</navLabel>
 	<file-name>index.xml</file-name>
-	<folder-name>en</folder-name>
+	<folder-name>en-copy-3</folder-name>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
 	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
@@ -61,8 +61,8 @@
 	</item></reasons_choosing_o>
 	<createdDate>2025-07-08T06:39:20.428Z</createdDate>
 	<createdDate_dt>2025-07-08T06:39:20.428Z</createdDate_dt>
-	<lastModifiedDate>2025-07-08T06:39:20.428Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-08T06:39:20.428Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T15:36:00.895Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T15:36:00.895Z</lastModifiedDate_dt>
 </component>
 	</item></reasons_choosing_o>
 	<customer_stalk_about_o item-list="true">	<item datasource="khchhngnivdtsvn">	<key>/site/components/ae4c1c65-dac9-ef4d-1bbf-a8bd3ab647e8.xml</key>
