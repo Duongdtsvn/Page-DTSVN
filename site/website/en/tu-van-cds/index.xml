@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/cds-consulting</content-type>
+	<display-template>/templates/web/pages/CDS-Consulting.ftl</display-template>
+	<no-template-required>true</no-template-required>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>072c</objectGroupId>
+	<objectId>072c22d2-3e3b-cc04-5cd6-79343a6dbef5</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>tu-van-cds</folder-name>
+	<internal-name>Tư vấn CDS</internal-name>
+	<navLabel>Tư vấn CDS</navLabel>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
+	<createdDate>2025-07-09T07:12:51.427Z</createdDate>
+	<createdDate_dt>2025-07-09T07:12:51.427Z</createdDate_dt>
+	<lastModifiedDate>2025-07-09T07:12:51.427Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T07:12:51.427Z</lastModifiedDate_dt>
+</page>
