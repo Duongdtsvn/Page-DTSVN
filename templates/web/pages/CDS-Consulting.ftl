@@ -21,7 +21,6 @@
         <@crafter.renderComponentCollection $field="banner_o" />
         <@crafter.renderComponentCollection $field="why_choose_o" />
         
-        <@crafter.renderComponentCollection $field="service_packages_o" />
         
         <@crafter.renderComponentCollection $field="member_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
