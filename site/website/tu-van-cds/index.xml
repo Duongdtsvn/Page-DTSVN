@@ -7,7 +7,7 @@
 	<objectGroupId>072c</objectGroupId>
 	<objectId>072c22d2-3e3b-cc04-5cd6-79343a6dbef5</objectId>
 	<file-name>index.xml</file-name>
-	<folder-name>website</folder-name>
+	<folder-name>digital-transformation</folder-name>
 	<internal-name>Tư vấn CDS</internal-name>
 	<navLabel>Tư vấn CDS</navLabel>
 	<placeInNav>false</placeInNav>
@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-09T07:12:51.427Z</createdDate>
 	<createdDate_dt>2025-07-09T07:12:51.427Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T15:35:34.307Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T15:35:34.307Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T15:46:14.657Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T15:46:14.657Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</key>
 	<value>banner tư vấn chuyển đổi số</value>
 	<include>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</include>
@@ -39,7 +39,7 @@
 	<service_packages_o item-list="true">	<item>	<icon_s/>
 	<number_s>01</number_s>
 	<title_s>Tư vấn cơ bản</title_s>
-	<description_html>&lt;p&gt;D&amp;agrave;nh cho doanh nghiệp mới bắt đầu c&amp;oacute; mong muốn chuyển đổi số&amp;lt;br&amp;gt;✔️Đ&amp;aacute;nh gi&amp;aacute; mức độ sẵn s&amp;agrave;ng v&amp;agrave; trưởng th&amp;agrave;nh số&amp;lt;br&amp;gt;✔️Đ&amp;aacute;nh gi&amp;aacute; mức độ văn h&amp;oacute;a số&amp;lt;br&amp;gt;✔️X&amp;acirc;y dựng danh mục ưu ti&amp;ecirc;n, s&amp;aacute;ng kiến số&amp;lt;br&amp;gt;✔️X&amp;acirc;y dựng chiến lược v&amp;agrave; lộ tr&amp;igrave;nh Chuyển đổi số&lt;/p&gt;</description_html>
+	<description_html>&lt;p&gt;D&amp;agrave;nh cho doanh nghiệp mới bắt đầu c&amp;oacute; mong muốn chuyển đổi số&lt;br /&gt;✔️Đ&amp;aacute;nh gi&amp;aacute; mức độ sẵn s&amp;agrave;ng v&amp;agrave; trưởng th&amp;agrave;nh số&lt;br /&gt;✔️Đ&amp;aacute;nh gi&amp;aacute; mức độ văn h&amp;oacute;a số&lt;br /&gt;✔️X&amp;acirc;y dựng danh mục ưu ti&amp;ecirc;n, s&amp;aacute;ng kiến số&lt;br /&gt;✔️X&amp;acirc;y dựng chiến lược v&amp;agrave; lộ tr&amp;igrave;nh Chuyển đổi số&lt;/p&gt;</description_html>
 	<disableFlattening>false</disableFlattening>
 	</item>	<item>	<icon_s/>
 	<number_s>02</number_s>
