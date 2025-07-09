@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page>
 	<content-type>/page/page-news-en</content-type>
-	<display-template>/templates/web/Page-news-en.ftl</display-template>
+	<display-template>/templates/web/pages/page-news-en.ftl</display-template>
 	<no-template-required/>
 	<merge-strategy>inherit-levels</merge-strategy>
 	<objectGroupId>2ea2</objectGroupId>
@@ -23,18 +23,18 @@
 	<navLabel>News</navLabel>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
-	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
-	<value>header</value>
-	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></header_o>
-	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
-	<value>footer</value>
-	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></footer_o>
 	<createdDate>2025-07-06T10:28:38.296Z</createdDate>
 	<createdDate_dt>2025-07-06T10:28:38.296Z</createdDate_dt>
-	<lastModifiedDate>2025-07-06T10:28:38.296Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-06T10:28:38.296Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T16:43:48.266Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T16:43:48.266Z</lastModifiedDate_dt>
 </page>
