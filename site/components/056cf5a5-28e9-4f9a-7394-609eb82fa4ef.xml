@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/component-banner</content-type>
+	<display-template>/templates/web/Component-banner.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>056c</objectGroupId>
+	<objectId>056cf5a5-28e9-4f9a-7394-609eb82fa4ef</objectId>
+	<internal-name>banner tư vấn chuyển đổi số</internal-name>
+	<name_page_s>Tư vấn CDS</name_page_s>
+	<title_s>Khóa học Business Analyst cho người mới bắt đầu</title_s>
+	<subtitle_s/>
+	<file-name>056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</file-name>
+	<folder-name/>
+	<createdDate>2025-07-09T07:21:06.799Z</createdDate>
+	<createdDate_dt>2025-07-09T07:21:06.799Z</createdDate_dt>
+	<lastModifiedDate>2025-07-09T07:21:06.799Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T07:21:06.799Z</lastModifiedDate_dt>
+</component>
