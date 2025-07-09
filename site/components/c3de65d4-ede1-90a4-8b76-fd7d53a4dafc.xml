@@ -11,11 +11,27 @@
 	<folder-name/>
 	<createdDate>2025-06-30T07:05:08.313Z</createdDate>
 	<createdDate_dt>2025-06-30T07:05:08.313Z</createdDate_dt>
-	<lastModifiedDate>2025-06-30T08:04:05.528Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-06-30T08:04:05.528Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T07:22:03.243Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T07:22:03.243Z</lastModifiedDate_dt>
 	<teambox_list_o item-list="true">	<item>	<name_s>Nguyễn Bá Chiến</name_s>
-	<position_s>CEO</position_s>
+	<position_s>Chủ Tịch Kiêm Tổng Giám Đốc</position_s>
 	<teambox_list_o item-list="true"/>
 	<image_s>/static-assets/images/home/nbc.png</image_s>
+	</item>	<item>	<name_s>Vũ Bảo Linh</name_s>
+	<position_s>Giám Đốc Phát Triển Kinh Doanh</position_s>
+	<teambox_list_o item-list="true"/>
+	<image_s>/static-assets/images/vbl.png</image_s>
+	</item>	<item>	<name_s>Ngô Đạt Thắng</name_s>
+	<position_s>Giám Đốc Nghiệp Vụ Và Đào Tạo</position_s>
+	<teambox_list_o item-list="true"/>
+	<image_s>/static-assets/images/ndt.png</image_s>
+	</item>	<item>	<name_s>Vũ Thành Nam</name_s>
+	<position_s>Giám Đốc Công Nghệ</position_s>
+	<teambox_list_o item-list="true"/>
+	<image_s>/static-assets/images/vtn.png</image_s>
+	</item>	<item>	<name_s>Lê Xuân Thịnh</name_s>
+	<position_s>Kế Toán Trưởng</position_s>
+	<teambox_list_o item-list="true"/>
+	<image_s>/static-assets/images/lxt.jpg</image_s>
 	</item></teambox_list_o>
 </component>

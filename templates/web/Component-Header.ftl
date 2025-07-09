@@ -42,8 +42,7 @@
           </a>
         </div>
 
-        <!-- Hamburger Menu Button - Nút menu cho mobile -->
-        <button class="nav-toggle">☰</button>
+       
 
         <!-- Desktop Navigation Menu - Menu điều hướng cho desktop -->
         <nav class="nav-desktop">
@@ -52,7 +51,7 @@
             <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
             <#list contentModel.menu_o.item as menu>
             <li class="nav-has-submenu">
-              <a href="/services">${menu.menu_s!''}</a>
+              <a href="${menu.link_s!''}">${menu.menu_s!''}</a>
             </li>
             </#list>
             </#if>
@@ -61,9 +60,10 @@
 
         <!-- Language Switcher - Bộ chuyển đổi ngôn ngữ -->
         <div class="nav-lang-switcher">
-          <button id="lang-switch-btn" class="lang-btn active">VN</button>
-          <button id="lang-switch-btn" class="lang-btn">EN</button>
-        </div>
+                    <button class="lang-btn active" id="lang-toggle">VN</button>
+                </div>
+         <!-- Hamburger Menu Button - Nút menu cho mobile -->
+        <button class="nav-toggle">☰</button>
       </div>
     </div>
   </header>
@@ -81,7 +81,7 @@
             <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
             <#list contentModel.menu_o.item as menu>
             <li class="nav-has-submenu">
-              <a href="/services">${menu.menu_s!''}</a>
+              <a href="${menu.link_s!''}">${menu.menu_s!''}</a>
             </li>
             </#list>
             </#if>

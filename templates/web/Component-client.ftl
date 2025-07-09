@@ -6,7 +6,7 @@
       <div class="col-md-12 col-lg-12 col-xl-12">
         <!-- <div class="col-md-8 col-lg-5 col-xl-4"> -->
         <div class="titlebox">
-          <h2 class="titlebox__title fz-44">50+ Khách hàng đã đồng hành cùng chúng tôi</h2>
+          <h2 class="titlebox__title fz-44">${contentModel.title_s!''}</h2>
         </div>
       </div>
     </div>

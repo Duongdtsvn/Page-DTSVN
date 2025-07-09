@@ -34,7 +34,7 @@
                     <div class="item__inner">
                       <div class="fix">
                         <span class="item__number"></span>
-                        <div class="translate" style="--y: 100px">
+                        <div class="translate" style="--y: undefinedpx;">
                           <h3 class="item__title">${solutionn.title_s!''}</h3>
                         </div>
                       </div>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/about</content-type>
+	<display-template>/templates/web/pages/About.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>af72</objectGroupId>
+	<objectId>af729052-bcfe-73af-3688-209d550c5f53</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>gioi-thieu</folder-name>
+	<internal-name>Giới thiệu</internal-name>
+	<navLabel>Giới thiệu</navLabel>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
+	<createdDate>2025-07-07T03:42:51.585Z</createdDate>
+	<createdDate_dt>2025-07-07T03:42:51.585Z</createdDate_dt>
+	<lastModifiedDate>2025-07-07T07:26:09.659Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T07:26:09.659Z</lastModifiedDate_dt>
+	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</key>
+	<value>Banner Giới thiệu</value>
+	<include>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></banner_o>
+	<solution_o item-list="true">	<item datasource="dTSVNCUNGCPTRNBGIIPHP">	<key>/site/components/b47ab75f-f4c6-d533-64d2-979c32819300.xml</key>
+	<value>DTSVN CUNG CẤP TRỌN BỘ GIẢI PHÁP</value>
+	<include>/site/components/b47ab75f-f4c6-d533-64d2-979c32819300.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></solution_o>
+	<strengths_o item-list="true">	<item datasource="thmnhcaDTSVN">	<key>/site/components/21b22ee6-b1c8-89dd-254b-6a257e284434.xml</key>
+	<value>Thế mạnh của DTSVN</value>
+	<include>/site/components/21b22ee6-b1c8-89dd-254b-6a257e284434.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></strengths_o>
+	<achievements_o item-list="true">	<item>	<key>/site/components/8770ee00-bc20-15c1-00f3-53b1470eef8f.xml</key>
+	<value>Thành tựu</value>
+	<include>/site/components/8770ee00-bc20-15c1-00f3-53b1470eef8f.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></achievements_o>
+	<leader_o item-list="true">	<item>	<key>/site/components/c3de65d4-ede1-90a4-8b76-fd7d53a4dafc.xml</key>
+	<value>ban lãnh đạo</value>
+	<include>/site/components/c3de65d4-ede1-90a4-8b76-fd7d53a4dafc.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></leader_o>
+	<member_o item-list="true">	<item>	<key>/site/components/af81c1ad-1803-d0cd-44c3-83f691775c1b.xml</key>
+	<value>thành viên</value>
+	<include>/site/components/af81c1ad-1803-d0cd-44c3-83f691775c1b.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></member_o>
+	<client_o item-list="true">	<item datasource="khchhng">	<key>/site/components/600b3a14-498b-59b9-abb2-f32db29d1280.xml</key>
+	<value>50+ Khách hàng đã đồng hành cùng chúng tôi</value>
+	<include>/site/components/600b3a14-498b-59b9-abb2-f32db29d1280.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></client_o>
+	<partner_o item-list="true">	<item datasource="itc">	<key>/site/components/2ad96b85-2a40-350a-83b6-081b2576d202.xml</key>
+	<value>Đối tác tiêu biểu của DTSVN</value>
+	<include>/site/components/2ad96b85-2a40-350a-83b6-081b2576d202.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></partner_o>
+</page>

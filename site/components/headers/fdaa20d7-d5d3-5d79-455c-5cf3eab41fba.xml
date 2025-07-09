@@ -11,11 +11,34 @@
 	<internal-name>header</internal-name>
 	<createdDate>2025-06-24T08:58:33.346Z</createdDate>
 	<createdDate_dt>2025-06-24T08:58:33.346Z</createdDate_dt>
-	<lastModifiedDate>2025-07-02T07:52:30.867Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-02T07:52:30.867Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-07T03:00:04.600Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T03:00:04.600Z</lastModifiedDate_dt>
 	<menu_o item-list="true">	<item>	<menu_s>Giới Thiệu</menu_s>
 	<menu_c2_o item-list="true"/>
-	</item>	<item>	<menu_s>home</menu_s>
+	<link_s>/gioi-thieu</link_s>
+	</item>	<item>	<menu_s>Sản phẩm - Dịch vụ</menu_s>
 	<menu_c2_o item-list="true"/>
+	<link_s>/sanpham-dichvu</link_s>
+	</item>	<item>	<menu_s>Khóa học BA</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s>/khoa-hoc-ba</link_s>
+	</item>	<item>	<menu_s>Nhà đầu tư</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s>/nha-dau-tu</link_s>
+	</item>	<item>	<menu_s>Tư vấn CĐS</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s>/dich-vu-tu-van-chuyen-doi-so</link_s>
+	</item>	<item>	<menu_s>Đối tác - Khách hàng</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s>/doitac-khachang</link_s>
+	</item>	<item>	<menu_s>Tin tức</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s>/tin-tuc</link_s>
+	</item>	<item>	<menu_s>Dự án</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s>/du-an</link_s>
+	</item>	<item>	<menu_s>Tuyển dụng</menu_s>
+	<menu_c2_o item-list="true"/>
+	<link_s>/tuyen-dung</link_s>
 	</item></menu_o>
 </component>

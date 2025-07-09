@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/component-partner-dtsvn</content-type>
+	<display-template>/templates/web/Component-partner-dtsvn.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>2ad9</objectGroupId>
+	<objectId>2ad96b85-2a40-350a-83b6-081b2576d202</objectId>
+	<internal-name>Đối tác tiêu biểu của DTSVN</internal-name>
+	<file-name>2ad96b85-2a40-350a-83b6-081b2576d202.xml</file-name>
+	<folder-name/>
+	<partner_dtsvn_o item-list="true">	<item>	<image_partner_s>/static-assets/images/insider.png</image_partner_s>
+	</item>	<item>	<image_partner_s>/static-assets/images/clevertap.png</image_partner_s>
+	</item>	<item>	<image_partner_s>/static-assets/images/odoo_logo_rgb.svg.png</image_partner_s>
+	</item>	<item>	<image_partner_s>/static-assets/images/meeyland.png</image_partner_s>
+	</item>	<item>	<image_partner_s>/static-assets/images/nuclent.png</image_partner_s>
+	</item>	<item>	<image_partner_s>/static-assets/images/nuclent.png</image_partner_s>
+	</item></partner_dtsvn_o>
+	<createdDate>2025-07-07T07:02:04.576Z</createdDate>
+	<createdDate_dt>2025-07-07T07:02:04.576Z</createdDate_dt>
+	<lastModifiedDate>2025-07-07T07:02:04.576Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-07T07:02:04.576Z</lastModifiedDate_dt>
+</component>

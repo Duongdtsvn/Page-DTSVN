@@ -1,3 +1,4 @@
+<#import "/templates/system/common/crafter.ftl" as crafter />
 <!-- Footer -->
 <footer class="footer">
     <div class="container-custom">
@@ -8,12 +9,11 @@
                         <div class="footer__info">
                             <div class="item-logo">
                                 <a href="/home">
-                                    <img src="/wp-content/themes/hello-elementor/assets/img/logo-footer.png" alt="">
+                                    <@crafter.img $field="logo_dtsvn_s" src=(contentModel.logo_dtsvn_s!"") alt="" />
                                 </a>
                             </div>
                             <p class="item-text">
-                                Số 116 Trung Liệt, phường Trung Liệt, quận Đống Đa, Hà Nội <br>
-                                08:30 - 17:45, từ thứ 2 đến thứ 7
+                                ${contentModel.address_s!''}
                             </p>
                         </div>
                     </div>
@@ -23,53 +23,51 @@
                         <div class="col-7 col-md-3">
                             <div class="footer__widget">
                                 <ul class="footer__contact">
-                                    <li>
-                                        <small>Điện thoại</small>
-                                        <p><a href="tel:(+84) 912 363 824">(+84) 912 363 824</a></p>
-                                    </li>
-                                    <li>
-                                        <small>Email</small>
-                                        <p><a href="mailto:info@dtsvn.net">info@dtsvn.net</a></p>
-                                    </li>
-                                    <li>
-                                        <small>Website</small>
-                                        <p><a href="https://dtsvn.net">https://dtsvn.net</a></p>
-                                    </li>
+                                    <#if contentModel.contact_information_o.item?? &&
+                                        contentModel.contact_information_o.item?has_content>
+                                        <#list contentModel.contact_information_o.item as contact_information>
+                                            <li>
+                                                <small> ${contact_information.information_1_s!''}</small>
+                                                <p><a href="tel:(+84) 912 363 824">
+                                                        ${contact_information.information_2_s!''}</a></p>
+                                            </li>
+                                        </#list>
+                                    </#if>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-4 col-xxxl-3 d-none d-md-block">
                             <div class="footer__widget">
-                                <h3 class="item-title">Công ty thành viên</h3>
+                                <h3 class="item-title">${contentModel.member_company_s!''}</h3>
                                 <ul class="footer__list">
-                                    <li><a href="https://beau.vn/vi">Beau Agency</a></li>
-                                    <li><a href="https://mate.com.vn/">MATE</a></li>
-                                    <li><a href="http://enterprisenao.com/">ENTERPRISENAO</a></li>
-                                    <li><a href="http://dtivn.net/">DTI</a></li>
+                                    <#if contentModel.member_company_o.item?? && contentModel.member_company_o.item?has_content>
+                                        <#list contentModel.member_company_o.item as member_company>
+                                            <li><a href="${member_company.link_s!''}">${member_company.name_company_s!''}</a></li>
+                                        </#list>
+                                    </#if>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-2 col-lg-3 col-xl-3 d-none d-md-block">
                             <div class="footer__widget">
-                                <h3 class="item-title">Kết nối</h3>
+                                <h3 class="item-title">${contentModel.social_network_s!''}</h3>
                                 <ul class="footer__list">
-                                    <li><a href="https://www.facebook.com/DTSVN.NET">Facebook</a></li>
-                                    <li><a href="https://zalo.me/3369742414252944142">Zalo</a></li>
-                                    <li><a href="https://www.linkedin.com/company/dtsvietnam">LinkedIn</a></li>
-                                    <li><a href="#">Youtube</a></li>
+                                    <#if contentModel.social_network_o.item?? && contentModel.social_network_o.item?has_content>
+                                        <#list contentModel.social_network_o.item as social_network>
+                                            <li><a href="${social_network.link_s!''}">${social_network.name_social_s!''}</a></li>
+                                        </#list>
+                                    </#if>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-5 col-md-3 col-lg-2 col-xxxl-3">
                             <div class="footer__widget">
                                 <ul class="footer__list big">
-                                    <li><a href="/gioi-thieu">Giới thiệu</a></li>
-                                    <li><a href="/sanpham-dichvu">Sản phẩm</a></li>
-                                    <li><a href="/doitac-khachang">Đối tác</a></li>
-                                    <li><a href="/tin-tuc">Tin tức</a></li>
-                                    <li><a href="/nha-dau-tu-2">Nhà đầu tư</a></li>
-                                    <li><a href="https://dtsvn-survey.website/">Khảo sát</a></li>
-                                    <li><a href="/lien-he">Liên hệ</a></li>
+                                    <#if contentModel.menu_footer_o.item?? && contentModel.menu_footer_o.item?has_content>
+                                        <#list contentModel.menu_footer_o.item as menu_footer>
+                                            <li><a href="${menu_footer.link_s!''}">${menu_footer.menu_s!''}</a></li>
+                                        </#list>
+                                    </#if>
                                 </ul>
                             </div>
                         </div>
@@ -84,14 +82,9 @@
                     <p class="footer__copyright">© Bản quyền thuộc về DTSVN</p>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
-                    <div class="footer__desgin">Thiết kế bởi © <a href="https://beau.vn/">Beau Agency</a></div>
+                    <div class="footer__desgin">Thiết kế bởi © <a href="https://beau.vn/">DTSVN</a></div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-<!-- End/Footer -->
-
-<!-- wp_footer() & closing tags không cần trong HTML thuần -->
-</body>
-</html>

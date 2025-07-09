@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/about-en</content-type>
+	<display-template>/templates/web/About-en.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>e653</objectGroupId>
+	<objectId>e653dac5-3a32-8c08-5557-761a0a64c67a</objectId>
+	<internal-name>Giới thiệu-en</internal-name>
+	<navLabel>Giới thiệu-en</navLabel>
+	<file-name>index.xml</file-name>
+	<folder-name>en</folder-name>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
+	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/ce9a3de3-978c-0555-256d-8aa62e4b18b0.xml</key>
+	<value>banner-about-en</value>
+	<include>/site/components/ce9a3de3-978c-0555-256d-8aa62e4b18b0.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></banner_o>
+	<solution_o item-list="true">	<item datasource="dTSVNCUNGCPTRNBGIIPHP">	<key>/site/components/4e84f869-dbc2-5485-d62f-8ec66be6d400.xml</key>
+	<value>DTSVN CUNG CẤP TRỌN BỘ GIẢI PHÁP-en</value>
+	<include>/site/components/4e84f869-dbc2-5485-d62f-8ec66be6d400.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></solution_o>
+	<strengths_o item-list="true">	<item datasource="thmnhcaDTSVN">	<key>/site/components/d94c9eb6-5cba-cd86-920d-91e4e51b8a68.xml</key>
+	<value>thế mạnh của dtsvn-en</value>
+	<include>/site/components/d94c9eb6-5cba-cd86-920d-91e4e51b8a68.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></strengths_o>
+	<achievements_o item-list="true">	<item>	<key>/site/components/5c47ec44-a2d4-e543-25ad-2df91d640ce3.xml</key>
+	<value>thành tựu en</value>
+	<include>/site/components/5c47ec44-a2d4-e543-25ad-2df91d640ce3.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></achievements_o>
+	<leader_o item-list="true">	<item>	<key>/site/components/ce1e1da3-e441-240f-400f-aa978af983c9.xml</key>
+	<value>leader en</value>
+	<include>/site/components/ce1e1da3-e441-240f-400f-aa978af983c9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></leader_o>
+	<member_o item-list="true">	<item datasource="thnhvin">	<key>/site/components/d9bd1f5b-5f53-5cdb-5ad4-535a7dfd35bd.xml</key>
+	<value>thành viên en</value>
+	<include>/site/components/d9bd1f5b-5f53-5cdb-5ad4-535a7dfd35bd.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></member_o>
+	<client_o item-list="true">	<item datasource="khchhng">	<key>/site/components/d6b2713b-227d-6b49-227e-61daccf2bef5.xml</key>
+	<value>50+ khách hàng en</value>
+	<include>/site/components/d6b2713b-227d-6b49-227e-61daccf2bef5.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></client_o>
+	<partner_o item-list="true">	<item datasource="itc">	<key>/site/components/60527de7-b7d1-1856-230e-5754ae26978d.xml</key>
+	<value>đối tác en</value>
+	<include>/site/components/60527de7-b7d1-1856-230e-5754ae26978d.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></partner_o>
+	<createdDate>2025-07-08T03:26:13.073Z</createdDate>
+	<createdDate_dt>2025-07-08T03:26:13.073Z</createdDate_dt>
+	<lastModifiedDate>2025-07-08T03:26:13.073Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-08T03:26:13.073Z</lastModifiedDate_dt>
+</page>

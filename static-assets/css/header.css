@@ -25,6 +25,8 @@ body {
 
 .nav-content {
   display: flex;
+  gap: 20px;
+
   align-items: center;
   padding: 15px 0;
   margin: 8px 0;
@@ -125,13 +127,13 @@ body {
   display: none;
   position: fixed;
   top: 60px;
-  left: 0;
+  right: 0;
   width: 66.67%;
   /* Set to 2/3 of the screen width */
   height: calc(100vh - 60px);
   background-color: #fff;
   z-index: 999;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 }
 
