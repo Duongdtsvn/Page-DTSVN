@@ -24,11 +24,18 @@
 	</item></footer_o>
 	<createdDate>2025-07-09T07:12:51.427Z</createdDate>
 	<createdDate_dt>2025-07-09T07:12:51.427Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T07:31:49.411Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T07:31:49.411Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T07:35:30.255Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T07:35:30.255Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</key>
 	<value>banner tư vấn chuyển đổi số</value>
 	<include>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></banner_o>
+	<why_choose_o item-list="true">	<item datasource="tisaobnnnchnDTSVNtrinkhai">	<key>/site/components/4f9d42ca-6adb-639c-f006-f2bbde4a821f.xml</key>
+	<value>Tại sao bạn nên chọn DTSVN để triển khai?</value>
+	<include>/site/components/4f9d42ca-6adb-639c-f006-f2bbde4a821f.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></why_choose_o>
+	<service_packages_o item-list="true"/>
+	<member_o item-list="true"/>
 </page>
