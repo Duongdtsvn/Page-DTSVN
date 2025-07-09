@@ -210,7 +210,7 @@
 						</property>
 						<property>
 							<name>imageManager</name>
-							<value></value>
+							<value>uploadphoto,selectphoto</value>
 							<type>datasource:image</type>
 						</property>
 						<property>
