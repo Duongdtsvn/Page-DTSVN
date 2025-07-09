@@ -3,12 +3,13 @@
 <section class="section sec-strength pb-0">
   <div class="container-custom">
       <div class="sec-strength__wrap">
-          <div class="titlebox">
-              <h2 class="titlebox__title fz-44 w-50">Khóa học này dành cho ai?</h2>
-          </div>
+         
           <div class="sec-strength__list owl-carousel">
               <#if contentModel.who_studies_o.item?? && contentModel.who_studies_o.item?has_content>
               <#list contentModel.who_studies_o.item as who_studies>
+               <div class="titlebox item">
+              <h2 class="titlebox__title fz-44 ">Khóa học này dành cho ai?</h2>
+                </div>
               <div class="item">
                   <div class="featurebox" style="border: 1px solid #E3E5EA ">
                       <div class="featurebox__inner">
