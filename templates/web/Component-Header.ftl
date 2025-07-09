@@ -46,7 +46,7 @@
 
         <!-- Desktop Navigation Menu - Menu điều hướng cho desktop -->
         <nav class="nav-desktop">
-          <ul class="nav-list">
+          <ul class="nav-list" style="margin-bottom: 0px;">
             <!-- Loop qua menu items từ CMS - Vòng lặp hiển thị menu từ hệ thống quản lý nội dung -->
             <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
             <#list contentModel.menu_o.item as menu>
