@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-09T07:12:51.427Z</createdDate>
 	<createdDate_dt>2025-07-09T07:12:51.427Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T07:53:27.960Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T07:53:27.960Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T10:24:08.184Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T10:24:08.184Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</key>
 	<value>banner tư vấn chuyển đổi số</value>
 	<include>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</include>
@@ -36,10 +36,35 @@
 	<include>/site/components/4f9d42ca-6adb-639c-f006-f2bbde4a821f.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></why_choose_o>
-	<service_packages_o item-list="true"/>
+	<service_packages_o item-list="true">	<item>	<icon_s/>
+	<number_s>01</number_s>
+	<title_s>Tư vấn cơ bản</title_s>
+	<description_html>0</description_html>
+	</item>	<item>	<icon_s/>
+	<number_s>02</number_s>
+	<title_s>Tư vấn chuyên sâu</title_s>
+	<description_html/>
+	</item>	<item>	<icon_s/>
+	<number_s>03</number_s>
+	<title_s>Tư vấn nâng cao</title_s>
+	<description_html/>
+	</item></service_packages_o>
 	<member_o item-list="true">	<item datasource="thnhvinlinkttrinkhai">	<key>/site/components/f49573a0-4a3c-c550-4d29-466711e18a31.xml</key>
 	<value>Thành viên liên kết triển khai</value>
 	<include>/site/components/f49573a0-4a3c-c550-4d29-466711e18a31.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></member_o>
+	<vision_title_s>Những vấn đề &amp; thách thức khi chuyển đổi số</vision_title_s>
+	<vision_description_s>Doanh nghiệp của bạn có đang gặp phải những khó khăn dưới đây khi Chuyển đổi số không?</vision_description_s>
+	<strength_title_s>Các gói dịch vụ tư vấn chuyển đổi số tại DTSVN</strength_title_s>
+	<vision_background_image_s>/static-assets/images/vision-bg.jpg</vision_background_image_s>
+	<vision_challenges_o item-list="true">	<item>	<title_s>Năng suất làm việc suy giảm</title_s>
+	<description_s>Nhiều công việc không tên, các công việc thủ công khiến nhân sự trong Doanh nghiệp mất thời gian giải quyết, không tập trung được cho các công việc quan trọng.</description_s>
+	</item>	<item>	<title_s>Quy trình làm việc phức tạp</title_s>
+	<description_s>Quy trình không đồng bộ thống nhất giữa các phòng ban, các phòng ban bị động trong công việc khiến hiệu quả vận hành Doanh nghiệp giảm sút.</description_s>
+	</item>	<item>	<title_s>Dữ liệu phân tán không đồng nhất</title_s>
+	<description_s>Quản lý dữ liệu theo cách thủ công truyền thống và không được thống nhất dẫn đến sự thiếu minh bạch và chậm chạp trong việc ra các quyết định kịp thời cho Doanh nghiệp.</description_s>
+	</item>	<item>	<title_s>Hiệu quả kinh doanh giảm sút</title_s>
+	<description_s>Khách hàng mất dần hứng thú và không còn quay lại với Doanh nghiệp vì không có phương thức chăm sóc khách hàng thường xuyên, liên tục.</description_s>
+	</item></vision_challenges_o>
 </page>
