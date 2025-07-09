@@ -5,11 +5,11 @@
       <div class="sec-strength__wrap">
          
           <div class="sec-strength__list owl-carousel">
-              <#if contentModel.who_studies_o.item?? && contentModel.who_studies_o.item?has_content>
-              <#list contentModel.who_studies_o.item as who_studies>
-               <div class="titlebox item">
+          <div class="titlebox item">
               <h2 class="titlebox__title fz-44 ">Khóa học này dành cho ai?</h2>
                 </div>
+              <#if contentModel.who_studies_o.item?? && contentModel.who_studies_o.item?has_content>
+              <#list contentModel.who_studies_o.item as who_studies>
               <div class="item">
                   <div class="featurebox" style="border: 1px solid #E3E5EA ">
                       <div class="featurebox__inner">
