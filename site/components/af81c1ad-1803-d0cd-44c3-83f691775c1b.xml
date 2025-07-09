@@ -18,13 +18,9 @@
 	<image_member_s>/static-assets/beau.png</image_member_s>
 	</item>	<item>	<url_s/>
 	<image_member_s>/static-assets/logo-mate.png</image_member_s>
-	</item>	<item>	<url_s/>
-	<image_member_s>/static-assets/images/insider.png</image_member_s>
-	</item>	<item>	<url_s/>
-	<image_member_s>/static-assets/images/nuclent.png</image_member_s>
 	</item></member_o>
 	<createdDate>2025-06-25T07:35:07.974Z</createdDate>
 	<createdDate_dt>2025-06-25T07:35:07.974Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T07:49:32.963Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T07:49:32.963Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T07:50:50.823Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T07:50:50.823Z</lastModifiedDate_dt>
 </component>
