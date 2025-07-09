@@ -14,7 +14,7 @@
 	<title_en_s>test1 test2</title_en_s>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
-	<categorys_o>	<item>	<key>Tin kinh doanh</key>
+	<categorys_o>	<item>	<key>Business-News</key>
 	<value_smv>Tin kinh doanh</value_smv>
 	</item></categorys_o>
 	<content_vi_html>&lt;p&gt;Năm 2024 v&amp;agrave; 2025 đ&amp;aacute;nh dấu bước ngoặt quan trọng cho ng&amp;agrave;nh t&amp;agrave;i ch&amp;iacute;nh &amp;ndash; ng&amp;acirc;n h&amp;agrave;ng Việt Nam, khi Ng&amp;acirc;n h&amp;agrave;ng Nh&amp;agrave; nước (NHNN) ch&amp;iacute;nh thức &amp;aacute;p dụng v&amp;agrave; siết chặt c&amp;aacute;c quy định bắt buộc qua Th&amp;ocirc;ng tư 50/2024/TT-NHNN. Những quy định n&amp;agrave;y kh&amp;ocirc;ng chỉ t&amp;aacute;c động đến c&amp;aacute;c ng&amp;acirc;n h&amp;agrave;ng m&amp;agrave; c&amp;ograve;n ảnh hưởng s&amp;acirc;u rộng đến c&amp;aacute;c c&amp;ocirc;ng ty t&amp;agrave;i ch&amp;iacute;nh, fintech v&amp;agrave; tổ chức trung gian thanh to&amp;aacute;n.&lt;/p&gt;
@@ -52,17 +52,37 @@
 &lt;p&gt;dsfjsdjfhdsj dsjfhjs dhfjsd js hfjsdh jf hsdjfh dsjf hdsjfh jsdhf jdsf sdfghsdf ghsdfg hsdgfh sdghfg dhsfg hsdfg shfg&amp;nbsp;&lt;/p&gt;</content_en_html>
 	<createdDate>2025-07-04T03:53:30.639Z</createdDate>
 	<createdDate_dt>2025-07-04T03:53:30.639Z</createdDate_dt>
-	<lastModifiedDate>2025-07-06T10:15:56.956Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-06T10:15:56.956Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T18:27:18.184Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T18:27:18.184Z</lastModifiedDate_dt>
 	<img_main_s>/static-assets/images/sfaf.jpg</img_main_s>
-	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
 	<value>header</value>
 	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
 	<disableFlattening>false</disableFlattening>
-	</item></header_o>
-	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	</item></header_VN_o>
+	<footer_VN_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
 	<value>footer</value>
 	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
 	<disableFlattening>false</disableFlattening>
-	</item></footer_o>
+	</item></footer_VN_o>
+	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
+	<value>Contact Form - VN</value>
+	<include>/site/components/contact-form/vn.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_VN_o>
+	<header_EN_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_EN_o>
+	<footer_EN_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_EN_o>
+	<contact_EN_o item-list="true">	<item>	<key>/site/components/contact-form/en.xml</key>
+	<value>Contact form - EN</value>
+	<include>/site/components/contact-form/en.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_EN_o>
 </page>
