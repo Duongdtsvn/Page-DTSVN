@@ -60,8 +60,8 @@
 
         <!-- Language Switcher - Bộ chuyển đổi ngôn ngữ -->
         <div class="nav-lang-switcher">
-                    <button class="lang-btn active" id="lang-toggle">VN</button>
-                </div>
+          <button class="lang-btn" id="lang-toggle" data-current-lang="VN">VN</button>
+        </div>
          <!-- Hamburger Menu Button - Nút menu cho mobile -->
         <button class="nav-toggle">☰</button>
       </div>
