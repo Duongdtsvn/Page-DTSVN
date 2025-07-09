@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page>
 	<content-type>/page/page-news-en</content-type>
-	<display-template/>
+	<display-template>/templates/web/Page-news-en.ftl</display-template>
 	<no-template-required/>
 	<merge-strategy>inherit-levels</merge-strategy>
 	<objectGroupId>13f4</objectGroupId>
@@ -20,7 +20,7 @@
 	<internal-name>News</internal-name>
 	<navLabel>News</navLabel>
 	<file-name>index.xml</file-name>
-	<folder-name>newss</folder-name>
+	<folder-name>news</folder-name>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
 	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
@@ -35,6 +35,6 @@
 	</item></footer_o>
 	<createdDate>2025-07-09T16:54:07.206Z</createdDate>
 	<createdDate_dt>2025-07-09T16:54:07.206Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T16:54:07.206Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T16:54:07.206Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T16:56:29.627Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T16:56:29.627Z</lastModifiedDate_dt>
 </page>
