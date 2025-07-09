@@ -16,11 +16,10 @@
   <link rel="stylesheet" href="/static-assets/css/language-switcher.css"/>
 
   <#-- Header: chỉ hiển thị 1 header theo ngôn ngữ -->
-  <@crafter.renderComponentCollection $field="header_VN_o"/>
-  <#--  
+  
     <@crafter.renderComponentCollection $field="header_VN_o" data-lang="vi"/>
     <@crafter.renderComponentCollection $field="header_EN_o" data-lang="en" style="display:none;"/>
-  -->
+  
   <#-- Render head component từ Crafter CMS -->
   <@crafter.head />
 </head>
@@ -101,11 +100,10 @@
       </div>
     </section>
   </main>
-  <@crafter.renderComponentCollection $field="footer_VN_o"/>
-  <#--  
+  
     <@crafter.renderComponentCollection $field="footer_VN_o" data-lang="vi"/>
     <@crafter.renderComponentCollection $field="footer_EN_o" data-lang="en" style="display:none;"/>
-  -->
+
   <script src="/static-assets/js/language-switcher.js"></script>
   <@crafter.body_bottom />
 </body>
