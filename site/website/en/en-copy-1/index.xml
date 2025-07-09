@@ -6,7 +6,7 @@
 	<merge-strategy>inherit-levels</merge-strategy>
 	<objectGroupId>42c2</objectGroupId>
 	<objectId>42c201d7-b217-15c8-2dd9-ee018eefa742</objectId>
-	<internal-name>khóa học ba en</internal-name>
+	<internal-name>khóa học ba en (Copy 1)</internal-name>
 	<navLabel>khóa học ba en</navLabel>
 	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
 	<value>Header-en</value>
@@ -51,11 +51,11 @@
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
 	<file-name>index.xml</file-name>
-	<folder-name>en</folder-name>
+	<folder-name>en-copy-1</folder-name>
 	<createdDate>2025-07-08T06:51:54.472Z</createdDate>
 	<createdDate_dt>2025-07-08T06:51:54.472Z</createdDate_dt>
-	<lastModifiedDate>2025-07-08T08:44:14.871Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-08T08:44:14.871Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T15:35:15.807Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T15:35:15.807Z</lastModifiedDate_dt>
 	<lecturer_o item-list="true">	<item datasource="gingvin">	<key>/site/components/71e6e9b4-7955-1782-ae52-a0397929690e.xml</key>
 	<value>giảng viên en</value>
 	<include>/site/components/71e6e9b4-7955-1782-ae52-a0397929690e.xml</include>
