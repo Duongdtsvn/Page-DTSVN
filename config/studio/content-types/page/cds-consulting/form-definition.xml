@@ -140,7 +140,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1752054411496</title>
+			<title>Default Section Title 1752056445201</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
@@ -465,7 +465,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1752054483032</title>
+			<title>Default Section Title 1752056445202</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
@@ -473,7 +473,7 @@
 					<type>image-picker</type>
 					<id>vision_background_image_s</id>
 					<iceId></iceId>
-					<title>ảnh </title>
+					<title>ảnh</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -500,7 +500,7 @@
 						</property>
 						<property>
 							<name>imageManager</name>
-							<value></value>
+							<value>upload,seleact</value>
 							<type>datasource:image</type>
 						</property>
 						<property>
@@ -735,7 +735,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1752055870070</title>
+			<title>Default Section Title 1752056445202</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
@@ -839,7 +839,7 @@
 						</property>
 						<property>
 							<name>imageManager</name>
-							<value></value>
+							<value>seleact,upload</value>
 							<type>datasource:image</type>
 						</property>
 						<property>
@@ -956,7 +956,7 @@
 					<type>numeric-input</type>
 					<id>description_html</id>
 					<iceId></iceId>
-					<title>nội dung </title>
+					<title>nội dung</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -1230,6 +1230,37 @@
 							<name>type</name>
 							<value></value>
 								<type>string</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>img-desktop-upload</type>
+					<id>upload</id>
+					<title>upload</title>
+					<interface>image</interface>
+					<properties>
+						<property>
+							<name>repoPath</name>
+							<value>/static-assets/images</value>
+								<type>content-path-input</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>img-repository-upload</type>
+					<id>seleact</id>
+					<title>seleact</title>
+					<interface>image</interface>
+					<properties>
+						<property>
+							<name>repoPath</name>
+							<value>/static-assets/images</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>useSearch</name>
+							<value>false</value>
+								<type>boolean</type>
 						</property>
 					</properties>
 				</datasource>
