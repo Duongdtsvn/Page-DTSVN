@@ -182,15 +182,12 @@ body {
 }
 
 .nav-mobile__menu .nav-has-submenu>a::after {
-  content: '▶';
+  
   float: right;
   font-size: 12px;
   margin-top: 5px;
 }
 
-.nav-mobile__menu .nav-has-submenu.active>a::after {
-  content: '▼';
-}
 
 .nav-mobile__info {
   list-style: none;
