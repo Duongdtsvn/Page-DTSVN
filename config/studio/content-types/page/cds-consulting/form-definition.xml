@@ -140,7 +140,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1752056608590</title>
+			<title>Default Section Title 1752056859264</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
@@ -465,7 +465,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1752056608591</title>
+			<title>Default Section Title 1752056859266</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
@@ -735,7 +735,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1752056608591</title>
+			<title>Default Section Title 1752056859266</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
@@ -953,7 +953,7 @@
 					</constraints>
 				</field>
 				<field>
-					<type>numeric-input</type>
+					<type>rte</type>
 					<id>description_html</id>
 					<iceId></iceId>
 					<title>nội dung</title>
@@ -962,29 +962,59 @@
 					<help></help>
 					<properties>
 						<property>
-							<name>size</name>
-							<value>50</value>
+							<name>height</name>
+							<value></value>
 							<type>int</type>
 						</property>
 						<property>
-							<name>maxValue</name>
-							<value></value>
-							<type>minMax</type>
-						</property>
-						<property>
-							<name>minValue</name>
-							<value></value>
-							<type>minMax</type>
-						</property>
-						<property>
-							<name>readonly</name>
-							<value></value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>tokenize</name>
+							<name>autoGrow</name>
 							<value>false</value>
 							<type>boolean</type>
+						</property>
+						<property>
+							<name>enableSpellCheck</name>
+							<value>true</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>forceRootBlockPTag</name>
+							<value>true</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>forceBRTags</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>supportedChannels</name>
+							<value></value>
+							<type>supportedChannels</type>
+						</property>
+						<property>
+							<name>rteConfiguration</name>
+							<value>generic</value>
+							<type>string</type>
+						</property>
+						<property>
+							<name>imageManager</name>
+							<value>upload,seleact</value>
+							<type>datasource:image</type>
+						</property>
+						<property>
+							<name>videoManager</name>
+							<value></value>
+							<type>datasource:video</type>
+						</property>
+						<property>
+							<name>audioManager</name>
+							<value></value>
+							<type>datasource:audio</type>
+						</property>
+						<property>
+							<name>fileManager</name>
+							<value></value>
+							<type>datasource:item</type>
 						</property>
 					</properties>
 					<constraints>
@@ -992,11 +1022,6 @@
 							<name>required</name>
 							<value><![CDATA[]]></value>
 							<type>boolean</type>
-						</constraint>
-						<constraint>
-							<name>pattern</name>
-							<value><![CDATA[]]></value>
-							<type>string</type>
 						</constraint>
 					</constraints>
 				</field>
