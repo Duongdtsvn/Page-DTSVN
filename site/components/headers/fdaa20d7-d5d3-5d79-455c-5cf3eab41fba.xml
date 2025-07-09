@@ -11,14 +11,14 @@
 	<internal-name>header</internal-name>
 	<createdDate>2025-06-24T08:58:33.346Z</createdDate>
 	<createdDate_dt>2025-06-24T08:58:33.346Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T15:41:19.217Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T15:41:19.217Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T15:48:00.161Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T15:48:00.161Z</lastModifiedDate_dt>
 	<menu_o item-list="true">	<item>	<menu_s>Giới Thiệu</menu_s>
 	<menu_c2_o item-list="true"/>
 	<link_s>/about</link_s>
 	</item>	<item>	<menu_s>Sản phẩm - Dịch vụ</menu_s>
 	<menu_c2_o item-list="true"/>
-	<link_s>/product</link_s>
+	<link_s>/products</link_s>
 	</item>	<item>	<menu_s>Khóa học BA</menu_s>
 	<menu_c2_o item-list="true"/>
 	<link_s>/course-of-ba</link_s>
