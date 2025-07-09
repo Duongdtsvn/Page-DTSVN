@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-09T07:12:51.427Z</createdDate>
 	<createdDate_dt>2025-07-09T07:12:51.427Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T07:35:30.255Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T07:35:30.255Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T07:47:15.645Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T07:47:15.645Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</key>
 	<value>banner tư vấn chuyển đổi số</value>
 	<include>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</include>
@@ -37,5 +37,9 @@
 	<disableFlattening>false</disableFlattening>
 	</item></why_choose_o>
 	<service_packages_o item-list="true"/>
-	<member_o item-list="true"/>
+	<member_o item-list="true">	<item>	<key>/site/components/af81c1ad-1803-d0cd-44c3-83f691775c1b.xml</key>
+	<value>thành viên</value>
+	<include>/site/components/af81c1ad-1803-d0cd-44c3-83f691775c1b.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></member_o>
 </page>
