@@ -74,7 +74,7 @@
                                         <div class="translate" data-translate=".featurebox__text" style="--y: 90px">
                                             <span class="featurebox__number">${service.number_s!''}</span>
                                             <h3 class="featurebox__title">${service.title_s!''}</h3>
-                                            <p class="featurebox__text" style="visibility: visible;">${service.description_html?no_esc!''}</p>
+                                            <p class="featurebox__text" style="visibility: visible;">${service.description_html!''}</p>
                                         </div>
                                     </div>
                                 </div>
