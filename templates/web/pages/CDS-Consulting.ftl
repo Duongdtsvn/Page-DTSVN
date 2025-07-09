@@ -137,6 +137,169 @@
         </div>
     </div>
 </section>
+<section class="section sec-teamLeader">
+    <div class="container-custom">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="titlebox">
+                    <h2 class="titlebox__title fz-44">Ban chuyên gia tư vấn Chuyển đổi số tại DTSVN</h2>
+                    <p class="titlebox__text">Với đội ngũ chuyên gia hơn 10 năm kinh nghiệm trong lĩnh vực Chuyển đổi số và sử dụng các phương pháp tiếp cận tiên tiến, DTSVN cam kết đồng hành cùng doanh nghiệp trên hành trình Chuyển đổi số, giúp tối ưu hóa hoạt động và nâng cao hiệu quả kinh doanh.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sec-teamLeader__content">
+            <div class="row">
+                <div class="col-6 col-lg-4 col-xl-3">
+                    <a href="#popup-team" class="teambox btn-popupTeam">
+                        <div class="teambox__inner">
+                            <div class="teambox__img" style="background-image: url(assets/img/AnhChien.jpg);"></div>
+                            <div class="teambox__body">
+                                <h3 class="teambox__name">Nguyễn Bá Chiến</h3>
+                                <p class="teambox__text">CEO</p>
+                            </div>
+                            <div class="teambox__list">
+                                <ul>
+                                    <li>
+                                        <div class="item-inner">
+                                            <div class="row">
+                                                <div class="col-xl-12 offset-xl-1">
+                                                    <p>- Chủ tịch kiêm Tổng Giám đốc Công ty Cổ phần Giải pháp Chuyển đổi số Việt Nam DTSVN.</p>
+                                                    <p>- Nguyên Giám đốc Kinh doanh khối Tài chính – Ngân hàng tại Tập đoàn Công nghệ CMC Corporation.</p>
+                                                    <p>- Chuyên gia tư vấn chuyển đổi số và giải pháp tài chính 4.0 trong lĩnh vực Tài chính – Ngân hàng.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3">
+                    <a href="#popup-team" class="teambox btn-popupTeam">
+                        <div class="teambox__inner">
+                            <div class="teambox__img" style="background-image: url(assets/img/thaoPT.jpg);"></div>
+                            <div class="teambox__body">
+                                <h3 class="teambox__name">Nguyễn Thị Hương Thảo</h3>
+                                <p class="teambox__text">Head Consultant</p>
+                            </div>
+                            <div class="teambox__list">
+                                <ul>
+                                    <li>
+                                        <div class="item-inner">
+                                            <div class="row">
+                                                <div class="col-xl-12 offset-xl-1">
+                                                    <p>- 16 năm kinh nghiệm tư vấn và triển khai chuyển đổi số trong lĩnh vực tài chính, ngân hàng.</p>
+                                                    <p>- Trưởng bộ phận sản phẩm và dịch vụ kỹ thuật số tại VPBank Securities</p>
+                                                    <p>- Trưởng bộ phận số hóa ngân hàng bán lẻ tại OCB</p>
+                                                    <p>- Tư vấn trưởng tại Công ty Cổ phần Giải pháp Chuyển đổi số Việt Nam DTSVN</p>
+                                                    <p>- Giám đốc chương trình cải tiến quy trình cho vay bán lẻ và dự án cho vay thế chấp kỹ thuật số tại OCB</p>
+                                                    <p>- Chuyên gia đào tạo về chuyển đổi số, chuyển đổi Agile tại MBBank, OCB, VNPT, Rạng Đông, SAVIS….</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-4 col-xl-3">
+                    <a href="#popup-team" class="teambox btn-popupTeam">
+                        <div class="teambox__inner">
+                            <div class="teambox__img" style="background-image: url(assets/img/namCTO.jpg);"></div>
+                            <div class="teambox__body">
+                                <h3 class="teambox__name">Vũ Thành Nam</h3>
+                                <p class="teambox__text">CTO</p>
+                            </div>
+                            <div class="teambox__list">
+                                <ul>
+                                    <li>
+                                        <div class="item-inner">
+                                            <div class="row">
+                                                <div class="col-xl-12 offset-xl-1">
+                                                    <p>- 30 năm giảng dạy và làm việc trong lĩnh vực công nghệ và giải pháp phần mềm.</p>
+                                                    <p>- Giảng viên/ Trưởng bộ môn Toán-Tin – Đại học Bách Khoa Hà Nội</p>
+                                                    <p>- Giám đốc Công nghệ tại Công ty Cổ phần Giải pháp Chuyển đổi số Việt Nam DTSVN</p>
+                                                    <p>- Kỹ sư hệ thống/ Kiến trúc sư hệ thống kiêm chuyên gia tư vấn giải pháp tại Tập đoàn Công nghệ CMC Corporation</p>
+                                                    <p>- Chuyên môn về an ninh thông tin, điện toán đám mây, an toàn máy tính, blockchain và IOT.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal-team" id="popup-team">
+    <div class="modal-team__bg"></div>
+    <div class="modal-team__inner">
+        <div class="modal-team__content">
+            <span class="modal-team__close">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z" fill="black" />
+                </svg>
+            </span>
+
+            <div class="modal-team__img" style="background-image: url(assets/img/teambox-1.jpg);"></div>
+            <div class="modal-team__body">
+                <span class="modal-team__subtitle">Deputy CEO of Professional Service</span>
+                <h2 class="modal-team__title">Trần Bá Trọng</h2>
+                <div class="modal-team__list">
+                    <ul>
+                        <li>
+                            <div class="item-inner">
+                                <span>01</span>
+                                <div class="row">
+                                    <div class="col-xl-5">
+                                        <h3>Trình độ <br>học vấn</h3>
+                                    </div>
+                                    <div class="col-xl-6 offset-xl-1">
+                                        <p>Tốt nghiệp Đại học khoa học xã hội và nhân văn - ĐHQGHN</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <span>02</span>
+                                <div class="row">
+                                    <div class="col-xl-5">
+                                        <h3>Kinh nghiệm <br>làm việc</h3>
+                                    </div>
+                                    <div class="col-xl-6 offset-xl-1">
+                                        <p>Có hơn 5 năm kinh Nghiêm triển khai trực tiếp các dự án lớn tại Ngân hàng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <span>03</span>
+                                <div class="row">
+                                    <div class="col-xl-5">
+                                        <h3>Lĩnh vực <br>chuyên môn</h3>
+                                    </div>
+                                    <div class="col-xl-6 offset-xl-1">
+                                        <p>Trên 10 năm triển khai các hệ thống lớn và phức tạp cho khách hàng trong và ngoài nước.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
         
         <@crafter.renderComponentCollection $field="member_o" />
