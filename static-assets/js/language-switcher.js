@@ -37,10 +37,11 @@ class LanguageSwitcher {
             return;
         }
 
+        // Khởi tạo ngôn ngữ ban đầu ngay lập tức
+        this.initializeLanguage();
+
         // Thiết lập các sự kiện cho nút
         this.setupEventListeners();
-        // Khởi tạo ngôn ngữ ban đầu
-        this.initializeLanguage();
     }
 
     setupEventListeners() {
@@ -178,31 +179,23 @@ class LanguageSwitcher {
     }
 
     initializeLanguage() {
-        // Thiết lập ngôn ngữ ban đầu
-        this.switchContent(this.currentLang);
+        // Cập nhật text và trạng thái của tất cả các nút ngay lập tức
+        this.langButtons.forEach(btn => {
+            const buttonText = this.currentLang === 'en' ? 'EN' : 'VN';
+            btn.textContent = buttonText;
+            btn.setAttribute('data-current-lang', buttonText);
 
-        // Tìm và thiết lập trạng thái ban đầu cho nút
-        const initialButton = Array.from(this.langButtons).find(btn => {
-            const btnLang = btn.textContent === 'VN' ? 'vi' : 'en';
-            return btnLang === this.currentLang;
+            if (this.currentLang === 'en') {
+                btn.classList.add('active');
+                btn.setAttribute('aria-pressed', 'true');
+            } else {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-pressed', 'false');
+            }
         });
 
-        if (initialButton) {
-            // Cập nhật text và trạng thái của tất cả các nút
-            this.langButtons.forEach(btn => {
-                const buttonText = this.currentLang === 'en' ? 'EN' : 'VN';
-                btn.textContent = buttonText;
-                btn.setAttribute('data-current-lang', buttonText);
-
-                if (this.currentLang === 'en') {
-                    btn.classList.add('active');
-                    btn.setAttribute('aria-pressed', 'true');
-                } else {
-                    btn.classList.remove('active');
-                    btn.setAttribute('aria-pressed', 'false');
-                }
-            });
-        }
+        // Thiết lập ngôn ngữ ban đầu cho nội dung
+        this.switchContent(this.currentLang);
 
         // Đảm bảo URL đúng với ngôn ngữ hiện tại khi load trang
         this.updateUrlForLanguage(this.currentLang);
@@ -227,7 +220,7 @@ class LanguageSwitcher {
     }
 }
 
-// Khởi tạo khi DOM đã sẵn sàng
+// Khởi tạo ngay khi DOM sẵn sàng
 document.addEventListener('DOMContentLoaded', function () {
     // Khởi tạo language switcher và lưu vào window object
     window.languageSwitcher = new LanguageSwitcher();
