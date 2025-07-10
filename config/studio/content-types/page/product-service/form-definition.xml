@@ -752,7 +752,7 @@
 						</property>
 						<property>
 							<name>contentTypes</name>
-							<value>/component/component-home-new-section</value>
+							<value>/component/component-list-product</value>
 								<type>contentTypes</type>
 						</property>
 						<property>
