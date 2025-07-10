@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-03T04:03:25.788Z</createdDate>
 	<createdDate_dt>2025-07-03T04:03:25.788Z</createdDate_dt>
-	<lastModifiedDate>2025-07-07T03:07:38.214Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-07T03:07:38.214Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T17:34:11.725Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T17:34:11.725Z</lastModifiedDate_dt>
 	<product_orientation_o item-list="true">	<item datasource="nhhngsnphm">	<key>/site/components/26ee3a14-72a0-b342-3c8a-d4d7023f49e6.xml</key>
 	<value>Định hướng sản phẩm</value>
 	<include>/site/components/26ee3a14-72a0-b342-3c8a-d4d7023f49e6.xml</include>
@@ -74,4 +74,9 @@
 	<include>/site/components/773d7d5b-ad45-a5b5-a8a9-9d37337442b3.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></customer_stalk_about_o>
+	<list_product_o item-list="true">	<item>	<key>/site/components/list-product/99a0e89e-8691-35cd-12d9-305978073e3f.xml</key>
+	<value>Sản phẩm - Dịch vụ</value>
+	<include>/site/components/list-product/99a0e89e-8691-35cd-12d9-305978073e3f.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></list_product_o>
 </page>
