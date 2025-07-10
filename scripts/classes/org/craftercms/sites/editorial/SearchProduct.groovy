@@ -32,33 +32,33 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
 /**
- * Class SearchProduct - Quản lý tìm kiếm và lấy dữ liệu sản phẩm từ OpenSearch
- * Chức năng chính: tìm kiếm sản phẩm, lấy tất cả sản phẩm
+ * Class SearchProduct - Quản lý tìm kiếm và lấy dữ liệu product từ OpenSearch
+ * Chức năng chính: tìm kiếm product, lấy tất cả product
  */
 class SearchProduct {
 
   // ===== CÁC HẰNG SỐ CẤU HÌNH =====
-  // Định nghĩa loại nội dung sản phẩm để lọc dữ liệu
-  static final String ITEM_PRODUCT_CONTENT_TYPE = "/page/item-product"
+  // Định nghĩa loại nội dung product để lọc dữ liệu
+  static final String ITEM_PRODUCT_CONTENT_TYPE = "/page/item"
   
-  // Đường dẫn thư mục chứa sản phẩm
+  // Đường dẫn thư mục chứa product
   static final String PRODUCT_PATH = "/site/website/product"
   
   // Các trường dữ liệu để tìm kiếm với độ ưu tiên khác nhau
   // ^2.0 = độ ưu tiên cao nhất, ^1.5 = ưu tiên trung bình, ^1.0 = ưu tiên thấp
   static final List<String> ITEM_PRODUCT_SEARCH_FIELDS = [
     'title_vi_s^2.0',      // Tiêu đề tiếng Việt (ưu tiên cao nhất)
-    'key_main_s^1.0',      // Thông tin chính tiếng Việt
+    'key_main_s^1.5',      // Key main (ưu tiên trung bình)
     'title_en_s^1.5',      // Tiêu đề tiếng Anh (ưu tiên trung bình)
-    'key_main_s^1.0'       // Thông tin chính tiếng Anh
+    'info_main_t^1.0'      // Thông tin chính
   ]
   
   // Các trường sẽ được highlight (làm nổi bật) khi tìm kiếm
-  static final String[] HIGHLIGHT_FIELDS = ["title_vi_s", "key_main_s", "title_en_s"]
+  static final String[] HIGHLIGHT_FIELDS = ["title_vi_s", "title_en_s", "key_main_s", "info_main_t"]
   
   // Cấu hình mặc định cho phân trang
   static final int DEFAULT_START = 0    // Vị trí bắt đầu mặc định
-  static final int DEFAULT_ROWS = 6     // Số lượng kết quả mặc định (6 sản phẩm mỗi trang)
+  static final int DEFAULT_ROWS = 6     // Số lượng kết quả mặc định (6 product mỗi trang)
 
   // ===== CÁC SERVICE CẦN THIẾT =====
   // Client để kết nối và tương tác với OpenSearch
@@ -78,18 +78,18 @@ class SearchProduct {
   }
 
   /**
-   * Tìm kiếm sản phẩm với từ khóa
+   * Tìm kiếm product với từ khóa
    * @param userTerm - Từ khóa tìm kiếm của người dùng
    * @param start - Vị trí bắt đầu (mặc định 0)
    * @param rows - Số lượng kết quả (mặc định 6)
-   * @return Danh sách sản phẩm phù hợp
+   * @return Danh sách product phù hợp
    */
   def searchProducts(userTerm, start = DEFAULT_START, rows = DEFAULT_ROWS) {
     // Tạo query bool để kết hợp nhiều điều kiện tìm kiếm
     def query = new BoolQuery.Builder()
 
     // ===== BƯỚC 1: LỌC THEO LOẠI NỘI DUNG =====
-    // Chỉ lấy các document có content-type là sản phẩm
+    // Chỉ lấy các document có content-type là product
     query.filter(q -> q
       .match(m -> m
         .field("content-type")
@@ -100,7 +100,7 @@ class SearchProduct {
     )
 
     // ===== BƯỚC 2: LỌC THEO ĐƯỜNG DẪN =====
-    // Chỉ lấy sản phẩm từ thư mục /product
+    // Chỉ lấy product từ thư mục /product
     query.filter(q -> q
       .wildcard(w -> w
         .field("localId")
@@ -185,16 +185,16 @@ class SearchProduct {
   }
 
   /**
-   * Lấy tất cả sản phẩm (không có filter tìm kiếm)
+   * Lấy tất cả product (không có filter tìm kiếm)
    * @param start - Vị trí bắt đầu
    * @param rows - Số lượng kết quả
-   * @return Danh sách tất cả sản phẩm
+   * @return Danh sách tất cả product
    */
   def getAllProducts(start = DEFAULT_START, rows = DEFAULT_ROWS) {
     def query = new BoolQuery.Builder()
 
     // ===== PHẦN 1: LỌC THEO LOẠI NỘI DUNG VÀ ĐƯỜNG DẪN =====
-    // Lọc để chỉ lấy các bài viết có content-type là sản phẩm
+    // Lọc để chỉ lấy các bài viết có content-type là product
     query.filter(q -> q
       .match(m -> m
         .field("content-type")
@@ -232,16 +232,16 @@ class SearchProduct {
     def result = searchClient.search(request, Map)
 
     if (result) {
-      return processProductListingResults(result)  // Xử lý và trả về danh sách sản phẩm
+      return processProductListingResults(result)  // Xử lý và trả về danh sách product
     } else {
       return []  // Trả về mảng rỗng nếu không có kết quả
     }
   }
 
   /**
-   * Xử lý kết quả tìm kiếm sản phẩm (có highlight từ khóa)
+   * Xử lý kết quả tìm kiếm product (có highlight từ khóa)
    * @param result - Kết quả tìm kiếm từ Elasticsearch
-   * @return Danh sách sản phẩm đã được xử lý
+   * @return Danh sách product đã được xử lý
    */
   private def processProductSearchResults(result) {
     def products = []
@@ -252,14 +252,16 @@ class SearchProduct {
         def doc = hit.source()
         def productItem = [:]
         
-        // ===== PHẦN 1: LẤY THÔNG TIN CƠ BẢN CỦA SẢN PHẨM =====
+        // ===== PHẦN 1: LẤY THÔNG TIN CƠ BẢN CỦA PRODUCT =====
         productItem.id = doc.objectId
         productItem.objectId = doc.objectId
         productItem.path = doc.localId
         productItem.title = doc.title_vi_s ?: doc.title_en_s  // Ưu tiên tiếng Việt, nếu không có thì dùng tiếng Anh
         productItem.title_vi = doc.title_vi_s
         productItem.title_en = doc.title_en_s
-        productItem.key_main = doc.key_main_s
+        productItem.key_main_s = doc.key_main_s
+        productItem.info_main = doc.info_main_t
+        productItem.info_main_en = doc.info_main_en_t
         productItem.internal_name = doc.internal_name
         productItem.nav_label = doc.navLabel
         productItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
@@ -291,9 +293,9 @@ class SearchProduct {
   }
 
   /**
-   * Xử lý kết quả danh sách sản phẩm (không có highlight)
+   * Xử lý kết quả danh sách product (không có highlight)
    * @param result - Kết quả tìm kiếm từ Elasticsearch
-   * @return Danh sách sản phẩm đã được xử lý
+   * @return Danh sách product đã được xử lý
    */
   private def processProductListingResults(result) {
     def products = []
@@ -303,7 +305,7 @@ class SearchProduct {
       documents.each {doc ->
         def productItem = [:]
         
-        // ===== PHẦN 1: LẤY THÔNG TIN CƠ BẢN CỦA SẢN PHẨM =====
+        // ===== PHẦN 1: LẤY THÔNG TIN CƠ BẢN CỦA PRODUCT =====
         productItem.id = doc.objectId
         productItem.objectId = doc.objectId
         productItem.path = doc.localId
@@ -311,7 +313,9 @@ class SearchProduct {
         productItem.title = doc.title_vi_s ?: doc.title_en_s
         productItem.title_vi = doc.title_vi_s
         productItem.title_en = doc.title_en_s
-        productItem.key_main = doc.key_main_s
+        productItem.key_main_s = doc.key_main_s
+        productItem.info_main = doc.info_main_t
+        productItem.info_main_en = doc.info_main_en_t
         productItem.internal_name = doc.internal_name
         productItem.nav_label = doc.navLabel
         productItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
