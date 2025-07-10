@@ -40,7 +40,7 @@
 	<service_packages_o item-list="true">	<item>	<icon_s/>
 	<number_s>01</number_s>
 	<title_s>Basic consulting</title_s>
-	<description_html>&lt;p&gt;For businesses that are just starting out and want to transform digitally ✔️Assess digital readiness and maturity ✔️Assess digital culture ✔️Build priority lists, digital initiatives ✔️Build digital transformation strategies and roadmaps&lt;/p&gt;</description_html>
+	<description_html>&lt;p&gt;For businesses that are just starting out and want to transform digitally &lt;br /&gt;✔️Assess digital readiness and maturity &lt;br /&gt;✔️Assess digital culture &lt;br /&gt;✔️Build priority lists, digital initiatives &lt;br /&gt;✔️Build digital transformation strategies and roadmaps&lt;/p&gt;</description_html>
 	<disableFlattening>false</disableFlattening>
 	</item>	<item>	<icon_s/>
 	<number_s>02</number_s>
@@ -65,8 +65,8 @@
 	<vision_background_image_s>/static-assets/images/vision-bg.jpg</vision_background_image_s>
 	<createdDate>2025-07-10T00:39:21.717Z</createdDate>
 	<createdDate_dt>2025-07-10T00:39:21.717Z</createdDate_dt>
-	<lastModifiedDate>2025-07-10T17:55:05.178Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-10T17:55:05.178Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T17:56:57.521Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T17:56:57.521Z</lastModifiedDate_dt>
 	<vision_challenges_o item-list="true">	<item>	<title_s>Decreased productivity</title_s>
 	<description_s>Many unnamed jobs, manual jobs create personnel in the business that take time to solve, not focusing on important jobs.</description_s>
 	</item>	<item>	<title_s>Complicated workflow</title_s>
