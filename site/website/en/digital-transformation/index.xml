@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/cds-consulting</content-type>
+	<display-template>/templates/web/pages/CDS-Consulting.ftl</display-template>
+	<no-template-required>true</no-template-required>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>90f6</objectGroupId>
+	<objectId>90f6ec7b-0880-173e-f7cb-8a76405d0ca2</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>digital-transformation</folder-name>
+	<internal-name>Tư vấn CDS-en</internal-name>
+	<navLabel>Tư vấn CDS-en</navLabel>
+	<vision_title_s/>
+	<vision_description_s/>
+	<strength_title_s/>
+	<team_title_s/>
+	<team_description_s/>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
+	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/0b9f5c5c-9b69-cef8-75a0-a50929f04639.xml</key>
+	<value>banner tư vấn cds en</value>
+	<include>/site/components/0b9f5c5c-9b69-cef8-75a0-a50929f04639.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></banner_o>
+	<why_choose_o item-list="true">	<item datasource="tisaobnnnchnDTSVNtrinkhai">	<key>/site/components/2913c331-fa58-9aa5-34ac-d097f1566041.xml</key>
+	<value>Tại sao bạn nên chọn DTSVN để triển khai?-en</value>
+	<include>/site/components/2913c331-fa58-9aa5-34ac-d097f1566041.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></why_choose_o>
+	<service_packages_o item-list="true"/>
+	<member_o item-list="true"/>
+	<vision_background_image_s/>
+	<createdDate>2025-07-10T00:39:21.717Z</createdDate>
+	<createdDate_dt>2025-07-10T00:39:21.717Z</createdDate_dt>
+	<lastModifiedDate>2025-07-10T00:39:21.717Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T00:39:21.717Z</lastModifiedDate_dt>
+</page>
