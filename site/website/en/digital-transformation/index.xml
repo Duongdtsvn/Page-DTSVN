@@ -38,10 +38,14 @@
 	<disableFlattening>false</disableFlattening>
 	</item></why_choose_o>
 	<service_packages_o item-list="true"/>
-	<member_o item-list="true"/>
+	<member_o item-list="true">	<item>	<key>/site/components/26c59c38-5971-22a1-063a-99d8c67361b2.xml</key>
+	<value>thành viên en</value>
+	<include>/site/components/26c59c38-5971-22a1-063a-99d8c67361b2.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></member_o>
 	<vision_background_image_s/>
 	<createdDate>2025-07-10T00:39:21.717Z</createdDate>
 	<createdDate_dt>2025-07-10T00:39:21.717Z</createdDate_dt>
-	<lastModifiedDate>2025-07-10T00:39:21.717Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-10T00:39:21.717Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T00:52:13.266Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T00:52:13.266Z</lastModifiedDate_dt>
 </page>
