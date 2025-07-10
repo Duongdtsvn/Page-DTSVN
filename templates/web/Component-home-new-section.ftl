@@ -16,25 +16,48 @@
                 </div>
             </div>
             <div class="sec-newUpdate__content wow fadeInUp  effect" style="visibility: visible;">
-                                  
-
-
-
-                                    <div class="item">
+                <#if latestNews?? && (latestNews?size > 0)>
+                    <#list latestNews as news>
+                        <div class="item">
+                            <div class="postMin">
+                                <div class="postMin__inner">
+                                    <h3 class="postMin__title">
+                                        <a href="${news.url!''}">${news.title_vi!news.title!''}</a>
+                                    </h3>
+                                    <ul class="postMin__meta">
+                                        <#if news.created_date??>
+                                            <li>
+                                                <#if news.created_date?is_date>
+                                                    ${news.created_date?string("dd/MM/yyyy")}
+                                                <#else>
+                                                    ${news.created_date!''}
+                                                </#if>
+                                            </li>
+                                        </#if>
+                                        <#if news.categories?? && (news.categories?size > 0)>
+                                            <li>
+                                                <a href="?tab=${news.categories?first!''}">${news.categories?first!''}</a>
+                                            </li>
+                                        </#if>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </#list>
+                <#else>
+                    <div class="item">
                         <div class="postMin">
                             <div class="postMin__inner">
-                                <h3 class="postMin__title"><a href="url">title_vi</a></h3>
+                                <h3 class="postMin__title"><a href="#">Không có tin tức mới</a></h3>
                                 <ul class="postMin__meta">
-                                    <li>${news.created_date?string("dd/MM/yyyy")}</li>
-                                                                            <li><a href="url-tab">tabname-vi</a></li>
-                                                                    </ul>
+                                    <li>--/--/----</li>
+                                    <li><a href="#">Tin tức</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                                
-
-
-                            </div>
+                </#if>
+            </div>
             <div class="sec-newUpdate__btn d-md-none">
                 <a href="${contentModel.link_s!''}" class="btn-text">${contentModel.label_s!''}<span></span></a>
             </div>
