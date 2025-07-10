@@ -282,9 +282,9 @@
 			<fields>
 				<field>
 					<type>input</type>
-					<id>title_main_s</id>
+					<id>title_main_1_s</id>
 					<iceId></iceId>
-					<title>Title-main</title>
+					<title>Title-main-1</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
