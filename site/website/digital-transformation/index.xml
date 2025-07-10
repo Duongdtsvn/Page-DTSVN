@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-09T07:12:51.427Z</createdDate>
 	<createdDate_dt>2025-07-09T07:12:51.427Z</createdDate_dt>
-	<lastModifiedDate>2025-07-10T00:32:08.828Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-10T00:32:08.828Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T00:35:08.151Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T00:35:08.151Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</key>
 	<value>banner tư vấn chuyển đổi số</value>
 	<include>/site/components/056cf5a5-28e9-4f9a-7394-609eb82fa4ef.xml</include>
@@ -75,5 +75,11 @@
 	<team_members_o item-list="true">	<item>	<image_s>/static-assets/images/vtn.png</image_s>
 	<name_s>Vũ Thành Nam</name_s>
 	<position_s>CTO</position_s>
+	</item>	<item>	<image_s>/static-assets/images/nbc.png</image_s>
+	<name_s>Nguyễn Bá Chiến</name_s>
+	<position_s>CEO</position_s>
+	</item>	<item>	<image_s>/static-assets/images/thaopt.jpg</image_s>
+	<name_s>Nguyễn Thị Hương Thảo</name_s>
+	<position_s>Head Consultant</position_s>
 	</item></team_members_o>
 </page>
