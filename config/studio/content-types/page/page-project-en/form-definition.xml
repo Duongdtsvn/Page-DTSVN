@@ -174,9 +174,9 @@
 				</field>
 				<field>
 					<type>node-selector</type>
-					<id>title_main_o</id>
+					<id>header_o</id>
 					<iceId></iceId>
-					<title>title-main</title>
+					<title>header</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
