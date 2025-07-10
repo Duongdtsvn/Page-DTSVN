@@ -1,22 +1,23 @@
-// Import các thư viện cần thiết để xử lý tìm kiếm sản phẩm
+// Import các thư viện cần thiết để xử lý tìm kiếm product và profile
 import org.craftercms.sites.editorial.SearchProduct
+import org.craftercms.sites.editorial.ProfileUtils
 
-// Khởi tạo đối tượng SearchProduct để thực hiện các thao tác tìm kiếm sản phẩm
+// Khởi tạo đối tượng SearchProduct để thực hiện các thao tác tìm kiếm product
 def searchProduct = new SearchProduct(searchClient, urlTransformationService)
 
 // Lấy tham số trang hiện tại từ URL, mặc định là trang 1 nếu không có
 def page = params.page ? params.page.toInteger() : 1
-// Số lượng sản phẩm hiển thị trên mỗi trang
+// Số lượng product hiển thị trên mỗi trang
 def itemsPerPage = 6
 
 // Tính toán vị trí bắt đầu để lấy dữ liệu cho trang hiện tại
 def start = (page - 1) * itemsPerPage
 
-// Khởi tạo biến để lưu trữ danh sách sản phẩm và tổng số sản phẩm
+// Khởi tạo biến để lưu trữ danh sách product và tổng số product
 def productItems = []
 def totalItems = 0
 
-// Lấy tất cả sản phẩm
+// Lấy tất cả product
 productItems = searchProduct.getAllProducts(start, itemsPerPage)
 totalItems = searchProduct.getAllProducts(0, 1000).size()
 
@@ -37,11 +38,11 @@ for (int i = startPage; i <= endPage; i++) {
 }
 
 // Đưa tất cả dữ liệu đã xử lý vào templateModel để template có thể sử dụng
-templateModel.productItems = productItems    // Danh sách sản phẩm cho trang hiện tại
-templateModel.totalItems = totalItems        // Tổng số sản phẩm
+templateModel.productItems = productItems    // Danh sách product cho trang hiện tại
+templateModel.totalItems = totalItems        // Tổng số product
 templateModel.currentPage = page             // Trang hiện tại
 templateModel.totalPages = totalPages        // Tổng số trang
 templateModel.hasNextPage = hasNextPage      // Có trang tiếp theo không
 templateModel.hasPrevPage = hasPrevPage      // Có trang trước không
 templateModel.pageNumbers = pageNumbers      // Danh sách số trang để hiển thị
-templateModel.itemsPerPage = itemsPerPage    // Số sản phẩm trên mỗi trang
+templateModel.itemsPerPage = itemsPerPage    // Số product trên mỗi trang
