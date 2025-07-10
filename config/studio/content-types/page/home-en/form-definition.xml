@@ -1050,12 +1050,12 @@
 						</property>
 						<property>
 							<name>repoPath</name>
-							<value>/site/components/home-blog</value>
+							<value>/site/components</value>
 								<type>content-path-input</type>
 						</property>
 						<property>
 							<name>browsePath</name>
-							<value>/site/components/home-blog</value>
+							<value>/site/components</value>
 								<type>content-path-input</type>
 						</property>
 						<property>
@@ -1164,12 +1164,12 @@
 						</property>
 						<property>
 							<name>repoPath</name>
-							<value>/site/components</value>
+							<value>/site/components/home-blog</value>
 								<type>content-path-input</type>
 						</property>
 						<property>
 							<name>browsePath</name>
-							<value>/site/components</value>
+							<value>/site/components/home-blog</value>
 								<type>content-path-input</type>
 						</property>
 						<property>
