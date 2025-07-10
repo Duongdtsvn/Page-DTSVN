@@ -40,15 +40,24 @@
 	<service_packages_o item-list="true">	<item>	<icon_s/>
 	<number_s>01</number_s>
 	<title_s>Basic consulting</title_s>
-	<description_html/>
+	<description_html>&lt;div&gt;
+&lt;h2&gt;For businesses that are just starting out and want to transform digitally&amp;lt;br&amp;gt;✔️Assess digital readiness and maturity&amp;lt;br&amp;gt;✔️Assess digital culture&amp;lt;br&amp;gt;✔️Build priority lists, digital initiatives&amp;lt;br&amp;gt;✔️Build digital transformation strategies and roadmaps&lt;/h2&gt;
+&lt;/div&gt;</description_html>
+	<disableFlattening>false</disableFlattening>
 	</item>	<item>	<icon_s/>
 	<number_s>02</number_s>
 	<title_s>In-depth consulting</title_s>
-	<description_html/>
+	<description_html>&lt;div&gt;
+&lt;div&gt;For businesses that want to optimize digital transformation infrastructure&amp;lt;br&amp;gt;✔️Evaluate and propose optimization of IT infrastructure&amp;lt;br&amp;gt;✔️Transform business models towards digital orientation&amp;lt;br&amp;gt;✔️Optimize operations for businesses&amp;lt;br&amp;gt;✔️Build customer strategies in the digital environment&lt;/div&gt;
+&lt;/div&gt;</description_html>
+	<disableFlattening>false</disableFlattening>
 	</item>	<item>	<icon_s/>
 	<number_s>03</number_s>
 	<title_s>Advanced consulting</title_s>
-	<description_html/>
+	<description_html>&lt;div&gt;
+&lt;div&gt;For businesses that want to develop comprehensive digital transformation &amp;lt;br&amp;gt; Talk directly 1:1 so we can understand your business's digital transformation needs&lt;/div&gt;
+&lt;/div&gt;</description_html>
+	<disableFlattening>false</disableFlattening>
 	</item></service_packages_o>
 	<member_o item-list="true">	<item datasource="thnhvinlinkttrinkhai">	<key>/site/components/5751910d-a8c2-e3cf-52ae-566eb69749cc.xml</key>
 	<value>thành viên en</value>
@@ -58,8 +67,8 @@
 	<vision_background_image_s>/static-assets/images/vision-bg.jpg</vision_background_image_s>
 	<createdDate>2025-07-10T00:39:21.717Z</createdDate>
 	<createdDate_dt>2025-07-10T00:39:21.717Z</createdDate_dt>
-	<lastModifiedDate>2025-07-10T11:41:44.097Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-10T11:41:44.097Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T17:49:07.978Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T17:49:07.978Z</lastModifiedDate_dt>
 	<vision_challenges_o item-list="true">	<item>	<title_s>Decreased productivity</title_s>
 	<description_s>Many unnamed jobs, manual jobs create personnel in the business that take time to solve, not focusing on important jobs.</description_s>
 	</item>	<item>	<title_s>Complicated workflow</title_s>
