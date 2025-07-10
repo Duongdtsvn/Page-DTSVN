@@ -57,10 +57,18 @@
 	<include>/site/components/be77cab9-bd66-7f28-2dc5-eedfdaac06e1.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></pobup_o>
-	<blog_o item-list="true"/>
-	<footer_o item-list="true"/>
+	<blog_o item-list="true">	<item>	<key>/site/components/home-blog/199cf225-ba2d-b208-f724-c39e9574b977.xml</key>
+	<value>News Updates</value>
+	<include>/site/components/home-blog/199cf225-ba2d-b208-f724-c39e9574b977.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></blog_o>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
 	<createdDate>2025-07-07T08:53:30.145Z</createdDate>
 	<createdDate_dt>2025-07-07T08:53:30.145Z</createdDate_dt>
-	<lastModifiedDate>2025-07-07T08:53:30.145Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-07T08:53:30.145Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T16:39:32.842Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T16:39:32.842Z</lastModifiedDate_dt>
 </page>
