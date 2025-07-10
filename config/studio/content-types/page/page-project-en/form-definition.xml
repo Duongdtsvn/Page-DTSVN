@@ -9,7 +9,7 @@
 	<properties>		<property>
 			<name>display-template</name>
 			<label>Display Template</label>
-			<value>/templates/web/home-fix-big.ftl</value>
+			<value>/templates/web/page-projects-en.ftl</value>
 			<type>template</type>
 		</property>
 		<property>
