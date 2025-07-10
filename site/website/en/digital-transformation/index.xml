@@ -13,8 +13,8 @@
 	<vision_title_s>Problems &amp; Formulas When Digital Transformation</vision_title_s>
 	<vision_description_s>Is your business facing the following difficulties when Digital Transformation?</vision_description_s>
 	<strength_title_s>Digital transformation consulting service packages</strength_title_s>
-	<team_title_s/>
-	<team_description_s/>
+	<team_title_s>Digital Transformation Consulting Team at DTSVN</team_title_s>
+	<team_description_s>With a team of experts with more than 10 years of experience in the field of Digital Transformation and using advanced approaches, DTSVN is committed to accompanying businesses on the Digital Transformation journey, helping to optimize operations and improve business efficiency.</team_description_s>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
 	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
@@ -65,8 +65,8 @@
 	<vision_background_image_s>/static-assets/images/vision-bg.jpg</vision_background_image_s>
 	<createdDate>2025-07-10T00:39:21.717Z</createdDate>
 	<createdDate_dt>2025-07-10T00:39:21.717Z</createdDate_dt>
-	<lastModifiedDate>2025-07-10T17:56:57.521Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-10T17:56:57.521Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T17:57:34.846Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T17:57:34.846Z</lastModifiedDate_dt>
 	<vision_challenges_o item-list="true">	<item>	<title_s>Decreased productivity</title_s>
 	<description_s>Many unnamed jobs, manual jobs create personnel in the business that take time to solve, not focusing on important jobs.</description_s>
 	</item>	<item>	<title_s>Complicated workflow</title_s>
@@ -76,8 +76,14 @@
 	</item>	<item>	<title_s>Declining business efficiency</title_s>
 	<description_s>Customers lose their livestock and no longer return to the business because there is no regular and continuous customer care method.</description_s>
 	</item></vision_challenges_o>
-	<team_members_o item-list="true">	<item>	<image_s/>
-	<name_s/>
-	<position_s/>
+	<team_members_o item-list="true">	<item>	<image_s>/static-assets/images/nbc.png</image_s>
+	<name_s>Mr. Nguyen Ba Chien</name_s>
+	<position_s> Chairman and CEO of DTSVN</position_s>
+	</item>	<item>	<image_s>/static-assets/images/thaopt.jpg</image_s>
+	<name_s>Mrs. Nguyen Thi Huong Thao </name_s>
+	<position_s>Liverpool John Moores University – United KingdomChief Consultant at DTSVN</position_s>
+	</item>	<item>	<image_s>/static-assets/images/vtn.png</image_s>
+	<name_s>Dr. Vu Thanh Nam</name_s>
+	<position_s> Ph.D. in Mathematical Foundations for Informatics – Hanoi University of Science and TechnologyChief Technology Officer at DTSVN</position_s>
 	</item></team_members_o>
 </page>
