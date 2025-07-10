@@ -57,16 +57,16 @@
 &lt;/div&gt;</description_html>
 	<disableFlattening>false</disableFlattening>
 	</item></service_packages_o>
-	<member_o item-list="true">	<item datasource="thnhvinlinkttrinkhai">	<key>/site/components/5751910d-a8c2-e3cf-52ae-566eb69749cc.xml</key>
-	<value>thành viên en</value>
-	<include>/site/components/5751910d-a8c2-e3cf-52ae-566eb69749cc.xml</include>
+	<member_o item-list="true">	<item datasource="thnhvinlinkttrinkhai">	<key>/site/components/724f2146-50fe-1032-610f-aa57d62d7542.xml</key>
+	<value>thành viên liên kết triển khai</value>
+	<include>/site/components/724f2146-50fe-1032-610f-aa57d62d7542.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></member_o>
 	<vision_background_image_s>/static-assets/images/vision-bg.jpg</vision_background_image_s>
 	<createdDate>2025-07-10T00:39:21.717Z</createdDate>
 	<createdDate_dt>2025-07-10T00:39:21.717Z</createdDate_dt>
-	<lastModifiedDate>2025-07-10T17:57:34.846Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-10T17:57:34.846Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T18:00:04.405Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T18:00:04.405Z</lastModifiedDate_dt>
 	<vision_challenges_o item-list="true">	<item>	<title_s>Decreased productivity</title_s>
 	<description_s>Many unnamed jobs, manual jobs create personnel in the business that take time to solve, not focusing on important jobs.</description_s>
 	</item>	<item>	<title_s>Complicated workflow</title_s>
