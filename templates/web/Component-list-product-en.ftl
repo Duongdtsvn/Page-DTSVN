@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-md-8 col-lg-7 col-xl-6">
                         <h1 class="sec-pageTitle__title fz-52">${contentModel.title_s!''}</h1>
-                        <p class="sec-pageTitle__text">${contentModel.text_s!''}</p>
+                        <p class="sec-pageTitle__text">${contentModel.text_t!''}</p>
                     </div>
                 </div>
             </div>
