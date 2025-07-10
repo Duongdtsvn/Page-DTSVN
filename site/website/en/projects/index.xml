@@ -13,11 +13,6 @@
 	<title_main_s>DTSVN Projects Implemented</title_main_s>
 	<file-name>index.xml</file-name>
 	<folder-name>projects</folder-name>
-	<title_main_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
-	<value>Header-en</value>
-	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></title_main_o>
 	<footer_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
 	<value>footer-en</value>
 	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
@@ -26,6 +21,11 @@
 	<text_main_t>Throughout the development process, the DTSVN team has implemented many diverse projects in many different fields</text_main_t>
 	<createdDate>2025-07-10T11:08:39.778Z</createdDate>
 	<createdDate_dt>2025-07-10T11:08:39.778Z</createdDate_dt>
-	<lastModifiedDate>2025-07-10T11:08:39.778Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-10T11:08:39.778Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T11:10:33.648Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T11:10:33.648Z</lastModifiedDate_dt>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
 </page>
