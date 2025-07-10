@@ -51,31 +51,103 @@
         <section class="section sec-projectFeature">
             <div class="container-custom">
                 <div class="projectFeature-list">
-
-
-
-                                                <div class="projectFeature">
+                    <#-- Kiểm tra có dự án để hiển thị không -->
+                    <#if projectItems?? && (projectItems?size > 0)>
+                        <#-- Lặp qua từng dự án -->
+                        <#list projectItems as project>
+                            <div class="projectFeature">
                                 <div class="row">
                                     <div class="col-md-5 col-xxxl-4">
-                                        <a href="url" class="projectFeature__img" style="background-image: url_img;"></a>
+                                        <a href="${project.url!''}" class="projectFeature__img" style="background-image: url('${(project.img_main_s?? && (project.img_main_s?length > 0))?then(project.img_main_s, '/static-assets/images/projects/default-project.jpg')}');">
+                                            <img src="${(project.img_main_s?? && (project.img_main_s?length > 0))?then(project.img_main_s, '/static-assets/images/projects/default-project.jpg')}" alt="${project.title!''}">
+                                        </a>
                                     </div>
                                     <div class="col-md-7 col-xxxl-6">
                                         <div class="projectFeature__body">
                                             <h3 class="projectFeature__title">
-                                                <a href="url">title</a>
+                                                <a href="${project.url!''}">${project.title!''}</a>
                                             </h3>
                                             <div class="projectFeature__text">
-                                                <p>text</p>
+                                                <#if project.info_main?? && (project.info_main!'') != ''>
+                                                    <p>${project.info_main!''}</p>
+                                                <#else>
+                                                    <p>Thông tin dự án đang được cập nhật...</p>
+                                                </#if>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </#list>
+                    <#else>
+                        <#-- Hiển thị thông báo khi không có dự án -->
+                        <div class="col-12">
+                            <div class="text-center py-5">
+                                <h3>Không tìm thấy dự án nào</h3>
+                                <p>Vui lòng thử lại sau.</p>
+                            </div>
+                        </div>
+                    </#if>
 
+                    <#-- Phân trang - chỉ hiển thị khi có nhiều hơn 1 trang -->
+                    <#if totalPages?? && (totalPages > 1)>
+                        <div class="pagination">
+                            <nav class="navigation pagination" aria-label="Phân trang dự án">
+                                <h2 class="screen-reader-text">Phân trang dự án</h2>
+                                <div class="nav-links">
+                                    <#-- Nút Previous -->
+                                    <#if hasPrevPage?? && hasPrevPage>
+                                        <a class="prev page-numbers" href="?page=${(currentPage!1) - 1}">← Previous</a>
+                                    </#if>
+                                    
+                                    <#-- Hiển thị các số trang -->
+                                    <#if pageNumbers?? && (pageNumbers?size > 0)>
+                                        <#-- Hiển thị dấu ... và số 1 nếu cần -->
+                                        <#if pageNumbers?first?number gt 1>
+                                            <#if pageNumbers?first?number gt 2>
+                                                <a class="page-numbers" href="?page=1">1</a>
+                                                <span class="page-numbers dots">…</span>
+                                            <#else>
+                                                <a class="page-numbers" href="?page=1">1</a>
+                                            </#if>
+                                        </#if>
+                                        
+                                        <#-- Lặp qua các số trang -->
+                                        <#list pageNumbers as pageNum>
+                                            <#if (pageNum?number) == (currentPage!1)?number>
+                                                <span aria-current="page" class="page-numbers current">${pageNum}</span>
+                                            <#else>
+                                                <a class="page-numbers" href="?page=${pageNum}">${pageNum}</a>
+                                            </#if>
+                                        </#list>
+                                        
+                                        <#-- Hiển thị dấu ... và số trang cuối nếu cần -->
+                                        <#if pageNumbers?last?number lt (totalPages!1)?number>
+                                            <#if pageNumbers?last?number lt (totalPages!1)?number - 1>
+                                                <span class="page-numbers dots">…</span>
+                                                <a class="page-numbers" href="?page=${totalPages!1}">${totalPages!1}</a>
+                                            <#else>
+                                                <a class="page-numbers" href="?page=${totalPages!1}">${totalPages!1}</a>
+                                            </#if>
+                                        </#if>
+                                    </#if>
+                                    <#if hasNextPage?? && hasNextPage>
+                                        <a class="next page-numbers" href="?page=${(currentPage!1) + 1}">Next →</a>
+                                    </#if>
+                                </div>
+                            </nav>
+                        </div>
+                    </#if>
 
-
-
-                    <div class="pagination"></div>                </div>
+                    <!-- Thông tin phân trang -->
+                    <#if totalItems?? && (totalItems > 0)>
+                        <div class="pagination-info text-center mt-3">
+                            <#assign fromItem = (((currentPage!1) - 1) * (itemsPerPage!12)) + 1 />
+                            <#assign toItem = ((currentPage!1) * (itemsPerPage!12) < (totalItems!0))?then((currentPage!1) * (itemsPerPage!12), (totalItems!0)) />
+                            <p>Hiển thị ${fromItem} - ${toItem} trong tổng số ${totalItems!0} dự án</p>
+                        </div>
+                    </#if>
+                </div>
             </div>
         </section>
     </main>
