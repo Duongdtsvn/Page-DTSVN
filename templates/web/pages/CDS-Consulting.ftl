@@ -111,21 +111,9 @@
                                         <p class="teambox__text">${member.position_s!''}</p>
                                     </div>
                                     <div class="teambox__list">
-                                        <ul>
-                                            <#if member.experience_o.item?? && member.experience_o.item?has_content>
-                                                <#list member.experience_o.item as exp>
-                                                    <li>
-                                                        <div class="item-inner">
-                                                            <div class="row">
-                                                                <div class="col-xl-12 offset-xl-1">
-                                                                    <p>${exp.detail_s!''}</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </#list>
-                                            </#if>
-                                        </ul>
+                                    <ul>
+                                        <@crafter.renderComponentCollection model="teambox_list_o" />
+                                      </ul>
                                     </div>
                                 </div>
                             </a>
