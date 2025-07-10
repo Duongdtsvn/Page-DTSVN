@@ -26,174 +26,103 @@
     <#-- Render header component collection -->
     <@crafter.renderComponentCollection $field="header_o"/>
     
-    <#-- Section hiển thị tiêu đề trang và breadcrumb -->
-    <section class="section sec-pageTitle style-2 style-doitac">
-        <div class="sec-pageTitle__wrap">
+   <main class="page-content">
+        <!-- Page Title Section -->
+        <section class="section sec-pageTitle style-productF style-2">
+            <div class="sec-pageTitle__wrap">
                 <ul class="sec-pageTitle__breadcrumb">
-                    <li><a href="/">Trang chủ</a></li>
+                    <li><a href="https://dtsvn.net">Trang chủ</a></li>
                     <li><span>Dự án nổi bật</span></li>
                 </ul>
                 <div class="sec-pageTitle__content">
                     <div class="container-custom">
                         <div class="row">
                             <div class="col-md-8 col-lg-7 col-xl-6">
-                                <h1 class="sec-pageTitle__title fz-52">${contentModel.title_main_s!''}</h1>
-                                <p class="sec-pageTitle__text">${contentModel.text_main_t!''}</p>
+                                <h1 class="sec-pageTitle__title fz-52">Các dự án DTSVN đã triển khai</h1>
+                                <p class="sec-pageTitle__text">Xuyên suốt quá trình phát triển, đội ngũ DTSVN đã triển khai nhiều dự án đa dạng ở nhiều lĩnh vực khác nhau</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </section>
-    
-    <#-- Section chính hiển thị danh sách tin tức -->
-    <section class="section sec-blogPage">
-        <div class="container-custom">
+        </section>
 
-            <#-- Navigation menu cho các danh mục tin tức -->
-            <nav class="nav-cat">
-                <ul>
-                    <#-- Tab "Tất cả tin bài" - luôn hiển thị -->
-                    <li>
-                        <a href="?tab=all" class="<#if (selectedTab!'') == 'all'>active</#if>">Tất cả tin bài</a>
-                    </li>
-                    
-                    <#-- Hiển thị các danh mục tin tức từ content model -->
-                    <#if contentModel.list_category_o?? && contentModel.list_category_o?has_content>
-                        <#list contentModel.list_category_o.item as category>
-                            <li>
-                                <a href="?tab=${category.item_s_s!''}" class="<#if (selectedTab!'') == (category.item_s_s!'')>active</#if>">${category.title_category_s!''}</a>
-                            </li>
-                        </#list>
-                    </#if>
-                </ul>
-            </nav>
-
-            <#-- Grid hiển thị danh sách tin tức -->
-            <div class="row">
-                <#-- Kiểm tra có tin tức để hiển thị không -->
-                <#if newsItems?? && (newsItems?size > 0)>
-                    <#-- Lặp qua từng tin tức -->
-                    <#list newsItems as news>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="blog">
-                                <div class="blog__inner">
-                                    <#-- Link và hình ảnh tin tức -->
-                                    <a class="blog__img" href="${news.url!''}" style="background-image: url('${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/default-news.jpg')}');">
-                                        <img src="${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/default-news.jpg')}" alt="${news.title!''}">
-                                    </a>
-                                    
-                                    <#-- Nội dung tin tức -->
-                                    <div class="blog__body">
-                                        <#-- Tiêu đề tin tức -->
-                                        <h3 class="blog__title">
-                                            <a href="${news.url!''}">${news.title!''}</a>
-                                        </h3>
-                                        
-                                        <#-- Tóm tắt tin tức (nếu có) -->
-                                        <#if news.highlight?? && (news.highlight!'') != ''>
-                                            <div class="blog__excerpt">
-                                                <p>${news.highlight!''}</p>
+        <!-- Projects Section -->
+        <section class="section sec-projectFeature">
+            <div class="container-custom">
+                <div class="projectFeature-list">
+                                                <div class="projectFeature">
+                                <div class="row">
+                                    <div class="col-md-5 col-xxxl-4">
+                                        <a href="https://dtsvn.net/nang-cap-trai-nghiem-so-toan-dien-voi-ngan-hang-ncb/" class="projectFeature__img" style="background-image: url(https://dtsvn.net/wp-content/uploads/2025/01/z6256834228534_cda6f828dd035823febc45bcbdbdfa97.jpg);"></a>
+                                    </div>
+                                    <div class="col-md-7 col-xxxl-6">
+                                        <div class="projectFeature__body">
+                                            <h3 class="projectFeature__title">
+                                                <a href="https://dtsvn.net/nang-cap-trai-nghiem-so-toan-dien-voi-ngan-hang-ncb/">Nâng cấp trải nghiệm số toàn diện với Ngân hàng NCB</a>
+                                            </h3>
+                                            <div class="projectFeature__text">
+                                                <p>NCB định vị mình là Nhà tư vấn tài chính thông minh, thân thiện; Cam kết phát triển bền vững nhằm đem lại sự an toàn tuyệt đối cho khách hàng. Với những sản phẩm dịch vụ hoàn hảo, tiện...</p>
                                             </div>
-                                        </#if>
-                                        
-                                        <#-- Meta information (ngày tạo) -->
-                                        <ul class="postMin__meta">
-                                            <#if news.created_date??>
-                                                <li>
-                                                    <#-- Kiểm tra và format ngày tạo -->
-                                                    <#if news.created_date?is_date>
-                                                        ${news.created_date?string("dd/MM/yyyy HH:mm")}
-                                                    <#else>
-                                                        ${news.created_date!''}
-                                                    </#if>
-                                                </li>
-                                            </#if>
-                                            <#-- Comment: Hiển thị categories (đã tắt) -->
-                                            <#--  <#if news.categories?? && (news.categories?size > 0)>
-                                                <li>
-                                                    <#list news.categories as category>
-                                                        <span class="badge badge-secondary">${category!''}</span>
-                                                    </#list>
-                                                </li>
-                                            </#if>  -->
-                                        </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </#list>
-                <#else>
-                    <#-- Hiển thị thông báo khi không có tin tức -->
-                    <div class="col-12">
-                        <div class="text-center py-5">
-                            <h3>Không tìm thấy tin tức nào</h3>
-                            <p>Vui lòng thử lại với tab khác.</p>
-                        </div>
-                    </div>
-                </#if>
+                                                <div class="projectFeature">
+                                <div class="row">
+                                    <div class="col-md-5 col-xxxl-4">
+                                        <a href="https://dtsvn.net/efast-giai-phap-internet-banking-cho-khach-hang-doanh-nghiep/" class="projectFeature__img" style="background-image: url(https://dtsvn.net/wp-content/uploads/2025/01/z6256817522471_4d8f6ff4e0e9c6933ef86cbd1a153292.jpg);"></a>
+                                    </div>
+                                    <div class="col-md-7 col-xxxl-6">
+                                        <div class="projectFeature__body">
+                                            <h3 class="projectFeature__title">
+                                                <a href="https://dtsvn.net/efast-giai-phap-internet-banking-cho-khach-hang-doanh-nghiep/">eFAST – Giải pháp Internet Banking cho Khách hàng Doanh nghiệp</a>
+                                            </h3>
+                                            <div class="projectFeature__text">
+                                                <p>VietinBank đã thành công ra mắt giải pháp Digital Banking toàn diện dành cho khách hàng doanh nghiệp vào cuối năm 2022, đánh dấu một bước phát triển quan trọng trong dịch vụ kinh doanh của Ngân hàng. Khi VietinBank...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                <div class="projectFeature">
+                                <div class="row">
+                                    <div class="col-md-5 col-xxxl-4">
+                                        <a href="https://dtsvn.net/bidv-nghiem-thu-du-an-martech-tren-website/" class="projectFeature__img" style="background-image: url(https://dtsvn.net/wp-content/uploads/2025/01/454648696_509965898218951_7303333919260901718_n.jpg);"></a>
+                                    </div>
+                                    <div class="col-md-7 col-xxxl-6">
+                                        <div class="projectFeature__body">
+                                            <h3 class="projectFeature__title">
+                                                <a href="https://dtsvn.net/bidv-nghiem-thu-du-an-martech-tren-website/">BIDV nghiệm thu dự án Martech trên Website</a>
+                                            </h3>
+                                            <div class="projectFeature__text">
+                                                <p>Trước khi triển khai, BIDV đã gặp rất nhiều vấn đề trong việc tiếp cận, thu hút và giữ chân Khách hàng trên Webiste. Thấu hiểu nhu cầu và mong muốn của BIDV, DTSVN cùng với Insider – Đơn vị...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                <div class="projectFeature">
+                                <div class="row">
+                                    <div class="col-md-5 col-xxxl-4">
+                                        <a href="https://dtsvn.net/aaaaa/" class="projectFeature__img" style="background-image: url(https://dtsvn.net/wp-content/uploads/2025/01/z6256843189338_c9ecaab281445f9e3f4a6237aca48d0e.jpg);"></a>
+                                    </div>
+                                    <div class="col-md-7 col-xxxl-6">
+                                        <div class="projectFeature__body">
+                                            <h3 class="projectFeature__title">
+                                                <a href="https://dtsvn.net/aaaaa/">Triển khai dự án VietinBank LAOeFAST</a>
+                                            </h3>
+                                            <div class="projectFeature__text">
+                                                <p>Ngân hàng VietinBank đặt mục tiêu hệ thống hóa “Trợ lý tài chính số” - VietinBank eFast cho tất cả khách hàng doanh nghiệp trong và ngoài nước của mình, tạo nên một dịch vụ Ngân hàng điện tử hiện...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="pagination"></div>                </div>
             </div>
-
-            <#-- Phân trang - chỉ hiển thị khi có nhiều hơn 1 trang -->
-            <#if totalPages?? && (totalPages > 1)>
-                <div class="pagination">
-                    <nav class="navigation pagination" aria-label="Phân trang bài viết">
-                        <h2 class="screen-reader-text">Phân trang bài viết</h2>
-                        <div class="nav-links">
-                            <#-- Nút Previous -->
-                            <#if hasPrevPage?? && hasPrevPage>
-                                <a class="prev page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) - 1}">← Previous</a>
-                            </#if>
-                            
-                            <#-- Hiển thị các số trang -->
-                            <#if pageNumbers?? && (pageNumbers?size > 0)>
-                                <#-- Hiển thị dấu ... và số 1 nếu cần -->
-                                <#if pageNumbers?first?number gt 1>
-                                    <#if pageNumbers?first?number gt 2>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1">1</a>
-                                        <span class="page-numbers dots">…</span>
-                                    <#else>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1">1</a>
-                                    </#if>
-                                </#if>
-                                
-                                <#-- Lặp qua các số trang -->
-                                <#list pageNumbers as pageNum>
-                                    <#if (pageNum?number) == (currentPage!1)?number>
-                                        <span aria-current="page" class="page-numbers current">${pageNum}</span>
-                                    <#else>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${pageNum}">${pageNum}</a>
-                                    </#if>
-                                </#list>
-                                
-                                <#-- Hiển thị dấu ... và số trang cuối nếu cần -->
-                                <#if pageNumbers?last?number lt (totalPages!1)?number>
-                                    <#if pageNumbers?last?number lt (totalPages!1)?number - 1>
-                                        <span class="page-numbers dots">…</span>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}">${totalPages!1}</a>
-                                    <#else>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}">${totalPages!1}</a>
-                                    </#if>
-                                </#if>
-                            </#if>
-                            <#if hasNextPage?? && hasNextPage>
-                                <a class="next page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) + 1}">Next →</a>
-                            </#if>
-                        </div>
-                    </nav>
-                </div>
-            </#if>
-
-            <!-- Thông tin phân trang -->
-            <#if totalItems?? && (totalItems > 0)>
-                <div class="pagination-info text-center mt-3">
-                    <#assign fromItem = (((currentPage!1) - 1) * (itemsPerPage!12)) + 1 />
-                    <#assign toItem = ((currentPage!1) * (itemsPerPage!12) < (totalItems!0))?then((currentPage!1) * (itemsPerPage!12), (totalItems!0)) />
-                    <p>Hiển thị ${fromItem} - ${toItem} trong tổng số ${totalItems!0} tin tức</p>
-                </div>
-            </#if>
-        </div>
-    </section>
+        </section>
+    </main>
     <@crafter.renderComponentCollection $field="footer_o"/>
     <script src="/static-assets/js/header.js?site=${siteContext.siteName}"></script>
     <@crafter.body_bottom />
