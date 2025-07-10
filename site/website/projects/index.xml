@@ -18,14 +18,14 @@
 	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></header_o>
-	<footer_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
-	<value>footer-en</value>
-	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></footer_o>
 	<text_main_t>Xuyên suốt quá trình phát triển, đội ngũ DTSVN đã triển khai nhiều dự án đa dạng ở nhiều lĩnh vực khác nhau</text_main_t>
 	<createdDate>2025-07-09T19:01:06.439Z</createdDate>
 	<createdDate_dt>2025-07-09T19:01:06.439Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T19:01:06.439Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T19:01:06.439Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T10:49:06.834Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T10:49:06.834Z</lastModifiedDate_dt>
 </page>
