@@ -8,7 +8,7 @@
       <div class="nav-content">
         <!-- Logo Section - Phần logo công ty -->
         <div class="nav-logo">
-          <a href="/">
+          <a href="/en">
             <span class="svg-container">
               <!-- SVG Logo - Logo vector của công ty với màu xanh dương -->
               <svg width="144" height="30" viewBox="0 0 144 30" fill="none" xmlns="http://www.w3.org/2000/svg">
