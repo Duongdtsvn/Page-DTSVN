@@ -2,6 +2,9 @@ import org.springframework.http.*
 import org.springframework.web.client.RestTemplate
 import groovy.json.JsonOutput
 
+println "Processing Contact Us Request with values:"
+println params
+
 def restTemplate = new org.springframework.web.client.RestTemplate()
 def url = "https://cms-authoring.vnsolutions-io.com/studio/api/2/submit-form"
 def headers = new org.springframework.http.HttpHeaders()
