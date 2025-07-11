@@ -272,8 +272,8 @@ body {
 }
 
 .lang-btn.active {
-  background: #2B6BB2;
-  color: #fff;
+  background: #fff;
+  color: #2B6BB2;
 }
 
 .lang-btn:not(.active):hover {
