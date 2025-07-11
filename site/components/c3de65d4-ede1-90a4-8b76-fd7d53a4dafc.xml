@@ -11,8 +11,8 @@
 	<folder-name/>
 	<createdDate>2025-06-30T07:05:08.313Z</createdDate>
 	<createdDate_dt>2025-06-30T07:05:08.313Z</createdDate_dt>
-	<lastModifiedDate>2025-07-11T06:40:09.932Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-11T06:40:09.932Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-11T06:52:13.453Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T06:52:13.453Z</lastModifiedDate_dt>
 	<teambox_list_o item-list="true">	<item>	<name_s>Nguyễn Bá Chiến</name_s>
 	<position_s>Chủ Tịch Kiêm Tổng Giám Đốc</position_s>
 	<teambox_list_o item-list="true"/>
@@ -32,6 +32,6 @@
 	</item>	<item>	<name_s>Lê Xuân Thịnh</name_s>
 	<position_s>Kế Toán Trưởng</position_s>
 	<teambox_list_o item-list="true"/>
-	<image_s>/static-assets/images/lxt.jpg</image_s>
+	<image_s>/static-assets/images/anhlxt.jpg</image_s>
 	</item></teambox_list_o>
 </component>
