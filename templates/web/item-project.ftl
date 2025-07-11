@@ -33,11 +33,11 @@
       <div class="sec-pageTitle__wrap">
         <ul class="sec-pageTitle__breadcrumb" data-lang="vi">
                 <li><a href="/"> Trang chủ </a></li>
-                <li><span>Tin tức</span></li>
+                    <li><span>Dự án</span></li>
             </ul>
         <ul class="sec-pageTitle__breadcrumb" data-lang="en" style="display:none;">
                 <li><a href="/en"> Home </a></li>
-                <li><span>News</span></li>
+                <li><span>Project</span></li>
             </ul>
         <div class="sec-pageTitle__content">
           <div class="container-custom">

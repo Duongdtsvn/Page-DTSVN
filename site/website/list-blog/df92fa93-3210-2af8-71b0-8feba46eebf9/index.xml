@@ -14,7 +14,7 @@
 	<title_en_s>12321312321</title_en_s>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
-	<categorys_o>	<item>	<key>Tin công nghệ</key>
+	<categorys_o>	<item>	<key>Technology-News</key>
 	<value_smv>Tin công nghệ</value_smv>
 	</item></categorys_o>
 	<content_vi_html>&lt;p&gt;Theo b&amp;aacute;o c&amp;aacute;o t&amp;agrave;i ch&amp;iacute;nh to&amp;agrave;n cầu năm 2024 của Quỹ tiền tệ Quốc tế (GFSR), gần 20% c&amp;aacute;c sự cố mạng được b&amp;aacute;o c&amp;aacute;o trong giai đoạn 2004-2023 đ&amp;atilde; ảnh hưởng trực tiếp đến ng&amp;agrave;nh t&amp;agrave;i ch&amp;iacute;nh, g&amp;acirc;y thiệt hại l&amp;ecirc;n đến gần 12 tỷ đ&amp;ocirc; la. Khi t&amp;igrave;nh trạng gian lận mạng ng&amp;agrave;y c&amp;agrave;ng tăng, c&amp;aacute;c giải ph&amp;aacute;p bảo mật truyền thống đ&amp;atilde; trở n&amp;ecirc;n lỗi thời v&amp;agrave; kh&amp;ocirc;ng c&amp;ograve;n đ&amp;aacute;p ứng được nhu cầu. Theo b&amp;aacute;o c&amp;aacute;o gần đ&amp;acirc;y &amp;ldquo;ZFraud Beat: Triển vọng Chiến lược T&amp;agrave;i ch&amp;iacute;nh&amp;rdquo; của Appgate, nhu cầu bảo vệ c&amp;aacute;c hệ thống ng&amp;acirc;n h&amp;agrave;ng số v&amp;agrave; giao dịch t&amp;agrave;i ch&amp;iacute;nh đang trở n&amp;ecirc;n cấp b&amp;aacute;ch hơn bao giờ hết.&amp;nbsp;&lt;/p&gt;
@@ -45,17 +45,37 @@
 	<content_en_html>&lt;p&gt;hjdhjfd jhdjhfjdf jdfhdj hfjd hfjd hjdfh jdhf jdh fj&lt;/p&gt;</content_en_html>
 	<createdDate>2025-07-04T03:54:13.225Z</createdDate>
 	<createdDate_dt>2025-07-04T03:54:13.225Z</createdDate_dt>
-	<lastModifiedDate>2025-07-06T10:05:24.425Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-06T10:05:24.425Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T18:23:04.143Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T18:23:04.143Z</lastModifiedDate_dt>
 	<img_main_s>/static-assets/images/aczxfe.jpg</img_main_s>
-	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
 	<value>header</value>
 	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
 	<disableFlattening>false</disableFlattening>
-	</item></header_o>
-	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	</item></header_VN_o>
+	<footer_VN_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
 	<value>footer</value>
 	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
 	<disableFlattening>false</disableFlattening>
-	</item></footer_o>
+	</item></footer_VN_o>
+	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
+	<value>Contact Form - VN</value>
+	<include>/site/components/contact-form/vn.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_VN_o>
+	<header_EN_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_EN_o>
+	<footer_EN_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_EN_o>
+	<contact_EN_o item-list="true">	<item>	<key>/site/components/contact-form/en.xml</key>
+	<value>Contact form - EN</value>
+	<include>/site/components/contact-form/en.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_EN_o>
 </page>

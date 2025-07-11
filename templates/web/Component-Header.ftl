@@ -46,7 +46,7 @@
 
         <!-- Desktop Navigation Menu - Menu điều hướng cho desktop -->
         <nav class="nav-desktop">
-          <ul class="nav-list">
+          <ul class="nav-list" style="margin-bottom: 0px;">
             <!-- Loop qua menu items từ CMS - Vòng lặp hiển thị menu từ hệ thống quản lý nội dung -->
             <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
             <#list contentModel.menu_o.item as menu>
@@ -60,8 +60,8 @@
 
         <!-- Language Switcher - Bộ chuyển đổi ngôn ngữ -->
         <div class="nav-lang-switcher">
-                    <button class="lang-btn active" id="lang-toggle">VN</button>
-                </div>
+          <button class="lang-btn" id="lang-toggle" data-current-lang="VN">VN</button>
+        </div>
          <!-- Hamburger Menu Button - Nút menu cho mobile -->
         <button class="nav-toggle">☰</button>
       </div>

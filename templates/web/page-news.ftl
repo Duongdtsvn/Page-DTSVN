@@ -7,7 +7,7 @@
     <#-- Thiết lập meta charset và viewport cho responsive -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DTSVN</title>
+    <title>DTSVN - Tin tức</title>
     
     <#-- Load jQuery library cho JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
