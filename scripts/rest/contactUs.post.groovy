@@ -4,35 +4,21 @@ import groovy.json.JsonOutput
 
 println "Processing Contact Us Request with values:"
 println params
-def result=[:]
-result.success = true
-return result
 
-def restTemplate = new RestTemplate()
+def restTemplate = new org.springframework.web.client.RestTemplate()
 def url = "https://cms-authoring.vnsolutions-io.com/studio/api/2/submit-form"
-def headers = new HttpHeaders()
-headers.setContentType(MediaType.APPLICATION_JSON)
+def headers = new org.springframework.http.HttpHeaders()
+headers.setContentType(MediaType.TEXT_PLAIN)
 headers.set("X-Requested-With", "XMLHttpRequest")
 
-// Lấy dữ liệu từ form gửi lên
-def data = [:]
-params.each { k, v ->
-  data[k] = v
-}
+// Dữ liệu gửi vào body dưới dạng chuỗi JSON
+def body = String.valueOf(params)// ví dụ bạn muốn gửi JSON
 
-// Chuyển thành JSON
-def body = JsonOutput.toJson(data)
 def entity = new HttpEntity<>(body, headers)
 
 def response = restTemplate.exchange(
     url,
-    HttpMethod.POST,
+    org.springframework.http.HttpMethod.POST,
     entity,
-    String.class
+    Void.class
 )
-
-// Trả về kết quả cho frontend
-return [
-  status: response.statusCodeValue,
-  body: response.body
-]
