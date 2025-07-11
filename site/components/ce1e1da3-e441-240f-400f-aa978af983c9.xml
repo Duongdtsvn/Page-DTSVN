@@ -28,10 +28,10 @@
 	</item>	<item>	<name_s>Le Xuan Thinh</name_s>
 	<position_s>CFO</position_s>
 	<teambox_list_o item-list="true"/>
-	<image_s>/static-assets/images/lxt.jpg</image_s>
+	<image_s>/static-assets/images/anhlxt.jpg</image_s>
 	</item></teambox_list_o>
 	<createdDate>2025-07-07T09:23:06.310Z</createdDate>
 	<createdDate_dt>2025-07-07T09:23:06.310Z</createdDate_dt>
-	<lastModifiedDate>2025-07-07T09:23:06.310Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-07T09:23:06.310Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-11T07:16:56.886Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T07:16:56.886Z</lastModifiedDate_dt>
 </component>
