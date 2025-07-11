@@ -51,14 +51,9 @@
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
 	<file-name>index.xml</file-name>
-	<folder-name>en-copy-1</folder-name>
+	<folder-name>course-of-ba</folder-name>
 	<createdDate>2025-07-08T06:51:54.472Z</createdDate>
 	<createdDate_dt>2025-07-08T06:51:54.472Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T15:35:15.807Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T15:35:15.807Z</lastModifiedDate_dt>
-	<lecturer_o item-list="true">	<item datasource="gingvin">	<key>/site/components/71e6e9b4-7955-1782-ae52-a0397929690e.xml</key>
-	<value>giảng viên en</value>
-	<include>/site/components/71e6e9b4-7955-1782-ae52-a0397929690e.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></lecturer_o>
+	<lastModifiedDate>2025-07-11T02:44:04.416Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T02:44:04.416Z</lastModifiedDate_dt>
 </page>
