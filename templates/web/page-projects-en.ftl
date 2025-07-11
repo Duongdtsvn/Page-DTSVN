@@ -59,7 +59,6 @@
                                 <div class="row">
                                     <div class="col-md-5 col-xxxl-4">
                                         <a href="${project.url_en!''}" class="projectFeature__img" style="background-image: url('${(project.img_main_s?? && (project.img_main_s?length > 0))?then(project.img_main_s, '/static-assets/images/projects/default-project.jpg')}');">
-                                            <img src="${(project.img_main_s?? && (project.img_main_s?length > 0))?then(project.img_main_s, '/static-assets/images/projects/default-project.jpg')}" alt="${project.title!''}">
                                         </a>
                                     </div>
                                     <div class="col-md-7 col-xxxl-6">
