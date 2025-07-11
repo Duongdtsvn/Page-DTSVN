@@ -36,8 +36,16 @@
 	<include>/site/components/contact-form/en.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></contact_EN_o>
-	<header_EN_o item-list="true"/>
-	<footer_EN_o item-list="true"/>
+	<header_EN_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_EN_o>
+	<footer_EN_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_EN_o>
 	<content_vi_html>&lt;p&gt;NCB định vị m&amp;igrave;nh l&amp;agrave; Nh&amp;agrave; tư vấn t&amp;agrave;i ch&amp;iacute;nh th&amp;ocirc;ng minh, th&amp;acirc;n thiện; Cam kết ph&amp;aacute;t triển bền vững nhằm đem lại sự an to&amp;agrave;n tuyệt đối cho kh&amp;aacute;ch h&amp;agrave;ng. Với những sản phẩm dịch vụ ho&amp;agrave;n hảo, tiện &amp;iacute;ch v&amp;agrave; đa dạng, NCB l&amp;agrave; đối t&amp;aacute;c tin cậy v&amp;agrave; người bạn đồng h&amp;agrave;nh của kh&amp;aacute;ch h&amp;agrave;ng &amp;ndash; l&amp;agrave; Ng&amp;acirc;n h&amp;agrave;ng của bạn.&lt;/p&gt;</content_vi_html>
 	<content_en_html>&lt;p&gt;NCB định vị m&amp;igrave;nh l&amp;agrave; Nh&amp;agrave; tư vấn t&amp;agrave;i ch&amp;iacute;nh th&amp;ocirc;ng minh, th&amp;acirc;n thiện; Cam kết ph&amp;aacute;t triển bền vững nhằm đem lại sự an to&amp;agrave;n tuyệt đối cho kh&amp;aacute;ch h&amp;agrave;ng. Với những sản phẩm dịch vụ ho&amp;agrave;n hảo, tiện &amp;iacute;ch v&amp;agrave; đa dạng, NCB l&amp;agrave; đối t&amp;aacute;c tin cậy v&amp;agrave; người bạn đồng h&amp;agrave;nh của kh&amp;aacute;ch h&amp;agrave;ng &amp;ndash; l&amp;agrave; Ng&amp;acirc;n h&amp;agrave;ng của bạn.&lt;/p&gt;
 &lt;p&gt;NCB định vị m&amp;igrave;nh l&amp;agrave; Nh&amp;agrave; tư vấn t&amp;agrave;i ch&amp;iacute;nh th&amp;ocirc;ng minh, th&amp;acirc;n thiện; Cam kết ph&amp;aacute;t triển bền vững nhằm đem lại sự an to&amp;agrave;n tuyệt đối cho kh&amp;aacute;ch h&amp;agrave;ng. Với những sản phẩm dịch vụ ho&amp;agrave;n hảo, tiện &amp;iacute;ch v&amp;agrave; đa dạng, NCB l&amp;agrave; đối t&amp;aacute;c tin cậy v&amp;agrave; người bạn đồng h&amp;agrave;nh của kh&amp;aacute;ch h&amp;agrave;ng &amp;ndash; l&amp;agrave; Ng&amp;acirc;n h&amp;agrave;ng của bạn.&lt;/p&gt;
@@ -46,6 +54,6 @@
 &lt;p&gt;NCB định vị m&amp;igrave;nh l&amp;agrave; Nh&amp;agrave; tư vấn t&amp;agrave;i ch&amp;iacute;nh th&amp;ocirc;ng minh, th&amp;acirc;n thiện; Cam kết ph&amp;aacute;t triển bền vững nhằm đem lại sự an to&amp;agrave;n tuyệt đối cho kh&amp;aacute;ch h&amp;agrave;ng. Với những sản phẩm dịch vụ ho&amp;agrave;n hảo, tiện &amp;iacute;ch v&amp;agrave; đa dạng, NCB l&amp;agrave; đối t&amp;aacute;c tin cậy v&amp;agrave; người bạn đồng h&amp;agrave;nh của kh&amp;aacute;ch h&amp;agrave;ng &amp;ndash; l&amp;agrave; Ng&amp;acirc;n h&amp;agrave;ng của bạn.&lt;/p&gt;</content_en_html>
 	<createdDate>2025-07-07T09:17:45.512Z</createdDate>
 	<createdDate_dt>2025-07-07T09:17:45.512Z</createdDate_dt>
-	<lastModifiedDate>2025-07-07T09:17:45.512Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-07T09:17:45.512Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T17:15:01.823Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T17:15:01.823Z</lastModifiedDate_dt>
 </page>

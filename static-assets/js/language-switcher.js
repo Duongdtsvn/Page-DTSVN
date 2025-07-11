@@ -1,6 +1,7 @@
 /**
  * Component chuyển đổi ngôn ngữ
  * Xử lý chức năng chuyển đổi ngôn ngữ với hiệu ứng mượt mà
+ * Hỗ trợ cả Component-Header.ftl và Item.ftl
  */
 class LanguageSwitcher {
     constructor() {
@@ -36,10 +37,11 @@ class LanguageSwitcher {
             return;
         }
 
+        // Khởi tạo ngôn ngữ ban đầu ngay lập tức
+        this.initializeLanguage();
+
         // Thiết lập các sự kiện cho nút
         this.setupEventListeners();
-        // Khởi tạo ngôn ngữ ban đầu
-        this.initializeLanguage();
     }
 
     setupEventListeners() {
@@ -67,8 +69,9 @@ class LanguageSwitcher {
     }
 
     handleLanguageSwitch(clickedButton) {
-        // Xác định ngôn ngữ mới dựa trên text của nút
-        const newLang = clickedButton.textContent === 'VN' ? 'vi' : 'en';
+        // Xác định ngôn ngữ mới dựa trên text hiện tại của nút
+        const currentButtonText = clickedButton.textContent;
+        const newLang = currentButtonText === 'VN' ? 'en' : 'vi';
 
         // Nếu đã ở ngôn ngữ này rồi thì không làm gì
         if (newLang === this.currentLang) {
@@ -76,7 +79,7 @@ class LanguageSwitcher {
         }
 
         // Cập nhật trạng thái các nút
-        this.updateButtonStates(clickedButton);
+        this.updateButtonStates(clickedButton, newLang);
 
         // Chuyển đổi nội dung
         this.switchContent(newLang);
@@ -94,7 +97,7 @@ class LanguageSwitcher {
         this.dispatchLanguageChangeEvent(newLang);
     }
 
-    updateButtonStates(activeButton) {
+    updateButtonStates(activeButton, newLang) {
         // Loại bỏ trạng thái active khỏi tất cả các nút
         this.langButtons.forEach(btn => {
             btn.classList.remove('active');
@@ -104,6 +107,12 @@ class LanguageSwitcher {
         // Thêm trạng thái active cho nút được click
         activeButton.classList.add('active');
         activeButton.setAttribute('aria-pressed', 'true');
+
+        // Cập nhật text của tất cả các nút để đồng bộ
+        this.langButtons.forEach(btn => {
+            btn.textContent = newLang === 'en' ? 'EN' : 'VN';
+            btn.setAttribute('data-current-lang', newLang === 'en' ? 'EN' : 'VN');
+        });
     }
 
     switchContent(lang) {
@@ -170,18 +179,24 @@ class LanguageSwitcher {
     }
 
     initializeLanguage() {
-        // Thiết lập ngôn ngữ ban đầu
-        this.switchContent(this.currentLang);
+        // Cập nhật text và trạng thái của tất cả các nút ngay lập tức
+        this.langButtons.forEach(btn => {
+            const buttonText = this.currentLang === 'en' ? 'EN' : 'VN';
+            btn.textContent = buttonText;
+            btn.setAttribute('data-current-lang', buttonText);
 
-        // Tìm và thiết lập trạng thái ban đầu cho nút VN
-        const initialButton = Array.from(this.langButtons).find(btn => {
-            const btnLang = btn.textContent === 'VN' ? 'vi' : 'en';
-            return btnLang === this.currentLang;
+            if (this.currentLang === 'en') {
+                btn.classList.add('active');
+                btn.setAttribute('aria-pressed', 'true');
+            } else {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-pressed', 'false');
+            }
         });
 
-        if (initialButton) {
-            this.updateButtonStates(initialButton);
-        }
+        // Thiết lập ngôn ngữ ban đầu cho nội dung
+        this.switchContent(this.currentLang);
+
         // Đảm bảo URL đúng với ngôn ngữ hiện tại khi load trang
         this.updateUrlForLanguage(this.currentLang);
     }
@@ -205,7 +220,7 @@ class LanguageSwitcher {
     }
 }
 
-// Khởi tạo khi DOM đã sẵn sàng
+// Khởi tạo ngay khi DOM sẵn sàng
 document.addEventListener('DOMContentLoaded', function () {
     // Khởi tạo language switcher và lưu vào window object
     window.languageSwitcher = new LanguageSwitcher();

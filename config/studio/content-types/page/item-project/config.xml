@@ -1,6 +1,6 @@
-<content-type name="/page/item" is-wcm-type="true">
-	<label>Item - product</label>
-	<form>/page/item</form>
+<content-type name="/page/item-project" is-wcm-type="true">
+	<label>Item - project</label>
+	<form>/page/item-project</form>
 	<form-path>simple</form-path>
 	<model-instance-path>NOT-USED-BY-SIMPLE-FORM-ENGINE</model-instance-path>
 	<file-extension>xml</file-extension>
