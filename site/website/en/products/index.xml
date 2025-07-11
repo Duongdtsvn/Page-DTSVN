@@ -42,9 +42,13 @@
 	<include>/site/components/19f70f18-fd97-e931-a3a8-5c56ef2e00f5.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></customer_stalk_about_o>
-	<list_product_o item-list="true"/>
+	<list_product_o item-list="true">	<item>	<key>/site/components/list-product/db927ed2-2ee1-2433-bc96-0e4fd9111dbe.xml</key>
+	<value>Product - Service</value>
+	<include>/site/components/list-product/db927ed2-2ee1-2433-bc96-0e4fd9111dbe.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></list_product_o>
 	<createdDate>2025-07-11T03:29:55.029Z</createdDate>
 	<createdDate_dt>2025-07-11T03:29:55.029Z</createdDate_dt>
-	<lastModifiedDate>2025-07-11T03:29:55.029Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-11T03:29:55.029Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-11T03:47:59.577Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T03:47:59.577Z</lastModifiedDate_dt>
 </page>
