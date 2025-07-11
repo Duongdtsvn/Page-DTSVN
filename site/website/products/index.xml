@@ -32,7 +32,11 @@
 	<include>/site/components/78e23124-112a-70b5-e03b-4b8fe5c6f052.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></software_development_o>
-	<reasons_choosing_o item-list="true"/>
+	<reasons_choosing_o item-list="true">	<item datasource="ldochnDTSVN">	<key>/site/components/d81b7b48-834a-3333-a89a-442fe1b75c95.xml</key>
+	<value>Lý do lựa chọn DTSVN</value>
+	<include>/site/components/d81b7b48-834a-3333-a89a-442fe1b75c95.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></reasons_choosing_o>
 	<customer_stalk_about_o item-list="true">	<item>	<key>/site/components/773d7d5b-ad45-a5b5-a8a9-9d37337442b3.xml</key>
 	<value>khách hàng nói về dtsvn</value>
 	<include>/site/components/773d7d5b-ad45-a5b5-a8a9-9d37337442b3.xml</include>
@@ -41,6 +45,6 @@
 	<list_product_o item-list="true"/>
 	<createdDate>2025-07-11T02:48:04.889Z</createdDate>
 	<createdDate_dt>2025-07-11T02:48:04.889Z</createdDate_dt>
-	<lastModifiedDate>2025-07-11T02:48:04.889Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-11T02:48:04.889Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-11T02:52:45.124Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T02:52:45.124Z</lastModifiedDate_dt>
 </page>
