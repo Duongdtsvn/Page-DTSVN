@@ -1,6 +1,6 @@
-<content-type name="/page/product-service" is-wcm-type="true">
-	<label>Product-Service</label>
-	<form>/page/product-service</form>
+<content-type name="/page/page-contact-en" is-wcm-type="true">
+	<label>Page - contact - en</label>
+	<form>/page/page-contact-en</form>
 	<form-path>simple</form-path>
 	<model-instance-path>NOT-USED-BY-SIMPLE-FORM-ENGINE</model-instance-path>
 	<file-extension>xml</file-extension>
