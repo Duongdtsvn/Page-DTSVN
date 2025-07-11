@@ -42,9 +42,13 @@
 	<include>/site/components/773d7d5b-ad45-a5b5-a8a9-9d37337442b3.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></customer_stalk_about_o>
-	<list_product_o item-list="true"/>
+	<list_product_o item-list="true">	<item>	<key>/site/components/list-product/99a0e89e-8691-35cd-12d9-305978073e3f.xml</key>
+	<value>Sản phẩm - Dịch vụ</value>
+	<include>/site/components/list-product/99a0e89e-8691-35cd-12d9-305978073e3f.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></list_product_o>
 	<createdDate>2025-07-11T02:48:04.889Z</createdDate>
 	<createdDate_dt>2025-07-11T02:48:04.889Z</createdDate_dt>
-	<lastModifiedDate>2025-07-11T02:52:45.124Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-11T02:52:45.124Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-11T03:26:53.791Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T03:26:53.791Z</lastModifiedDate_dt>
 </page>
