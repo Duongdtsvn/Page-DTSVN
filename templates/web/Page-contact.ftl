@@ -57,14 +57,8 @@
                   <p role="status" aria-live="polite" aria-atomic="true"></p>
                   <ul></ul>
                 </div>
-                <form action="/scripts/rest/contact.post.groovy" method="post" class="wpcf7-form init" aria-label="Form liên hệ" novalidate="novalidate" data-status="init">
+                <form id="contactForm" action="/rest/contact" method="post" class="wpcf7-form init" aria-label="Form liên hệ" novalidate="novalidate" data-status="init">
                   <div style="display: none;">
-                    <input type="hidden" name="_wpcf7" value="6">
-                    <input type="hidden" name="_wpcf7_version" value="5.9.8">
-                    <input type="hidden" name="_wpcf7_locale" value="vi">
-                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-o1">
-                    <input type="hidden" name="_wpcf7_container_post" value="0">
-                    <input type="hidden" name="_wpcf7_posted_data_hash" value="">
                   </div>
                   <#if contentModel.list_input_o.item?has_content>
                     <div class="row g-3">
