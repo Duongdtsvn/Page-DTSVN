@@ -8,6 +8,8 @@
 	<previewable>true</previewable>
 	<quickCreate>false</quickCreate>
 	<quickCreatePath></quickCreatePath>
+	<!-- Specifies whether a form-controller.js is present in the type definition and should be loaded by the Forms Engine -->
+	<controller>false</controller>
 	<noThumbnail>true</noThumbnail>
 	<image-thumbnail></image-thumbnail>
 </content-type>

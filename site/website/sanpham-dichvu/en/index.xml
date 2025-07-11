@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/product-service</content-type>
+	<display-template>/templates/web/pages/Product-Service.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>542d</objectGroupId>
+	<objectId>542d4015-4ca1-7225-9a88-7e8f34d6b989</objectId>
+	<internal-name>Products-Service-en</internal-name>
+	<navLabel>Products-Service-en</navLabel>
+	<file-name>index.xml</file-name>
+	<folder-name>en</folder-name>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
+	<product_orientation_o item-list="true">	<item datasource="nhhngsnphm">	<key>/site/components/5ee1a7e6-29da-99d5-5979-a1110b86dec7.xml</key>
+	<value>Product orientation en</value>
+	<include>/site/components/5ee1a7e6-29da-99d5-5979-a1110b86dec7.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></product_orientation_o>
+	<software_development_o item-list="true">	<item datasource="dchvphttrinphnmm">	<key>/site/components/4241e0c1-0319-b83b-57e1-1669dede2760.xml</key>
+	<value>SOFTWARE DEVELOPMENT SERVICES en</value>
+	<include>/site/components/4241e0c1-0319-b83b-57e1-1669dede2760.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></software_development_o>
+	<reasons_choosing_o item-list="true">	<item datasource="ldochnDTSVN" inline="true">	<key>64ef5321-7a31-b439-ccde-9280aa35abb6</key>
+	<value>reasons-choosing-DTSVN-en</value>
+<component id="64ef5321-7a31-b439-ccde-9280aa35abb6">
+	<content-type>/component/component-reasons-choosing-dtsvn</content-type>
+	<display-template>/templates/web/Component-reasons-choosing-DTSVN.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>64ef</objectGroupId>
+	<objectId>64ef5321-7a31-b439-ccde-9280aa35abb6</objectId>
+	<file-name>64ef5321-7a31-b439-ccde-9280aa35abb6.xml</file-name>
+	<folder-name/>
+	<internal-name>reasons-choosing-DTSVN-en</internal-name>
+	<title_s>Why choose DTSVN</title_s>
+	<subtitle_s>DTSVN has succeeded in building softwares that meets requirements from big and small size financial institutions by resolving many obstacles, saving costs and increasing profits.</subtitle_s>
+	<reasons_choosing_o item-list="true">	<item>	<title_s>Quick response and error fixing</title_s>
+	<subtitle_s>Respond and quickly resolve system errors as soon as customers encounter them, both onsite and offsite.</subtitle_s>
+	</item>	<item>	<title_s>Experienced team</title_s>
+	<subtitle_s>DTSVN have a team of experts with many years of experience in the field of financial and banking software.</subtitle_s>
+	</item>	<item>	<title_s>Understand the profession clearly</title_s>
+	<subtitle_s>Design, evaluate and build technology systems from a thorough understanding of management requirements.</subtitle_s>
+	</item>	<item>	<title_s>Communication in simple technology language</title_s>
+	<subtitle_s>All your questions will be answered and explained easily by the technical team in oreder to help you fully understand.</subtitle_s>
+	</item>	<item>	<title_s>All-in-one solution</title_s>
+	<subtitle_s>Handles all aspects of IT infrastructure, including hardware, software, and other technology needs.</subtitle_s>
+	</item>	<item>	<title_s>100% satisfaction guaranteed</title_s>
+	<subtitle_s>Our services will bring satisfaction and true value to you.</subtitle_s>
+	</item></reasons_choosing_o>
+	<createdDate>2025-07-08T06:39:20.428Z</createdDate>
+	<createdDate_dt>2025-07-08T06:39:20.428Z</createdDate_dt>
+	<lastModifiedDate>2025-07-08T06:39:20.428Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-08T06:39:20.428Z</lastModifiedDate_dt>
+</component>
+	</item></reasons_choosing_o>
+	<customer_stalk_about_o item-list="true">	<item datasource="khchhngnivdtsvn">	<key>/site/components/ae4c1c65-dac9-ef4d-1bbf-a8bd3ab647e8.xml</key>
+	<value>Customers-talk-about en</value>
+	<include>/site/components/ae4c1c65-dac9-ef4d-1bbf-a8bd3ab647e8.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></customer_stalk_about_o>
+	<createdDate>2025-07-08T04:51:34.865Z</createdDate>
+	<createdDate_dt>2025-07-08T04:51:34.865Z</createdDate_dt>
+	<lastModifiedDate>2025-07-10T17:34:57.635Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T17:34:57.635Z</lastModifiedDate_dt>
+	<list_product_o item-list="true">	<item>	<key>/site/components/list-product/db927ed2-2ee1-2433-bc96-0e4fd9111dbe.xml</key>
+	<value>Product - Service</value>
+	<include>/site/components/list-product/db927ed2-2ee1-2433-bc96-0e4fd9111dbe.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></list_product_o>
+</page>

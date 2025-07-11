@@ -12,8 +12,8 @@
 	<folder-name/>
 	<createdDate>2017-01-31T16:18:14.000Z</createdDate>
 	<createdDate_dt>2017-01-31T16:18:14.000Z</createdDate_dt>
-	<lastModifiedDate>2025-07-07T18:26:41.658Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-07T18:26:41.658Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-10T16:36:37.530Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-10T16:36:37.530Z</lastModifiedDate_dt>
 	<title_t>Editorial</title_t>
 	<disabled>false</disabled>
 	<home_o item-list="true">	<item>	<key>/site/components/home/67818315-5397-246d-8b2a-b930ffc34193.xml</key>
@@ -61,9 +61,9 @@
 	<include>/site/components/8770ee00-bc20-15c1-00f3-53b1470eef8f.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></achievements_o>
-	<blog_o item-list="true">	<item datasource="blog">	<key>/site/e5753c46-bed5-95ce-e39e-219ce01e47be.xml</key>
-	<value>list tin tức</value>
-	<include>/site/e5753c46-bed5-95ce-e39e-219ce01e47be.xml</include>
+	<blog_o item-list="true">	<item>	<key>/site/components/home-blog/8a24b6be-4195-687b-bf2d-e896f0a47296.xml</key>
+	<value>Tin tức cập nhật</value>
+	<include>/site/components/home-blog/8a24b6be-4195-687b-bf2d-e896f0a47296.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></blog_o>
 	<leader_o item-list="true">	<item datasource="leader">	<key>/site/components/c3de65d4-ede1-90a4-8b76-fd7d53a4dafc.xml</key>
