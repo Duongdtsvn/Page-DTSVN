@@ -56,7 +56,7 @@
                   <p role="status" aria-live="polite" aria-atomic="true"></p>
                   <ul></ul>
                 </div>
-                <form id="contactForm" action="/api/1/services/contactUs.json" method="post" class="wpcf7-form init" aria-label="Form liên hệ" novalidate="novalidate" data-status="init">
+                <form id="contactForm" action="/api/1/services/contactUs" method="post" class="wpcf7-form init" aria-label="Form liên hệ" novalidate="novalidate" data-status="init">
                   <#if contentModel.list_input_o.item?has_content>
                     <div class="row g-3">
                       <#list contentModel.list_input_o.item as form>
