@@ -7,7 +7,7 @@
 	<objectGroupId>4319</objectGroupId>
 	<objectId>4319d8ed-864c-8178-f7da-ba8e3c376045</objectId>
 	<file-name>index.xml</file-name>
-	<folder-name>khoa-hoc-ba</folder-name>
+	<folder-name>course-of-ba</folder-name>
 	<internal-name>Khóa học BA</internal-name>
 	<navLabel>Khóa học BA</navLabel>
 	<placeInNav>false</placeInNav>
@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-04T04:27:44.021Z</createdDate>
 	<createdDate_dt>2025-07-04T04:27:44.021Z</createdDate_dt>
-	<lastModifiedDate>2025-07-08T08:20:12.402Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-08T08:20:12.402Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-09T15:44:27.753Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-09T15:44:27.753Z</lastModifiedDate_dt>
 	<who_studies_o item-list="true">	<item datasource="khahcnydnhchoai">	<key>/site/components/e25d62d4-56f4-8ba9-527d-2dc658efc674.xml</key>
 	<value>Khóa học này dành cho ai</value>
 	<include>/site/components/e25d62d4-56f4-8ba9-527d-2dc658efc674.xml</include>
@@ -56,9 +56,4 @@
 	<include>/site/components/efeb6b9b-4d75-70bf-0cc7-3effdc17513d.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></result_o>
-	<lecturer_o item-list="true">	<item datasource="gingvin">	<key>/site/components/28acc439-8ba6-9146-6817-0467b571f2ac.xml</key>
-	<value>giảng viên BA</value>
-	<include>/site/components/28acc439-8ba6-9146-6817-0467b571f2ac.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></lecturer_o>
 </page>

@@ -223,7 +223,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
 }
 
 ol ol,
@@ -12815,7 +12815,7 @@ html.mobile.landscape .menuMobile__info li + li {
     position: relative;
   }
   .sec-strength__wrap .titlebox {
-    position: absolute;
+   
     top: 0;
     left: 0;
     width: 45%;

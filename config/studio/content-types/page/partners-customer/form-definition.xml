@@ -1,21 +1,21 @@
 <form>
-	<title>CDS-Consulting</title>
+	<title>Partners-customer</title>
 	<description></description>
 	<objectType>page</objectType>
-	<content-type>/page/cds-consulting</content-type>
+	<content-type>/page/partners-customer</content-type>
 	<imageThumbnail></imageThumbnail>
 	<quickCreate>false</quickCreate>
 	<quickCreatePath></quickCreatePath>
 	<properties>		<property>
 			<name>display-template</name>
 			<label>Display Template</label>
-			<value>/templates/web/pages/CDS-Consulting.ftl</value>
+			<value>/templates/web/pages/Partners-customer.ftl</value>
 			<type>template</type>
 		</property>
 		<property>
 			<name>no-template-required</name>
 			<label>No Template Required</label>
-			<value>true</value>
+			<value></value>
 			<type>boolean</type>
 		</property>
 		<property>
@@ -26,7 +26,7 @@
 		</property>
 	</properties>
 	<sections>		<section>
-			<title>CDS-Consulting Properties</title>
+			<title>Partners-customer Properties</title>
 			<description></description>
 			<defaultOpen>true</defaultOpen>
 			<fields>
@@ -137,13 +137,6 @@
 						</constraint>
 					</constraints>
 				</field>
-			</fields>
-		</section>
-		<section>
-			<title>Default Section Title 1752107470866</title>
-			<description></description>
-			<defaultOpen>false</defaultOpen>
-			<fields>
 				<field>
 					<type>node-selector</type>
 					<id>header_o</id>
@@ -305,9 +298,9 @@
 				</field>
 				<field>
 					<type>node-selector</type>
-					<id>why_choose_o</id>
+					<id>achievements_o</id>
 					<iceId></iceId>
-					<title>Tại sao bạn nên chọn DTSVN để triển khai?</title>
+					<title>Con số ấn tượng</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -324,7 +317,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>tisaobnnnchnDTSVNtrinkhai</value>
+							<value>consntng</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -358,9 +351,9 @@
 				</field>
 				<field>
 					<type>node-selector</type>
-					<id>service_packages_o</id>
+					<id>client_o</id>
 					<iceId></iceId>
-					<title>Các gói dịch vụ tư vấn chuyển đổi số tại DTSVN</title>
+					<title>Khách hàng</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -377,7 +370,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>thnhvinlinkttrinkhai</value>
+							<value>khchhng</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -411,9 +404,9 @@
 				</field>
 				<field>
 					<type>node-selector</type>
-					<id>member_o</id>
+					<id>partner_o</id>
 					<iceId></iceId>
-					<title>Thành viên liên kết triển khai</title>
+					<title>đối tác</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -430,7 +423,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>thnhvinlinkttrinkhai</value>
+							<value>itc</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -465,61 +458,13 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1752107470867</title>
+			<title>Quan hệ khách hàng</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
 				<field>
-					<type>image-picker</type>
-					<id>vision_background_image_s</id>
-					<iceId></iceId>
-					<title>ảnh</title>
-					<description></description>
-					<defaultValue></defaultValue>
-					<help></help>
-					<properties>
-						<property>
-							<name>width</name>
-							<value>{ &quot;exact&quot;:&quot;&quot;, &quot;min&quot;:&quot;&quot;, &quot;max&quot;:&quot;&quot; }</value>
-							<type>range</type>
-						</property>
-						<property>
-							<name>height</name>
-							<value>{ &quot;exact&quot;:&quot;&quot;, &quot;min&quot;:&quot;&quot;, &quot;max&quot;:&quot;&quot; }</value>
-							<type>range</type>
-						</property>
-						<property>
-							<name>thumbnailWidth</name>
-							<value></value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>thumbnailHeight</name>
-							<value></value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>imageManager</name>
-							<value>upload,seleact</value>
-							<type>datasource:image</type>
-						</property>
-						<property>
-							<name>readonly</name>
-							<value></value>
-							<type>boolean</type>
-						</property>
-					</properties>
-					<constraints>
-						<constraint>
-							<name>required</name>
-							<value><![CDATA[]]></value>
-							<type>boolean</type>
-						</constraint>
-					</constraints>
-				</field>
-				<field>
 					<type>input</type>
-					<id>vision_title_s</id>
+					<id>customer_section_subtitle_s</id>
 					<iceId></iceId>
 					<title>tiêu đề chính</title>
 					<description></description>
@@ -567,7 +512,7 @@
 				</field>
 				<field>
 					<type>input</type>
-					<id>vision_description_s</id>
+					<id>customer_section_title_s</id>
 					<iceId></iceId>
 					<title>tiêu đề phụ</title>
 					<description></description>
@@ -614,10 +559,58 @@
 					</constraints>
 				</field>
 				<field>
-					<type>repeat</type>
-					<id>vision_challenges_o</id>
+					<type>image-picker</type>
+					<id>customer_section_image_s</id>
 					<iceId></iceId>
-					<title>list</title>
+					<title>ảnh</title>
+					<description></description>
+					<defaultValue></defaultValue>
+					<help></help>
+					<properties>
+						<property>
+							<name>width</name>
+							<value>{ &quot;exact&quot;:&quot;&quot;, &quot;min&quot;:&quot;&quot;, &quot;max&quot;:&quot;&quot; }</value>
+							<type>range</type>
+						</property>
+						<property>
+							<name>height</name>
+							<value>{ &quot;exact&quot;:&quot;&quot;, &quot;min&quot;:&quot;&quot;, &quot;max&quot;:&quot;&quot; }</value>
+							<type>range</type>
+						</property>
+						<property>
+							<name>thumbnailWidth</name>
+							<value></value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>thumbnailHeight</name>
+							<value></value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>imageManager</name>
+							<value>upload,select</value>
+							<type>datasource:image</type>
+						</property>
+						<property>
+							<name>readonly</name>
+							<value></value>
+							<type>boolean</type>
+						</property>
+					</properties>
+					<constraints>
+						<constraint>
+							<name>required</name>
+							<value><![CDATA[]]></value>
+							<type>boolean</type>
+						</constraint>
+					</constraints>
+				</field>
+				<field>
+					<type>repeat</type>
+					<id>customer_partnerships_o</id>
+					<iceId></iceId>
+					<title>Quan hệ khách hàng</title>
 					<description></description>
 					<minOccurs>0</minOccurs>
 					<maxOccurs>*</maxOccurs>
@@ -636,9 +629,9 @@
 					<fields>
 				<field>
 					<type>input</type>
-					<id>title_s</id>
+					<id>number_s</id>
 					<iceId></iceId>
-					<title>tiêu đề</title>
+					<title>số</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -650,7 +643,55 @@
 						</property>
 						<property>
 							<name>maxlength</name>
-							<value>5000</value>
+							<value>50000</value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>readonly</name>
+							<value></value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>tokenize</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>escapeContent</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+					</properties>
+					<constraints>
+						<constraint>
+							<name>required</name>
+							<value><![CDATA[]]></value>
+							<type>boolean</type>
+						</constraint>
+						<constraint>
+							<name>pattern</name>
+							<value><![CDATA[]]></value>
+							<type>string</type>
+						</constraint>
+					</constraints>
+				</field>
+				<field>
+					<type>input</type>
+					<id>title_s</id>
+					<iceId></iceId>
+					<title>nội dung chính</title>
+					<description></description>
+					<defaultValue></defaultValue>
+					<help></help>
+					<properties>
+						<property>
+							<name>size</name>
+							<value>50</value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>maxlength</name>
+							<value>50000</value>
 							<type>int</type>
 						</property>
 						<property>
@@ -686,7 +727,7 @@
 					<type>input</type>
 					<id>description_s</id>
 					<iceId></iceId>
-					<title>nội dung</title>
+					<title>nội dung phụ</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -735,13 +776,13 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1752107470868</title>
+			<title>Quan hệ đối tác</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
 				<field>
 					<type>input</type>
-					<id>strength_title_s</id>
+					<id>strategic_section_subtitle_s</id>
 					<iceId></iceId>
 					<title>tiêu đề chính</title>
 					<description></description>
@@ -755,7 +796,7 @@
 						</property>
 						<property>
 							<name>maxlength</name>
-							<value>50</value>
+							<value>5000</value>
 							<type>int</type>
 						</property>
 						<property>
@@ -788,31 +829,58 @@
 					</constraints>
 				</field>
 				<field>
-					<type>repeat</type>
-					<id>service_packages_o</id>
+					<type>input</type>
+					<id>strategic_section_title_s</id>
 					<iceId></iceId>
-					<title>list</title>
+					<title>tiêu đề phụ</title>
 					<description></description>
-					<minOccurs>0</minOccurs>
-					<maxOccurs>*</maxOccurs>
+					<defaultValue></defaultValue>
+					<help></help>
 					<properties>
 						<property>
-							<name>minOccurs</name>
-							<value>0</value>
-							<type>string</type>
+							<name>size</name>
+							<value>50</value>
+							<type>int</type>
 						</property>
 						<property>
-							<name>maxOccurs</name>
-							<value>*</value>
-							<type>string</type>
+							<name>maxlength</name>
+							<value>5000</value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>readonly</name>
+							<value></value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>tokenize</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>escapeContent</name>
+							<value>false</value>
+							<type>boolean</type>
 						</property>
 					</properties>
-					<fields>
+					<constraints>
+						<constraint>
+							<name>required</name>
+							<value><![CDATA[]]></value>
+							<type>boolean</type>
+						</constraint>
+						<constraint>
+							<name>pattern</name>
+							<value><![CDATA[]]></value>
+							<type>string</type>
+						</constraint>
+					</constraints>
+				</field>
 				<field>
 					<type>image-picker</type>
-					<id>icon_s</id>
+					<id>strategic_section_image_s</id>
 					<iceId></iceId>
-					<title>icon</title>
+					<title>ảnh</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -839,7 +907,7 @@
 						</property>
 						<property>
 							<name>imageManager</name>
-							<value>seleact,upload</value>
+							<value>upload,select</value>
 							<type>datasource:image</type>
 						</property>
 						<property>
@@ -856,6 +924,27 @@
 						</constraint>
 					</constraints>
 				</field>
+				<field>
+					<type>repeat</type>
+					<id>strategic_partnerships_o</id>
+					<iceId></iceId>
+					<title>Quan hệ đối tác</title>
+					<description></description>
+					<minOccurs>0</minOccurs>
+					<maxOccurs>*</maxOccurs>
+					<properties>
+						<property>
+							<name>minOccurs</name>
+							<value>0</value>
+							<type>string</type>
+						</property>
+						<property>
+							<name>maxOccurs</name>
+							<value>*</value>
+							<type>string</type>
+						</property>
+					</properties>
+					<fields>
 				<field>
 					<type>input</type>
 					<id>number_s</id>
@@ -908,137 +997,7 @@
 					<type>input</type>
 					<id>title_s</id>
 					<iceId></iceId>
-					<title>tiêu để</title>
-					<description></description>
-					<defaultValue></defaultValue>
-					<help></help>
-					<properties>
-						<property>
-							<name>size</name>
-							<value>50</value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>maxlength</name>
-							<value>5000</value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>readonly</name>
-							<value></value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>tokenize</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>escapeContent</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-					</properties>
-					<constraints>
-						<constraint>
-							<name>required</name>
-							<value><![CDATA[]]></value>
-							<type>boolean</type>
-						</constraint>
-						<constraint>
-							<name>pattern</name>
-							<value><![CDATA[]]></value>
-							<type>string</type>
-						</constraint>
-					</constraints>
-				</field>
-				<field>
-					<type>rte</type>
-					<id>description_html</id>
-					<iceId></iceId>
-					<title>nội dung</title>
-					<description></description>
-					<defaultValue></defaultValue>
-					<help></help>
-					<properties>
-						<property>
-							<name>height</name>
-							<value></value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>autoGrow</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>enableSpellCheck</name>
-							<value>true</value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>forceRootBlockPTag</name>
-							<value>true</value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>forceBRTags</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>supportedChannels</name>
-							<value></value>
-							<type>supportedChannels</type>
-						</property>
-						<property>
-							<name>rteConfiguration</name>
-							<value>generic</value>
-							<type>string</type>
-						</property>
-						<property>
-							<name>imageManager</name>
-							<value>upload,seleact</value>
-							<type>datasource:image</type>
-						</property>
-						<property>
-							<name>videoManager</name>
-							<value></value>
-							<type>datasource:video</type>
-						</property>
-						<property>
-							<name>audioManager</name>
-							<value></value>
-							<type>datasource:audio</type>
-						</property>
-						<property>
-							<name>fileManager</name>
-							<value></value>
-							<type>datasource:item</type>
-						</property>
-					</properties>
-					<constraints>
-						<constraint>
-							<name>required</name>
-							<value><![CDATA[]]></value>
-							<type>boolean</type>
-						</constraint>
-					</constraints>
-				</field>
-					</fields>
-				</field>
-			</fields>
-		</section>
-		<section>
-			<title>Default Section Title 1752107470868</title>
-			<description></description>
-			<defaultOpen>false</defaultOpen>
-			<fields>
-				<field>
-					<type>input</type>
-					<id>team_title_s</id>
-					<iceId></iceId>
-					<title>tiêu đề chính</title>
+					<title>nội dung chính</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -1084,174 +1043,9 @@
 				</field>
 				<field>
 					<type>input</type>
-					<id>team_description_s</id>
+					<id>description_s</id>
 					<iceId></iceId>
-					<title>tiêu dề phụ</title>
-					<description></description>
-					<defaultValue></defaultValue>
-					<help></help>
-					<properties>
-						<property>
-							<name>size</name>
-							<value>50</value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>maxlength</name>
-							<value>5000</value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>readonly</name>
-							<value></value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>tokenize</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>escapeContent</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-					</properties>
-					<constraints>
-						<constraint>
-							<name>required</name>
-							<value><![CDATA[]]></value>
-							<type>boolean</type>
-						</constraint>
-						<constraint>
-							<name>pattern</name>
-							<value><![CDATA[]]></value>
-							<type>string</type>
-						</constraint>
-					</constraints>
-				</field>
-				<field>
-					<type>repeat</type>
-					<id>team_members_o</id>
-					<iceId></iceId>
-					<title>list</title>
-					<description></description>
-					<minOccurs>0</minOccurs>
-					<maxOccurs>*</maxOccurs>
-					<properties>
-						<property>
-							<name>minOccurs</name>
-							<value>0</value>
-							<type>string</type>
-						</property>
-						<property>
-							<name>maxOccurs</name>
-							<value>*</value>
-							<type>string</type>
-						</property>
-					</properties>
-					<fields>
-				<field>
-					<type>image-picker</type>
-					<id>image_s</id>
-					<iceId></iceId>
-					<title>ảnh</title>
-					<description></description>
-					<defaultValue></defaultValue>
-					<help></help>
-					<properties>
-						<property>
-							<name>width</name>
-							<value>{ &quot;exact&quot;:&quot;&quot;, &quot;min&quot;:&quot;&quot;, &quot;max&quot;:&quot;&quot; }</value>
-							<type>range</type>
-						</property>
-						<property>
-							<name>height</name>
-							<value>{ &quot;exact&quot;:&quot;&quot;, &quot;min&quot;:&quot;&quot;, &quot;max&quot;:&quot;&quot; }</value>
-							<type>range</type>
-						</property>
-						<property>
-							<name>thumbnailWidth</name>
-							<value></value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>thumbnailHeight</name>
-							<value></value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>imageManager</name>
-							<value>upload,seleact</value>
-							<type>datasource:image</type>
-						</property>
-						<property>
-							<name>readonly</name>
-							<value></value>
-							<type>boolean</type>
-						</property>
-					</properties>
-					<constraints>
-						<constraint>
-							<name>required</name>
-							<value><![CDATA[]]></value>
-							<type>boolean</type>
-						</constraint>
-					</constraints>
-				</field>
-				<field>
-					<type>input</type>
-					<id>name_s</id>
-					<iceId></iceId>
-					<title>Tên</title>
-					<description></description>
-					<defaultValue></defaultValue>
-					<help></help>
-					<properties>
-						<property>
-							<name>size</name>
-							<value>50</value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>maxlength</name>
-							<value>5000</value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>readonly</name>
-							<value></value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>tokenize</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>escapeContent</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-					</properties>
-					<constraints>
-						<constraint>
-							<name>required</name>
-							<value><![CDATA[]]></value>
-							<type>boolean</type>
-						</constraint>
-						<constraint>
-							<name>pattern</name>
-							<value><![CDATA[]]></value>
-							<type>string</type>
-						</constraint>
-					</constraints>
-				</field>
-				<field>
-					<type>input</type>
-					<id>position_s</id>
-					<iceId></iceId>
-					<title>nộidung</title>
+					<title>nội dung phụ</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -1415,120 +1209,6 @@
 					</properties>
 				</datasource>
 				<datasource>
-					<type>shared-content</type>
-					<id>tisaobnnnchnDTSVNtrinkhai</id>
-					<title>Tại sao bạn nên chọn DTSVN để triển khai?</title>
-					<interface>item</interface>
-					<properties>
-						<property>
-							<name>enableCreateNew</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableBrowseExisting</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableSearchExisting</name>
-							<value>false</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>repoPath</name>
-							<value>/site/components</value>
-								<type>content-path-input</type>
-						</property>
-						<property>
-							<name>browsePath</name>
-							<value>/site/components</value>
-								<type>content-path-input</type>
-						</property>
-						<property>
-							<name>type</name>
-							<value></value>
-								<type>string</type>
-						</property>
-					</properties>
-				</datasource>
-				<datasource>
-					<type>shared-content</type>
-					<id>ccgidchvtvnchuynistiDTSVN</id>
-					<title>Các gói dịch vụ tư vấn chuyển đổi số tại DTSVN</title>
-					<interface>item</interface>
-					<properties>
-						<property>
-							<name>enableCreateNew</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableBrowseExisting</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableSearchExisting</name>
-							<value>false</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>repoPath</name>
-							<value>/site/components</value>
-								<type>content-path-input</type>
-						</property>
-						<property>
-							<name>browsePath</name>
-							<value>/site/components</value>
-								<type>content-path-input</type>
-						</property>
-						<property>
-							<name>type</name>
-							<value></value>
-								<type>string</type>
-						</property>
-					</properties>
-				</datasource>
-				<datasource>
-					<type>shared-content</type>
-					<id>thnhvinlinkttrinkhai</id>
-					<title>Thành viên liên kết triển khai</title>
-					<interface>item</interface>
-					<properties>
-						<property>
-							<name>enableCreateNew</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableBrowseExisting</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableSearchExisting</name>
-							<value>false</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>repoPath</name>
-							<value>/site/components</value>
-								<type>content-path-input</type>
-						</property>
-						<property>
-							<name>browsePath</name>
-							<value>/site/components</value>
-								<type>content-path-input</type>
-						</property>
-						<property>
-							<name>type</name>
-							<value></value>
-								<type>string</type>
-						</property>
-					</properties>
-				</datasource>
-				<datasource>
 					<type>img-desktop-upload</type>
 					<id>upload</id>
 					<title>upload</title>
@@ -1543,8 +1223,8 @@
 				</datasource>
 				<datasource>
 					<type>img-repository-upload</type>
-					<id>seleact</id>
-					<title>seleact</title>
+					<id>select</id>
+					<title>select</title>
 					<interface>image</interface>
 					<properties>
 						<property>
@@ -1556,6 +1236,120 @@
 							<name>useSearch</name>
 							<value>false</value>
 								<type>boolean</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>shared-content</type>
+					<id>consntng</id>
+					<title>Con số ấn tượng</title>
+					<interface>item</interface>
+					<properties>
+						<property>
+							<name>enableCreateNew</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableBrowseExisting</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableSearchExisting</name>
+							<value>false</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>repoPath</name>
+							<value>/site/components</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>browsePath</name>
+							<value>/site/components</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>type</name>
+							<value></value>
+								<type>string</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>shared-content</type>
+					<id>khchhng</id>
+					<title>Khách hàng</title>
+					<interface>item</interface>
+					<properties>
+						<property>
+							<name>enableCreateNew</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableBrowseExisting</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableSearchExisting</name>
+							<value>false</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>repoPath</name>
+							<value>/site/components</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>browsePath</name>
+							<value>/site/components</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>type</name>
+							<value></value>
+								<type>string</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>shared-content</type>
+					<id>itc</id>
+					<title>đối tác</title>
+					<interface>item</interface>
+					<properties>
+						<property>
+							<name>enableCreateNew</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableBrowseExisting</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableSearchExisting</name>
+							<value>false</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>repoPath</name>
+							<value>/site/components</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>browsePath</name>
+							<value>/site/components</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>type</name>
+							<value></value>
+								<type>string</type>
 						</property>
 					</properties>
 				</datasource>

@@ -9,7 +9,7 @@
 	<internal-name>Giới thiệu-en</internal-name>
 	<navLabel>Giới thiệu-en</navLabel>
 	<file-name>index.xml</file-name>
-	<folder-name>en</folder-name>
+	<folder-name>about</folder-name>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
 	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
@@ -64,6 +64,6 @@
 	</item></partner_o>
 	<createdDate>2025-07-08T03:26:13.073Z</createdDate>
 	<createdDate_dt>2025-07-08T03:26:13.073Z</createdDate_dt>
-	<lastModifiedDate>2025-07-08T03:26:13.073Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-08T03:26:13.073Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-11T02:43:46.913Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T02:43:46.913Z</lastModifiedDate_dt>
 </page>
