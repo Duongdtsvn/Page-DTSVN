@@ -4,6 +4,9 @@ import groovy.json.JsonOutput
 
 println "Processing Contact Us Request with values:"
 println params
+def result=[:]
+result.success = true
+return result
 
 def restTemplate = new RestTemplate()
 def url = "https://cms-authoring.vnsolutions-io.com/studio/api/2/submit-form"
