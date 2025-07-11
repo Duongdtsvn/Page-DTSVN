@@ -14,7 +14,7 @@
 	<menu_c2_o item-list="true"/>
 	</item>	<item>	<menu_s>Products-Service</menu_s>
 	<menu_c2_o item-list="true"/>
-	<link_s>/en/product</link_s>
+	<link_s>/en/products</link_s>
 	</item>	<item>	<menu_s>BA course</menu_s>
 	<menu_c2_o item-list="true"/>
 	<link_s>/en/course-of-ba</link_s>
@@ -36,6 +36,6 @@
 	</item></menu_o>
 	<createdDate>2025-07-07T08:53:50.134Z</createdDate>
 	<createdDate_dt>2025-07-07T08:53:50.134Z</createdDate_dt>
-	<lastModifiedDate>2025-07-11T02:36:14.056Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-11T02:36:14.056Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-11T03:42:05.314Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T03:42:05.314Z</lastModifiedDate_dt>
 </component>
