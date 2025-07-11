@@ -16,7 +16,7 @@
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
 	<info_main_t>VietinBank đã thành công ra mắt giải pháp Digital Banking toàn diện dành cho khách hàng doanh nghiệp vào cuối năm 2022, đánh dấu một bước phát triển quan trọng trong dịch vụ kinh doanh của Ngân hàng. Khi VietinBank...</info_main_t>
-	<img_main_s/>
+	<img_main_s>/static-assets/images/z6256817522471_4d8f6ff4e0e9c6933ef86cbd1a153292.jpg</img_main_s>
 	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
 	<value>Contact Form - VN</value>
 	<include>/site/components/contact-form/vn.xml</include>
@@ -96,7 +96,7 @@
 &lt;p&gt;With eFAST, corporate financial transactions have never been easier. Information groups are structured and directed based on user roles and needs. The navigation bar is clearly designed and prominently positioned, with additional widgets linked to relevant sections on the interface, enhancing usability and decision-making efficiency.&lt;/p&gt;</content_en_html>
 	<createdDate>2025-07-10T10:53:37.012Z</createdDate>
 	<createdDate_dt>2025-07-10T10:53:37.012Z</createdDate_dt>
-	<lastModifiedDate>2025-07-10T11:14:48.779Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-10T11:14:48.779Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-11T03:06:51.251Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T03:06:51.251Z</lastModifiedDate_dt>
 	<info_main_en_t>In late 2022, VietinBank successfully launched a comprehensive Digital Banking solution tailored for corporate clients, marking a significant milestone in the Bank’s business services.When VietinBank...</info_main_en_t>
 </page>
