@@ -11,16 +11,16 @@
 	<internal-name>thành viên</internal-name>
 	<title5_s>Thành viên liên kết triển khai</title5_s>
 	<member_o item-list="true">	<item>	<url_s>https://dtsvn.net/</url_s>
-	<image_member_s>/static-assets/enao1.png</image_member_s>
+	<image_member_s>/static-assets/images/beau.png</image_member_s>
 	</item>	<item>	<url_s>https://dtsvn.net/</url_s>
-	<image_member_s>/static-assets/z6780091458608_769564767f69d878abd60bdfb8c1ccfa.jpg</image_member_s>
+	<image_member_s>/static-assets/images/enao1.png</image_member_s>
 	</item>	<item>	<url_s/>
-	<image_member_s>/static-assets/beau.png</image_member_s>
+	<image_member_s>/static-assets/images/logo-mate.png</image_member_s>
 	</item>	<item>	<url_s/>
-	<image_member_s>/static-assets/logo-mate.png</image_member_s>
+	<image_member_s>/static-assets/images/z6780091458608_769564767f69d878abd60bdfb8c1ccfa.jpg</image_member_s>
 	</item></member_o>
 	<createdDate>2025-06-25T07:35:07.974Z</createdDate>
 	<createdDate_dt>2025-06-25T07:35:07.974Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T07:50:50.823Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T07:50:50.823Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-11T06:58:43.930Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T06:58:43.930Z</lastModifiedDate_dt>
 </component>
