@@ -36,8 +36,7 @@ if (selectedTab == 'all') {
     // Nếu chọn category cụ thể, tìm category tương ứng trong danh sách tabs
     def currentCategory = tabs.find { it.item_s_s == selectedTab }
     if (currentCategory) {
-        // Sử dụng trực tiếp giá trị item_s_s để tìm kiếm
-        // Vì item_s_s đã chứa giá trị thực tế cần tìm kiếm
+        // Dùng trực tiếp item_s_s làm key truy vấn
         def categoryKey = currentCategory.item_s_s
         if (categoryKey) {
             // Lấy tin tức theo category và tính tổng số
