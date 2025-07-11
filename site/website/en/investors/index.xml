@@ -7,10 +7,10 @@
 	<objectGroupId>7fb7</objectGroupId>
 	<objectId>7fb74e04-6bfd-4a51-d33e-113300a924bb</objectId>
 	<file-name>index.xml</file-name>
-	<folder-name>en</folder-name>
+	<folder-name>investors</folder-name>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
-	<internal-name>nhà đầu tư em</internal-name>
+	<internal-name>nhà đầu tư em (Copy 2)</internal-name>
 	<navLabel>nhà đầu tư em</navLabel>
 	<header_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
 	<value>Header-en</value>
@@ -38,6 +38,6 @@
 	</item></investors_o>
 	<createdDate>2025-07-08T09:40:29.666Z</createdDate>
 	<createdDate_dt>2025-07-08T09:40:29.666Z</createdDate_dt>
-	<lastModifiedDate>2025-07-08T09:40:29.666Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-08T09:40:29.666Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-11T02:44:42.084Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-11T02:44:42.084Z</lastModifiedDate_dt>
 </page>
