@@ -485,7 +485,7 @@
 					<iceId></iceId>
 					<title>Contact-VN</title>
 					<description></description>
-					<defaultValue></defaultValue>
+					<defaultValue>/site/components/contact-form/vn.xml</defaultValue>
 					<help></help>
 					<properties>
 						<property>
@@ -538,7 +538,7 @@
 					<iceId></iceId>
 					<title>header-VN</title>
 					<description></description>
-					<defaultValue></defaultValue>
+					<defaultValue>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</defaultValue>
 					<help></help>
 					<properties>
 						<property>
@@ -591,7 +591,7 @@
 					<iceId></iceId>
 					<title>footer-VN</title>
 					<description></description>
-					<defaultValue></defaultValue>
+					<defaultValue>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</defaultValue>
 					<help></help>
 					<properties>
 						<property>
@@ -762,7 +762,7 @@
 					<iceId></iceId>
 					<title>Contact-EN</title>
 					<description></description>
-					<defaultValue></defaultValue>
+					<defaultValue>/site/components/contact-form/en.xml</defaultValue>
 					<help></help>
 					<properties>
 						<property>
@@ -815,7 +815,7 @@
 					<iceId></iceId>
 					<title>header-EN</title>
 					<description></description>
-					<defaultValue></defaultValue>
+					<defaultValue>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</defaultValue>
 					<help></help>
 					<properties>
 						<property>
@@ -868,7 +868,7 @@
 					<iceId></iceId>
 					<title>footer-EN</title>
 					<description></description>
-					<defaultValue></defaultValue>
+					<defaultValue>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</defaultValue>
 					<help></help>
 					<properties>
 						<property>
