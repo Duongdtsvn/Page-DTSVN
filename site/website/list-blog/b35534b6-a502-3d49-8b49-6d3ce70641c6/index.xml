@@ -29,20 +29,24 @@
 	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
 	</item></header_VN_o>
 	<footer_VN_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
-	<value>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</value>
+	<value>footer</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
 	</item></footer_VN_o>
 	<contact_EN_o item-list="true">	<item>	<key>/site/components/contact-form/en.xml</key>
-	<value>/site/components/contact-form/en.xml</value>
+	<value>Contact form - EN</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/contact-form/en.xml</include>
 	</item></contact_EN_o>
 	<header_EN_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
-	<value>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</value>
+	<value>Header-en</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
 	</item></header_EN_o>
 	<footer_EN_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
-	<value>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</value>
+	<value>footer-en</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
 	</item></footer_EN_o>
 	<content_vi_html>&lt;p&gt;Tu&amp;acirc;n thủ y&amp;ecirc;u cầu bắt buộc (Mandatory) từ Ng&amp;acirc;n h&amp;agrave;ng Nh&amp;agrave; nước (NHNN) l&amp;agrave; nghĩa vụ kh&amp;ocirc;ng thể thiếu đối với c&amp;aacute;c tổ chức t&amp;iacute;n dụng, fintech, c&amp;ocirc;ng ty bảo hiểm hay trung gian thanh to&amp;aacute;n. Thế nhưng, biến nghĩa vụ ph&amp;aacute;p l&amp;yacute; n&amp;agrave;y th&amp;agrave;nh lợi thế cạnh tranh bền vững lại l&amp;agrave; c&amp;acirc;u chuyện ho&amp;agrave;n to&amp;agrave;n kh&amp;aacute;c &amp;ndash;&amp;nbsp;đ&amp;ograve;i hỏi sự chủ động, tư duy chiến lược v&amp;agrave; một lộ tr&amp;igrave;nh triển khai b&amp;agrave;i bản.&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;L&amp;agrave;m thế n&amp;agrave;o để kh&amp;ocirc;ng chỉ l&amp;agrave;m cho xong, m&amp;agrave; c&amp;ograve;n l&amp;agrave;m đ&amp;uacute;ng, đủ v&amp;agrave; kịp thời? Theo c&amp;aacute;c chuy&amp;ecirc;n gia của DTSVN &amp;ndash; đơn vị đồng h&amp;agrave;nh c&amp;ugrave;ng nhiều tổ chức lớn trong h&amp;agrave;nh tr&amp;igrave;nh chuyển đổi số v&amp;agrave; bảo mật th&amp;ocirc;ng tin &amp;ndash; dưới đ&amp;acirc;y l&amp;agrave; 5 bước thực tiễn m&amp;agrave; nhiều doanh nghiệp lớn đang &amp;aacute;p dụng để biến &amp;aacute;p lực th&amp;agrave;nh động lực đổi mới, biến nghĩa vụ th&amp;agrave;nh cơ hội vươn l&amp;ecirc;n dẫn đầu.&amp;nbsp;&lt;/p&gt;
@@ -122,6 +126,6 @@
 &lt;p&gt;👉 &lt;strong&gt;Contact us today&lt;/strong&gt; for consultation and to experience our solutions firsthand.&lt;/p&gt;</content_en_html>
 	<createdDate>2025-07-14T08:31:29.619Z</createdDate>
 	<createdDate_dt>2025-07-14T08:31:29.619Z</createdDate_dt>
-	<lastModifiedDate>2025-07-14T08:34:33.849Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-14T08:34:33.849Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-14T08:35:41.785Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-14T08:35:41.785Z</lastModifiedDate_dt>
 </page>
