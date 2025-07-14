@@ -507,7 +507,7 @@
 					<iceId></iceId>
 					<title>Contact-VN</title>
 					<description></description>
-					<defaultValue>/components/contact-form/vn.xml</defaultValue>
+					<defaultValue></defaultValue>
 					<help></help>
 					<properties>
 						<property>
