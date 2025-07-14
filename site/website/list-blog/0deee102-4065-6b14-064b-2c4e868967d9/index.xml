@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/item-new</content-type>
+	<display-template>/templates/web/item-news.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>0dee</objectGroupId>
+	<objectId>0deee102-4065-6b14-064b-2c4e868967d9</objectId>
+	<internal-name>dfsj sdfh sdjf hsdj</internal-name>
+	<navLabel>fhsgdfshd ghsdg fshdfg dsfhg </navLabel>
+	<title_vi_s>sadsaxzczca sdadsadsa</title_vi_s>
+	<title_en_s/>
+	<file-name>index.xml</file-name>
+	<folder-name>0deee102-4065-6b14-064b-2c4e868967d9</folder-name>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<categorys_o>	<item>	<key>Business-News</key>
+	<value_smv>Tin kinh doanh</value_smv>
+	</item></categorys_o>
+	<img_main_s/>
+	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
+	<value>Contact Form - VN</value>
+	<include>/site/components/contact-form/vn.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_VN_o>
+	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<disableFlattening>false</disableFlattening>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	</item></header_VN_o>
+	<footer_VN_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<disableFlattening>false</disableFlattening>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	</item></footer_VN_o>
+	<contact_EN_o item-list="true"/>
+	<header_EN_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<disableFlattening>false</disableFlattening>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	</item></header_EN_o>
+	<footer_EN_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<disableFlattening>false</disableFlattening>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	</item></footer_EN_o>
+	<content_vi_html>&lt;p&gt;asdsa dsadwe r wer ưettertrdfgd&lt;/p&gt;</content_vi_html>
+	<content_en_html/>
+	<createdDate>2025-07-14T08:49:56.386Z</createdDate>
+	<createdDate_dt>2025-07-14T08:49:56.386Z</createdDate_dt>
+	<lastModifiedDate>2025-07-14T08:49:56.386Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-14T08:49:56.386Z</lastModifiedDate_dt>
+</page>
