@@ -1,20 +1,5 @@
 version: "1.0"
 plugins:
-- id: "org.craftercms.plugin.yoast"
-  version:
-    major: 1
-    minor: 0
-    patch: 15
-  type: "site"
-  pluginUrl: "https://github.com/craftercms/yoast-plugin"
-  installationDate: "2025-07-14T08:03:30.876774056Z"
-  files:
-  - path: "config/studio/static-assets/plugins/org/craftercms/plugin/yoast/sidebar/yoast-plugin/index.modern.js"
-  - path: "templates/plugins/org/craftercms/plugin/yoast/body_bottom.ftl"
-  - path: "static-assets/plugins/org/craftercms/plugin/yoast/js/yoast-guest.js"
-  config:
-  - type: "preview-app"
-    elementXpath: "//plugin[@id='org.craftercms.yoastPlugin.components.yoast']"
 - id: "org.craftercms.plugin.bulkedit"
   version:
     major: 1
