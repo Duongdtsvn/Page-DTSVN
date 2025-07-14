@@ -24,29 +24,34 @@
 	<disableFlattening>false</disableFlattening>
 	</item></contact_VN_o>
 	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
-	<value>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</value>
+	<value>header</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
 	</item></header_VN_o>
 	<footer_VN_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
-	<value>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</value>
+	<value>footer</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
 	</item></footer_VN_o>
 	<contact_EN_o item-list="true">	<item>	<key>/site/components/contact-form/en.xml</key>
-	<value>/site/components/contact-form/en.xml</value>
+	<value>Contact form - EN</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/contact-form/en.xml</include>
 	</item></contact_EN_o>
 	<header_EN_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
-	<value>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</value>
+	<value>Header-en</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
 	</item></header_EN_o>
 	<footer_EN_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
-	<value>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</value>
+	<value>footer-en</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
 	</item></footer_EN_o>
 	<content_vi_html>&lt;p&gt;dsadsa dsadsa dadsad sadsa da&amp;nbsp;&lt;/p&gt;</content_vi_html>
 	<content_en_html/>
 	<createdDate>2025-07-14T08:46:46.456Z</createdDate>
 	<createdDate_dt>2025-07-14T08:46:46.456Z</createdDate_dt>
-	<lastModifiedDate>2025-07-14T08:46:46.456Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-14T08:46:46.456Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-14T08:47:30.773Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-14T08:47:30.773Z</lastModifiedDate_dt>
 </page>
