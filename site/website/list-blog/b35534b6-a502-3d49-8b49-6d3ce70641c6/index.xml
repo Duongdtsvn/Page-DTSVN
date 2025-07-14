@@ -19,12 +19,14 @@
 	</item></categorys_o>
 	<img_main_s/>
 	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
-	<value>/site/components/contact-form/vn.xml</value>
+	<value>Contact Form - VN</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/contact-form/vn.xml</include>
 	</item></contact_VN_o>
 	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
-	<value>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</value>
+	<value>header</value>
 	<disableFlattening>false</disableFlattening>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
 	</item></header_VN_o>
 	<footer_VN_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
 	<value>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</value>
@@ -120,6 +122,6 @@
 &lt;p&gt;👉 &lt;strong&gt;Contact us today&lt;/strong&gt; for consultation and to experience our solutions firsthand.&lt;/p&gt;</content_en_html>
 	<createdDate>2025-07-14T08:31:29.619Z</createdDate>
 	<createdDate_dt>2025-07-14T08:31:29.619Z</createdDate_dt>
-	<lastModifiedDate>2025-07-14T08:31:29.619Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-14T08:31:29.619Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-14T08:34:33.849Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-14T08:34:33.849Z</lastModifiedDate_dt>
 </page>
