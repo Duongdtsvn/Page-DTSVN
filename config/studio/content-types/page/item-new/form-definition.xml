@@ -1,5 +1,5 @@
 <form>
-	<title>Item - new</title>
+	<title>Item - news</title>
 	<description></description>
 	<objectType>page</objectType>
 	<content-type>/page/item-new</content-type>
@@ -522,7 +522,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>test_contact_a</value>
+							<value>contact</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -681,7 +681,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>contact_form</value>
+							<value>contact</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -872,150 +872,6 @@
 					</properties>
 				</datasource>
 				<datasource>
-					<type>components</type>
-					<id>header</id>
-					<title>header</title>
-					<interface>item</interface>
-					<properties>
-						<property>
-							<name>allowEmbedded</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>allowShared</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableBrowse</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableSearch</name>
-							<value>false</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>baseRepoPath</name>
-							<value>/site/components</value>
-								<type>string</type>
-						</property>
-						<property>
-							<name>baseBrowsePath</name>
-							<value>/site/components</value>
-								<type>string</type>
-						</property>
-						<property>
-							<name>contentTypes</name>
-							<value>/component/component-header</value>
-								<type>contentTypes</type>
-						</property>
-						<property>
-							<name>tags</name>
-							<value></value>
-								<type>string</type>
-						</property>
-					</properties>
-				</datasource>
-				<datasource>
-					<type>components</type>
-					<id>footer</id>
-					<title>footer</title>
-					<interface>item</interface>
-					<properties>
-						<property>
-							<name>allowEmbedded</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>allowShared</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableBrowse</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableSearch</name>
-							<value>false</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>baseRepoPath</name>
-							<value>/site/components</value>
-								<type>string</type>
-						</property>
-						<property>
-							<name>baseBrowsePath</name>
-							<value>/site/components</value>
-								<type>string</type>
-						</property>
-						<property>
-							<name>contentTypes</name>
-							<value>/component/component-footer</value>
-								<type>contentTypes</type>
-						</property>
-						<property>
-							<name>tags</name>
-							<value></value>
-								<type>string</type>
-						</property>
-					</properties>
-				</datasource>
-				<datasource>
-					<type>components</type>
-					<id>contact_form</id>
-					<title>contact-form</title>
-					<interface>item</interface>
-					<properties>
-						<property>
-							<name>allowEmbedded</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>allowShared</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableBrowse</name>
-							<value>true</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>enableSearch</name>
-							<value>false</value>
-								<type>boolean</type>
-						</property>
-						<property>
-							<name>baseRepoPath</name>
-							<value>/site/components</value>
-								<type>string</type>
-						</property>
-						<property>
-							<name>baseBrowsePath</name>
-							<value>/site/components</value>
-								<type>string</type>
-						</property>
-						<property>
-							<name>contentTypes</name>
-							<value>/component/component-contact-form</value>
-								<type>contentTypes</type>
-						</property>
-						<property>
-							<name>tags</name>
-							<value></value>
-								<type>string</type>
-						</property>
-					</properties>
-				</datasource>
-				<datasource>
 					<type>video-desktop-upload</type>
 					<id>uploadvideo</id>
 					<title>upload video</title>
@@ -1048,8 +904,84 @@
 				</datasource>
 				<datasource>
 					<type>shared-content</type>
-					<id>test_contact_a</id>
-					<title>test-contact-a</title>
+					<id>header</id>
+					<title>header</title>
+					<interface>item</interface>
+					<properties>
+						<property>
+							<name>enableCreateNew</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableBrowseExisting</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableSearchExisting</name>
+							<value>false</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>repoPath</name>
+							<value>/site/components/headers</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>browsePath</name>
+							<value>/site/components/headers</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>type</name>
+							<value></value>
+								<type>string</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>shared-content</type>
+					<id>footer</id>
+					<title>footer</title>
+					<interface>item</interface>
+					<properties>
+						<property>
+							<name>enableCreateNew</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableBrowseExisting</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableSearchExisting</name>
+							<value>false</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>repoPath</name>
+							<value>/site/components/footer</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>browsePath</name>
+							<value>/site/components/footer</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>type</name>
+							<value></value>
+								<type>string</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>shared-content</type>
+					<id>contact</id>
+					<title>Contact</title>
 					<interface>item</interface>
 					<properties>
 						<property>
