@@ -59,24 +59,34 @@
                     <#-- Giữ lại tab hiện tại -->
                     <input type="hidden" name="tab" value="${selectedTab!''}">
                     
-                    <div class="search-input-wrapper flex-grow-1 me-3">
+                    <#-- Dropdown chọn phạm vi tìm kiếm -->
+                    <div class="search-scope-dropdown me-2">
+                        <select name="scope" class="form-select" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd; min-width: 140px;">
+                            <option value="all" <#if (searchScope!'all') == 'all'>selected</#if>>Tất cả</option>
+                            <option value="title" <#if (searchScope!'') == 'title'>selected</#if>>Tiêu đề</option>
+                            <option value="content" <#if (searchScope!'') == 'content'>selected</#if>>Nội dung</option>
+                            <option value="title_content" <#if (searchScope!'') == 'title_content'>selected</#if>>Tiêu đề + Nội dung</option>
+                        </select>
+                    </div>
+                    
+                    <#-- Input tìm kiếm với icon -->
+                    <div class="search-input-wrapper flex-grow-1 position-relative me-3">
                         <input 
                             type="text" 
                             name="q" 
                             value="${searchQuery!''}" 
-                            placeholder="Tìm kiếm tin tức..." 
+                            placeholder="Nhập từ khóa tìm kiếm..." 
                             class="form-control"
-                            style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;"
+                            style="padding: 12px 16px; padding-right: 50px; border-radius: 8px; border: 1px solid #ddd;"
                         >
+                        <button type="submit" class="btn position-absolute" style="right: 5px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #666;">
+                            <i class="fa fa-search"></i>
+                        </button>
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="padding: 12px 24px; border-radius: 8px;">
-                        <i class="fa fa-search"></i> Tìm kiếm
-                    </button>
                     
                     <#-- Nút xóa tìm kiếm nếu có từ khóa -->
                     <#if searchQuery?? && searchQuery != ''>
-                        <a href="?tab=${selectedTab!''}" class="btn btn-outline-secondary ms-2" style="padding: 12px 16px; border-radius: 8px;">
+                        <a href="?tab=${selectedTab!''}" class="btn btn-outline-secondary" style="padding: 12px 16px; border-radius: 8px;">
                             <i class="fa fa-times"></i> Xóa
                         </a>
                     </#if>
