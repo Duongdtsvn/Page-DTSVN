@@ -170,7 +170,7 @@
                         <div class="text-center py-5">
                             <h3>Không tìm thấy tin tức nào</h3>
                             <p>
-                                Vui lòng thử lại với từ khóa tìm kiếm khác.
+                                Không tìm thấy tin tức nào phù hợp với từ khóa tìm kiếm của bạn.
                             </p>
                         </div>
                     </div>
