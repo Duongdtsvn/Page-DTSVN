@@ -68,6 +68,10 @@
                 </form>
             </div>
 
+            <!-- Search results title if searching -->
+            <#if searchQuery?? && searchQuery != ''>
+                <h2 class="search-result-title" style="margin-bottom: 24px; font-size: 2rem; font-weight: bold; color: #1a237e;">Search Results</h2>
+            </#if>
             <!-- Navigation danh mục -->
             <nav class="nav-cat">
                 <ul>
