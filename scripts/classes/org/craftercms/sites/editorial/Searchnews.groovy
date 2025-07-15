@@ -89,7 +89,6 @@ class Searchnews {
    * @return Danh sách tin tức phù hợp
    */
   def searchNews(userTerm, categories, start = DEFAULT_START, rows = DEFAULT_ROWS) {
-    // Tạo query bool để kết hợp nhiều điều kiện tìm kiếm
     def query = new BoolQuery.Builder()
 
     // ===== BƯỚC 1: LỌC THEO LOẠI NỘI DUNG =====
@@ -121,42 +120,31 @@ class Searchnews {
     // ===== BƯỚC 4: XỬ LÝ TỪ KHÓA TÌM KIẾM =====
     if (userTerm) {
       // Kiểm tra xem người dùng có yêu cầu tìm kiếm chính xác với dấu ngoặc kép không
-      // Ví dụ: "từ khóa chính xác" sẽ tìm kiếm cụm từ này
       def matcher = userTerm =~ /.*("([^"]+)").*/
       if (matcher.matches()) {
-        // Sử dụng MUST để bắt buộc phải có kết quả khớp với cụm từ trong ngoặc kép
+        // Nếu thực sự có dấu ngoặc kép thì mới ép exact phrase
         query.must(q -> q
           .multiMatch(m -> m
-            .query(matcher.group(2))  // Lấy phần text trong ngoặc kép
+            .query(matcher.group(2))
             .fields(ITEM_NEW_SEARCH_FIELDS)
             .fuzzyTranspositions(false)
             .autoGenerateSynonymsPhraseQuery(false)
           )
         )
-
-        // Xóa phần tìm kiếm chính xác để tiếp tục xử lý phần còn lại
         userTerm = StringUtils.remove(userTerm, matcher.group(1))
-      } else {
-        // Nếu không có ngoặc kép, yêu cầu ít nhất 1 từ khóa phải khớp
-        query.minimumShouldMatch("1")
       }
-
+      // Không else minimumShouldMatch("1") nữa, chỉ cần match tương đối
       // ===== BƯỚC 5: XỬ LÝ PHẦN TỪ KHÓA CÒN LẠI =====
-      if (userTerm) {
-        // Sử dụng SHOULD để tạo tìm kiếm tùy chọn
-        // Mỗi match thêm sẽ tăng điểm của document
+      if (userTerm && userTerm.trim() != "") {
         query
-          // Tìm kiếm phrase match với wildcard ở cuối (boost 1.5)
-          // Ví dụ: "tin tức" sẽ tìm "tin tức", "tin tức mới", "tin tức công nghệ"
           .should(q -> q
             .multiMatch(m -> m
               .query(userTerm)
               .fields(ITEM_NEW_SEARCH_FIELDS)
               .type(TextQueryType.PhrasePrefix)
-              .boost(1.5f)  // Tăng điểm cho kết quả này
+              .boost(1.5f)
             )
           )
-          // Tìm kiếm match trên các từ riêng lẻ
           .should(q -> q
             .multiMatch(m -> m
               .query(userTerm)
@@ -187,7 +175,7 @@ class Searchnews {
     // Thực hiện tìm kiếm và xử lý kết quả
     def result = searchClient.search(request, Map)
 
-    if (result) {
+    if (result && result.hits() && result.hits().hits()) {
       return processNewsSearchResults(result)  // Xử lý kết quả tìm kiếm với highlight
     } else {
       return []
