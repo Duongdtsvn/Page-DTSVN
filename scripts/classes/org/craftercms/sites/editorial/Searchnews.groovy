@@ -524,12 +524,12 @@ class Searchnews {
       )
     )
     // Lọc theo danh mục nếu có
-    if (categories) {
+    if (categories && categories.size() > 0) {
       query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
     }
     // Chỉ tìm kiếm theo tiêu đề đúng ngôn ngữ
     def searchField = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
-    if (userTerm) {
+    if (userTerm && userTerm.trim() != "") {
       query.should(q -> q
         .match(m -> m
           .field(searchField)
@@ -543,7 +543,6 @@ class Searchnews {
         )
       )
     }
-    // Tạo request
     SearchRequest request = SearchRequest.of(r -> r
       .query(query.build()._toQuery())
       .from(start)
@@ -555,10 +554,14 @@ class Searchnews {
         )
       )
     )
-    def result = searchClient.search(request, Map)
-    if (result && result.hits() && result.hits().hits()) {
-      return processNewsListingResults(result)
-    } else {
+    try {
+      def result = searchClient.search(request, Map)
+      if (result && result.hits() && result.hits().hits()) {
+        return processNewsListingResults(result)
+      } else {
+        return []
+      }
+    } catch (Exception e) {
       return []
     }
   }
