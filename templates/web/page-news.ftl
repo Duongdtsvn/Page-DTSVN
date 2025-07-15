@@ -109,6 +109,9 @@
             </nav>
 
             <#-- Grid hiển thị danh sách tin tức -->
+            <#if searchQuery?? && searchQuery != ''>
+                <h2 class="search-result-title" style="margin-bottom: 24px; font-size: 2rem; font-weight: bold; color: #1a237e;">Kết quả tìm kiếm</h2>
+            </#if>
             <div class="row">
                 <#-- Kiểm tra có tin tức để hiển thị không -->
                 <#if newsItems?? && (newsItems?size > 0)>
