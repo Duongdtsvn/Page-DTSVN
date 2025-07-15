@@ -66,6 +66,9 @@ if (searchQuery && searchQuery.trim() != '') {
     }
 }
 
+// Đảm bảo newsItems luôn là list, không null
+if (!newsItems) newsItems = []
+
 // Tính toán thông tin phân trang
 def totalPages = Math.ceil(totalItems / itemsPerPage).toInteger()
 def hasNextPage = page < totalPages
