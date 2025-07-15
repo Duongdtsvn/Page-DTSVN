@@ -11,8 +11,6 @@ def page = params.page ? params.page.toInteger() : 1
 def selectedTab = params.tab ?: 'all'
 // Lấy từ khóa tìm kiếm từ URL
 def searchQuery = params.q ?: ''
-// Lấy phạm vi tìm kiếm từ URL, mặc định là 'all'
-def searchScope = params.scope ?: 'all'
 // Số lượng tin tức hiển thị trên mỗi trang
 def itemsPerPage = 12
 
@@ -35,7 +33,6 @@ def totalItems = 0
 if (searchQuery && searchQuery.trim() != '') {
     // Nếu có từ khóa tìm kiếm
     def categories = []
-    
     if (selectedTab != 'all') {
         // Nếu chọn category cụ thể, tìm category tương ứng trong danh sách tabs
         def currentCategory = tabs.find { it.item_s_s == selectedTab }
@@ -43,12 +40,10 @@ if (searchQuery && searchQuery.trim() != '') {
             categories = [currentCategory.item_s_s]
         }
     }
-    
-    // Thực hiện tìm kiếm với từ khóa, category và scope
-    newsItems = searchNews.searchNewsWithScope(searchQuery, categories, searchScope, start, itemsPerPage)
-    
+    // Thực hiện tìm kiếm với từ khóa và category (nếu có)
+    newsItems = searchNews.searchNews(searchQuery, categories, start, itemsPerPage)
     // Tính tổng số kết quả tìm kiếm
-    def totalSearchResults = searchNews.searchNewsWithScope(searchQuery, categories, searchScope, 0, 1000)
+    def totalSearchResults = searchNews.searchNews(searchQuery, categories, 0, 1000)
     totalItems = totalSearchResults.size()
 } else {
     // Nếu không có từ khóa tìm kiếm, sử dụng logic cũ
@@ -91,7 +86,6 @@ for (int i = startPage; i <= endPage; i++) {
 templateModel.tabs = tabs                    // Danh sách các tab category
 templateModel.selectedTab = selectedTab      // Tab đang được chọn
 templateModel.searchQuery = searchQuery      // Từ khóa tìm kiếm
-templateModel.searchScope = searchScope      // Phạm vi tìm kiếm
 templateModel.newsItems = newsItems          // Danh sách tin tức cho trang hiện tại
 templateModel.totalItems = totalItems        // Tổng số tin tức
 templateModel.currentPage = page             // Trang hiện tại
