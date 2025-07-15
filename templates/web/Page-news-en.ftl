@@ -131,11 +131,7 @@
                         <div class="text-center py-5">
                             <h3>No news found</h3>
                             <p>
-                                <#if searchQuery?? && searchQuery != ''>
-                                    No news found matching "${searchQuery}".
-                                <#else>
-                                    Please try another tab.
-                                </#if>
+                                Please try another search keyword.
                             </p>
                         </div>
                     </div>
