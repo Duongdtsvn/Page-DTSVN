@@ -40,9 +40,15 @@ if (searchQuery && searchQuery.trim() != '') {
             categories = [currentCategory.item_s_s]
         }
     }
-    // Chỉ tìm theo tiêu đề tiếng Việt
-    newsItems = searchNews.searchNewsByTitle(searchQuery, categories, 'vi', start, itemsPerPage)
-    totalItems = newsItems.size()
+    try {
+        // Chỉ tìm theo tiêu đề tiếng Việt
+        newsItems = searchNews.searchNewsByTitle(searchQuery, categories, 'vi', start, itemsPerPage)
+        if (!newsItems) newsItems = []
+        totalItems = newsItems.size()
+    } catch (Exception e) {
+        newsItems = []
+        totalItems = 0;
+    }
 } else {
     // Nếu không có từ khóa tìm kiếm, sử dụng logic cũ
     if (selectedTab == 'all') {
