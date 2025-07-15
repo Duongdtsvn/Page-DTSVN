@@ -40,11 +40,9 @@ if (searchQuery && searchQuery.trim() != '') {
             categories = [currentCategory.item_s_s]
         }
     }
-    // Thực hiện tìm kiếm với từ khóa và category (nếu có)
-    newsItems = searchNews.searchNews(searchQuery, categories, start, itemsPerPage)
-    // Tính tổng số kết quả tìm kiếm
-    def totalSearchResults = searchNews.searchNews(searchQuery, categories, 0, 1000)
-    totalItems = totalSearchResults.size()
+    // Chỉ tìm theo tiêu đề tiếng Anh
+    newsItems = searchNews.searchNewsByTitle(searchQuery, categories, 'en', start, itemsPerPage)
+    totalItems = newsItems.size()
 } else {
     // Nếu không có từ khóa tìm kiếm, sử dụng logic cũ
     if (selectedTab == 'all') {
