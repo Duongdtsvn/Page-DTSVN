@@ -93,5 +93,5 @@
   </div>
   <!-- End Header -->
 </body>
-<script src="/static-assets/js/header.js?site=${siteContext.siteName}"></script>
+  <!-- <script src="/static-assets/js/header.js?site=${siteContext.siteName}"></script> -->
 </html>
