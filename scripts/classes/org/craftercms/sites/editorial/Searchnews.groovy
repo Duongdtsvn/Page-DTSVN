@@ -534,12 +534,15 @@ class Searchnews {
         .match(m -> m
           .field(searchField)
           .query(v -> v.stringValue(userTerm))
+          .operator(org.opensearch.client.opensearch._types.query_dsl.Operator.And)
+          .caseInsensitive(true)
         )
       )
       query.should(q -> q
         .matchPhrasePrefix(m -> m
           .field(searchField)
           .query(userTerm)
+          .caseInsensitive(true)
         )
       )
     }
