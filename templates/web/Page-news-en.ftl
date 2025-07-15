@@ -135,7 +135,7 @@
                         <div class="text-center py-5">
                             <h3>No news found</h3>
                             <p>
-                                Please try another search keyword.
+                                No news found matching your search keyword.
                             </p>
                         </div>
                     </div>
