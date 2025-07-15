@@ -9,6 +9,8 @@ def searchNews = new Searchnews(searchClient, urlTransformationService)
 def page = params.page ? params.page.toInteger() : 1
 // Lấy tab category đang được chọn từ URL, mặc định là 'all' nếu không có
 def selectedTab = params.tab ?: 'all'
+// Lấy từ khóa tìm kiếm từ URL
+def searchQuery = params.q ?: ''
 // Số lượng tin tức hiển thị trên mỗi trang
 def itemsPerPage = 12
 
@@ -29,21 +31,42 @@ if (contentModel.list_category_o && contentModel.list_category_o.item) {
 def newsItems = []
 def totalItems = 0
 
-// Xử lý logic lấy tin tức dựa trên category được chọn
-if (selectedTab == 'all') {
-    // Nếu chọn "Tất cả", lấy tất cả tin tức
-    newsItems = searchNews.getAllNews(start, itemsPerPage)
-    totalItems = searchNews.getAllNews(0, 1000).size()
+// Xử lý logic lấy tin tức dựa trên category được chọn và từ khóa tìm kiếm
+if (searchQuery && searchQuery.trim() != '') {
+    // Nếu có từ khóa tìm kiếm
+    def categories = []
+    
+    if (selectedTab != 'all') {
+        // Nếu chọn category cụ thể, tìm category tương ứng trong danh sách tabs
+        def currentCategory = tabs.find { it.item_s_s == selectedTab }
+        if (currentCategory) {
+            categories = [currentCategory.item_s_s]
+        }
+    }
+    
+    // Thực hiện tìm kiếm với từ khóa và category (nếu có)
+    newsItems = searchNews.searchNews(searchQuery, categories, start, itemsPerPage)
+    
+    // Tính tổng số kết quả tìm kiếm
+    def totalSearchResults = searchNews.searchNews(searchQuery, categories, 0, 1000)
+    totalItems = totalSearchResults.size()
 } else {
-    // Nếu chọn category cụ thể, tìm category tương ứng trong danh sách tabs
-    def currentCategory = tabs.find { it.item_s_s == selectedTab }
-    if (currentCategory) {
-        // Dùng trực tiếp item_s_s làm key truy vấn
-        def categoryKey = currentCategory.item_s_s
-        if (categoryKey) {
-            // Lấy tin tức theo category và tính tổng số
-            newsItems = searchNews.getNewsByCategoryKey(categoryKey, start, itemsPerPage)
-            totalItems = searchNews.getNewsByCategoryKey(categoryKey, 0, 1000).size()
+    // Nếu không có từ khóa tìm kiếm, sử dụng logic cũ
+    if (selectedTab == 'all') {
+        // Nếu chọn "Tất cả", lấy tất cả tin tức
+        newsItems = searchNews.getAllNews(start, itemsPerPage)
+        totalItems = searchNews.getAllNews(0, 1000).size()
+    } else {
+        // Nếu chọn category cụ thể, tìm category tương ứng trong danh sách tabs
+        def currentCategory = tabs.find { it.item_s_s == selectedTab }
+        if (currentCategory) {
+            // Dùng trực tiếp item_s_s làm key truy vấn
+            def categoryKey = currentCategory.item_s_s
+            if (categoryKey) {
+                // Lấy tin tức theo category và tính tổng số
+                newsItems = searchNews.getNewsByCategoryKey(categoryKey, start, itemsPerPage)
+                totalItems = searchNews.getNewsByCategoryKey(categoryKey, 0, 1000).size()
+            }
         }
     }
 }
@@ -67,6 +90,7 @@ for (int i = startPage; i <= endPage; i++) {
 // Đưa tất cả dữ liệu đã xử lý vào templateModel để template có thể sử dụng
 templateModel.tabs = tabs                    // Danh sách các tab category
 templateModel.selectedTab = selectedTab      // Tab đang được chọn
+templateModel.searchQuery = searchQuery      // Từ khóa tìm kiếm
 templateModel.newsItems = newsItems          // Danh sách tin tức cho trang hiện tại
 templateModel.totalItems = totalItems        // Tổng số tin tức
 templateModel.currentPage = page             // Trang hiện tại

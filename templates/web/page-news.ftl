@@ -53,19 +53,49 @@
     <section class="section sec-blogPage">
         <div class="container-custom">
 
+            <#-- Form tìm kiếm tin tức -->
+            <div class="search-form mb-4">
+                <form method="GET" action="" class="d-flex align-items-center">
+                    <#-- Giữ lại tab hiện tại -->
+                    <input type="hidden" name="tab" value="${selectedTab!''}">
+                    
+                    <div class="search-input-wrapper flex-grow-1 me-3">
+                        <input 
+                            type="text" 
+                            name="q" 
+                            value="${searchQuery!''}" 
+                            placeholder="Tìm kiếm tin tức..." 
+                            class="form-control"
+                            style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;"
+                        >
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="padding: 12px 24px; border-radius: 8px;">
+                        <i class="fa fa-search"></i> Tìm kiếm
+                    </button>
+                    
+                    <#-- Nút xóa tìm kiếm nếu có từ khóa -->
+                    <#if searchQuery?? && searchQuery != ''>
+                        <a href="?tab=${selectedTab!''}" class="btn btn-outline-secondary ms-2" style="padding: 12px 16px; border-radius: 8px;">
+                            <i class="fa fa-times"></i> Xóa
+                        </a>
+                    </#if>
+                </form>
+            </div>
+
             <#-- Navigation menu cho các danh mục tin tức -->
             <nav class="nav-cat">
                 <ul>
                     <#-- Tab "Tất cả tin bài" - luôn hiển thị -->
                     <li>
-                        <a href="?tab=all" class="<#if (selectedTab!'') == 'all'>active</#if>">Tất cả tin bài</a>
+                        <a href="?tab=all<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>" class="<#if (selectedTab!'') == 'all'>active</#if>">Tất cả tin bài</a>
                     </li>
                     
                     <#-- Hiển thị các danh mục tin tức từ content model -->
                     <#if contentModel.list_category_o?? && contentModel.list_category_o?has_content>
                         <#list contentModel.list_category_o.item as category>
                             <li>
-                                <a href="?tab=${category.item_s_s!''}" class="<#if (selectedTab!'') == (category.item_s_s!'')>active</#if>">${category.title_category_s!''}</a>
+                                <a href="?tab=${category.item_s_s!''}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>" class="<#if (selectedTab!'') == (category.item_s_s!'')>active</#if>">${category.title_category_s!''}</a>
                             </li>
                         </#list>
                     </#if>
@@ -131,7 +161,13 @@
                     <div class="col-12">
                         <div class="text-center py-5">
                             <h3>Không tìm thấy tin tức nào</h3>
-                            <p>Vui lòng thử lại với tab khác.</p>
+                            <p>
+                                <#if searchQuery?? && searchQuery != ''>
+                                    Không tìm thấy tin tức nào phù hợp với từ khóa "${searchQuery}".
+                                <#else>
+                                    Vui lòng thử lại với tab khác.
+                                </#if>
+                            </p>
                         </div>
                     </div>
                 </#if>
@@ -145,7 +181,7 @@
                         <div class="nav-links">
                             <#-- Nút Previous -->
                             <#if hasPrevPage?? && hasPrevPage>
-                                <a class="prev page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) - 1}">← Previous</a>
+                                <a class="prev page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) - 1}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">← Previous</a>
                             </#if>
                             
                             <#-- Hiển thị các số trang -->
@@ -153,10 +189,10 @@
                                 <#-- Hiển thị dấu ... và số 1 nếu cần -->
                                 <#if pageNumbers?first?number gt 1>
                                     <#if pageNumbers?first?number gt 2>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1">1</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">1</a>
                                         <span class="page-numbers dots">…</span>
                                     <#else>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1">1</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">1</a>
                                     </#if>
                                 </#if>
                                 
@@ -165,7 +201,7 @@
                                     <#if (pageNum?number) == (currentPage!1)?number>
                                         <span aria-current="page" class="page-numbers current">${pageNum}</span>
                                     <#else>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${pageNum}">${pageNum}</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${pageNum}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">${pageNum}</a>
                                     </#if>
                                 </#list>
                                 
@@ -173,14 +209,14 @@
                                 <#if pageNumbers?last?number lt (totalPages!1)?number>
                                     <#if pageNumbers?last?number lt (totalPages!1)?number - 1>
                                         <span class="page-numbers dots">…</span>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}">${totalPages!1}</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">${totalPages!1}</a>
                                     <#else>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}">${totalPages!1}</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">${totalPages!1}</a>
                                     </#if>
                                 </#if>
                             </#if>
                             <#if hasNextPage?? && hasNextPage>
-                                <a class="next page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) + 1}">Next →</a>
+                                <a class="next page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) + 1}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">Next →</a>
                             </#if>
                         </div>
                     </nav>
@@ -192,7 +228,12 @@
                 <div class="pagination-info text-center mt-3">
                     <#assign fromItem = (((currentPage!1) - 1) * (itemsPerPage!12)) + 1 />
                     <#assign toItem = ((currentPage!1) * (itemsPerPage!12) < (totalItems!0))?then((currentPage!1) * (itemsPerPage!12), (totalItems!0)) />
-                    <p>Hiển thị ${fromItem} - ${toItem} trong tổng số ${totalItems!0} tin tức</p>
+                    <p>
+                        Hiển thị ${fromItem} - ${toItem} trong tổng số ${totalItems!0} tin tức
+                        <#if searchQuery?? && searchQuery != ''>
+                            cho từ khóa "${searchQuery}"
+                        </#if>
+                    </p>
                 </div>
             </#if>
         </div>
