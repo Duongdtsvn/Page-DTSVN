@@ -499,6 +499,71 @@ class Searchnews {
   }
 
   /**
+   * Tìm kiếm tin tức chỉ theo tiêu đề (title_vi_s hoặc title_en_s tùy ngôn ngữ)
+   * @param userTerm - Từ khóa tìm kiếm
+   * @param categories - Danh mục cần lọc
+   * @param lang - 'vi' hoặc 'en'
+   * @param start - Vị trí bắt đầu
+   * @param rows - Số lượng kết quả
+   * @return Danh sách tin tức phù hợp
+   */
+  def searchNewsByTitle(userTerm, categories, lang = 'vi', start = DEFAULT_START, rows = DEFAULT_ROWS) {
+    def query = new BoolQuery.Builder()
+    // Lọc loại nội dung
+    query.filter(q -> q
+      .match(m -> m
+        .field("content-type")
+        .query(v -> v.stringValue(ITEM_NEW_CONTENT_TYPE))
+      )
+    )
+    // Lọc theo đường dẫn
+    query.filter(q -> q
+      .wildcard(w -> w
+        .field("localId")
+        .value("*" + LIST_BLOG_PATH + "*")
+      )
+    )
+    // Lọc theo danh mục nếu có
+    if (categories) {
+      query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
+    }
+    // Chỉ tìm kiếm theo tiêu đề đúng ngôn ngữ
+    def searchField = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
+    if (userTerm) {
+      query.should(q -> q
+        .match(m -> m
+          .field(searchField)
+          .query(v -> v.stringValue(userTerm))
+        )
+      )
+      query.should(q -> q
+        .matchPhrasePrefix(m -> m
+          .field(searchField)
+          .query(userTerm)
+        )
+      )
+    }
+    // Tạo request
+    SearchRequest request = SearchRequest.of(r -> r
+      .query(query.build()._toQuery())
+      .from(start)
+      .size(rows)
+      .sort(s -> s
+        .field(f -> f
+          .field("createdDate_dt")
+          .order(SortOrder.Desc)
+        )
+      )
+    )
+    def result = searchClient.search(request, Map)
+    if (result && result.hits() && result.hits().hits()) {
+      return processNewsListingResults(result)
+    } else {
+      return []
+    }
+  }
+
+  /**
    * Xử lý kết quả tìm kiếm tin tức (có highlight từ khóa)
    * @param result - Kết quả tìm kiếm từ Elasticsearch
    * @return Danh sách tin tức đã được xử lý
