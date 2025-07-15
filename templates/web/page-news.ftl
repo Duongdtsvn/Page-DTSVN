@@ -163,16 +163,11 @@
                         </div>
                     </#list>
                 <#else>
-                    <#-- Hiển thị thông báo khi không có tin tức -->
                     <div class="col-12">
                         <div class="text-center py-5">
                             <h3>Không tìm thấy tin tức nào</h3>
                             <p>
-                                <#if searchQuery?? && searchQuery != ''>
-                                    Không tìm thấy tin tức nào phù hợp với từ khóa "${searchQuery}".
-                                <#else>
-                                    Vui lòng thử lại với tab khác.
-                                </#if>
+                                Vui lòng thử lại với từ khóa tìm kiếm khác.
                             </p>
                         </div>
                     </div>
