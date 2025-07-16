@@ -41,8 +41,8 @@ if (searchQuery && searchQuery.trim() != '') {
         }
     }
     try {
-        // Chỉ tìm theo tiêu đề tiếng Anh
-        newsItems = searchNews.searchNewsByTitle(searchQuery, categories, 'en', start, itemsPerPage)
+        // Sử dụng searchNews với tìm kiếm tương đối, chỉ tìm trong title_en_s
+        newsItems = searchNews.searchNews(searchQuery, categories, start, itemsPerPage, 'title_en_s')
         if (!newsItems) newsItems = []
         totalItems = newsItems.size()
     } catch (Exception e) {

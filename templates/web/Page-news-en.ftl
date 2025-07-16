@@ -70,7 +70,10 @@
 
             <!-- Search results title if searching -->
             <#if searchQuery?? && searchQuery != ''>
-                <h2 class="search-result-title" style="margin-bottom: 24px; font-size: 2rem; font-weight: bold; color: #1a237e;">Search Results</h2>
+                <h2 class="search-result-title" style="margin-bottom: 24px; font-size: 2rem; font-weight: bold; color: #1a237e;">Relative Search Results</h2>
+                <p class="search-info" style="margin-bottom: 16px; color: #666; font-style: italic;">
+                    Showing results related to "${searchQuery}" (including similar keywords and spelling corrections)
+                </p>
             </#if>
             <!-- Navigation danh mục -->
             <nav class="nav-cat">
@@ -135,7 +138,8 @@
                         <div class="text-center py-5">
                             <h3>No news found</h3>
                             <p>
-                                No news found matching your search keyword.
+                                No news found related to "${searchQuery}". 
+                                <br>You can try with different keywords or check your spelling.
                             </p>
                         </div>
                     </div>
@@ -192,7 +196,7 @@
                     <p>
                         Showing ${fromItem} - ${toItem} of ${totalItems!0} news articles
                         <#if searchQuery?? && searchQuery != ''>
-                            for "${searchQuery}"
+                            related to "${searchQuery}"
                         </#if>
                     </p>
                 </div>
