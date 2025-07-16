@@ -42,7 +42,7 @@
                             </#list>
                         </select>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-8">
                         <input type="text" name="title" value="${searchParams.title!''}" placeholder="Search by title..." class="form-control" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;">
                     </div>
                     <div class="col-md-2">
