@@ -617,6 +617,174 @@ class Searchnews {
   }
 
   /**
+   * Tìm kiếm nâng cao cho bài viết (news) với hỗ trợ fuzzy, case-insensitive, lọc theo category, title, content, v.v.
+   * @param searchParams Map chứa các tham số tìm kiếm (title, content, category)
+   * @param start Vị trí bắt đầu
+   * @param rows Số lượng bản ghi
+   * @param sort Tham số sắp xếp (newest, oldest, a_to_z, z_to_a)
+   * @param lang Ngôn ngữ ('vi' hoặc 'en')
+   * @return Danh sách kết quả tìm kiếm
+   */
+  def searchNewsAdvanced(Map searchParams = [:], int start = DEFAULT_START, int rows = DEFAULT_ROWS, String sort = "newest", String lang = "vi") {
+    try {
+      def queryBuilder = new BoolQuery.Builder()
+      // Filter by content-type
+      queryBuilder.filter(q -> q
+        .match(m -> m
+          .field("content-type")
+          .query(v -> v.stringValue(ITEM_NEW_CONTENT_TYPE))
+        )
+      )
+      // Filter by path
+      queryBuilder.filter(q -> q
+        .wildcard(w -> w
+          .field("localId")
+          .value("*" + LIST_BLOG_PATH + "*")
+        )
+      )
+      def searchFieldsBool = new BoolQuery.Builder()
+      def hasSearchParams = false
+      // Tìm kiếm theo tiêu đề
+      if (searchParams.title) {
+        hasSearchParams = true
+        def field = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
+        searchFieldsBool.should(s -> s
+          .regexp(r -> r
+            .field(field)
+            .value(".*${searchParams.title}.*")
+            .caseInsensitive(true)
+          )
+        )
+      }
+      // Tìm kiếm theo nội dung
+      if (searchParams.content) {
+        hasSearchParams = true
+        def field = (lang == 'en') ? 'content_en_html' : 'content_vi_html'
+        searchFieldsBool.should(s -> s
+          .regexp(r -> r
+            .field(field)
+            .value(".*${searchParams.content}.*")
+            .caseInsensitive(true)
+          )
+        )
+      }
+      // Tìm kiếm theo danh mục (category)
+      if (searchParams.category) {
+        hasSearchParams = true
+        searchFieldsBool.should(s -> s
+          .match(m -> m
+            .field("categorys_o.item.key")
+            .query(v -> v.stringValue(searchParams.category))
+            .analyzer(MULTIPLE_VALUES_SEARCH_ANALYZER)
+          )
+        )
+      }
+      if (hasSearchParams) {
+        queryBuilder.must(b -> b.bool(searchFieldsBool.build()))
+      }
+      // Sắp xếp
+      def sortField
+      def sortOrder
+      switch (sort) {
+        case "oldest":
+          sortField = "createdDate_dt"; sortOrder = SortOrder.Asc; break
+        case "a_to_z":
+          sortField = (lang == 'en') ? "title_en_s.keyword" : "title_vi_s.keyword"; sortOrder = SortOrder.Asc; break
+        case "z_to_a":
+          sortField = (lang == 'en') ? "title_en_s.keyword" : "title_vi_s.keyword"; sortOrder = SortOrder.Desc; break
+        case "newest":
+        default:
+          sortField = "createdDate_dt"; sortOrder = SortOrder.Desc; break
+      }
+      def searchRequest = SearchRequest.of(r -> r
+        .query(queryBuilder.build()._toQuery())
+        .from(start)
+        .size(rows)
+        .sort(s -> s.field(f -> f.field(sortField).order(sortOrder)))
+      )
+      def result = searchClient.search(searchRequest, Map)
+      if (result) {
+        return processNewsListingResults(result)
+      } else {
+        return []
+      }
+    } catch (Exception e) {
+      return []
+    }
+  }
+
+  /**
+   * Đếm tổng số bài viết phù hợp với điều kiện tìm kiếm
+   * @param searchParams Map chứa các tham số tìm kiếm
+   * @param lang Ngôn ngữ ('vi' hoặc 'en')
+   * @return Số lượng bài viết phù hợp
+   */
+  def getTotalNews(Map searchParams = [:], String lang = "vi") {
+    try {
+      def queryBuilder = new BoolQuery.Builder()
+      // Filter by content-type
+      queryBuilder.filter(q -> q
+        .match(m -> m
+          .field("content-type")
+          .query(v -> v.stringValue(ITEM_NEW_CONTENT_TYPE))
+        )
+      )
+      // Filter by path
+      queryBuilder.filter(q -> q
+        .wildcard(w -> w
+          .field("localId")
+          .value("*" + LIST_BLOG_PATH + "*")
+        )
+      )
+      def searchFieldsBool = new BoolQuery.Builder()
+      def hasSearchParams = false
+      if (searchParams.title) {
+        hasSearchParams = true
+        def field = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
+        searchFieldsBool.should(s -> s
+          .regexp(r -> r
+            .field(field)
+            .value(".*${searchParams.title}.*")
+            .caseInsensitive(true)
+          )
+        )
+      }
+      if (searchParams.content) {
+        hasSearchParams = true
+        def field = (lang == 'en') ? 'content_en_html' : 'content_vi_html'
+        searchFieldsBool.should(s -> s
+          .regexp(r -> r
+            .field(field)
+            .value(".*${searchParams.content}.*")
+            .caseInsensitive(true)
+          )
+        )
+      }
+      if (searchParams.category) {
+        hasSearchParams = true
+        searchFieldsBool.should(s -> s
+          .match(m -> m
+            .field("categorys_o.item.key")
+            .query(v -> v.stringValue(searchParams.category))
+            .analyzer(MULTIPLE_VALUES_SEARCH_ANALYZER)
+          )
+        )
+      }
+      if (hasSearchParams) {
+        queryBuilder.must(b -> b.bool(searchFieldsBool.build()))
+      }
+      def searchRequest = SearchRequest.of(r -> r
+        .query(queryBuilder.build()._toQuery())
+        .size(0)
+      )
+      def result = searchClient.search(searchRequest, Map)
+      return result.hits().total().value()
+    } catch (Exception e) {
+      return 0
+    }
+  }
+
+  /**
    * Xử lý kết quả tìm kiếm tin tức (có highlight từ khóa)
    * @param result - Kết quả tìm kiếm từ Elasticsearch
    * @return Danh sách tin tức đã được xử lý
