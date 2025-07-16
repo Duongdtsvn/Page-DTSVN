@@ -47,6 +47,12 @@
                     <div class="col-md-8">
                         <input type="text" name="title" value="${searchParams.title!''}" placeholder="Tìm theo tiêu đề..." class="form-control" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;">
                     </div>
+                    <div class="col-md-2 d-flex">
+                        <button type="submit" class="btn btn-primary flex-grow-1">Tìm kiếm</button>
+                        <#if searchParams.title?? || searchParams.content?? || (selectedTab != 'all')>
+                            <a href="?tab=all" class="btn btn-outline-secondary ms-2">Xóa</a>
+                        </#if>
+                    </div>
                     <div class="col-md-2">
                         <select name="sort" class="form-select">
                             <option value="newest" <#if sort == "newest">selected</#if>>Mới nhất đến cũ nhất</option>
@@ -54,12 +60,6 @@
                             <option value="a_to_z" <#if sort == "a_to_z">selected</#if>>A đến Z</option>
                             <option value="z_to_a" <#if sort == "z_to_a">selected</#if>>Z đến A</option>
                         </select>
-                    </div>
-                    <div class="col-md-2 d-flex">
-                        <button type="submit" class="btn btn-primary flex-grow-1">Tìm kiếm</button>
-                        <#if searchParams.title?? || searchParams.content?? || (selectedTab != 'all')>
-                            <a href="?tab=all" class="btn btn-outline-secondary ms-2">Xóa</a>
-                        </#if>
                     </div>
                 </form>
             </div>
