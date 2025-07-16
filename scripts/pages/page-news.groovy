@@ -68,3 +68,21 @@ for (int i = startPage; i <= endPage; i++) {
 templateModel.pageNumbers = pageNumbers
 templateModel.hasNextPage = page < totalPages
 templateModel.hasPrevPage = page > 1
+
+// Nếu đang tìm kiếm và có tab cụ thể, lọc lại kết quả để chỉ hiển thị bài viết thuộc tab đó
+if ((searchParams.title || searchParams.content) && selectedTab != 'all') {
+    // Lọc lại newsItems để chỉ lấy bài viết thuộc category đang chọn
+    newsItems = newsItems.findAll { item ->
+        item.categories && item.categories.contains(selectedTab)
+    }
+    // Nếu không có bài viết nào thuộc tab, trả về rỗng
+    if (!newsItems || newsItems.size() == 0) {
+        newsItems = []
+        totalItems = 0
+        totalPages = 1
+    } else {
+        totalItems = newsItems.size()
+        totalPages = Math.ceil(totalItems / itemsPerPage) as Integer
+        if (totalPages < 1) totalPages = 1
+    }
+}
