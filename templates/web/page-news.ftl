@@ -44,7 +44,7 @@
                             </#list>
                         </select>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-8">
                         <input type="text" name="title" value="${searchParams.title!''}" placeholder="Tìm theo tiêu đề..." class="form-control" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;">
                     </div>
                     <div class="col-md-2">
