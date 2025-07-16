@@ -81,18 +81,18 @@ class Searchnews {
   }
 
   /**
-   * Tìm kiếm tin tức với từ khóa và danh mục
+   * Tìm kiếm tin tức với từ khóa và danh mục, cho phép chỉ định trường tìm kiếm cụ thể
    * @param userTerm - Từ khóa tìm kiếm của người dùng
    * @param categories - Danh mục cần lọc
    * @param start - Vị trí bắt đầu (mặc định 0)
    * @param rows - Số lượng kết quả (mặc định 50)
+   * @param searchField - (Tùy chọn) Chỉ tìm kiếm trên trường này (vd: 'title_vi_s' hoặc 'title_en_s')
    * @return Danh sách tin tức phù hợp
    */
-  def searchNews(userTerm, categories, start = DEFAULT_START, rows = DEFAULT_ROWS) {
+  def searchNews(userTerm, categories, start = DEFAULT_START, rows = DEFAULT_ROWS, searchField = null) {
     def query = new BoolQuery.Builder()
 
     // ===== BƯỚC 1: LỌC THEO LOẠI NỘI DUNG =====
-    // Chỉ lấy các document có content-type là tin tức
     query.filter(q -> q
       .match(m -> m
         .field("content-type")
@@ -103,7 +103,6 @@ class Searchnews {
     )
 
     // ===== BƯỚC 2: LỌC THEO ĐƯỜNG DẪN =====
-    // Chỉ lấy tin tức từ thư mục /list-blog
     query.filter(q -> q
       .wildcard(w -> w
         .field("localId")
@@ -112,80 +111,58 @@ class Searchnews {
     )
 
     // ===== BƯỚC 3: LỌC THEO DANH MỤC (NẾU CÓ) =====
-    // Nếu người dùng chọn danh mục cụ thể, thêm filter theo danh mục
     if (categories) {
       query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
     }
 
-          // ===== BƯỚC 4: XỬ LÝ TỪ KHÓA TÌM KIẾM =====
-      if (userTerm) {
-        // Kiểm tra xem người dùng có yêu cầu tìm kiếm chính xác với dấu ngoặc kép không
-        def matcher = userTerm =~ /.*("([^"]+)").*/
-        if (matcher.matches()) {
-          // Nếu thực sự có dấu ngoặc kép thì mới ép exact phrase
-          query.must(q -> q
-            .multiMatch(m -> m
-              .query(matcher.group(2))
-              .fields(ITEM_NEW_SEARCH_FIELDS)
-              .fuzzyTranspositions(false)
-              .autoGenerateSynonymsPhraseQuery(false)
-            )
+    // ===== BƯỚC 4: XỬ LÝ TỪ KHÓA TÌM KIẾM =====
+    if (userTerm) {
+      // Nếu truyền vào searchField thì chỉ tìm trên trường đó
+      def fields = searchField ? [searchField] : ITEM_NEW_SEARCH_FIELDS
+      // Tìm kiếm phrase prefix với boost cao nhất
+      query.should(q -> q
+        .multiMatch(m -> m
+          .query(userTerm)
+          .fields(fields)
+          .type(TextQueryType.PhrasePrefix)
+          .boost(2.0f)
+        )
+      )
+      // Tìm kiếm match với operator OR (tương đối hơn)
+      query.should(q -> q
+        .multiMatch(m -> m
+          .query(userTerm)
+          .fields(fields)
+          .operator(org.opensearch.client.opensearch._types.query_dsl.Operator.Or)
+          .boost(1.5f)
+        )
+      )
+      // Tìm kiếm fuzzy để bắt lỗi chính tả
+      query.should(q -> q
+        .multiMatch(m -> m
+          .query(userTerm)
+          .fields(fields)
+          .fuzziness("AUTO")
+          .boost(1.0f)
+        )
+      )
+      // Tìm kiếm wildcard để bắt các từ có chứa từ khóa
+      fields.each { field ->
+        query.should(q -> q
+          .wildcard(w -> w
+            .field(field)
+            .value("*" + userTerm + "*")
+            .caseInsensitive(true)
+            .boost(0.8f)
           )
-          userTerm = StringUtils.remove(userTerm, matcher.group(1))
-        }
-        
-        // ===== BƯỚC 5: XỬ LÝ PHẦN TỪ KHÓA CÒN LẠI VỚI TÌM KIẾM TƯƠNG ĐỐI =====
-        if (userTerm && userTerm.trim() != "") {
-          // Tìm kiếm phrase prefix với boost cao nhất
-          query.should(q -> q
-            .multiMatch(m -> m
-              .query(userTerm)
-              .fields(ITEM_NEW_SEARCH_FIELDS)
-              .type(TextQueryType.PhrasePrefix)
-              .boost(2.0f)
-            )
-          )
-          // Tìm kiếm match với operator OR (tương đối hơn)
-          query.should(q -> q
-            .multiMatch(m -> m
-              .query(userTerm)
-              .fields(ITEM_NEW_SEARCH_FIELDS)
-              .operator(org.opensearch.client.opensearch._types.query_dsl.Operator.Or)
-              .boost(1.5f)
-            )
-          )
-          // Tìm kiếm fuzzy để bắt lỗi chính tả
-          query.should(q -> q
-            .multiMatch(m -> m
-              .query(userTerm)
-              .fields(ITEM_NEW_SEARCH_FIELDS)
-              .fuzziness("AUTO")
-              .boost(1.0f)
-            )
-          )
-          // Tìm kiếm wildcard để bắt các từ có chứa từ khóa
-          query.should(q -> q
-            .wildcard(w -> w
-              .field("title_vi_s")
-              .value("*" + userTerm + "*")
-              .caseInsensitive(true)
-              .boost(0.8f)
-            )
-          )
-          query.should(q -> q
-            .wildcard(w -> w
-              .field("title_en_s")
-              .value("*" + userTerm + "*")
-              .caseInsensitive(true)
-              .boost(0.8f)
-            )
-          )
-        }
+        )
       }
+    }
 
     // Cấu hình highlight để làm nổi bật từ khóa tìm kiếm
     def highlighter = new Highlight.Builder();
-    HIGHLIGHT_FIELDS.each{ field -> highlighter.fields(field, f -> f ) }
+    def highlightFields = searchField ? [searchField] : HIGHLIGHT_FIELDS
+    highlightFields.each{ field -> highlighter.fields(field, f -> f ) }
 
     // Tạo request tìm kiếm với các tham số
     SearchRequest request = SearchRequest.of(r -> r
