@@ -4,43 +4,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <#-- Thiết lập meta charset và viewport cho responsive -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DTSVN - Tin tức</title>
-    
-    <#-- Load jQuery library cho JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <#-- Import các file CSS cho styling -->
     <link rel="stylesheet" href="/static-assets/css/header.css">
     <link rel="stylesheet" href="/static-assets/css/main.css">
-    
-    <#-- Render head component từ Crafter CMS -->
     <@crafter.head />
-  </head>
+  </head>   
   <body>
-    <#-- Render body top component từ Crafter CMS -->
     <@crafter.body_top />
-    
-    <#-- Render header component collection -->
     <@crafter.renderComponentCollection $field="header_o"/>
-    
-    <#-- Section hiển thị tiêu đề trang và breadcrumb -->
     <section class="section sec-pageTitle style-2 style-doitac">
         <div class="sec-pageTitle__wrap">
-            <#-- Breadcrumb navigation -->
             <ul class="sec-pageTitle__breadcrumb">
                 <li><a href="#">Trang chủ</a></li>
                 <li><span>Tin tức</span></li>
             </ul>
-            
-            <#-- Nội dung tiêu đề trang -->
             <div class="sec-pageTitle__content">
                 <div class="container-custom">
                     <div class="row">
                         <div class="col-md-8 col-lg-7 col-xl-6">  
-                            <#-- Hiển thị tiêu đề trang từ content model -->
                             <h1 class="sec-pageTitle__title fz-52">${contentModel["internal-name"]!''}</h1>
                         </div>
                     </div>
@@ -48,16 +32,11 @@
             </div>
         </div>
     </section>
-    
-    <#-- Section chính hiển thị danh sách tin tức -->
     <section class="section sec-blogPage">
         <div class="container-custom">
-
-            <#-- Form tìm kiếm tin tức -->
             <div class="search-form mb-4">
-                <form method="GET" action="" class="d-flex align-items-center">
-                    <#-- Dropdown chọn doanh mục -->
-                    <div class="search-category-dropdown me-2">
+                <form method="GET" action="" class="d-flex align-items-center row g-2">
+                    <div class="col-md-2">
                         <select name="tab" class="form-select" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd; min-width: 140px;">
                             <option value="all" <#if (selectedTab!'all') == 'all'>selected</#if>>Tất cả</option>
                             <#list tabs as cat>
@@ -65,88 +44,63 @@
                             </#list>
                         </select>
                     </div>
-                    
-                    <#-- Input tìm kiếm với icon search bên phải -->
-                    <div class="search-input-wrapper flex-grow-1 position-relative me-2">
-                        <input 
-                            type="text" 
-                            name="q" 
-                            value="${searchQuery!''}" 
-                            placeholder="Nhập từ khóa tìm kiếm..." 
-                            class="form-control"
-                            style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;"
-                        >
+                    <div class="col-md-3">
+                        <input type="text" name="title" value="${searchParams.title!''}" placeholder="Tìm theo tiêu đề..." class="form-control" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;">
                     </div>
-                    <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center" style="padding: 12px 16px; border-radius: 8px; min-width: 48px;">
-                        <i class="fa fa-search"></i>
-                    </button>
-                    <#-- Nút xóa tìm kiếm nếu có từ khóa -->
-                    <#if searchQuery?? && searchQuery != ''>
-                        <a href="?tab=${selectedTab!''}" class="btn btn-outline-secondary ms-2" style="padding: 12px 16px; border-radius: 8px;">
-                            <i class="fa fa-times"></i> Xóa
-                        </a>
-                    </#if>
+                    <div class="col-md-3">
+                        <input type="text" name="content" value="${searchParams.content!''}" placeholder="Tìm theo nội dung..." class="form-control" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;">
+                    </div>
+                    <div class="col-md-2">
+                        <select name="sort" class="form-select">
+                            <option value="newest" <#if sort == "newest">selected</#if>>Mới nhất đến cũ nhất</option>
+                            <option value="oldest" <#if sort == "oldest">selected</#if>>Cũ nhất đến mới nhất</option>
+                            <option value="a_to_z" <#if sort == "a_to_z">selected</#if>>A đến Z</option>
+                            <option value="z_to_a" <#if sort == "z_to_a">selected</#if>>Z đến A</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 d-flex">
+                        <button type="submit" class="btn btn-primary flex-grow-1">Tìm kiếm</button>
+                        <#if searchParams.title?? || searchParams.content?? || (selectedTab != 'all')>
+                            <a href="?tab=all" class="btn btn-outline-secondary ms-2">Xóa</a>
+                        </#if>
+                    </div>
                 </form>
             </div>
-
-            <#-- Navigation menu cho các danh mục tin tức -->
             <nav class="nav-cat">
                 <ul>
-                    <#-- Tab "Tất cả tin bài" - luôn hiển thị -->
                     <li>
-                        <a href="?tab=all<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>" class="<#if (selectedTab!'') == 'all'>active</#if>">Tất cả tin bài</a>
+                        <a href="?tab=all<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>" class="<#if (selectedTab!'') == 'all'>active</#if>">Tất cả tin bài</a>
                     </li>
-                    
-                    <#-- Hiển thị các danh mục tin tức từ content model -->
-                    <#if contentModel.list_category_o?? && contentModel.list_category_o?has_content>
-                        <#list contentModel.list_category_o.item as category>
+                    <#if tabs?has_content>
+                        <#list tabs as category>
                             <li>
-                                <a href="?tab=${category.item_s_s!''}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>" class="<#if (selectedTab!'') == (category.item_s_s!'')>active</#if>">${category.title_category_s!''}</a>
+                                <a href="?tab=${category.item_s_s!''}<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>" class="<#if (selectedTab!'') == (category.item_s_s!'')>active</#if>">${category.title_category_s!''}</a>
                             </li>
                         </#list>
                     </#if>
                 </ul>
             </nav>
-
-            <#-- Grid hiển thị danh sách tin tức -->
-            <#if searchQuery?? && searchQuery != ''>
-                <h2 class="search-result-title" style="margin-bottom: 24px; font-size: 2rem; font-weight: bold; color: #1a237e;">Kết quả tìm kiếm tương đối</h2>
-                <p class="search-info" style="margin-bottom: 16px; color: #666; font-style: italic;">
-                    Hiển thị kết quả liên quan đến "${searchQuery}" (bao gồm từ khóa tương tự và lỗi chính tả)
-                </p>
-            </#if>
             <div class="row">
-                <#-- Kiểm tra có tin tức để hiển thị không -->
                 <#if newsItems?? && (newsItems?size > 0)>
-                    <#-- Lặp qua từng tin tức -->
                     <#list newsItems as news>
                         <div class="col-md-6 col-lg-4">
                             <div class="blog">
                                 <div class="blog__inner">
-                                    <#-- Link và hình ảnh tin tức -->
                                     <a class="blog__img" href="${news.url!''}" style="background-image: url('${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/default-news.jpg')}');">
                                         <img src="${(news.img_main_s?? && (news.img_main_s?length > 0))?then(news.img_main_s, '/static-assets/images/news/default-news.jpg')}" alt="${news.title!''}">
                                     </a>
-                                    
-                                    <#-- Nội dung tin tức -->
                                     <div class="blog__body">
-                                        <#-- Tiêu đề tin tức -->
                                         <h3 class="blog__title">
                                             <a href="${news.url!''}">${news.title!''}</a>
                                         </h3>
-                                        
-                                        <#-- Tóm tắt tin tức (nếu có) -->
                                         <#if news.highlight?? && (news.highlight!'') != ''>
                                             <div class="blog__excerpt">
                                                 <p>${news.highlight!''}</p>
                                             </div>
                                         </#if>
-                                        
-                                        <#-- Meta information (ngày tạo) -->
                                         <ul class="postMin__meta">
                                             <#if news.created_date??>
                                                 <li>
-                                                    <#-- Kiểm tra và format ngày tạo -->
                                                     <#if news.created_date?is_date>
                                                         ${news.created_date?string("dd/MM/yyyy HH:mm")}
                                                     <#else>
@@ -154,14 +108,6 @@
                                                     </#if>
                                                 </li>
                                             </#if>
-                                            <#-- Comment: Hiển thị categories (đã tắt) -->
-                                            <#--  <#if news.categories?? && (news.categories?size > 0)>
-                                                <li>
-                                                    <#list news.categories as category>
-                                                        <span class="badge badge-secondary">${category!''}</span>
-                                                    </#list>
-                                                </li>
-                                            </#if>  -->
                                         </ul>
                                     </div>
                                 </div>
@@ -173,74 +119,59 @@
                         <div class="text-center py-5">
                             <h3>Không tìm thấy tin tức nào</h3>
                             <p>
-                                Không tìm thấy tin tức nào liên quan đến từ khóa "${searchQuery}". 
+                                Không tìm thấy tin tức nào phù hợp với tiêu chí tìm kiếm.
                                 <br>Bạn có thể thử với từ khóa khác hoặc kiểm tra lại chính tả.
                             </p>
                         </div>
                     </div>
                 </#if>
             </div>
-
-            <#-- Phân trang - chỉ hiển thị khi có nhiều hơn 1 trang -->
             <#if totalPages?? && (totalPages > 1)>
                 <div class="pagination">
                     <nav class="navigation pagination" aria-label="Phân trang bài viết">
                         <h2 class="screen-reader-text">Phân trang bài viết</h2>
                         <div class="nav-links">
-                            <#-- Nút Previous -->
                             <#if hasPrevPage?? && hasPrevPage>
-                                <a class="prev page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) - 1}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">← Previous</a>
+                                <a class="prev page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) - 1}<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>">← Previous</a>
                             </#if>
-                            
-                            <#-- Hiển thị các số trang -->
                             <#if pageNumbers?? && (pageNumbers?size > 0)>
-                                <#-- Hiển thị dấu ... và số 1 nếu cần -->
                                 <#if pageNumbers?first?number gt 1>
                                     <#if pageNumbers?first?number gt 2>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">1</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>">1</a>
                                         <span class="page-numbers dots">…</span>
                                     <#else>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">1</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=1<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>">1</a>
                                     </#if>
                                 </#if>
-                                
-                                <#-- Lặp qua các số trang -->
                                 <#list pageNumbers as pageNum>
                                     <#if (pageNum?number) == (currentPage!1)?number>
                                         <span aria-current="page" class="page-numbers current">${pageNum}</span>
                                     <#else>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${pageNum}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">${pageNum}</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${pageNum}<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>">${pageNum}</a>
                                     </#if>
                                 </#list>
-                                
-                                <#-- Hiển thị dấu ... và số trang cuối nếu cần -->
                                 <#if pageNumbers?last?number lt (totalPages!1)?number>
                                     <#if pageNumbers?last?number lt (totalPages!1)?number - 1>
                                         <span class="page-numbers dots">…</span>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">${totalPages!1}</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>">${totalPages!1}</a>
                                     <#else>
-                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">${totalPages!1}</a>
+                                        <a class="page-numbers" href="?tab=${selectedTab!''}&page=${totalPages!1}<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>">${totalPages!1}</a>
                                     </#if>
                                 </#if>
                             </#if>
                             <#if hasNextPage?? && hasNextPage>
-                                <a class="next page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) + 1}<#if searchQuery?? && searchQuery != ''>&q=${searchQuery}</#if>">Next →</a>
+                                <a class="next page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) + 1}<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>">Next →</a>
                             </#if>
                         </div>
                     </nav>
                 </div>
             </#if>
-
-            <!-- Thông tin phân trang -->
             <#if totalItems?? && (totalItems > 0)>
                 <div class="pagination-info text-center mt-3">
                     <#assign fromItem = (((currentPage!1) - 1) * (itemsPerPage!12)) + 1 />
                     <#assign toItem = ((currentPage!1) * (itemsPerPage!12) < (totalItems!0))?then((currentPage!1) * (itemsPerPage!12), (totalItems!0)) />
                     <p>
                         Hiển thị ${fromItem} - ${toItem} trong tổng số ${totalItems!0} tin tức
-                        <#if searchQuery?? && searchQuery != ''>
-                            liên quan đến "${searchQuery}"
-                        </#if>
                     </p>
                 </div>
             </#if>
