@@ -45,9 +45,6 @@
                     <div class="col-md-3">
                         <input type="text" name="title" value="${searchParams.title!''}" placeholder="Search by title..." class="form-control" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;">
                     </div>
-                    <div class="col-md-3">
-                        <input type="text" name="content" value="${searchParams.content!''}" placeholder="Search by content..." class="form-control" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;">
-                    </div>
                     <div class="col-md-2">
                         <select name="sort" class="form-select">
                             <option value="newest" <#if sort == "newest">selected</#if>>Newest to Oldest</option>
@@ -64,20 +61,23 @@
                     </div>
                 </form>
             </div>
-            <nav class="nav-cat">
-                <ul>
-                    <li>
-                        <a href="?tab=all<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>" class="<#if (selectedTab!'') == 'all'>active</#if>">Featured news</a>
-                    </li>
-                    <#if tabs?has_content>
-                        <#list tabs as category>
-                            <li>
-                                <a href="?tab=${category.item_s_s!''}<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>" class="<#if (selectedTab!'') == (category.item_s_s!'')>active</#if>">${category.title_category_s!''}</a>
-                            </li>
-                        </#list>
-                    </#if>
-                </ul>
-            </nav>
+            <#-- Ẩn thanh tab khi đang tìm kiếm -->
+            <#if !(searchParams.title?? && searchParams.title?length > 0) && !(searchParams.content?? && searchParams.content?length > 0)>
+                <nav class="nav-cat">
+                    <ul>
+                        <li>
+                            <a href="?tab=all<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>" class="<#if (selectedTab!'') == 'all'>active</#if>">Featured news</a>
+                        </li>
+                        <#if tabs?has_content>
+                            <#list tabs as category>
+                                <li>
+                                    <a href="?tab=${category.item_s_s!''}<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>" class="<#if (selectedTab!'') == (category.item_s_s!'')>active</#if>">${category.title_category_s!''}</a>
+                                </li>
+                            </#list>
+                        </#if>
+                    </ul>
+                </nav>
+            </#if>
             <div class="row">
                 <#if newsItems?? && (newsItems?size > 0)>
                     <#list newsItems as news>
