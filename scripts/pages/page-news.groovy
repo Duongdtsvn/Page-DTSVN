@@ -33,7 +33,6 @@ def totalItems = 0
 if (searchQuery && searchQuery.trim() != '') {
     // Nếu có từ khóa tìm kiếm
     def categories = []
-    
     if (selectedTab != 'all') {
         // Nếu chọn category cụ thể, tìm category tương ứng trong danh sách tabs
         def currentCategory = tabs.find { it.item_s_s == selectedTab }
@@ -41,13 +40,15 @@ if (searchQuery && searchQuery.trim() != '') {
             categories = [currentCategory.item_s_s]
         }
     }
-    
-    // Thực hiện tìm kiếm với từ khóa và category (nếu có)
-    newsItems = searchNews.searchNews(searchQuery, categories, start, itemsPerPage)
-    
-    // Tính tổng số kết quả tìm kiếm
-    def totalSearchResults = searchNews.searchNews(searchQuery, categories, 0, 1000)
-    totalItems = totalSearchResults.size()
+    try {
+        // Chỉ tìm theo tiêu đề tiếng Việt
+        newsItems = searchNews.searchNewsByTitle(searchQuery, categories, 'vi', start, itemsPerPage)
+        if (!newsItems) newsItems = []
+        totalItems = newsItems.size()
+    } catch (Exception e) {
+        newsItems = []
+        totalItems = 0;
+    }
 } else {
     // Nếu không có từ khóa tìm kiếm, sử dụng logic cũ
     if (selectedTab == 'all') {
@@ -68,6 +69,9 @@ if (searchQuery && searchQuery.trim() != '') {
         }
     }
 }
+
+// Đảm bảo newsItems luôn là list, không null
+if (!newsItems) newsItems = []
 
 // Tính toán thông tin phân trang
 def totalPages = Math.ceil(totalItems / itemsPerPage).toInteger()

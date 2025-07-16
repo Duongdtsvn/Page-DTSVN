@@ -36,24 +36,29 @@
             <!-- Search form -->
             <div class="search-form mb-4">
                 <form method="GET" action="" class="d-flex align-items-center">
-                    <!-- Keep current tab -->
-                    <input type="hidden" name="tab" value="${selectedTab!''}">
-                    
-                    <div class="search-input-wrapper flex-grow-1 me-3">
+                    <!-- Dropdown for category selection -->
+                    <div class="search-category-dropdown me-2">
+                        <select name="tab" class="form-select" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd; min-width: 140px;">
+                            <option value="all" <#if (selectedTab!'all') == 'all'>selected</#if>>All</option>
+                            <#list tabs as cat>
+                                <option value="${cat.item_s_s!''}" <#if (selectedTab!'') == (cat.item_s_s!'')>selected</#if>>${cat.title_category_s!''}</option>
+                            </#list>
+                        </select>
+                    </div>
+                    <!-- Search input with icon search on the right -->
+                    <div class="search-input-wrapper flex-grow-1 position-relative me-2">
                         <input 
                             type="text" 
                             name="q" 
                             value="${searchQuery!''}" 
-                            placeholder="Search news..." 
+                            placeholder="Enter search keywords..." 
                             class="form-control"
                             style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;"
                         >
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="padding: 12px 24px; border-radius: 8px;">
-                        <i class="fa fa-search"></i> Search
+                    <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center" style="padding: 12px 16px; border-radius: 8px; min-width: 48px;">
+                        <i class="fa fa-search"></i>
                     </button>
-                    
                     <!-- Clear search button if there's a search query -->
                     <#if searchQuery?? && searchQuery != ''>
                         <a href="?tab=${selectedTab!''}" class="btn btn-outline-secondary ms-2" style="padding: 12px 16px; border-radius: 8px;">
@@ -63,6 +68,10 @@
                 </form>
             </div>
 
+            <!-- Search results title if searching -->
+            <#if searchQuery?? && searchQuery != ''>
+                <h2 class="search-result-title" style="margin-bottom: 24px; font-size: 2rem; font-weight: bold; color: #1a237e;">Search Results</h2>
+            </#if>
             <!-- Navigation danh mục -->
             <nav class="nav-cat">
                 <ul>
@@ -126,11 +135,7 @@
                         <div class="text-center py-5">
                             <h3>No news found</h3>
                             <p>
-                                <#if searchQuery?? && searchQuery != ''>
-                                    No news found matching "${searchQuery}".
-                                <#else>
-                                    Please try another tab.
-                                </#if>
+                                No news found matching your search keyword.
                             </p>
                         </div>
                     </div>

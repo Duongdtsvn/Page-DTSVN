@@ -89,7 +89,6 @@ class Searchnews {
    * @return Danh sách tin tức phù hợp
    */
   def searchNews(userTerm, categories, start = DEFAULT_START, rows = DEFAULT_ROWS) {
-    // Tạo query bool để kết hợp nhiều điều kiện tìm kiếm
     def query = new BoolQuery.Builder()
 
     // ===== BƯỚC 1: LỌC THEO LOẠI NỘI DUNG =====
@@ -121,42 +120,31 @@ class Searchnews {
     // ===== BƯỚC 4: XỬ LÝ TỪ KHÓA TÌM KIẾM =====
     if (userTerm) {
       // Kiểm tra xem người dùng có yêu cầu tìm kiếm chính xác với dấu ngoặc kép không
-      // Ví dụ: "từ khóa chính xác" sẽ tìm kiếm cụm từ này
       def matcher = userTerm =~ /.*("([^"]+)").*/
       if (matcher.matches()) {
-        // Sử dụng MUST để bắt buộc phải có kết quả khớp với cụm từ trong ngoặc kép
+        // Nếu thực sự có dấu ngoặc kép thì mới ép exact phrase
         query.must(q -> q
           .multiMatch(m -> m
-            .query(matcher.group(2))  // Lấy phần text trong ngoặc kép
+            .query(matcher.group(2))
             .fields(ITEM_NEW_SEARCH_FIELDS)
             .fuzzyTranspositions(false)
             .autoGenerateSynonymsPhraseQuery(false)
           )
         )
-
-        // Xóa phần tìm kiếm chính xác để tiếp tục xử lý phần còn lại
         userTerm = StringUtils.remove(userTerm, matcher.group(1))
-      } else {
-        // Nếu không có ngoặc kép, yêu cầu ít nhất 1 từ khóa phải khớp
-        query.minimumShouldMatch("1")
       }
-
+      // Không else minimumShouldMatch("1") nữa, chỉ cần match tương đối
       // ===== BƯỚC 5: XỬ LÝ PHẦN TỪ KHÓA CÒN LẠI =====
-      if (userTerm) {
-        // Sử dụng SHOULD để tạo tìm kiếm tùy chọn
-        // Mỗi match thêm sẽ tăng điểm của document
+      if (userTerm && userTerm.trim() != "") {
         query
-          // Tìm kiếm phrase match với wildcard ở cuối (boost 1.5)
-          // Ví dụ: "tin tức" sẽ tìm "tin tức", "tin tức mới", "tin tức công nghệ"
           .should(q -> q
             .multiMatch(m -> m
               .query(userTerm)
               .fields(ITEM_NEW_SEARCH_FIELDS)
               .type(TextQueryType.PhrasePrefix)
-              .boost(1.5f)  // Tăng điểm cho kết quả này
+              .boost(1.5f)
             )
           )
-          // Tìm kiếm match trên các từ riêng lẻ
           .should(q -> q
             .multiMatch(m -> m
               .query(userTerm)
@@ -187,9 +175,151 @@ class Searchnews {
     // Thực hiện tìm kiếm và xử lý kết quả
     def result = searchClient.search(request, Map)
 
-    if (result) {
+    if (result && result.hits() && result.hits().hits()) {
       return processNewsSearchResults(result)  // Xử lý kết quả tìm kiếm với highlight
     } else {
+      return []
+    }
+  }
+
+  /**
+   * Tìm kiếm tin tức với phạm vi tìm kiếm cụ thể (title, content, title+content, all)
+   * @param userTerm - Từ khóa tìm kiếm của người dùng
+   * @param categories - Danh mục cần lọc
+   * @param scope - Phạm vi tìm kiếm (all, title, content, title_content)
+   * @param start - Vị trí bắt đầu (mặc định 0)
+   * @param rows - Số lượng kết quả (mặc định 50)
+   * @return Danh sách tin tức phù hợp
+   */
+  def searchNewsWithScope(userTerm, categories, scope = 'all', start = DEFAULT_START, rows = DEFAULT_ROWS) {
+    // Tạo query bool để kết hợp nhiều điều kiện tìm kiếm
+    def query = new BoolQuery.Builder()
+
+    // ===== BƯỚC 1: LỌC THEO LOẠI NỘI DUNG =====
+    // Chỉ lấy các document có content-type là tin tức
+    query.filter(q -> q
+      .match(m -> m
+        .field("content-type")
+        .query(v -> v
+          .stringValue(ITEM_NEW_CONTENT_TYPE)
+        )
+      )
+    )
+
+    // ===== BƯỚC 2: LỌC THEO ĐƯỜNG DẪN =====
+    // Chỉ lấy tin tức từ thư mục /list-blog
+    query.filter(q -> q
+      .wildcard(w -> w
+        .field("localId")
+        .value("*" + LIST_BLOG_PATH + "*")
+      )
+    )
+
+    // ===== BƯỚC 3: LỌC THEO DANH MỤC (NẾU CÓ) =====
+    // Nếu người dùng chọn danh mục cụ thể, thêm filter theo danh mục
+    if (categories) {
+      query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
+    }
+
+    // ===== BƯỚC 4: XỬ LÝ TỪ KHÓA TÌM KIẾM VỚI PHẠM VI =====
+    if (userTerm) {
+      // Xác định các trường tìm kiếm dựa trên scope
+      def searchFields = []
+      def highlightFields = []
+      
+      switch (scope) {
+        case 'title':
+          // Chỉ tìm kiếm trong tiêu đề
+          searchFields = ['title_vi_s^2.0', 'title_en_s^1.5']
+          highlightFields = ['title_vi_s', 'title_en_s']
+          break
+        case 'content':
+          // Chỉ tìm kiếm trong nội dung
+          searchFields = ['content_vi_html^1.0', 'content_en_html^1.0']
+          highlightFields = ['content_vi_html', 'content_en_html']
+          break
+        case 'title_content':
+          // Tìm kiếm trong tiêu đề và nội dung (ưu tiên tiêu đề)
+          searchFields = ['title_vi_s^2.0', 'title_en_s^1.5', 'content_vi_html^1.0', 'content_en_html^1.0']
+          highlightFields = ['title_vi_s', 'title_en_s', 'content_vi_html', 'content_en_html']
+          break
+        default:
+          // Tìm kiếm tất cả (mặc định)
+          searchFields = ITEM_NEW_SEARCH_FIELDS
+          highlightFields = HIGHLIGHT_FIELDS
+          break
+      }
+
+      // Kiểm tra xem người dùng có yêu cầu tìm kiếm chính xác với dấu ngoặc kép không
+      def matcher = userTerm =~ /.*("([^"]+)").*/
+      if (matcher.matches()) {
+        // Sử dụng MUST để bắt buộc phải có kết quả khớp với cụm từ trong ngoặc kép
+        query.must(q -> q
+          .multiMatch(m -> m
+            .query(matcher.group(2))  // Lấy phần text trong ngoặc kép
+            .fields(searchFields)
+            .fuzzyTranspositions(false)
+            .autoGenerateSynonymsPhraseQuery(false)
+          )
+        )
+
+        // Xóa phần tìm kiếm chính xác để tiếp tục xử lý phần còn lại
+        userTerm = StringUtils.remove(userTerm, matcher.group(1))
+      } else {
+        // Nếu không có ngoặc kép, yêu cầu ít nhất 1 từ khóa phải khớp
+        query.minimumShouldMatch("1")
+      }
+
+      // ===== BƯỚC 5: XỬ LÝ PHẦN TỪ KHÓA CÒN LẠI =====
+      if (userTerm) {
+        // Sử dụng SHOULD để tạo tìm kiếm tùy chọn
+        query
+          // Tìm kiếm phrase match với wildcard ở cuối (boost 1.5)
+          .should(q -> q
+            .multiMatch(m -> m
+              .query(userTerm)
+              .fields(searchFields)
+              .type(TextQueryType.PhrasePrefix)
+              .boost(1.5f)  // Tăng điểm cho kết quả này
+            )
+          )
+          // Tìm kiếm match trên các từ riêng lẻ
+          .should(q -> q
+            .multiMatch(m -> m
+              .query(userTerm)
+              .fields(searchFields)
+            )
+          )
+      }
+
+      // Cấu hình highlight để làm nổi bật từ khóa tìm kiếm
+      def highlighter = new Highlight.Builder();
+      highlightFields.each{ field -> highlighter.fields(field, f -> f ) }
+
+      // Tạo request tìm kiếm với các tham số
+      SearchRequest request = SearchRequest.of(r -> r
+        .query(query.build()._toQuery())
+        .from(start)
+        .size(rows)
+        .highlight(highlighter.build())
+        .sort(s -> s
+          .field(f -> f
+            .field("createdDate_dt")
+            .order(SortOrder.Desc)  // Sắp xếp theo ngày tạo giảm dần
+          )
+        )
+      )
+
+      // Thực hiện tìm kiếm và xử lý kết quả
+      def result = searchClient.search(request, Map)
+
+      if (result) {
+        return processNewsSearchResults(result)  // Xử lý kết quả tìm kiếm với highlight
+      } else {
+        return []
+      }
+    } else {
+      // Nếu không có từ khóa tìm kiếm, trả về danh sách rỗng
       return []
     }
   }
@@ -364,6 +494,77 @@ class Searchnews {
     if (result) {
       return processNewsListingResults(result)
     } else {
+      return []
+    }
+  }
+
+  /**
+   * Tìm kiếm tin tức chỉ theo tiêu đề (title_vi_s hoặc title_en_s tùy ngôn ngữ)
+   * @param userTerm - Từ khóa tìm kiếm
+   * @param categories - Danh mục cần lọc
+   * @param lang - 'vi' hoặc 'en'
+   * @param start - Vị trí bắt đầu
+   * @param rows - Số lượng kết quả
+   * @return Danh sách tin tức phù hợp
+   */
+  def searchNewsByTitle(userTerm, categories, lang = 'vi', start = DEFAULT_START, rows = DEFAULT_ROWS) {
+    def query = new BoolQuery.Builder()
+    // Lọc loại nội dung
+    query.filter(q -> q
+      .match(m -> m
+        .field("content-type")
+        .query(v -> v.stringValue(ITEM_NEW_CONTENT_TYPE))
+      )
+    )
+    // Lọc theo đường dẫn
+    query.filter(q -> q
+      .wildcard(w -> w
+        .field("localId")
+        .value("*" + LIST_BLOG_PATH + "*")
+      )
+    )
+    // Lọc theo danh mục nếu có
+    if (categories && categories.size() > 0) {
+      query.filter(getFieldQueryWithMultipleValues("categorys_o.item.key", categories))
+    }
+    // Chỉ tìm kiếm theo tiêu đề đúng ngôn ngữ
+    def searchField = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
+    if (userTerm && userTerm.trim() != "") {
+      query.should(q -> q
+        .match(m -> m
+          .field(searchField)
+          .query(v -> v.stringValue(userTerm))
+          .operator(org.opensearch.client.opensearch._types.query_dsl.Operator.And)
+          .caseInsensitive(true)
+        )
+      )
+      query.should(q -> q
+        .matchPhrasePrefix(m -> m
+          .field(searchField)
+          .query(userTerm)
+          .caseInsensitive(true)
+        )
+      )
+    }
+    SearchRequest request = SearchRequest.of(r -> r
+      .query(query.build()._toQuery())
+      .from(start)
+      .size(rows)
+      .sort(s -> s
+        .field(f -> f
+          .field("createdDate_dt")
+          .order(SortOrder.Desc)
+        )
+      )
+    )
+    try {
+      def result = searchClient.search(request, Map)
+      if (result && result.hits() && result.hits().hits()) {
+        return processNewsListingResults(result)
+      } else {
+        return []
+      }
+    } catch (Exception e) {
       return []
     }
   }

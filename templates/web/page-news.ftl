@@ -56,24 +56,30 @@
             <#-- Form tìm kiếm tin tức -->
             <div class="search-form mb-4">
                 <form method="GET" action="" class="d-flex align-items-center">
-                    <#-- Giữ lại tab hiện tại -->
-                    <input type="hidden" name="tab" value="${selectedTab!''}">
+                    <#-- Dropdown chọn doanh mục -->
+                    <div class="search-category-dropdown me-2">
+                        <select name="tab" class="form-select" style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd; min-width: 140px;">
+                            <option value="all" <#if (selectedTab!'all') == 'all'>selected</#if>>Tất cả</option>
+                            <#list tabs as cat>
+                                <option value="${cat.item_s_s!''}" <#if (selectedTab!'') == (cat.item_s_s!'')>selected</#if>>${cat.title_category_s!''}</option>
+                            </#list>
+                        </select>
+                    </div>
                     
-                    <div class="search-input-wrapper flex-grow-1 me-3">
+                    <#-- Input tìm kiếm với icon search bên phải -->
+                    <div class="search-input-wrapper flex-grow-1 position-relative me-2">
                         <input 
                             type="text" 
                             name="q" 
                             value="${searchQuery!''}" 
-                            placeholder="Tìm kiếm tin tức..." 
+                            placeholder="Nhập từ khóa tìm kiếm..." 
                             class="form-control"
                             style="padding: 12px 16px; border-radius: 8px; border: 1px solid #ddd;"
                         >
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="padding: 12px 24px; border-radius: 8px;">
-                        <i class="fa fa-search"></i> Tìm kiếm
+                    <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center" style="padding: 12px 16px; border-radius: 8px; min-width: 48px;">
+                        <i class="fa fa-search"></i>
                     </button>
-                    
                     <#-- Nút xóa tìm kiếm nếu có từ khóa -->
                     <#if searchQuery?? && searchQuery != ''>
                         <a href="?tab=${selectedTab!''}" class="btn btn-outline-secondary ms-2" style="padding: 12px 16px; border-radius: 8px;">
@@ -103,6 +109,9 @@
             </nav>
 
             <#-- Grid hiển thị danh sách tin tức -->
+            <#if searchQuery?? && searchQuery != ''>
+                <h2 class="search-result-title" style="margin-bottom: 24px; font-size: 2rem; font-weight: bold; color: #1a237e;">Kết quả tìm kiếm</h2>
+            </#if>
             <div class="row">
                 <#-- Kiểm tra có tin tức để hiển thị không -->
                 <#if newsItems?? && (newsItems?size > 0)>
@@ -157,16 +166,11 @@
                         </div>
                     </#list>
                 <#else>
-                    <#-- Hiển thị thông báo khi không có tin tức -->
                     <div class="col-12">
                         <div class="text-center py-5">
                             <h3>Không tìm thấy tin tức nào</h3>
                             <p>
-                                <#if searchQuery?? && searchQuery != ''>
-                                    Không tìm thấy tin tức nào phù hợp với từ khóa "${searchQuery}".
-                                <#else>
-                                    Vui lòng thử lại với tab khác.
-                                </#if>
+                                Không tìm thấy tin tức nào phù hợp với từ khóa tìm kiếm của bạn.
                             </p>
                         </div>
                     </div>
