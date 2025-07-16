@@ -110,7 +110,10 @@
 
             <#-- Grid hiển thị danh sách tin tức -->
             <#if searchQuery?? && searchQuery != ''>
-                <h2 class="search-result-title" style="margin-bottom: 24px; font-size: 2rem; font-weight: bold; color: #1a237e;">Kết quả tìm kiếm</h2>
+                <h2 class="search-result-title" style="margin-bottom: 24px; font-size: 2rem; font-weight: bold; color: #1a237e;">Kết quả tìm kiếm tương đối</h2>
+                <p class="search-info" style="margin-bottom: 16px; color: #666; font-style: italic;">
+                    Hiển thị kết quả liên quan đến "${searchQuery}" (bao gồm từ khóa tương tự và lỗi chính tả)
+                </p>
             </#if>
             <div class="row">
                 <#-- Kiểm tra có tin tức để hiển thị không -->
@@ -170,7 +173,8 @@
                         <div class="text-center py-5">
                             <h3>Không tìm thấy tin tức nào</h3>
                             <p>
-                                Không tìm thấy tin tức nào phù hợp với từ khóa tìm kiếm của bạn.
+                                Không tìm thấy tin tức nào liên quan đến từ khóa "${searchQuery}". 
+                                <br>Bạn có thể thử với từ khóa khác hoặc kiểm tra lại chính tả.
                             </p>
                         </div>
                     </div>
@@ -235,7 +239,7 @@
                     <p>
                         Hiển thị ${fromItem} - ${toItem} trong tổng số ${totalItems!0} tin tức
                         <#if searchQuery?? && searchQuery != ''>
-                            cho từ khóa "${searchQuery}"
+                            liên quan đến "${searchQuery}"
                         </#if>
                     </p>
                 </div>
