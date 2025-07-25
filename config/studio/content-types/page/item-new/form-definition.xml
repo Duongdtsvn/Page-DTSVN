@@ -294,7 +294,7 @@
 						</property>
 						<property>
 							<name>allowPastDate</name>
-							<value>false</value>
+							<value>true</value>
 							<type>boolean</type>
 						</property>
 						<property>
