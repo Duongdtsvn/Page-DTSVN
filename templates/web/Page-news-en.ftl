@@ -117,44 +117,7 @@
                         <div class="text-center py-5">
                             <h3>No news found</h3>
                             <p>
-                                <#if searchParams.title?? && searchParams.title?length > 0>
-                                    <#if selectedTab?? && selectedTab != 'all'>
-                                        <#assign categoryName = ""/>
-                                        <#list tabs as cat>
-                                            <#if cat.item_s_s?? && cat.item_s_s == selectedTab>
-                                                <#assign categoryName = cat.title_category_s!''/>
-                                                <#break/>
-                                            </#if>
-                                        </#list>
-                                        No news found in category "${categoryName}" with keyword "${searchParams.title}".
-                                    <#else>
-                                        No news found with keyword "${searchParams.title}".
-                                    </#if>
-                                <#elseif searchParams.content?? && searchParams.content?length > 0>
-                                    <#if selectedTab?? && selectedTab != 'all'>
-                                        <#assign categoryName = ""/>
-                                        <#list tabs as cat>
-                                            <#if cat.item_s_s?? && cat.item_s_s == selectedTab>
-                                                <#assign categoryName = cat.title_category_s!''/>
-                                                <#break/>
-                                            </#if>
-                                        </#list>
-                                        No news found in category "${categoryName}" with content "${searchParams.content}".
-                                    <#else>
-                                        No news found with content "${searchParams.content}".
-                                    </#if>
-                                <#elseif selectedTab?? && selectedTab != 'all'>
-                                    <#assign categoryName = ""/>
-                                    <#list tabs as cat>
-                                        <#if cat.item_s_s?? && cat.item_s_s == selectedTab>
-                                            <#assign categoryName = cat.title_category_s!''/>
-                                            <#break/>
-                                        </#if>
-                                    </#list>
-                                    No news found in category "${categoryName}".
-                                <#else>
-                                    No news found matching your search criteria.
-                                </#if>
+                                No news found matching your search criteria.
                                 <br>You can try with different keywords or check your spelling.
                             </p>
                         </div>
