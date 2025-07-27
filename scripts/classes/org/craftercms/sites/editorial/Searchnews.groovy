@@ -811,7 +811,7 @@ class Searchnews {
         newsItem.nav_label = doc.navLabel
         newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)
         newsItem.url_en = newsItem.url + (newsItem.url.contains('?') ? '&' : '?') + 'lang=en'
-        newsItem.created_date = convertToHanoiTimeString(doc.createdDate_dt)
+        newsItem.created_date = convertToHanoiTimeString(doc.time_create_dt, doc.time_create_dt_tz)
         newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)
         newsItem.img_main_s = doc.img_main_s
 
@@ -898,7 +898,7 @@ class Searchnews {
         newsItem.nav_label = doc.navLabel             // Nhãn navigation
         newsItem.url = urlTransformationService.transform("storeUrlToRenderUrl", doc.localId)  // URL hiển thị
         newsItem.url_en = newsItem.url + (newsItem.url.contains('?') ? '&' : '?') + 'lang=en'
-        newsItem.created_date = convertToHanoiTimeString(doc.createdDate_dt)      // Ngày tạo (giờ Hà Nội)
+        newsItem.created_date = convertToHanoiTimeString(doc.time_create_dt, doc.time_create_dt_tz)      // Ngày tạo (giờ Hà Nội)
         newsItem.last_modified_date = convertToHanoiTimeString(doc.lastModifiedDate_dt)  // Ngày sửa cuối
         newsItem.img_main_s = doc.img_main_s          // Hình ảnh chính
 
@@ -961,21 +961,30 @@ class Searchnews {
   }
 
   /**
-   * Chuyển đổi thời gian từ UTC sang giờ Hà Nội
+   * Chuyển đổi thời gian từ timezone được chỉ định sang giờ Hà Nội
    * @param date - Thời gian cần chuyển đổi (có thể là String hoặc ZonedDateTime)
+   * @param timezone - Timezone của thời gian (nếu null thì mặc định là UTC)
    * @return String thời gian theo định dạng dd/MM/yyyy HH:mm (giờ Hà Nội)
    */
-  private def convertToHanoiTimeString(date) {
+  private def convertToHanoiTimeString(date, timezone = null) {
     // Kiểm tra nếu date rỗng thì trả về chuỗi rỗng
     if (!date) return ""
     
     try {
       // ===== PHẦN 1: CHUYỂN ĐỔI THỜI GIAN =====
       // Nếu date là String thì parse thành ZonedDateTime, nếu không thì dùng trực tiếp
-      def utc = (date instanceof String) ? ZonedDateTime.parse(date) : date
+      def sourceDateTime = (date instanceof String) ? ZonedDateTime.parse(date) : date
       
-      // Chuyển từ UTC sang múi giờ Hà Nội (Asia/Bangkok)
-      def hanoi = utc.withZoneSameInstant(ZoneId.of("Asia/Bangkok"))
+      // Xác định timezone nguồn
+      def sourceZone = timezone ? ZoneId.of(timezone) : ZoneId.of("UTC")
+      
+      // Nếu sourceDateTime chưa có timezone, gán timezone cho nó
+      if (sourceDateTime.zone == ZoneId.of("Z")) {
+        sourceDateTime = sourceDateTime.withZoneSameInstant(sourceZone)
+      }
+      
+      // Chuyển từ timezone nguồn sang múi giờ Hà Nội (Asia/Bangkok)
+      def hanoi = sourceDateTime.withZoneSameInstant(ZoneId.of("Asia/Bangkok"))
       
       return hanoi.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))
     } catch (Exception e) {
