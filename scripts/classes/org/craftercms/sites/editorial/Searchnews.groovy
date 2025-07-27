@@ -628,8 +628,6 @@ class Searchnews {
   def searchNewsAdvanced(Map searchParams = [:], int start = DEFAULT_START, int rows = DEFAULT_ROWS, String sort = "newest", String lang = "vi") {
     try {
       def queryBuilder = new BoolQuery.Builder()
-      
-      // ===== PHẦN 1: LỌC THEO LOẠI NỘI DUNG VÀ ĐƯỜNG DẪN =====
       // Filter by content-type
       queryBuilder.filter(q -> q
         .match(m -> m
@@ -644,78 +642,47 @@ class Searchnews {
           .value("*" + LIST_BLOG_PATH + "*")
         )
       )
-      
-      // ===== PHẦN 2: LỌC THEO DANH MỤC (TAB) =====
-      if (searchParams.category && searchParams.category != 'all') {
-        queryBuilder.filter(q -> q
+      def searchFieldsBool = new BoolQuery.Builder()
+      def hasSearchParams = false
+      // Tìm kiếm theo tiêu đề
+      if (searchParams.title) {
+        hasSearchParams = true
+        def field = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
+        searchFieldsBool.should(s -> s
+          .regexp(r -> r
+            .field(field)
+            .value(".*${searchParams.title}.*")
+            .caseInsensitive(true)
+          )
+        )
+      }
+      // Tìm kiếm theo nội dung
+      if (searchParams.content) {
+        hasSearchParams = true
+        def field = (lang == 'en') ? 'content_en_html' : 'content_vi_html'
+        searchFieldsBool.should(s -> s
+          .regexp(r -> r
+            .field(field)
+            .value(".*${searchParams.content}.*")
+            .caseInsensitive(true)
+          )
+        )
+      }
+      // Tìm kiếm theo danh mục (category)
+      if (searchParams.category) {
+        hasSearchParams = true
+        searchFieldsBool.should(s -> s
           .match(m -> m
             .field("categorys_o.item.key")
             .query(v -> v.stringValue(searchParams.category))
+            .analyzer(MULTIPLE_VALUES_SEARCH_ANALYZER)
           )
         )
       }
-      
-      // ===== PHẦN 3: TÌM KIẾM THEO TỪ KHÓA =====
-      if (searchParams.title && searchParams.title.trim() != "") {
-        def field = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
-        
-        // Tìm kiếm phrase prefix (từ khóa bắt đầu)
-        queryBuilder.should(q -> q
-          .matchPhrasePrefix(m -> m
-            .field(field)
-            .query(searchParams.title.trim())
-            .caseInsensitive(true)
-            .boost(2.0f)
-          )
-        )
-        
-        // Tìm kiếm match với operator OR
-        queryBuilder.should(q -> q
-          .match(m -> m
-            .field(field)
-            .query(v -> v.stringValue(searchParams.title.trim()))
-            .operator(org.opensearch.client.opensearch._types.query_dsl.Operator.Or)
-            .caseInsensitive(true)
-            .boost(1.5f)
-          )
-        )
-        
-        // Tìm kiếm wildcard để bắt các từ có chứa từ khóa
-        queryBuilder.should(q -> q
-          .wildcard(w -> w
-            .field(field)
-            .value("*" + searchParams.title.trim() + "*")
-            .caseInsensitive(true)
-            .boost(1.0f)
-          )
-        )
+      if (hasSearchParams) {
+        queryBuilder.must(b -> b.bool(searchFieldsBool.build()))
       }
-      
-      // Tìm kiếm theo nội dung
-      if (searchParams.content && searchParams.content.trim() != "") {
-        def field = (lang == 'en') ? 'content_en_html' : 'content_vi_html'
-        
-        queryBuilder.should(q -> q
-          .match(m -> m
-            .field(field)
-            .query(v -> v.stringValue(searchParams.content.trim()))
-            .operator(org.opensearch.client.opensearch._types.query_dsl.Operator.Or)
-            .caseInsensitive(true)
-            .boost(1.0f)
-          )
-        )
-        
-        queryBuilder.should(q -> q
-          .wildcard(w -> w
-            .field(field)
-            .value("*" + searchParams.content.trim() + "*")
-            .caseInsensitive(true)
-            .boost(0.8f)
-          )
-        )
-      }
-      
-      // ===== PHẦN 4: SẮP XẾP =====
+      // Sắp xếp
       def sortField
       def sortOrder
       switch (sort) {
@@ -729,14 +696,12 @@ class Searchnews {
         default:
           sortField = "time_create_dt"; sortOrder = SortOrder.Desc; break
       }
-      
       def searchRequest = SearchRequest.of(r -> r
         .query(queryBuilder.build()._toQuery())
         .from(start)
         .size(rows)
         .sort(s -> s.field(f -> f.field(sortField).order(sortOrder)))
       )
-      
       def result = searchClient.search(searchRequest, Map)
       if (result) {
         return processNewsListingResults(result)
@@ -757,8 +722,6 @@ class Searchnews {
   def getTotalNews(Map searchParams = [:], String lang = "vi") {
     try {
       def queryBuilder = new BoolQuery.Builder()
-      
-      // ===== PHẦN 1: LỌC THEO LOẠI NỘI DUNG VÀ ĐƯỜNG DẪN =====
       // Filter by content-type
       queryBuilder.filter(q -> q
         .match(m -> m
@@ -773,77 +736,43 @@ class Searchnews {
           .value("*" + LIST_BLOG_PATH + "*")
         )
       )
-      
-      // ===== PHẦN 2: LỌC THEO DANH MỤC (TAB) =====
-      if (searchParams.category && searchParams.category != 'all') {
-        queryBuilder.filter(q -> q
+      def searchFieldsBool = new BoolQuery.Builder()
+      def hasSearchParams = false
+      if (searchParams.title) {
+        hasSearchParams = true
+        def field = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
+        searchFieldsBool.should(s -> s
+          .regexp(r -> r
+            .field(field)
+            .value(".*${searchParams.title}.*")
+            .caseInsensitive(true)
+          )
+        )
+      }
+      if (searchParams.content) {
+        hasSearchParams = true
+        def field = (lang == 'en') ? 'content_en_html' : 'content_vi_html'
+        searchFieldsBool.should(s -> s
+          .regexp(r -> r
+            .field(field)
+            .value(".*${searchParams.content}.*")
+            .caseInsensitive(true)
+          )
+        )
+      }
+      if (searchParams.category) {
+        hasSearchParams = true
+        searchFieldsBool.should(s -> s
           .match(m -> m
             .field("categorys_o.item.key")
             .query(v -> v.stringValue(searchParams.category))
+            .analyzer(MULTIPLE_VALUES_SEARCH_ANALYZER)
           )
         )
       }
-      
-      // ===== PHẦN 3: TÌM KIẾM THEO TỪ KHÓA =====
-      if (searchParams.title && searchParams.title.trim() != "") {
-        def field = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
-        
-        // Tìm kiếm phrase prefix (từ khóa bắt đầu)
-        queryBuilder.should(q -> q
-          .matchPhrasePrefix(m -> m
-            .field(field)
-            .query(searchParams.title.trim())
-            .caseInsensitive(true)
-            .boost(2.0f)
-          )
-        )
-        
-        // Tìm kiếm match với operator OR
-        queryBuilder.should(q -> q
-          .match(m -> m
-            .field(field)
-            .query(v -> v.stringValue(searchParams.title.trim()))
-            .operator(org.opensearch.client.opensearch._types.query_dsl.Operator.Or)
-            .caseInsensitive(true)
-            .boost(1.5f)
-          )
-        )
-        
-        // Tìm kiếm wildcard để bắt các từ có chứa từ khóa
-        queryBuilder.should(q -> q
-          .wildcard(w -> w
-            .field(field)
-            .value("*" + searchParams.title.trim() + "*")
-            .caseInsensitive(true)
-            .boost(1.0f)
-          )
-        )
+      if (hasSearchParams) {
+        queryBuilder.must(b -> b.bool(searchFieldsBool.build()))
       }
-      
-      // Tìm kiếm theo nội dung
-      if (searchParams.content && searchParams.content.trim() != "") {
-        def field = (lang == 'en') ? 'content_en_html' : 'content_vi_html'
-        
-        queryBuilder.should(q -> q
-          .match(m -> m
-            .field(field)
-            .query(v -> v.stringValue(searchParams.content.trim()))
-            .operator(org.opensearch.client.opensearch._types.query_dsl.Operator.Or)
-            .caseInsensitive(true)
-            .boost(1.0f)
-          )
-        )
-        
-        queryBuilder.should(q -> q
-          .wildcard(w -> w
-            .field(field)
-            .value("*" + searchParams.content.trim() + "*")
-            .caseInsensitive(true)
-            .boost(0.8f)
-          )
-        )
-      }
-      
       def searchRequest = SearchRequest.of(r -> r
         .query(queryBuilder.build()._toQuery())
         .size(0)
