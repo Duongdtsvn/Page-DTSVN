@@ -12,10 +12,10 @@ int start = (page - 1) * itemsPerPage
 
 def searchParams = [:]
 if (params.title?.trim()) {
-    searchParams.title = params.title.trim().toLowerCase()
+    searchParams.title = params.title.trim()
 }
 if (params.content?.trim()) {
-    searchParams.content = params.content.trim().toLowerCase()
+    searchParams.content = params.content.trim()
 }
 // category lấy từ tab
 if (params.tab && params.tab != 'all') {
@@ -35,7 +35,6 @@ def totalPages = Math.ceil(totalItems / itemsPerPage) as Integer
 if (totalPages < 1) totalPages = 1
 
 // Lấy danh sách các category từ contentModel để hiển thị các tab
-// (giữ nguyên logic cũ)
 def tabs = []
 if (contentModel.list_category_o && contentModel.list_category_o.item) {
     def items = contentModel.list_category_o.item
@@ -68,21 +67,3 @@ for (int i = startPage; i <= endPage; i++) {
 templateModel.pageNumbers = pageNumbers
 templateModel.hasNextPage = page < totalPages
 templateModel.hasPrevPage = page > 1
-
-// Nếu đang tìm kiếm và có tab cụ thể, lọc lại kết quả để chỉ hiển thị bài viết thuộc tab đó
-if ((searchParams.title || searchParams.content) && selectedTab != 'all') {
-    // Lọc lại newsItems để chỉ lấy bài viết thuộc category đang chọn
-    newsItems = newsItems.findAll { item ->
-        item.categories && item.categories.contains(selectedTab)
-    }
-    // Nếu không có bài viết nào thuộc tab, trả về rỗng
-    if (!newsItems || newsItems.size() == 0) {
-        newsItems = []
-        totalItems = 0
-        totalPages = 1
-    } else {
-        totalItems = newsItems.size()
-        totalPages = Math.ceil(totalItems / itemsPerPage) as Integer
-        if (totalPages < 1) totalPages = 1
-    }
-}
