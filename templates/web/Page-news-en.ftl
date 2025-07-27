@@ -117,7 +117,7 @@
                         <div class="text-center py-5">
                             <h3>No news found</h3>
                             <p>
-                                <#if searchParams.title?? && searchParams.title?length > 0>
+                                <#if searchParams.title?? && (searchParams.title?length > 0)>
                                     No news found with keyword "<strong>${searchParams.title}</strong>"
                                     <#if selectedTab?? && selectedTab != 'all'>
                                         in category "<strong>${selectedTab}</strong>"
