@@ -45,8 +45,8 @@
 	<content_en_html>&lt;p&gt;hjdhjfd jhdjhfjdf jdfhdj hfjd hfjd hjdfh jdhf jdh fj&lt;/p&gt;</content_en_html>
 	<createdDate>2025-07-04T03:54:13.225Z</createdDate>
 	<createdDate_dt>2025-07-04T03:54:13.225Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T18:23:04.143Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T18:23:04.143Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-27T07:45:16.635Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-27T07:45:16.635Z</lastModifiedDate_dt>
 	<img_main_s>/static-assets/images/aczxfe.jpg</img_main_s>
 	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
 	<value>header</value>
@@ -78,4 +78,6 @@
 	<include>/site/components/contact-form/en.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></contact_EN_o>
+	<time_create_dt>2025-06-20T07:45:17.000Z</time_create_dt>
+	<time_create_dt_tz>Asia/Saigon</time_create_dt_tz>
 </page>
