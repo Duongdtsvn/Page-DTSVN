@@ -52,8 +52,8 @@
 &lt;p&gt;dsfjsdjfhdsj dsjfhjs dhfjsd js hfjsdh jf hsdjfh dsjf hdsjfh jsdhf jdsf sdfghsdf ghsdfg hsdgfh sdghfg dhsfg hsdfg shfg&amp;nbsp;&lt;/p&gt;</content_en_html>
 	<createdDate>2025-07-04T03:53:30.639Z</createdDate>
 	<createdDate_dt>2025-07-04T03:53:30.639Z</createdDate_dt>
-	<lastModifiedDate>2025-07-09T18:27:18.184Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-09T18:27:18.184Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-07-27T07:45:36.189Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-07-27T07:45:36.189Z</lastModifiedDate_dt>
 	<img_main_s>/static-assets/images/sfaf.jpg</img_main_s>
 	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
 	<value>header</value>
@@ -85,4 +85,6 @@
 	<include>/site/components/contact-form/en.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></contact_EN_o>
+	<time_create_dt>2025-02-10T07:45:36.000Z</time_create_dt>
+	<time_create_dt_tz>Asia/Saigon</time_create_dt_tz>
 </page>
