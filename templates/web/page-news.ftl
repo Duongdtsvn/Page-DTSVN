@@ -119,7 +119,7 @@
                         <div class="text-center py-5">
                             <h3>Không tìm thấy tin tức nào</h3>
                             <p>
-                                <#if searchParams.title?? && searchParams.title?length > 0>
+                                <#if searchParams.title?? && (searchParams.title?length > 0)>
                                     Không tìm thấy tin tức nào với từ khóa "<strong>${searchParams.title}</strong>"
                                     <#if selectedTab?? && selectedTab != 'all'>
                                         trong danh mục "<strong>${selectedTab}</strong>"
