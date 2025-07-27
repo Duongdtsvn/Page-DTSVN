@@ -642,36 +642,10 @@ class Searchnews {
           .value("*" + LIST_BLOG_PATH + "*")
         )
       )
-      def searchFieldsBool = new BoolQuery.Builder()
-      def hasSearchParams = false
-      // Tìm kiếm theo tiêu đề
-      if (searchParams.title) {
-        hasSearchParams = true
-        def field = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
-        searchFieldsBool.should(s -> s
-          .regexp(r -> r
-            .field(field)
-            .value(".*${searchParams.title}.*")
-            .caseInsensitive(true)
-          )
-        )
-      }
-      // Tìm kiếm theo nội dung
-      if (searchParams.content) {
-        hasSearchParams = true
-        def field = (lang == 'en') ? 'content_en_html' : 'content_vi_html'
-        searchFieldsBool.should(s -> s
-          .regexp(r -> r
-            .field(field)
-            .value(".*${searchParams.content}.*")
-            .caseInsensitive(true)
-          )
-        )
-      }
-      // Tìm kiếm theo danh mục (category)
-      if (searchParams.category) {
-        hasSearchParams = true
-        searchFieldsBool.should(s -> s
+      
+      // ===== PHẦN 1: LỌC THEO DANH MỤC (TAB) =====
+      if (searchParams.category && searchParams.category != 'all') {
+        queryBuilder.filter(q -> q
           .match(m -> m
             .field("categorys_o.item.key")
             .query(v -> v.stringValue(searchParams.category))
@@ -679,10 +653,69 @@ class Searchnews {
           )
         )
       }
-      if (hasSearchParams) {
+      
+      // ===== PHẦN 2: TÌM KIẾM THEO TỪ KHÓA =====
+      def hasSearchTerms = false
+      def searchFieldsBool = new BoolQuery.Builder()
+      
+      // Tìm kiếm theo tiêu đề
+      if (searchParams.title && searchParams.title.trim() != "") {
+        hasSearchTerms = true
+        def field = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
+        searchFieldsBool.should(s -> s
+          .multiMatch(m -> m
+            .query(searchParams.title.trim())
+            .fields([field + "^2.0"])
+            .type(TextQueryType.PhrasePrefix)
+            .boost(2.0f)
+          )
+        )
+        searchFieldsBool.should(s -> s
+          .multiMatch(m -> m
+            .query(searchParams.title.trim())
+            .fields([field + "^1.5"])
+            .operator(org.opensearch.client.opensearch._types.query_dsl.Operator.Or)
+            .boost(1.5f)
+          )
+        )
+        searchFieldsBool.should(s -> s
+          .wildcard(w -> w
+            .field(field)
+            .value("*" + searchParams.title.trim() + "*")
+            .caseInsensitive(true)
+            .boost(1.0f)
+          )
+        )
+      }
+      
+      // Tìm kiếm theo nội dung
+      if (searchParams.content && searchParams.content.trim() != "") {
+        hasSearchTerms = true
+        def field = (lang == 'en') ? 'content_en_html' : 'content_vi_html'
+        searchFieldsBool.should(s -> s
+          .multiMatch(m -> m
+            .query(searchParams.content.trim())
+            .fields([field + "^1.0"])
+            .operator(org.opensearch.client.opensearch._types.query_dsl.Operator.Or)
+            .boost(1.0f)
+          )
+        )
+        searchFieldsBool.should(s -> s
+          .wildcard(w -> w
+            .field(field)
+            .value("*" + searchParams.content.trim() + "*")
+            .caseInsensitive(true)
+            .boost(0.8f)
+          )
+        )
+      }
+      
+      // Nếu có từ khóa tìm kiếm, thêm vào query
+      if (hasSearchTerms) {
         queryBuilder.must(b -> b.bool(searchFieldsBool.build()))
       }
-      // Sắp xếp
+      
+      // ===== PHẦN 3: SẮP XẾP =====
       def sortField
       def sortOrder
       switch (sort) {
@@ -696,12 +729,14 @@ class Searchnews {
         default:
           sortField = "time_create_dt"; sortOrder = SortOrder.Desc; break
       }
+      
       def searchRequest = SearchRequest.of(r -> r
         .query(queryBuilder.build()._toQuery())
         .from(start)
         .size(rows)
         .sort(s -> s.field(f -> f.field(sortField).order(sortOrder)))
       )
+      
       def result = searchClient.search(searchRequest, Map)
       if (result) {
         return processNewsListingResults(result)
