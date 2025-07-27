@@ -172,7 +172,7 @@ class Searchnews {
       .highlight(highlighter.build())
       .sort(s -> s
         .field(f -> f
-          .field("createdDate_dt")
+          .field("time_create_dt")
           .order(SortOrder.Desc)  // Sắp xếp theo ngày tạo giảm dần
         )
       )
@@ -386,7 +386,7 @@ class Searchnews {
       .size(rows)
       .sort(s -> s
         .field(f -> f
-          .field("createdDate_dt")
+          .field("time_create_dt")
           .order(SortOrder.Desc)
         )
       )
@@ -445,7 +445,7 @@ class Searchnews {
       .size(rows)
       .sort(s -> s
         .field(f -> f
-          .field("createdDate_dt")
+          .field("time_create_dt")
           .order(SortOrder.Desc)
         )
       )
@@ -507,7 +507,7 @@ class Searchnews {
       .size(rows)
       .sort(s -> s
         .field(f -> f
-          .field("createdDate_dt")
+          .field("time_create_dt")
           .order(SortOrder.Desc)
         )
       )
@@ -599,7 +599,7 @@ class Searchnews {
       .size(rows)
       .sort(s -> s
         .field(f -> f
-          .field("createdDate_dt")
+          .field("time_create_dt")
           .order(SortOrder.Desc)
         )
       )
@@ -687,14 +687,14 @@ class Searchnews {
       def sortOrder
       switch (sort) {
         case "oldest":
-          sortField = "createdDate_dt"; sortOrder = SortOrder.Asc; break
+          sortField = "time_create_dt"; sortOrder = SortOrder.Asc; break
         case "a_to_z":
           sortField = (lang == 'en') ? "title_en_s.keyword" : "title_vi_s.keyword"; sortOrder = SortOrder.Asc; break
         case "z_to_a":
           sortField = (lang == 'en') ? "title_en_s.keyword" : "title_vi_s.keyword"; sortOrder = SortOrder.Desc; break
         case "newest":
         default:
-          sortField = "createdDate_dt"; sortOrder = SortOrder.Desc; break
+          sortField = "time_create_dt"; sortOrder = SortOrder.Desc; break
       }
       def searchRequest = SearchRequest.of(r -> r
         .query(queryBuilder.build()._toQuery())
