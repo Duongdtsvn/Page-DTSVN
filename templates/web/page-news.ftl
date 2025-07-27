@@ -119,44 +119,7 @@
                         <div class="text-center py-5">
                             <h3>Không tìm thấy tin tức nào</h3>
                             <p>
-                                <#if searchParams.title?? && searchParams.title?length > 0>
-                                    <#if selectedTab?? && selectedTab != 'all'>
-                                        <#assign categoryName = ""/>
-                                        <#list tabs as cat>
-                                            <#if cat.item_s_s?? && cat.item_s_s == selectedTab>
-                                                <#assign categoryName = cat.title_category_s!''/>
-                                                <#break/>
-                                            </#if>
-                                        </#list>
-                                        Không tìm thấy tin tức nào trong danh mục "${categoryName}" với từ khóa "${searchParams.title}".
-                                    <#else>
-                                        Không tìm thấy tin tức nào với từ khóa "${searchParams.title}".
-                                    </#if>
-                                <#elseif searchParams.content?? && searchParams.content?length > 0>
-                                    <#if selectedTab?? && selectedTab != 'all'>
-                                        <#assign categoryName = ""/>
-                                        <#list tabs as cat>
-                                            <#if cat.item_s_s?? && cat.item_s_s == selectedTab>
-                                                <#assign categoryName = cat.title_category_s!''/>
-                                                <#break/>
-                                            </#if>
-                                        </#list>
-                                        Không tìm thấy tin tức nào trong danh mục "${categoryName}" với nội dung "${searchParams.content}".
-                                    <#else>
-                                        Không tìm thấy tin tức nào với nội dung "${searchParams.content}".
-                                    </#if>
-                                <#elseif selectedTab?? && selectedTab != 'all'>
-                                    <#assign categoryName = ""/>
-                                    <#list tabs as cat>
-                                        <#if cat.item_s_s?? && cat.item_s_s == selectedTab>
-                                            <#assign categoryName = cat.title_category_s!''/>
-                                            <#break/>
-                                        </#if>
-                                    </#list>
-                                    Không tìm thấy tin tức nào trong danh mục "${categoryName}".
-                                <#else>
-                                    Không tìm thấy tin tức nào phù hợp với tiêu chí tìm kiếm.
-                                </#if>
+                                Không tìm thấy tin tức nào phù hợp với tiêu chí tìm kiếm.
                                 <br>Bạn có thể thử với từ khóa khác hoặc kiểm tra lại chính tả.
                             </p>
                         </div>
