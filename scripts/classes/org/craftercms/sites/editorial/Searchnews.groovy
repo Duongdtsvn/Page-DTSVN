@@ -644,9 +644,12 @@ class Searchnews {
       )
       def searchFieldsBool = new BoolQuery.Builder()
       def hasSearchParams = false
+      def hasKeywordSearch = false
+      
       // Tìm kiếm theo tiêu đề
       if (searchParams.title) {
         hasSearchParams = true
+        hasKeywordSearch = true
         def field = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
         searchFieldsBool.should(s -> s
           .regexp(r -> r
@@ -659,6 +662,7 @@ class Searchnews {
       // Tìm kiếm theo nội dung
       if (searchParams.content) {
         hasSearchParams = true
+        hasKeywordSearch = true
         def field = (lang == 'en') ? 'content_en_html' : 'content_vi_html'
         searchFieldsBool.should(s -> s
           .regexp(r -> r
@@ -668,10 +672,11 @@ class Searchnews {
           )
         )
       }
-      // Tìm kiếm theo danh mục (category)
+      
+      // Tìm kiếm theo danh mục (category) - sử dụng FILTER để bắt buộc
       if (searchParams.category) {
         hasSearchParams = true
-        searchFieldsBool.should(s -> s
+        queryBuilder.filter(q -> q
           .match(m -> m
             .field("categorys_o.item.key")
             .query(v -> v.stringValue(searchParams.category))
@@ -679,7 +684,9 @@ class Searchnews {
           )
         )
       }
-      if (hasSearchParams) {
+      
+      // Nếu có từ khóa tìm kiếm, thêm vào MUST
+      if (hasKeywordSearch) {
         queryBuilder.must(b -> b.bool(searchFieldsBool.build()))
       }
       // Sắp xếp
@@ -738,8 +745,11 @@ class Searchnews {
       )
       def searchFieldsBool = new BoolQuery.Builder()
       def hasSearchParams = false
+      def hasKeywordSearch = false
+      
       if (searchParams.title) {
         hasSearchParams = true
+        hasKeywordSearch = true
         def field = (lang == 'en') ? 'title_en_s' : 'title_vi_s'
         searchFieldsBool.should(s -> s
           .regexp(r -> r
@@ -751,6 +761,7 @@ class Searchnews {
       }
       if (searchParams.content) {
         hasSearchParams = true
+        hasKeywordSearch = true
         def field = (lang == 'en') ? 'content_en_html' : 'content_vi_html'
         searchFieldsBool.should(s -> s
           .regexp(r -> r
@@ -760,9 +771,11 @@ class Searchnews {
           )
         )
       }
+      
+      // Tìm kiếm theo danh mục (category) - sử dụng FILTER để bắt buộc
       if (searchParams.category) {
         hasSearchParams = true
-        searchFieldsBool.should(s -> s
+        queryBuilder.filter(q -> q
           .match(m -> m
             .field("categorys_o.item.key")
             .query(v -> v.stringValue(searchParams.category))
@@ -770,7 +783,9 @@ class Searchnews {
           )
         )
       }
-      if (hasSearchParams) {
+      
+      // Nếu có từ khóa tìm kiếm, thêm vào MUST
+      if (hasKeywordSearch) {
         queryBuilder.must(b -> b.bool(searchFieldsBool.build()))
       }
       def searchRequest = SearchRequest.of(r -> r
