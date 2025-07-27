@@ -17,10 +17,8 @@ if (params.title?.trim()) {
 if (params.content?.trim()) {
     searchParams.content = params.content.trim()
 }
-// category lấy từ tab
-if (params.tab && params.tab != 'all') {
-    searchParams.category = params.tab
-}
+// category lấy từ tab - luôn truyền tab vào searchParams
+searchParams.category = params.tab ?: 'all'
 
 def sort = params.sort ?: "newest"
 def validSorts = ["newest", "oldest", "a_to_z", "z_to_a"]
