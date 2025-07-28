@@ -262,7 +262,7 @@
 					<type>date-time</type>
 					<id>time_create_dt</id>
 					<iceId></iceId>
-					<title>time-create</title>
+					<title>Thời gian</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
