@@ -24,5 +24,5 @@
   <@crafter.renderComponentCollection $field="footer_o" />
   <@crafter.body_bottom />
 </body>
-
+    <link rel="stylesheet" href="/js/header.js">
 </html>
