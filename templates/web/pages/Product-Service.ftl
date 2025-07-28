@@ -23,6 +23,6 @@
   <@crafter.renderComponentCollection $field="reasons_choosing_o" />
   <@crafter.renderComponentCollection $field="footer_o" />
   <@crafter.body_bottom />
+  <script src="/static-assets/js/header.js?site=${siteContext.siteName}"></script>
 </body>
-    <link rel="stylesheet" href="/js/header.js">
 </html>
