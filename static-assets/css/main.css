@@ -14087,3 +14087,14 @@ html.mobile.landscape .menuMobile__info li + li {
     max-width: 100px;
   }
 }
+.featurebox__text {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.featurebox:hover .featurebox__text {
+  opacity: 1;
+  max-height: 300px; /* hoặc auto nếu dùng thêm animation height */
+}
