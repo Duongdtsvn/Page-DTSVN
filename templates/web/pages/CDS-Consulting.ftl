@@ -191,8 +191,7 @@
         <@crafter.renderComponentCollection $field="member_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
-<script src="/static-assets/js/function.js"></script>
-<script>
+    <script>
   window.addEventListener("load", function () {
     const items = document.querySelectorAll(".partnershipsBox__list .translate");
     let maxHeight = 0;
@@ -209,6 +208,8 @@
     });
   });
 </script>
+<script src="/static-assets/js/function.js"></script>
+
 
     <@crafter.body_bottom />
 </body>
