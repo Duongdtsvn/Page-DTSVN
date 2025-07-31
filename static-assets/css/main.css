@@ -12172,8 +12172,8 @@ html.mobile.landscape .menuMobile__info li + li {
     padding-top: 108%;
   }
   .partnershipsBox__list .item .translate {
-    -webkit-transform: translateY(var(--y));
-            transform: translateY(var(--y));
+    /*-webkit-transform: translateY(var(--y));*/
+    /*        transform: translateY(var(--y));*/
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
