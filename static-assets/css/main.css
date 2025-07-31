@@ -14123,4 +14123,17 @@ html.mobile.landscape .menuMobile__info li + li {
   justify-content: flex-end;
   height: 100%;
 }
+.item__text {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  height: 0;
+  overflow: hidden;
+}
 
+/* Khi hover vào item, hiện dòng mô tả */
+.item:hover .item__text {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+}
