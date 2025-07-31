@@ -14098,3 +14098,22 @@ html.mobile.landscape .menuMobile__info li + li {
   opacity: 1;
   max-height: 300px; /* hoặc auto nếu dùng thêm animation height */
 }
+/* Phần hiển thị cố định */
+.featurebox__body .fixed-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Phần trượt khi hover */
+.translate {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease; /* Hiệu ứng mượt cho toàn bộ khối */
+  transform: translateY(100%); /* Ẩn dưới đáy ban đầu */
+}
+
+.featurebox:hover .translate {
+  transform: translateY(-100%); /* Trượt lên trên khi hover */
+}
