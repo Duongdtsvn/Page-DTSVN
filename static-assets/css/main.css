@@ -10585,9 +10585,9 @@ html.mobile.landscape .menuMobile__info li + li {
 }
 @media (min-width: 768px) {
   .featurebox__body .translate {
-    -webkit-transform: translateY(var(--y));
-            transform: translateY(var(--y));
-    -webkit-transition: all 0.3s;
+    /*-webkit-transform: translateY(var(--y));*/
+    /*        transform: translateY(var(--y));*/
+    /*-webkit-transition: all 0.3s;*/
     transition: all 0.3s;
   }
 
