@@ -191,23 +191,7 @@
         <@crafter.renderComponentCollection $field="member_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
-    <script>
-  window.addEventListener("load", function () {
-    const items = document.querySelectorAll(".partnershipsBox__list .translate");
-    let maxHeight = 0;
-
-    // Tìm chiều cao lớn nhất của các .translate
-    items.forEach(item => {
-      const height = item.offsetHeight;
-      if (height > maxHeight) maxHeight = height;
-    });
-
-    // Gán lại --y cho tất cả dựa trên chiều cao lớn nhất
-    items.forEach(item => {
-      item.style.setProperty('--y', `${maxHeight}px`);
-    });
-  });
-</script>
+    
 <script src="/static-assets/js/function.js"></script>
 
 
