@@ -193,6 +193,7 @@
     </main>
     
 <script src="/static-assets/js/function.js"></script>
+  <script src="/static-assets/js/header.js?site=${siteContext.siteName}"></script>
 
 
     <@crafter.body_bottom />
