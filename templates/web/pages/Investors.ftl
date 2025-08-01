@@ -47,6 +47,8 @@
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
 <script src="/static-assets/js/function.css"></script>
+  <script src="/static-assets/js/header.js?site=${siteContext.siteName}"></script>
+
     <@crafter.body_bottom />
 </body>
 

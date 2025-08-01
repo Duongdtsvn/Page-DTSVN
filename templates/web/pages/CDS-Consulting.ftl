@@ -191,7 +191,11 @@
         <@crafter.renderComponentCollection $field="member_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
+    
 <script src="/static-assets/js/function.js"></script>
+  <script src="/static-assets/js/header.js?site=${siteContext.siteName}"></script>
+
+
     <@crafter.body_bottom />
 </body>
 

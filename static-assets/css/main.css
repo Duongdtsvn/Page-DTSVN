@@ -10585,9 +10585,9 @@ html.mobile.landscape .menuMobile__info li + li {
 }
 @media (min-width: 768px) {
   .featurebox__body .translate {
-    -webkit-transform: translateY(var(--y));
-            transform: translateY(var(--y));
-    -webkit-transition: all 0.3s;
+    /*-webkit-transform: translateY(var(--y));*/
+    /*        transform: translateY(var(--y));*/
+    /*-webkit-transition: all 0.3s;*/
     transition: all 0.3s;
   }
 
@@ -12172,8 +12172,8 @@ html.mobile.landscape .menuMobile__info li + li {
     padding-top: 108%;
   }
   .partnershipsBox__list .item .translate {
-    -webkit-transform: translateY(var(--y));
-            transform: translateY(var(--y));
+    /*-webkit-transform: translateY(var(--y));*/
+    /*        transform: translateY(var(--y));*/
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
@@ -14086,4 +14086,54 @@ html.mobile.landscape .menuMobile__info li + li {
   .sec-dtsvgdvtk__inner .item-text__icon {
     max-width: 100px;
   }
+}
+.featurebox__text {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.featurebox:hover .featurebox__text {
+  opacity: 1;
+  max-height: 300px; /* hoặc auto nếu dùng thêm animation height */
+}
+.featurebox__body .fixed-content {
+  position: relative;
+  z-index: 1;
+}
+
+.item__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.fix {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.translate {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+.item__text {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Khi hover vào item, hiện dòng mô tả */
+.item:hover .item__text {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
 }

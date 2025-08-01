@@ -122,7 +122,22 @@
   <@crafter.renderComponentCollection $field="achievements_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
+    <script>
+  window.addEventListener("load", function () {
+    const translates = document.querySelectorAll(".partnershipsBox__list .translate");
+    const first = translates[0];
+    if (first) {
+      const height = first.offsetHeight;
+      translates.forEach(el => {
+        el.style.setProperty('--y', `${height}px`);
+      });
+    }
+  });
+</script>
+
 <script src="/static-assets/js/function.js"></script>
+  <script src="/static-assets/js/header.js?site=${siteContext.siteName}"></script>
+
     <@crafter.body_bottom />
 </body>
 
