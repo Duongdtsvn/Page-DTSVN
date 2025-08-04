@@ -23,6 +23,15 @@
         <@crafter.renderComponentCollection $field="target_o" />
         <@crafter.renderComponentCollection $field="why_choose_o" />
         <@crafter.renderComponentCollection $field="result_o" />
+        <section class="section pb-0">
+                <div class="container-custom">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lich-DTSVN.png">
+                        </div>
+                    </div>
+                </div>
+            </section>
         <@crafter.renderComponentCollection $field="course_information_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
