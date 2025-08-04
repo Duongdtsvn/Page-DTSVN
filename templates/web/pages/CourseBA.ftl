@@ -27,7 +27,7 @@
                 <div class="container-custom">
                     <div class="row">
                         <div class="col-xl-12">
-                            <@crafter.img $field="image_s" src=(partner_dtsvn.image_s!"") alt="" />
+                            <@crafter.img $field="image_s" src=(contentModel.image_s!"") alt="" />
                         </div>
                     </div>
                 </div>
