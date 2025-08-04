@@ -18,7 +18,7 @@
 
                           <p class="testimonial__info">
                               <b>${contentModel.name_teacher_s!''}</b>
-                              ${contentModel.work at_s!''}
+                              ${contentModel.work_at_s!''}
                           </p>
                       </div>
                   </div>
