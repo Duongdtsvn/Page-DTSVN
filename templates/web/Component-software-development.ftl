@@ -27,7 +27,7 @@
                                                     <p>${software_developer.describe_s!''}</p>
                                                 </div>
                                                 <div class="item__btn">
-                                                    <a href="https://dtsvn.net/service" class="btn-text">${software_developer.learn more_s!''}<span></span></a>
+                                                    <a href="https://dtsvn.net/service" class="btn-text">${software_developer.learn_more_s!''}<span></span></a>
                                                 </div>
                                             </div>
                                         </div>
