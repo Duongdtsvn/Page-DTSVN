@@ -89,7 +89,7 @@
 			</fields>
 		</section>
 		<section>
-			<title>Default Section Title 1751518576067</title>
+			<title>Default Section Title 1754304990102</title>
 			<description></description>
 			<defaultOpen>false</defaultOpen>
 			<fields>
@@ -179,6 +179,54 @@
 						<property>
 							<name>maxlength</name>
 							<value>50000</value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>readonly</name>
+							<value></value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>tokenize</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>escapeContent</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+					</properties>
+					<constraints>
+						<constraint>
+							<name>required</name>
+							<value><![CDATA[]]></value>
+							<type>boolean</type>
+						</constraint>
+						<constraint>
+							<name>pattern</name>
+							<value><![CDATA[]]></value>
+							<type>string</type>
+						</constraint>
+					</constraints>
+				</field>
+				<field>
+					<type>input</type>
+					<id>learn_more_s</id>
+					<iceId></iceId>
+					<title>Xem thêm</title>
+					<description></description>
+					<defaultValue></defaultValue>
+					<help></help>
+					<properties>
+						<property>
+							<name>size</name>
+							<value>50</value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>maxlength</name>
+							<value>50</value>
 							<type>int</type>
 						</property>
 						<property>
