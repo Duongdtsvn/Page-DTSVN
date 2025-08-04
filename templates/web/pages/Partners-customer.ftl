@@ -35,7 +35,7 @@
                                 <h2 class="item-title fz-40">${contentModel.customer_section_title_s!''}</h2>
                             </div>
                             <div class="item-btn">
-                                <a href="${contentModel.customer_section_link_s!''}" class="btn-text btn-light">Khách hàng của DTSVN<span></span></a>
+                                <a href="${contentModel.customer_section_link_s!''}" class="btn-text btn-light">${contentModel.client_partner_s!''}<span></span></a>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                                 <h2 class="item-title fz-40">${contentModel.strategic_section_title_s!''}</h2>
                             </div>
                             <div class="item-btn">
-                                <a href="${contentModel.strategic_section_link_s!''}" class="btn-text btn-light">Đối tác của DTSVN <span></span></a>
+                                <a href="${contentModel.strategic_section_link_s!''}" class="btn-text btn-light">${contentModel.client_partner_s!''}<span></span></a>
                             </div>
                         </div>
                     </div>
