@@ -22,6 +22,15 @@
         <@crafter.renderComponentCollection $field="who_studies_o" />
         <@crafter.renderComponentCollection $field="target_o" />
         <@crafter.renderComponentCollection $field="why_choose_o" />
+        <section class="section pb-0">
+                <div class="container-custom">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <@crafter.img $field="image_s" src=(contentModel.image_s!"") alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
         <@crafter.renderComponentCollection $field="result_o" />
         <@crafter.renderComponentCollection $field="course_information_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
