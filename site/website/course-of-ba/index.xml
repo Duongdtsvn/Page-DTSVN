@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-04T04:27:44.021Z</createdDate>
 	<createdDate_dt>2025-07-04T04:27:44.021Z</createdDate_dt>
-	<lastModifiedDate>2025-08-04T07:45:57.944Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-04T07:45:57.944Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-04T07:49:18.041Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-04T07:49:18.041Z</lastModifiedDate_dt>
 	<who_studies_o item-list="true">	<item datasource="khahcnydnhchoai">	<key>/site/components/e25d62d4-56f4-8ba9-527d-2dc658efc674.xml</key>
 	<value>Khóa học này dành cho ai</value>
 	<include>/site/components/e25d62d4-56f4-8ba9-527d-2dc658efc674.xml</include>
@@ -57,9 +57,9 @@
 	<disableFlattening>false</disableFlattening>
 	</item></result_o>
 	<image_s>/static-assets/images/lich-dtsvn.png</image_s>
-	<teacher_ba_o item-list="true">	<item datasource="teacher_ba">	<key>/site/components/46a482d2-8369-efe0-a5ae-79a0b53325af.xml</key>
-	<value>Giảng viên khóa học BA</value>
-	<include>/site/components/46a482d2-8369-efe0-a5ae-79a0b53325af.xml</include>
+	<teacher_ba_o item-list="true">	<item>	<key>/site/components/28acc439-8ba6-9146-6817-0467b571f2ac.xml</key>
+	<value>giảng viên BA</value>
+	<include>/site/components/28acc439-8ba6-9146-6817-0467b571f2ac.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></teacher_ba_o>
 </page>
