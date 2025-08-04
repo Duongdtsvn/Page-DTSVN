@@ -27,7 +27,7 @@
                 <div class="container-custom">
                     <div class="row">
                         <div class="col-xl-12">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lich-DTSVN.png">
+                            <@crafter.img $field="image_s" src=(partner_dtsvn.image_s!"") alt="" />
                         </div>
                     </div>
                 </div>
