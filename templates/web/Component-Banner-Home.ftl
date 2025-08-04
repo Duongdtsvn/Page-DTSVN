@@ -17,7 +17,7 @@
                                     <p class="sec-hero__text">${contentModel.subtitle1_s!''}</p>
                                     <div class="sec-hero__btn">
                                         <p class="sec-hero__text"><a href="contact.html"
-                                                class="btn btn-secondary-3">Liên hệ ngay</a></p>
+                                                class="btn btn-secondary-3">${contentModel.contact_s!''}</a></p>
                                     </div>
                                 </div>
                             </div>
