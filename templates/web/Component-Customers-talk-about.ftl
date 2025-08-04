@@ -15,7 +15,7 @@
                                 ${contentModel.company_s!''}
                             </p>
                             <div class="testimonial__footer">
-                                <a href="partners-customer.html" class="btn-text">Khách hàng của DTSVN <span></span></a>
+                                <a href="partners-customer.html" class="btn-text">${contentModel.customer_dtsvn_s!''}<span></span></a>
                             </div>
                         </div>
                     </div>
