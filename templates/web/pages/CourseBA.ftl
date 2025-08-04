@@ -33,6 +33,7 @@
             </section>
         <@crafter.renderComponentCollection $field="result_o" />
         <@crafter.renderComponentCollection $field="course_information_o" />
+        <@crafter.renderComponentCollection $field="teacher_ba_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
 <script src="/static-assets/js/function.css"></script>
