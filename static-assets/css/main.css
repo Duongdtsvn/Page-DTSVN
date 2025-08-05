@@ -14138,6 +14138,6 @@ html.mobile.landscape .menuMobile__info li + li {
   height: auto;
 }
 .item .featurebox{
-    border: 1px solid #E3E5EA;
+       border-bottom: 1px solid #E3E5EA;
 }
   
