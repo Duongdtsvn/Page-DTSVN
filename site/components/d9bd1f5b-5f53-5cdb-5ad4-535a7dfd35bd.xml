@@ -11,16 +11,16 @@
 	<internal-name>thành viên en</internal-name>
 	<title5_s>Deployment associate members</title5_s>
 	<member_o item-list="true">	<item>	<url_s/>
-	<image_member_s>/static-assets/beau.png</image_member_s>
+	<image_member_s>/static-assets/images/beau.png</image_member_s>
 	</item>	<item>	<url_s/>
-	<image_member_s>/static-assets/enao1.png</image_member_s>
+	<image_member_s>/static-assets/images/enao1-copy-1.png</image_member_s>
 	</item>	<item>	<url_s/>
-	<image_member_s>/static-assets/logo-mate.png</image_member_s>
+	<image_member_s>/static-assets/images/logo-mate.png</image_member_s>
 	</item>	<item>	<url_s/>
-	<image_member_s>/static-assets/z6780091458608_769564767f69d878abd60bdfb8c1ccfa.jpg</image_member_s>
+	<image_member_s>/static-assets/images/z6780091458608_769564767f69d878abd60bdfb8c1ccfa-copy-1.jpg</image_member_s>
 	</item></member_o>
 	<createdDate>2025-07-08T03:56:54.479Z</createdDate>
 	<createdDate_dt>2025-07-08T03:56:54.479Z</createdDate_dt>
-	<lastModifiedDate>2025-07-08T03:56:54.479Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-08T03:56:54.479Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-05T04:19:14.166Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-05T04:19:14.166Z</lastModifiedDate_dt>
 </component>
