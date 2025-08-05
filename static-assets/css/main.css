@@ -14137,7 +14137,7 @@ html.mobile.landscape .menuMobile__info li + li {
   transform: translateY(0);
   height: auto;
 }
-.item .featurebox{
+.featurebox {
        border-bottom: 1px solid #E3E5EA;
 }
   
