@@ -6,7 +6,7 @@
          
           <div class="sec-strength__list owl-carousel">
           <div class="titlebox item">
-              <h2 class="titlebox__title fz-44 ">Khóa học này dành cho ai?</h2>
+              <h2 class="titlebox__title fz-44 ">${contentModel.who_studies_s!''}</h2>
                 </div>
               <#if contentModel.who_studies_o.item?? && contentModel.who_studies_o.item?has_content>
               <#list contentModel.who_studies_o.item as who_studies>
