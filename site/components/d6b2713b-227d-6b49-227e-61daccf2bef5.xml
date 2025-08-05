@@ -10,7 +10,10 @@
 	<folder-name/>
 	<internal-name>50+ khách hàng en</internal-name>
 	<title_s>50+ Customers have accompanied us</title_s>
-	<client_o item-list="true">	<item>	<image_s>/static-assets/images/client-2.png</image_s>
+	<client_o item-list="true">	<item>	<image_s>/static-assets/images/logo-vietinbnak.png</image_s>
+	</item>	<item>	<image_s>/static-assets/images/vna_logo_vn--1-.webp</image_s>
+	</item>	<item>	<image_s>/static-assets/images/logo-bidv.png</image_s>
+	</item>	<item>	<image_s>/static-assets/images/client-2.png</image_s>
 	</item>	<item>	<image_s>/static-assets/images/client-10.png</image_s>
 	</item>	<item>	<image_s>/static-assets/images/client-11.png</image_s>
 	</item>	<item>	<image_s>/static-assets/images/client-14.png</image_s>
@@ -20,17 +23,14 @@
 	</item>	<item>	<image_s>/static-assets/images/client-7.png</image_s>
 	</item>	<item>	<image_s>/static-assets/images/client-9.png</image_s>
 	</item>	<item>	<image_s>/static-assets/images/client-17.png</image_s>
-	</item>	<item>	<image_s>/static-assets/images/logo-vietinbnak.png</image_s>
 	</item>	<item>	<image_s>/static-assets/images/client-18.png</image_s>
 	</item>	<item>	<image_s>/static-assets/images/client-20.png</image_s>
-	</item>	<item>	<image_s>/static-assets/images/logo-bidv.png</image_s>
-	</item>	<item>	<image_s>/static-assets/images/client-15.png</image_s>
 	</item>	<item>	<image_s>/static-assets/images/client-15.png</image_s>
 	</item>	<item>	<image_s>/static-assets/images/client-16.png</image_s>
 	</item>	<item>	<image_s>/static-assets/images/client-21.png</image_s>
 	</item></client_o>
 	<createdDate>2025-07-08T04:05:40.411Z</createdDate>
 	<createdDate_dt>2025-07-08T04:05:40.411Z</createdDate_dt>
-	<lastModifiedDate>2025-07-08T04:05:40.411Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-08T04:05:40.411Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-05T04:20:11.399Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-05T04:20:11.399Z</lastModifiedDate_dt>
 </component>
