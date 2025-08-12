@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/item</content-type>
+	<display-template>/templates/web/Item.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>c5e6</objectGroupId>
+	<objectId>c5e680a0-75de-68ba-d0c4-9152bec0a41b</objectId>
+	<internal-name>DTSVN – Phần mềm Quản lý mẫu in tập trung  </internal-name>
+	<navLabel>DTSVN – Phần mềm Quản lý mẫu in tập trung  </navLabel>
+	<key_main_s>DTSVN - Quản lý mẫu in</key_main_s>
+	<title_vi_s>DTSVN – Phần mềm Quản lý mẫu in tập trung  </title_vi_s>
+	<title_en_s/>
+	<file-name>index.xml</file-name>
+	<folder-name>c5e680a0-75de-68ba-d0c4-9152bec0a41b</folder-name>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<img_main_s/>
+	<info_main_t/>
+	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
+	<value>Contact Form - VN</value>
+	<include>/site/components/contact-form/vn.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_VN_o>
+	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_VN_o>
+	<footer_VN_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_VN_o>
+	<contact_EN_o item-list="true">	<item>	<key>/site/components/contact-form/en.xml</key>
+	<value>Contact form - EN</value>
+	<include>/site/components/contact-form/en.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_EN_o>
+	<header_EN_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_EN_o>
+	<footer_EN_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_EN_o>
+	<content_vi_html>&lt;p&gt;Quản l&amp;yacute; mẫu in tập trung l&amp;agrave; giải ph&amp;aacute;p to&amp;agrave;n diện gi&amp;uacute;p c&amp;aacute;c doanh nghiệp tối ưu quy tr&amp;igrave;nh thiết kế, quản l&amp;yacute; v&amp;agrave; triển khai c&amp;aacute;c mẫu in một c&amp;aacute;ch nhanh ch&amp;oacute;ng, hiệu quả v&amp;agrave; nhất qu&amp;aacute;n. Với những t&amp;iacute;nh năng nổi bật, phần mềm mang lại nhiều lợi &amp;iacute;ch thiết thực như: Cho ph&amp;eacute;p nghiệp vụ, IT phối hợp tốt; Thiết kế nhanh tiện lợi; T&amp;iacute;ch hợp API thuận tiện; Hệ thống b&amp;aacute;o c&amp;aacute;o linh hoạt; Nghiệp vụ quản l&amp;yacute; rủi ro, tu&amp;acirc;n thủ.&lt;/p&gt;
+&lt;figure&gt;
+&lt;div&gt;&lt;iframe sandbox=""&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Nhu cầu thị trường &amp;ndash; Một số pain points&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Về thiết kế mẫu in:&lt;/em&gt;&lt;/strong&gt;&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Một số hệ thống kh&amp;ocirc;ng hỗ trợ việc thiết kế bản in tr&amp;ecirc;n ứng dụng;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Việc thiết kế b&amp;ecirc;n ngo&amp;agrave;i v&amp;agrave; t&amp;iacute;ch hợp tốn thời gian, c&amp;ocirc;ng sức.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Về t&amp;iacute;ch hợp dữ liệu:&lt;/em&gt;&lt;/strong&gt;&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Việc t&amp;iacute;ch hợp dữ liệu với bản in mất nhiều thời gian;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Ứng dụng lớn việc t&amp;iacute;ch hợp c&amp;oacute; thể kh&amp;ocirc;ng liền mạch, nhiều khi mất t&amp;iacute;nh nhất qu&amp;aacute;n.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Về quản l&amp;yacute; tập trung:&amp;nbsp;&lt;/em&gt;&lt;/strong&gt;&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Doanh nghiệp lớn khi thay đổi cấp độ Tổng c&amp;ocirc;ng ty c&amp;oacute; thể g&amp;acirc;y ảnh hưởng tới nhiều ứng dụng độc lập dẫn tới c&amp;aacute;c bản in bị lỗi;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Truy xuất bản in cũ, phi&amp;ecirc;n bản c&amp;oacute; thể kh&amp;ocirc;ng được c&amp;acirc;n nhắc xử l&amp;yacute; từ đầu g&amp;acirc;y kh&amp;oacute; khăn trong kh&amp;acirc;u vận h&amp;agrave;nh;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Qu&amp;aacute; nhiều xử l&amp;yacute; thủ c&amp;ocirc;ng của c&amp;aacute;c ứng dụng ph&amp;acirc;n t&amp;aacute;n cũng g&amp;acirc;y kh&amp;oacute; khăn khi phải r&amp;agrave; so&amp;aacute;t v&amp;agrave; điều chỉnh tr&amp;ecirc;n diện rộng.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Khả năng đ&amp;aacute;p ứng &amp;ndash; T&amp;iacute;ch hợp dữ liệu&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;T&amp;iacute;ch hợp trường dữ liệu v&amp;agrave;o mẫu in sử dụng AI;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Bộ m&amp;atilde; trường dữ liệu th&amp;acirc;n thiện;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Quản l&amp;yacute; dữ liệu nhất qu&amp;aacute;n;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Phương &amp;aacute;n t&amp;iacute;ch hợp API thuận tiện.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Khả năng đ&amp;aacute;p ứng &amp;ndash; Thiết kế&lt;/strong&gt;&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Thiết kế nhanh với nhiều tiện &amp;iacute;ch;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;T&amp;iacute;ch hợp trường dữ liệu nhanh;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Khả năng thay đổi nhiều mẫu in c&amp;ugrave;ng l&amp;uacute;c;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Nhiều phương &amp;aacute;n quản l&amp;yacute; v&amp;agrave; sử dụng mẫu in.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Khả năng đ&amp;aacute;p ứng &amp;ndash; Quản l&amp;yacute; tập trung&lt;/strong&gt;&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quản l&amp;yacute; dữ liệu tập trung;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Quản l&amp;yacute; bản in tập trung;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Quản l&amp;yacute; API tập trung;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;B&amp;aacute;o c&amp;aacute;o tập trung.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;</content_vi_html>
+	<content_en_html/>
+	<createdDate>2025-08-12T02:49:54.255Z</createdDate>
+	<createdDate_dt>2025-08-12T02:49:54.255Z</createdDate_dt>
+	<lastModifiedDate>2025-08-12T02:49:54.255Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-12T02:49:54.255Z</lastModifiedDate_dt>
+	<time_create_dt>2025-08-12T02:49:55.000Z</time_create_dt>
+	<time_create_dt_tz>Asia/Bangkok</time_create_dt_tz>
+</page>
