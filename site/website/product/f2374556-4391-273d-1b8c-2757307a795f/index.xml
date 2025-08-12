@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/item</content-type>
+	<display-template>/templates/web/Item.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>f237</objectGroupId>
+	<objectId>f2374556-4391-273d-1b8c-2757307a795f</objectId>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<file-name>index.xml</file-name>
+	<folder-name>f2374556-4391-273d-1b8c-2757307a795f</folder-name>
+	<internal-name>D-DF – Phần mềm quản lý hồ sơ biểu mẫu cho Bank</internal-name>
+	<navLabel>D-DF – Phần mềm quản lý hồ sơ biểu mẫu cho Bank</navLabel>
+	<key_main_s>DTSVN – DOCUMENT FORM (D-DF)</key_main_s>
+	<title_vi_s>D-DF – Phần mềm quản lý hồ sơ biểu mẫu cho Bank</title_vi_s>
+	<title_en_s/>
+	<info_main_t/>
+	<img_main_s/>
+	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
+	<value>Contact Form - VN</value>
+	<include>/site/components/contact-form/vn.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_VN_o>
+	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_VN_o>
+	<footer_VN_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_VN_o>
+	<contact_EN_o item-list="true">	<item>	<key>/site/components/contact-form/en.xml</key>
+	<value>Contact form - EN</value>
+	<include>/site/components/contact-form/en.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_EN_o>
+	<header_EN_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_EN_o>
+	<footer_EN_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_EN_o>
+	<content_vi_html>&lt;p&gt;Phần mềm gi&amp;uacute;p quản l&amp;yacute; tập trung th&amp;ocirc;ng tin, mẫu biểu, hồ sơ kh&amp;aacute;ch h&amp;agrave;ng chuy&amp;ecirc;n nghiệp, t&amp;aacute;c nghiệp thuận tiện, khoa học&lt;/p&gt;
+&lt;h4&gt;D-DF giải quyết vấn đề g&amp;igrave;?&lt;/h4&gt;
+&lt;figure&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Vấn đề gặp phải&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;D-DF&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cập nhật, thay đổi form mẫu hồ sơ to&amp;agrave;n hệ thống gặp kh&amp;oacute; v&amp;igrave; phức tạp, qu&amp;aacute; nhiều mẫu v&amp;agrave; l&amp;agrave;m thủ c&amp;ocirc;ng.&lt;/td&gt;
+&lt;td&gt;Quy tr&amp;igrave;nh cập nhật, thay đổi tự động &amp;aacute;p dụng dễ d&amp;agrave;ng cho to&amp;agrave;n hệ thống&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Phải t&amp;igrave;m chọn mẫu hồ sơ mong muốn trong kho mẫu lớn theo tr&amp;iacute; nhớ hoặc hướng dẫn phức tạp&lt;/td&gt;
+&lt;td&gt;Cấu tr&amp;uacute;c lưu trữ, nhập liệu v&amp;agrave; xuất file khoa học, quy tr&amp;igrave;nh đơn giản&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lỗi sai, sửa ho&amp;agrave;n to&amp;agrave;n phụ thuộc con người&lt;/td&gt;
+&lt;td&gt;Tự động sửa lỗi (Autocorrect) hoặc b&amp;aacute;o động (alert) khi nhập sai dữ liệu; xuất file hồ sơ đạt chuẩn dễ kiểm so&amp;aacute;t, ph&amp;ecirc; duyệt.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;T&amp;agrave;i liệu, hồ sơ, mẫu biểu kh&amp;ocirc;ng theo chuẩn chung quốc tế&lt;/td&gt;
+&lt;td&gt;Chất lượng t&amp;agrave;i liệu cuối được chuẩn ho&amp;aacute; theo ti&amp;ecirc;u chuẩn quốc tế với chất lượng h&amp;igrave;nh ảnh v&amp;agrave; cảm quan chuy&amp;ecirc;n nghiệp.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hệ thống lưu trữ v&amp;agrave; khai th&amp;aacute;c bảo mật k&amp;eacute;m&lt;/td&gt;
+&lt;td&gt;Lưu trữ v&amp;agrave; khai th&amp;aacute;c đảm bảo quy tr&amp;igrave;nh bảo mật cao&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/figure&gt;</content_vi_html>
+	<content_en_html/>
+	<createdDate>2025-08-12T09:24:01.904Z</createdDate>
+	<createdDate_dt>2025-08-12T09:24:01.904Z</createdDate_dt>
+	<lastModifiedDate>2025-08-12T09:24:01.904Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-12T09:24:01.904Z</lastModifiedDate_dt>
+	<time_create_dt>2025-08-12T09:24:02.000Z</time_create_dt>
+	<time_create_dt_tz>Asia/Bangkok</time_create_dt_tz>
+</page>
