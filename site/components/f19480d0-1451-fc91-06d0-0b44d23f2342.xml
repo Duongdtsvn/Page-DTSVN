@@ -14,9 +14,9 @@
 	<products_o item-list="true">	<item>	<slogan_s>DTSVN - CEP</slogan_s>
 	<url_s>https://dtsvn.net/martech/</url_s>
 	<product_name_s>Dịch vụ vận hành Martech</product_name_s>
-	</item>	<item>	<slogan_s>DTSVN - CDxP</slogan_s>
+	</item>	<item>	<slogan_s>DTSVN - D@DI</slogan_s>
 	<url_s/>
-	<product_name_s>Dịch vụ Vận hành và Quản lý Nền tảng CDxP</product_name_s>
+	<product_name_s>Phần mềm thông tin kết nối giao dịch mua bán tài sản bảo đảm</product_name_s>
 	</item>	<item>	<slogan_s>DTSVN – iDB</slogan_s>
 	<url_s/>
 	<product_name_s>Kênh giao dịch số tài chính thông minh (iDB)</product_name_s>
@@ -35,6 +35,6 @@
 	</item></products_o>
 	<createdDate>2025-06-25T09:47:40.404Z</createdDate>
 	<createdDate_dt>2025-06-25T09:47:40.404Z</createdDate_dt>
-	<lastModifiedDate>2025-08-04T09:31:16.296Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-04T09:31:16.296Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-12T02:47:50.665Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-12T02:47:50.665Z</lastModifiedDate_dt>
 </component>
