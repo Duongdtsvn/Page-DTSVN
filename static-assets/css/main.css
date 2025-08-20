@@ -14140,4 +14140,29 @@ html.mobile.landscape .menuMobile__info li + li {
 .featurebox {
        border-bottom: 1px solid #E3E5EA;
 }
-  
+   /* Basic CSS for submenu styling */
+    .nav-has-submenu { position: relative; }
+    .nav-has-submenu .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      list-style: none;
+      padding: 10px 0;
+      min-width: 150px;
+    }
+    .nav-has-submenu:hover .submenu { display: block; }
+    .submenu li a {
+      display: block;
+      padding: 8px 15px;
+      color: #0E245B;
+      text-decoration: none;
+    }
+    .submenu li a:hover { background: #f0f0f0; }
+    .nav-mobile__menu .submenu {
+      display: none;
+      padding-left: 20px;
+    }
+    .nav-mobile__menu .nav-has-submenu.active .submenu { display: block; }
