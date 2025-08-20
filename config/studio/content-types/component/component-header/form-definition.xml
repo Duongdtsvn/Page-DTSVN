@@ -375,12 +375,12 @@
 						</property>
 						<property>
 							<name>repoPath</name>
-							<value>/site/</value>
+							<value>/site/components/headers</value>
 								<type>content-path-input</type>
 						</property>
 						<property>
 							<name>browsePath</name>
-							<value>/site/</value>
+							<value>/site/components/headers</value>
 								<type>content-path-input</type>
 						</property>
 						<property>
