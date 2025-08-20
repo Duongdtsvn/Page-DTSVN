@@ -53,10 +53,9 @@
             <li class="nav-has-submenu">
               <a href="${menu.link_s!''}">${menu.menu_s!''}</a>
                <ul class="submenu">
-                <li><a href="/services/web-development">Web Development</a></li>
-                <li><a href="/services/mobile-development">Mobile Development</a></li>
+                <@crafter.renderComponentCollection $field="submenu_o" />
               </ul>
-<@crafter.renderComponentCollection $field="submenu_o" />
+
            </li>
             </#list>
             </#if>
