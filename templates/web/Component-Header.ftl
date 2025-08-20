@@ -46,22 +46,24 @@
 
         <!-- Desktop Navigation Menu - Menu điều hướng cho desktop -->
         <nav class="nav-desktop">
-          <ul class="nav-list" style="margin-bottom: 0px;">
-            <!-- Loop qua menu items từ CMS - Vòng lặp hiển thị menu từ hệ thống quản lý nội dung -->
-            <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
-            <#list contentModel.menu_o.item as menu>
-            <li class="nav-has-submenu">
-              <a href="${menu.link_s!''}">${menu.menu_s!''}</a>
-               <ul class="submenu">
-                        <@crafter.renderComponentCollection $field="submenu_o" $model=menu />
+  <ul class="nav-list" style="margin-bottom: 0px;">
+    <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
+      <#list contentModel.menu_o.item as menu>
+        <li class="nav-has-submenu">
+          <a href="${menu.link_s!''}">${menu.menu_s!''}</a>
 
-              </ul>
+          <#-- Nếu có submenu thì render -->
+          <#if menu.submenu_o?? && menu.submenu_o?has_content>
+            <ul class="submenu">
+              <@crafter.renderComponentCollection $field="submenu_o" $model=menu />
+            </ul>
+          </#if>
+        </li>
+      </#list>
+    </#if>
+  </ul>
+</nav>
 
-           </li>
-            </#list>
-            </#if>
-          </ul>
-        </nav>
 
         <!-- Language Switcher - Bộ chuyển đổi ngôn ngữ -->
         <div class="nav-lang-switcher">
