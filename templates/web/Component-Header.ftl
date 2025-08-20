@@ -55,7 +55,7 @@
           <#-- Nếu có submenu thì render -->
           <#if menu.submenu_o?? && menu.submenu_o?has_content>
             <ul class="submenu">
-              <@crafter.renderComponentCollection $field="submenu_o" $model=menu />
+              <@crafter.renderComponentCollection $field="submenu_o" />
             </ul>
           </#if>
         </li>
