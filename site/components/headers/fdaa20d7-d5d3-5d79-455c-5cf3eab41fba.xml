@@ -11,20 +11,20 @@
 	<internal-name>header</internal-name>
 	<createdDate>2025-06-24T08:58:33.346Z</createdDate>
 	<createdDate_dt>2025-06-24T08:58:33.346Z</createdDate_dt>
-	<lastModifiedDate>2025-08-20T04:04:00.901Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-20T04:04:00.901Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-20T10:08:57.747Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-20T10:08:57.747Z</lastModifiedDate_dt>
 	<menu_o item-list="true">	<item>	<menu_s>Giới Thiệu</menu_s>
 	<menu_c2_o item-list="true"/>
 	<link_s>/about</link_s>
 	<submenu_o item-list="true"/>
 	</item>	<item>	<menu_s>Sản phẩm - Dịch vụ</menu_s>
-	<menu_c2_o item-list="true">	<item datasource="menu">	<key>/site/components/headers/70364ed5-be23-fd68-cbc9-d2bbee6feb8f.xml</key>
+	<menu_c2_o item-list="true"/>
+	<link_s>/products</link_s>
+	<submenu_o item-list="true">	<item>	<key>/site/components/headers/70364ed5-be23-fd68-cbc9-d2bbee6feb8f.xml</key>
 	<value>Menu cấp 2</value>
 	<include>/site/components/headers/70364ed5-be23-fd68-cbc9-d2bbee6feb8f.xml</include>
 	<disableFlattening>false</disableFlattening>
-	</item></menu_c2_o>
-	<link_s>/products</link_s>
-	<submenu_o item-list="true"/>
+	</item></submenu_o>
 	</item>	<item>	<menu_s>Khóa học BA</menu_s>
 	<menu_c2_o item-list="true"/>
 	<link_s>/course-of-ba</link_s>
