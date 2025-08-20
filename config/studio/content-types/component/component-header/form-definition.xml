@@ -277,7 +277,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>menucp2</value>
+							<value>menuc2</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -354,8 +354,8 @@
 				</datasource>
 				<datasource>
 					<type>shared-content</type>
-					<id>menucp2</id>
-					<title>menu cấp 2</title>
+					<id>menuc2</id>
+					<title>menuc2</title>
 					<interface>item</interface>
 					<properties>
 						<property>
