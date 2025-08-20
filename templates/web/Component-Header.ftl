@@ -51,13 +51,9 @@
       <#list contentModel.menu_o.item as menu>
         <li class="nav-has-submenu">
           <a href="${menu.link_s!''}">${menu.menu_s!''}</a>
-
-          <#-- Nếu có submenu thì render -->
-          <#if menu.submenu_o?? && menu.submenu_o?has_content>
             <ul class="submenu">
               <@crafter.renderComponentCollection $field="submenu_o" />
             </ul>
-          </#if>
         </li>
       </#list>
     </#if>
