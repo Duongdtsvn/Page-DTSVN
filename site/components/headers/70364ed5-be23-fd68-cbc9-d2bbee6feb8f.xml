@@ -11,9 +11,11 @@
 	<internal-name>Menu cấp 2</internal-name>
 	<submenu_o item-list="true">	<item>	<menu_s>Khóa học BA</menu_s>
 	<link_s>/course-of-ba</link_s>
+	</item>	<item>	<menu_s>Tư vấn chuyển đổi số</menu_s>
+	<link_s/>
 	</item></submenu_o>
 	<createdDate>2025-08-20T04:04:22.239Z</createdDate>
 	<createdDate_dt>2025-08-20T04:04:22.239Z</createdDate_dt>
-	<lastModifiedDate>2025-08-20T04:04:22.239Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-20T04:04:22.239Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-20T04:45:02.016Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-20T04:45:02.016Z</lastModifiedDate_dt>
 </component>
