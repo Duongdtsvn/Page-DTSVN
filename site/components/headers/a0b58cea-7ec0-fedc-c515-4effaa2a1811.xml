@@ -11,31 +11,23 @@
 	<folder-name/>
 	<menu_o item-list="true">	<item>	<menu_s>About</menu_s>
 	<link_s>/en/about</link_s>
-	<menu_c2_o item-list="true"/>
+	<menu_c2_o/>
+	<submenu_o item-list="true"/>
 	</item>	<item>	<menu_s>Products-Service</menu_s>
-	<menu_c2_o item-list="true"/>
+	<menu_c2_o/>
 	<link_s>/en/products</link_s>
-	</item>	<item>	<menu_s>BA course</menu_s>
-	<menu_c2_o item-list="true"/>
-	<link_s>/en/course-of-ba</link_s>
-	</item>	<item>	<menu_s>Investors</menu_s>
-	<menu_c2_o item-list="true"/>
-	<link_s>/en/investors</link_s>
-	</item>	<item>	<menu_s>Digital Transformation</menu_s>
-	<menu_c2_o item-list="true"/>
-	<link_s>/en/digital-transformation</link_s>
-	</item>	<item>	<menu_s>Partners</menu_s>
-	<menu_c2_o item-list="true"/>
-	<link_s>/en/partners-customer</link_s>
+	<submenu_o item-list="true"/>
 	</item>	<item>	<menu_s>News</menu_s>
-	<menu_c2_o item-list="true"/>
+	<menu_c2_o/>
 	<link_s>/en/news</link_s>
+	<submenu_o item-list="true"/>
 	</item>	<item>	<menu_s>Projects</menu_s>
-	<menu_c2_o item-list="true"/>
+	<menu_c2_o/>
 	<link_s>/en/projects</link_s>
+	<submenu_o item-list="true"/>
 	</item></menu_o>
 	<createdDate>2025-07-07T08:53:50.134Z</createdDate>
 	<createdDate_dt>2025-07-07T08:53:50.134Z</createdDate_dt>
-	<lastModifiedDate>2025-07-14T08:50:42.000Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-14T08:50:42.000Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-21T08:20:48.969Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-21T08:20:48.969Z</lastModifiedDate_dt>
 </component>
