@@ -9736,7 +9736,6 @@ html.mobile.landscape .menuMobile__info li + li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top: 1px solid #E1E1E1;
   padding-top: 30px;
 }
 .pagination li {
