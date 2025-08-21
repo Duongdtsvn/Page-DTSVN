@@ -9,7 +9,7 @@
                         <h1 class="sec-pageTitle__title fz-52">
                             ${contentModel.title_s!''}
                         </h1>
-                        <p class="sec-pageTitle__text">${contentModel.text_t!''}</p>
+                        <p class="sec-pageTitle__text">${contentModel.text_s!''}</p>
                     </div>
                 </div>
             </div>
@@ -31,12 +31,12 @@
                                         ${service.key_main_s!''}
                                     </span>
                                     <h3 class="productbox__title">
-                                        <a href="${service.link_s!''}">${service.title_vi!''}</a>
+                                        <a href="${service.link_s!''}">${service.title_s!''}</a>
                                     </h3>
                                 </div>
                                 <div class="productbox__btn">
                                     <a href="${service.link_s!''}" class="btn-text">
-                                        Tìm hiểu thêm <span></span>
+                                        ${service.text_s!''} <span></span>
                                     </a>
                                 </div>
                             </div>
