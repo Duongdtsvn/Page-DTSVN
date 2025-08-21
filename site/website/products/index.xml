@@ -49,11 +49,11 @@
 	</item></list_product_o>
 	<createdDate>2025-07-11T02:48:04.889Z</createdDate>
 	<createdDate_dt>2025-07-11T02:48:04.889Z</createdDate_dt>
-	<lastModifiedDate>2025-08-21T07:50:55.771Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-21T07:50:55.771Z</lastModifiedDate_dt>
-	<list_service_o item-list="true">	<item datasource="dchv">	<key>/site/11690e51-8629-0054-5d94-c192f696d02a.xml</key>
-	<value>Dịch Vụ</value>
-	<include>/site/11690e51-8629-0054-5d94-c192f696d02a.xml</include>
+	<lastModifiedDate>2025-08-21T07:56:09.050Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-21T07:56:09.050Z</lastModifiedDate_dt>
+	<list_service_o item-list="true">	<item datasource="dchv">	<key>/site/ec12c134-1756-0e81-164c-1d0748c16da9.xml</key>
+	<value>Dịch vụ</value>
+	<include>/site/ec12c134-1756-0e81-164c-1d0748c16da9.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></list_service_o>
 </page>
