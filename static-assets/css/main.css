@@ -10216,8 +10216,8 @@ html.mobile.landscape .menuMobile__info li + li {
   margin-right: 24px;
 }
 .nav-cat ul a {
-  font-size: 16px;
-  color: rgba(15, 29, 99, 0.4);
+  font-size: 18px;
+  color: black;
 }
 .nav-cat ul a:hover, .nav-cat ul a.current {
   color: #0F1D63;
