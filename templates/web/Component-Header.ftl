@@ -47,16 +47,17 @@
         <!-- Desktop Navigation Menu - Menu điều hướng cho desktop -->
         <nav class="nav-desktop">
   <ul class="nav-list" style="margin-bottom: 0px;">
-    <#if contentModel.menu_o.item?? && contentModel.menu_o.item?has_content>
-      <#list contentModel.menu_o.item as menu>
-        <li class="nav-has-submenu">
-          <a href="${menu.link_s!''}">${menu.menu_s!''}</a>
-            <ul class="submenu">
-              <@crafter.renderComponentCollection $field="submenu_o" />
-            </ul>
-        </li>
-      </#list>
+    <#list contentModel.menu_o.item as menu>
+  <li class="nav-has-submenu">
+    <a href="${menu.link_s!''}">${menu.menu_s!''}</a>
+    <#if menu.submenu_o.item?? && menu.submenu_o.item?has_content>
+      <ul class="submenu">
+        <@crafter.renderComponentCollection $field=menu.submenu_o />
+      </ul>
     </#if>
+  </li>
+</#list>
+
   </ul>
 </nav>
 
