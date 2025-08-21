@@ -14165,4 +14165,6 @@ html.mobile.landscape .menuMobile__info li + li {
   color: #fff;
   border-color: #007bff;
 }
-
+.pagination-info{
+    color: #c6e2f7;
+}
