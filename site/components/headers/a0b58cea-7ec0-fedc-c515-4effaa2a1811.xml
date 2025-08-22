@@ -25,9 +25,12 @@
 	<menu_c2_o/>
 	<link_s>/en/projects</link_s>
 	<submenu_o item-list="true"/>
+	</item>	<item>	<menu_s>Contact</menu_s>
+	<link_s/>
+	<submenu_o item-list="true"/>
 	</item></menu_o>
 	<createdDate>2025-07-07T08:53:50.134Z</createdDate>
 	<createdDate_dt>2025-07-07T08:53:50.134Z</createdDate_dt>
-	<lastModifiedDate>2025-08-21T08:20:48.969Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-21T08:20:48.969Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-22T02:56:58.785Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-22T02:56:58.785Z</lastModifiedDate_dt>
 </component>
