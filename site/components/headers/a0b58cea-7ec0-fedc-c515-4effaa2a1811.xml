@@ -26,11 +26,11 @@
 	<link_s>/en/projects</link_s>
 	<submenu_o item-list="true"/>
 	</item>	<item>	<menu_s>Contact</menu_s>
-	<link_s/>
+	<link_s>/en/contact</link_s>
 	<submenu_o item-list="true"/>
 	</item></menu_o>
 	<createdDate>2025-07-07T08:53:50.134Z</createdDate>
 	<createdDate_dt>2025-07-07T08:53:50.134Z</createdDate_dt>
-	<lastModifiedDate>2025-08-22T02:56:58.785Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-22T02:56:58.785Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-22T03:14:31.513Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-22T03:14:31.513Z</lastModifiedDate_dt>
 </component>
