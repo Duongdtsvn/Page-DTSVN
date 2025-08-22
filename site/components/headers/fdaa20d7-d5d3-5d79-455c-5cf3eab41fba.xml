@@ -11,8 +11,8 @@
 	<internal-name>header</internal-name>
 	<createdDate>2025-06-24T08:58:33.346Z</createdDate>
 	<createdDate_dt>2025-06-24T08:58:33.346Z</createdDate_dt>
-	<lastModifiedDate>2025-08-21T08:16:11.163Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-21T08:16:11.163Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-22T02:56:12.122Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-22T02:56:12.122Z</lastModifiedDate_dt>
 	<menu_o item-list="true">	<item>	<menu_s>Giới Thiệu</menu_s>
 	<menu_c2_o/>
 	<link_s>/about</link_s>
@@ -28,6 +28,9 @@
 	</item>	<item>	<menu_s>Dự án</menu_s>
 	<menu_c2_o/>
 	<link_s>/projects</link_s>
+	<submenu_o item-list="true"/>
+	</item>	<item>	<menu_s>Liên hệ</menu_s>
+	<link_s/>
 	<submenu_o item-list="true"/>
 	</item></menu_o>
 </component>
