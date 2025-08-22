@@ -49,6 +49,11 @@
 	</item></list_product_o>
 	<createdDate>2025-07-11T03:29:55.029Z</createdDate>
 	<createdDate_dt>2025-07-11T03:29:55.029Z</createdDate_dt>
-	<lastModifiedDate>2025-08-06T08:13:30.099Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-06T08:13:30.099Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-22T03:03:14.904Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-22T03:03:14.904Z</lastModifiedDate_dt>
+	<list_service_o item-list="true">	<item datasource="dchv">	<key>/site/4d3e5d87-6025-e2aa-7de6-184ae30615d1.xml</key>
+	<value>Dịch vụ en</value>
+	<include>/site/4d3e5d87-6025-e2aa-7de6-184ae30615d1.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></list_service_o>
 </page>
