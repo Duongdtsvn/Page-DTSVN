@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/item-new</content-type>
+	<display-template>/templates/web/item-news.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>aa33</objectGroupId>
+	<objectId>aa335bf0-4c71-f9f1-d219-78920cf621ab</objectId>
+	<internal-name>KÝ KẾT HỢP TÁC CHIẾN LƯỢC GIỮA DTSVN VÀ VFS</internal-name>
+	<navLabel>KÝ KẾT HỢP TÁC CHIẾN LƯỢC GIỮA DTSVN VÀ VFS</navLabel>
+	<title_vi_s>KÝ KẾT HỢP TÁC CHIẾN LƯỢC GIỮA DTSVN VÀ VFS</title_vi_s>
+	<title_en_s>SIGNING OF STRATEGIC COOPERATION AGREEMENT BETWEEN DTSVN AND VFS</title_en_s>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<file-name>index.xml</file-name>
+	<folder-name>aa335bf0-4c71-f9f1-d219-78920cf621ab</folder-name>
+	<categorys_o>	<item>	<key>Business-News</key>
+	<value_smv>Tin kinh doanh</value_smv>
+	</item></categorys_o>
+	<img_main_s>/static-assets/images/z6942586866528_25f5b4b2028fae974854e3cff0cb6033.jpg</img_main_s>
+	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
+	<value>Contact Form - VN</value>
+	<include>/site/components/contact-form/vn.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_VN_o>
+	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_VN_o>
+	<footer_VN_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_VN_o>
+	<contact_EN_o item-list="true">	<item>	<key>/site/components/contact-form/en.xml</key>
+	<value>Contact form - EN</value>
+	<include>/site/components/contact-form/en.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_EN_o>
+	<header_EN_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_EN_o>
+	<footer_EN_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_EN_o>
+	<content_vi_html>&lt;section&gt;&lt;/section&gt;
+&lt;section&gt;
+&lt;div&gt;
+&lt;div&gt;
+&lt;div&gt;
+&lt;div&gt;
+&lt;div&gt;
+&lt;div&gt;
+&lt;div style="text-align: justify;"&gt;
+&lt;p style="text-align: justify;"&gt;Ng&amp;agrave;y 12/12, tại H&amp;agrave; Nội, DTSVN ch&amp;iacute;nh thức k&amp;iacute; kết hợp đồng Tư vấn quản trị chiến lược với VFS - một trong những đơn vị tư vấn t&amp;agrave;i ch&amp;iacute;nh h&amp;agrave;ng đầu tại Việt Nam hiện nay.&lt;/p&gt;
+&amp;nbsp;&lt;img src="/static-assets/images/z6942586216042_22eebc7867cad5352c3613fe00d37357.jpg" alt="" width="2560" height="1843"&gt;
+&lt;div&gt;
+&lt;p style="text-align: justify;"&gt;&lt;img&gt;DTSVN l&amp;agrave; hệ sinh th&amp;aacute;i chuyển đổi số h&amp;agrave;ng đầu, chuy&amp;ecirc;n cung cấp c&amp;aacute;c giải ph&amp;aacute;p chuyển đổi số cho doanh nghiệp trong lĩnh vực T&amp;agrave;i ch&amp;iacute;nh, Ng&amp;acirc;n h&amp;agrave;ng v&amp;agrave; chứng kho&amp;aacute;n tại Việt Nam. Với đội ngũ hơn 70% l&amp;agrave; c&amp;aacute;c kỹ sư c&amp;ocirc;ng nghệ gi&amp;agrave;u kinh nghiệm, DTSVN đ&amp;atilde; đồng h&amp;agrave;nh c&amp;ugrave;ng nhiều Ng&amp;acirc;n h&amp;agrave;ng h&amp;agrave;ng đầu tại Việt Nam, triển khai th&amp;agrave;nh c&amp;ocirc;ng c&amp;aacute;c giải ph&amp;aacute;p đột ph&amp;aacute;, g&amp;oacute;p phần n&amp;acirc;ng cao hiệu quả hoạt động v&amp;agrave; tạo gi&amp;aacute; trị bền vững cho kh&amp;aacute;ch h&amp;agrave;ng.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;VFS, với kinh nghiệm l&amp;acirc;u năm trong lĩnh vực tư vấn t&amp;agrave;i ch&amp;iacute;nh v&amp;agrave; quản trị doanh nghiệp, đ&amp;atilde; hỗ trợ nhiều c&amp;ocirc;ng ty tại Việt Nam v&amp;agrave; khu vực Đ&amp;ocirc;ng Nam &amp;Aacute; đạt được sự ph&amp;aacute;t triển vượt bậc. C&amp;aacute;c chuy&amp;ecirc;n gia của VFS lu&amp;ocirc;n đem đến những giải ph&amp;aacute;p chiến lược v&amp;agrave; quản trị tối ưu, gi&amp;uacute;p c&amp;aacute;c doanh nghiệp cải thiện hiệu quả vận h&amp;agrave;nh v&amp;agrave; tối đa h&amp;oacute;a tiềm năng tăng trưởng.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;Nội dung hợp t&amp;aacute;c&lt;/strong&gt;&lt;/p&gt;
+&lt;ul style="text-align: justify;"&gt;
+&lt;li&gt;Tư vấn chiến lược ph&amp;aacute;t triển doanh nghiệp&lt;/li&gt;
+&lt;li&gt;Tư vấn quản trị vận h&amp;agrave;nh hiệu quả&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;Mục ti&amp;ecirc;u&lt;/strong&gt;&lt;/p&gt;
+&lt;ul style="text-align: justify;"&gt;
+&lt;li&gt;Chuẩn h&amp;oacute;a chiến lược kinh doanh v&amp;agrave; hệ thống vận h&amp;agrave;nh&lt;/li&gt;
+&lt;li&gt;Đặt nền m&amp;oacute;ng vững chắc cho sự ph&amp;aacute;t triển vượt bậc v&amp;agrave; mở rộng quy m&amp;ocirc; trong tương lai&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style="text-align: justify;"&gt;&lt;img src="/static-assets/images/z6942586517614_a22d984c11f67a964d38220903b09d08.jpg" alt="" width="2561" height="1921"&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;C&amp;ugrave;ng với sự đồng h&amp;agrave;nh của VFS, DTSVN tin tưởng sẽ đạt được những bước tiến đột ph&amp;aacute;, ng&amp;agrave;y c&amp;agrave;ng khẳng định vị thế C&amp;ocirc;ng ty ti&amp;ecirc;n phong tại Việt Nam chuy&amp;ecirc;n về giải ph&amp;aacute;p chuyển đổi số cho c&amp;aacute;c Ng&amp;acirc;n h&amp;agrave;ng v&amp;agrave; tổ chức T&amp;agrave;i Ch&amp;iacute;nh.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;---------------&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;DTSVN l&amp;agrave; C&amp;ocirc;ng ty Chuyển đổi số ti&amp;ecirc;n phong cung cấp giải ph&amp;aacute;p số h&amp;oacute;a mới nhất d&amp;agrave;nh ri&amp;ecirc;ng cho c&amp;aacute;c doanh nghiệp trong ng&amp;agrave;nh T&amp;agrave;i ch&amp;iacute;nh - Ng&amp;acirc;n h&amp;agrave;ng tại Việt Nam; gi&amp;uacute;p Ng&amp;acirc;n h&amp;agrave;ng, tổ chức t&amp;agrave;i ch&amp;iacute;nh nhanh ch&amp;oacute;ng ho&amp;agrave;n thiện hệ thống c&amp;ocirc;ng nghệ phục vụ Chuyển đổi số.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Li&amp;ecirc;n hệ ngay để được tư vấn v&amp;agrave; trải nghiệm giải ph&amp;aacute;p&amp;nbsp;&lt;a href="https://dtsvn.net/contact-us"&gt;tại đ&amp;acirc;y&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;</content_vi_html>
+	<content_en_html>&lt;p style="text-align: justify;"&gt;On December 12, in Hanoi, DTSVN officially signed a Strategic Management Consulting contract with VFS &amp;ndash; one of the leading financial consulting firms in Vietnam today.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;img src="/static-assets/images/z6942586216042_22eebc7867cad5352c3613fe00d37357.jpg" alt="" width="2560" height="1843"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p style="text-align: justify;"&gt;DTSVN is a leading digital transformation ecosystem, specializing in providing digital transformation solutions for enterprises in the fields of Finance, Banking, and Securities in Vietnam. With a team of more than 70% experienced technology engineers, DTSVN has accompanied many leading banks in Vietnam, successfully implementing breakthrough solutions, contributing to enhancing operational efficiency and creating sustainable value for customers.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;VFS, with many years of experience in financial consulting and corporate management, has supported many companies in Vietnam and Southeast Asia to achieve outstanding development. VFS experts always deliver strategic and optimal management solutions, helping businesses improve operational efficiency and maximize growth potential.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;Scope of Cooperation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul style="text-align: justify;"&gt;
+&lt;li&gt;
+&lt;p&gt;Strategic consulting for business development&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Consulting for effective operational management&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;Objectives&lt;/strong&gt;&lt;/p&gt;
+&lt;ul style="text-align: justify;"&gt;
+&lt;li&gt;
+&lt;p&gt;Standardize business strategy and operating system&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lay a solid foundation for outstanding development and future scale expansion&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style="text-align: justify;"&gt;With the companionship of VFS, DTSVN believes it will achieve breakthrough progress, increasingly affirming its position as a pioneering company in Vietnam specializing in digital transformation solutions for Banks and Financial Institutions.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;img src="/static-assets/images/z6942586517614_a22d984c11f67a964d38220903b09d08.jpg" alt=""&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p style="text-align: justify;"&gt;DTSVN is a pioneering Digital Transformation company providing the latest digitalization solutions exclusively for enterprises in the Finance &amp;ndash; Banking sector in Vietnam; helping Banks and Financial Institutions quickly complete their technology systems to serve Digital Transformation.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;👉 Contact us now for consultation and to experience our solutions &lt;strong&gt;here&lt;/strong&gt;.&lt;/p&gt;</content_en_html>
+	<time_create_dt>2024-12-12T06:11:13.000Z</time_create_dt>
+	<createdDate>2025-08-25T06:11:12.927Z</createdDate>
+	<createdDate_dt>2025-08-25T06:11:12.927Z</createdDate_dt>
+	<lastModifiedDate>2025-08-25T06:11:12.927Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-25T06:11:12.927Z</lastModifiedDate_dt>
+	<time_create_dt_tz>Asia/Jakarta</time_create_dt_tz>
+</page>
