@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/item-new</content-type>
+	<display-template>/templates/web/item-news.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>7080</objectGroupId>
+	<objectId>70808418-e1ba-83a3-255e-d5a139e860ba</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>70808418-e1ba-83a3-255e-d5a139e860ba</folder-name>
+	<internal-name>Tận dụng Sức mạnh của Xử lý Ngôn ngữ Tự nhiên (NLP) để Tối ưu Hóa Quản lý Rủi ro trong Ngành Tài chính - Ngân hàng</internal-name>
+	<navLabel>Tận dụng Sức mạnh của Xử lý Ngôn ngữ Tự nhiên (NLP) để Tối ưu Hóa Quản lý Rủi ro trong Ngành Tài chính - Ngân hàng</navLabel>
+	<title_vi_s>Tận dụng Sức mạnh của Xử lý Ngôn ngữ Tự nhiên (NLP) để Tối ưu Hóa Quản lý Rủi ro trong Ngành Tài chính - Ngân hàng</title_vi_s>
+	<title_en_s>Natural Language Processing (NLP) and Generative Applications for Risk Management in Banking and Financial Institutions</title_en_s>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<categorys_o>	<item>	<key>Blog</key>
+	<value_smv>Blog</value_smv>
+	</item></categorys_o>
+	<img_main_s>/static-assets/images/ngon-ngu-tu-nhien-nlp-la-gi-1024x625--1-.jpg</img_main_s>
+	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
+	<value>Contact Form - VN</value>
+	<include>/site/components/contact-form/vn.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_VN_o>
+	<header_VN_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_VN_o>
+	<footer_VN_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_VN_o>
+	<contact_EN_o item-list="true">	<item>	<key>/site/components/contact-form/en.xml</key>
+	<value>Contact form - EN</value>
+	<include>/site/components/contact-form/en.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></contact_EN_o>
+	<header_EN_o item-list="true">	<item>	<key>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</key>
+	<value>Header-en</value>
+	<include>/site/components/headers/a0b58cea-7ec0-fedc-c515-4effaa2a1811.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_EN_o>
+	<footer_EN_o item-list="true">	<item>	<key>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</key>
+	<value>footer-en</value>
+	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_EN_o>
+	<content_vi_html>&lt;section&gt;
+&lt;div&gt;
+&lt;div&gt;
+&lt;div&gt;
+&lt;div&gt;
+&lt;div&gt;
+&lt;h1&gt;Quản l&amp;yacute; rủi ro một c&amp;aacute;ch hiệu quả rất quan trọng để đảm bảo sự ổn định v&amp;agrave; th&amp;agrave;nh c&amp;ocirc;ng. Để đạt được cột mốc quan trọng đ&amp;oacute;, ch&amp;uacute;ng ta cần xem x&amp;eacute;t nhiều yếu tố. Một trong những c&amp;ocirc;ng nghệ mang t&amp;iacute;nh biến đổi nhất th&amp;uacute;c đẩy quản l&amp;yacute; rủi ro ph&amp;aacute;t triển l&amp;agrave; Xử l&amp;yacute; ng&amp;ocirc;n ngữ tự nhi&amp;ecirc;n (NLP) v&amp;agrave; Ứng dụng s&amp;aacute;ng tạo. B&amp;agrave;i viết n&amp;agrave;y kh&amp;aacute;m ph&amp;aacute; t&amp;aacute;c động đ&amp;aacute;ng kể của NLP v&amp;agrave; c&amp;aacute;c m&amp;ocirc; h&amp;igrave;nh tổng qu&amp;aacute;t trong c&amp;aacute;c quy tr&amp;igrave;nh quản l&amp;yacute; rủi ro, từ ph&amp;acirc;n t&amp;iacute;ch cảm x&amp;uacute;c đến ph&amp;aacute;t hiện gian lận, tạo b&amp;aacute;o c&amp;aacute;o tự động,&amp;hellip;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section&gt;
+&lt;div style="text-align: justify;"&gt;
+&lt;div&gt;
+&lt;p&gt;&lt;strong&gt;1. 👀 NLP l&amp;agrave; g&amp;igrave;?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;NLP l&amp;agrave; một nh&amp;aacute;nh của tr&amp;iacute; tuệ nh&amp;acirc;n tạo (AI) tập trung v&amp;agrave;o sự tương t&amp;aacute;c giữa m&amp;aacute;y t&amp;iacute;nh v&amp;agrave; ng&amp;ocirc;n ngữ của con người. N&amp;oacute; cho ph&amp;eacute;p m&amp;aacute;y m&amp;oacute;c hiểu, diễn giải v&amp;agrave; tạo ra ng&amp;ocirc;n ngữ của con người, khiến n&amp;oacute; trở th&amp;agrave;nh một c&amp;ocirc;ng cụ mạnh mẽ để xử l&amp;yacute; lượng lớn dữ liệu văn bản.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hiểu ng&amp;ocirc;n ngữ tự nhi&amp;ecirc;n so với thế hệ&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.💡 Tầm quan trọng của NLP trong Quản l&amp;yacute; Rủi ro&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Trong quản l&amp;yacute; rủi ro, việc tiếp cận th&amp;ocirc;ng tin li&amp;ecirc;n quan l&amp;agrave; rất quan trọng. NLP cho ph&amp;eacute;p c&amp;aacute;c tổ chức t&amp;agrave;i ch&amp;iacute;nh ph&amp;acirc;n t&amp;iacute;ch dữ liệu phi cấu tr&amp;uacute;c, chẳng hạn như c&amp;aacute;c b&amp;agrave;i b&amp;aacute;o, phương tiện truyền th&amp;ocirc;ng x&amp;atilde; hội v&amp;agrave; phản hồi của kh&amp;aacute;ch h&amp;agrave;ng, để r&amp;uacute;t ra c&amp;aacute;c insight c&amp;oacute; gi&amp;aacute; trị.&lt;/p&gt;
+&lt;p&gt;Đến năm 2025, gần 30% ứng dụng Xử l&amp;yacute; ng&amp;ocirc;n ngữ tự nhi&amp;ecirc;n sẽ được thực hiện trong Ng&amp;acirc;n h&amp;agrave;ng, Dịch vụ t&amp;agrave;i ch&amp;iacute;nh v&amp;agrave; Bảo hiểm. Ng&amp;acirc;n h&amp;agrave;ng lu&amp;ocirc;n l&amp;agrave; động lực th&amp;uacute;c đẩy ứng dụng AI, cụ thể hơn l&amp;agrave; NLP cho t&amp;agrave;i ch&amp;iacute;nh, trong tự động h&amp;oacute;a dữ liệu.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thị phần theo ng&amp;agrave;nh dọc - Nguồn : johnsnowlabs&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NLP trong T&amp;agrave;i ch&amp;iacute;nh (ng&amp;agrave;nh BFSI) đ&amp;atilde; được sử dụng cho:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ứng dụng cho vay, t&amp;iacute;n dụng tự động&lt;/li&gt;
+&lt;li&gt;Tự động t&amp;iacute;nh to&amp;aacute;n ph&amp;iacute;&lt;/li&gt;
+&lt;li&gt;Giới thiệu kh&amp;aacute;ch h&amp;agrave;ng&lt;/li&gt;
+&lt;li&gt;Quản l&amp;yacute; rủi ro&lt;/li&gt;
+&lt;li&gt;Quản l&amp;yacute; t&amp;agrave;i sản, ESG&lt;/li&gt;
+&lt;li&gt;Sự tu&amp;acirc;n thủ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mọi người c&amp;oacute; thể nghĩ rằng NLP sẽ bị giới hạn ở một số c&amp;ocirc;ng dụng nhất định. Điều n&amp;agrave;y l&amp;agrave; ho&amp;agrave;n to&amp;agrave;n sai! C&amp;ocirc;ng dụng của NLP sẽ c&amp;aacute;ch mạng h&amp;oacute;a tất cả c&amp;aacute;c lĩnh vực rủi ro ng&amp;acirc;n h&amp;agrave;ng/phi ng&amp;acirc;n h&amp;agrave;ng; n&amp;oacute; sẽ cho ph&amp;eacute;p những người d&amp;ugrave;ng kh&amp;ocirc;ng chuy&amp;ecirc;n về kỹ thuật đi s&amp;acirc;u v&amp;agrave;o cấp độ ph&amp;acirc;n t&amp;iacute;ch cao hơn tr&amp;ecirc;n nhiều kh&amp;iacute;a cạnh rủi ro.&lt;img&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Ph&amp;ograve;ng Rủi ro của c&amp;aacute;c tổ chức t&amp;agrave;i ch&amp;iacute;nh&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ứng dụng rủi ro NLP trong c&amp;aacute;c tổ chức T&amp;agrave;i ch&amp;iacute;nh Ng&amp;acirc;n h&amp;agrave;ng&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;C&amp;oacute; thể n&amp;oacute;i rằng việc sử dụng NLP &amp;amp; AI v&amp;agrave;o Ứng dụng Rủi ro trong c&amp;aacute;c Tổ chức T&amp;agrave;i ch&amp;iacute;nh v&amp;agrave; Ng&amp;acirc;n h&amp;agrave;ng sẽ được triển khai trong từng phần Rủi ro. Gi&amp;aacute;m đốc rủi ro c&amp;oacute; quyền truy cập v&amp;agrave;o hiểu biết v&amp;agrave; th&amp;ocirc;ng tin về rủi ro c&amp;oacute; t&amp;iacute;nh hữu &amp;iacute;ch hơn, v&amp;iacute; dụ như ph&amp;acirc;n t&amp;iacute;ch sự cố tập trung v&amp;agrave;o việc t&amp;igrave;m hiểu điều g&amp;igrave; đ&amp;atilde; xảy ra v&amp;agrave; tại sao.&lt;/p&gt;
+&lt;p&gt;Giờ đ&amp;acirc;y, họ đang ng&amp;agrave;y c&amp;agrave;ng trang bị c&amp;aacute;c c&amp;ocirc;ng cụ cho ph&amp;eacute;p ph&amp;acirc;n t&amp;iacute;ch trước, tạo điều kiện thuận lợi cho việc dự đo&amp;aacute;n c&amp;aacute;c sự cố rủi ro tiềm ẩn. Khai th&amp;aacute;c dữ liệu, lập m&amp;ocirc; h&amp;igrave;nh kịch bản v&amp;agrave; dự b&amp;aacute;o l&amp;agrave; c&amp;aacute;c t&amp;iacute;nh năng t&amp;iacute;ch hợp của hầu hết c&amp;aacute;c giải ph&amp;aacute;p quản l&amp;yacute; rủi ro.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.😁 Ph&amp;acirc;n t&amp;iacute;ch cảm x&amp;uacute;c phản hồi của kh&amp;aacute;ch h&amp;agrave;ng&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Ph&amp;acirc;n t&amp;iacute;ch cảm x&amp;uacute;c cho phản hồi của kh&amp;aacute;ch h&amp;agrave;ng&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Phản hồi của kh&amp;aacute;ch h&amp;agrave;ng đ&amp;oacute;ng một vai tr&amp;ograve; quan trọng trong việc định h&amp;igrave;nh c&amp;aacute;c sản phẩm v&amp;agrave; dịch vụ t&amp;agrave;i ch&amp;iacute;nh. Ph&amp;acirc;n t&amp;iacute;ch cảm x&amp;uacute;c do NLP cung cấp gi&amp;uacute;p c&amp;aacute;c tổ chức hiểu được nhận thức v&amp;agrave; mức độ h&amp;agrave;i l&amp;ograve;ng của kh&amp;aacute;ch h&amp;agrave;ng. Cảm x&amp;uacute;c t&amp;iacute;ch cực c&amp;oacute; thể l&amp;agrave;m nổi bật những dự &amp;aacute;n kinh doanh th&amp;agrave;nh c&amp;ocirc;ng, trong khi cảm x&amp;uacute;c ti&amp;ecirc;u cực c&amp;oacute; thể chỉ ra những vấn đề tiềm ẩn cần được quan t&amp;acirc;m ngay lập tức.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🦹🏻&amp;zwj;♂️ Ph&amp;aacute;t hiện v&amp;agrave; ngăn chặn gian lận&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Gian lận l&amp;agrave; mối lo ngại thường xuy&amp;ecirc;n trong ng&amp;agrave;nh t&amp;agrave;i ch&amp;iacute;nh. C&amp;aacute;c thuật to&amp;aacute;n NLP c&amp;oacute; thể xem x&amp;eacute;t kỹ lưỡng lượng lớn dữ liệu giao dịch v&amp;agrave; x&amp;aacute;c định c&amp;aacute;c mẫu hoặc điểm bất thường đ&amp;aacute;ng ngờ cho thấy c&amp;aacute;c hoạt động gian lận. Việc sử dụng NLP để ph&amp;acirc;n t&amp;iacute;ch Big Data được ph&amp;acirc;n loại để Ph&amp;aacute;t hiện gian lận đ&amp;atilde; c&amp;oacute; sẵn v&amp;agrave; nhiều c&amp;ocirc;ng ty đang cung cấp c&amp;aacute;c sản phẩm như vậy để sử dụng nhằm chống lại rủi ro gian lận. Khả năng n&amp;agrave;y cho ph&amp;eacute;p c&amp;aacute;c ng&amp;acirc;n h&amp;agrave;ng phản ứng kịp thời v&amp;agrave; ngăn ngừa tổn thất t&amp;agrave;i ch&amp;iacute;nh.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Những khả năng như vậy xoay quanh:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Một l&amp;agrave; khai th&amp;aacute;c văn bản NLP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Việc sử dụng NLP trong Ph&amp;acirc;n t&amp;iacute;ch gian lận để khai th&amp;aacute;c văn bản bị đ&amp;aacute;nh gi&amp;aacute; thấp. NLP c&amp;oacute; thể g&amp;aacute;n nh&amp;atilde;n tập dữ liệu sự thật cơ bản, văn bản kh&amp;aacute;c nhau v&amp;agrave; sử dụng c&amp;aacute;c phần nh&amp;uacute;ng theo ngữ cảnh.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hai l&amp;agrave; từ điển Gian lận&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;T&amp;igrave;m ra c&amp;aacute;c mối li&amp;ecirc;n kết kh&amp;ocirc;ng phải l&amp;agrave; một vấn đề &amp;nbsp;dễ d&amp;agrave;ng đối với bất kỳ nh&amp;agrave; ph&amp;acirc;n t&amp;iacute;ch n&amp;agrave;o. nhưng bằng c&amp;aacute;ch ứng dụng NLP trong Ph&amp;acirc;n t&amp;iacute;ch gian lận cho Từ điển gian lận, n&amp;oacute; sẽ gi&amp;uacute;p tất cả c&amp;aacute;c nh&amp;agrave; ph&amp;acirc;n t&amp;iacute;ch gian lận đưa ra quyết định dựa tr&amp;ecirc;n dữ liệu&amp;nbsp; hiện tại m&amp;agrave; họ c&amp;oacute;. N&amp;oacute; cũng sẽ gi&amp;uacute;p họ ph&amp;aacute;t hiện c&amp;aacute;c mẫu số, t&amp;ecirc;n địa l&amp;yacute;, thời gian v&amp;agrave; c&amp;aacute;c mối li&amp;ecirc;n kết th&amp;ocirc;ng thường.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ba l&amp;agrave; ph&amp;acirc;n t&amp;iacute;ch gian lận&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Việc x&amp;acirc;y dựng KRI (Key Result Indicators)&amp;nbsp;để ph&amp;acirc;n t&amp;iacute;ch gian lận được thực hiện tr&amp;ecirc;n cơ sở nỗ lực tốt nhất. Những điều như vậy thay đổi t&amp;ugrave;y theo từng tổ chức v&amp;agrave; kh&amp;ocirc;ng c&amp;oacute; cuốn s&amp;aacute;ch r&amp;otilde; r&amp;agrave;ng n&amp;agrave;o để đạt được. Sử dụng NLP trong Ph&amp;acirc;n t&amp;iacute;ch gian lận sẽ gi&amp;uacute;p c&amp;aacute;c Gi&amp;aacute;m đốc v&amp;agrave; người quản l&amp;yacute; thiết lập điểm x&amp;aacute;c suất, số liệu mức độ rủi ro v&amp;agrave; chỉ b&amp;aacute;o mối đe dọa (KRI).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bốn l&amp;agrave; sự đ&amp;aacute;nh gi&amp;aacute;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cuối c&amp;ugrave;ng nhưng kh&amp;ocirc;ng k&amp;eacute;m phần quan trọng, NLP trong Fraud Analytics chắc chắn sẽ gi&amp;uacute;p người d&amp;ugrave;ng x&amp;acirc;y dựng ph&amp;acirc;n t&amp;iacute;ch điểm AUC v&amp;agrave; giảm tỷ lệ dương t&amp;iacute;nh giả cũng như x&amp;acirc;y dựng cơ sở dựa tr&amp;ecirc;n quy tắc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.💻 Mạng s&amp;aacute;ng tạo đối nghịch (GAN)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Mạng s&amp;aacute;ng tạo đối nghịch (GAN) l&amp;agrave; một loại m&amp;ocirc; h&amp;igrave;nh tổng qu&amp;aacute;t được sử dụng để tạo dữ liệu tổng hợp. Trong t&amp;agrave;i ch&amp;iacute;nh, GAN c&amp;oacute; thể tạo ra dữ liệu t&amp;agrave;i ch&amp;iacute;nh thực tế, chẳng hạn như xu hướng thị trường chứng kho&amp;aacute;n, c&amp;oacute; thể hỗ trợ c&amp;aacute;c nh&amp;agrave; ph&amp;acirc;n t&amp;iacute;ch rủi ro trong việc kiểm tra sức chịu đựng v&amp;agrave; lập kế hoạch kịch bản.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🚫 C&amp;aacute;c trường hợp sử dụng trong quản l&amp;yacute; rủi ro&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GAN c&amp;oacute; thể m&amp;ocirc; phỏng kết quả thị trường tiềm năng v&amp;agrave; đ&amp;aacute;nh gi&amp;aacute; t&amp;aacute;c động của c&amp;aacute;c yếu tố rủi ro kh&amp;aacute;c nhau. C&amp;aacute;c tổ chức t&amp;agrave;i ch&amp;iacute;nh c&amp;oacute; thể sử dụng khả năng n&amp;agrave;y để đưa ra c&amp;aacute;c chiến lược quản l&amp;yacute; rủi ro hiệu quả v&amp;agrave; đ&amp;aacute;nh gi&amp;aacute; hiệu quả của ch&amp;uacute;ng trong c&amp;aacute;c t&amp;igrave;nh huống m&amp;ocirc; phỏng.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;strong&gt;5.👨🏻&amp;zwj;⚖️ N&amp;acirc;ng cao khả năng ra quyết định&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Những Insight thu được từ ph&amp;acirc;n t&amp;iacute;ch NLP v&amp;agrave; c&amp;aacute;c m&amp;ocirc; h&amp;igrave;nh tổng qu&amp;aacute;t trao quyền cho c&amp;aacute;c nh&amp;agrave; quản l&amp;yacute; rủi ro đưa ra quyết định dựa tr&amp;ecirc;n dữ liệu. Điều n&amp;agrave;y dẫn đến việc đ&amp;aacute;nh gi&amp;aacute; rủi ro ch&amp;iacute;nh x&amp;aacute;c hơn v&amp;agrave; thực h&amp;agrave;nh quản l&amp;yacute; rủi ro chủ động hơn.&lt;/p&gt;
+&lt;p&gt;☺&lt;strong&gt;️ Cải thiện trải nghiệm của kh&amp;aacute;ch h&amp;agrave;ng&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bằng c&amp;aacute;ch hiểu được cảm x&amp;uacute;c của kh&amp;aacute;ch h&amp;agrave;ng th&amp;ocirc;ng qua NLP, c&amp;aacute;c tổ chức t&amp;agrave;i ch&amp;iacute;nh c&amp;oacute; thể điều chỉnh sản phẩm v&amp;agrave; dịch vụ của họ để đ&amp;aacute;p ứng mong đợi của kh&amp;aacute;ch h&amp;agrave;ng, dẫn đến trải nghiệm tổng thể của kh&amp;aacute;ch h&amp;agrave;ng được n&amp;acirc;ng cao.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔍 Đ&amp;aacute;nh gi&amp;aacute; rủi ro theo thời gian thực&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;NLP cho ph&amp;eacute;p ph&amp;acirc;n t&amp;iacute;ch thời gian thực v&amp;agrave; gần thời gian thực về xu hướng thị trường v&amp;agrave; c&amp;aacute;c rủi ro mới nổi. Được kết hợp với c&amp;aacute;c ứng dụng tổng hợp, c&amp;aacute;c tổ chức c&amp;oacute; thể phản ứng kịp thời với c&amp;aacute;c điều kiện thị trường năng động v&amp;agrave; c&amp;aacute;c mối đe dọa tiềm ẩn.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6.🔐 Những lo ngại về quyền ri&amp;ecirc;ng tư v&amp;agrave; bảo mật dữ liệu&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sử dụng NLP để ph&amp;acirc;n t&amp;iacute;ch dữ liệu phi cấu tr&amp;uacute;c l&amp;agrave;m tăng mối lo ngại về quyền ri&amp;ecirc;ng tư v&amp;agrave; bảo mật dữ liệu. C&amp;aacute;c tổ chức phải thực hiện c&amp;aacute;c biện ph&amp;aacute;p bảo vệ dữ liệu mạnh mẽ để bảo vệ th&amp;ocirc;ng tin nhạy cảm.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🎯 Đảm bảo độ bền v&amp;agrave; độ ch&amp;iacute;nh x&amp;aacute;c&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;NLP v&amp;agrave; c&amp;aacute;c m&amp;ocirc; h&amp;igrave;nh tổng qu&amp;aacute;t phụ thuộc rất nhiều v&amp;agrave;o chất lượng v&amp;agrave; số lượng dữ liệu. Đảm bảo t&amp;iacute;nh ch&amp;iacute;nh x&amp;aacute;c v&amp;agrave; mạnh mẽ của c&amp;aacute;c m&amp;ocirc; h&amp;igrave;nh n&amp;agrave;y l&amp;agrave; điều cần thiết để tr&amp;aacute;nh đưa ra c&amp;aacute;c quyết định quan trọng dựa tr&amp;ecirc;n th&amp;ocirc;ng tin sai s&amp;oacute;t.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7.📃 T&amp;iacute;nh c&amp;ocirc;ng bằng v&amp;agrave; sai lệch trong thuật to&amp;aacute;n&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;C&amp;aacute;c thuật to&amp;aacute;n NLP c&amp;oacute; thể v&amp;ocirc; t&amp;igrave;nh duy tr&amp;igrave; những th&amp;agrave;nh kiến c&amp;oacute; trong dữ liệu đ&amp;agrave;o tạo. C&amp;aacute;c tổ chức phải t&amp;iacute;ch cực giải quyết v&amp;agrave; khắc phục những th&amp;agrave;nh kiến để đảm bảo đối xử c&amp;ocirc;ng bằng với tất cả kh&amp;aacute;ch h&amp;agrave;ng v&amp;agrave; c&amp;aacute;c b&amp;ecirc;n li&amp;ecirc;n quan.&lt;/p&gt;
+&lt;p&gt;Khi c&amp;ocirc;ng nghệ ng&amp;agrave;y c&amp;agrave;ng ph&amp;aacute;t triển, việc sử dụng Xử l&amp;yacute; ng&amp;ocirc;n ngữ tự nhi&amp;ecirc;n (NLP) v&amp;agrave; Ứng dụng s&amp;aacute;ng tạo trong quản l&amp;yacute; rủi ro cho c&amp;aacute;c tổ chức t&amp;agrave;i ch&amp;iacute;nh ng&amp;acirc;n h&amp;agrave;ng ng&amp;agrave;y c&amp;agrave;ng trở n&amp;ecirc;n cần thiết. Khả năng tr&amp;iacute;ch xuất những th&amp;ocirc;ng tin c&amp;oacute; gi&amp;aacute; trị từ lượng lớn dữ liệu văn bản v&amp;agrave; tạo ra th&amp;ocirc;ng tin ph&amp;ugrave; hợp theo ngữ cảnh gi&amp;uacute;p c&amp;aacute;c nh&amp;agrave; quản l&amp;yacute; rủi ro đưa ra quyết định s&amp;aacute;ng suốt v&amp;agrave; chủ động. Việc &amp;aacute;p dụng c&amp;aacute;c c&amp;ocirc;ng nghệ kh&amp;ocirc;ng chỉ n&amp;acirc;ng cao quy tr&amp;igrave;nh đ&amp;aacute;nh gi&amp;aacute; rủi ro m&amp;agrave; c&amp;ograve;n th&amp;uacute;c đẩy hiệu quả v&amp;agrave; khả năng phục hồi chung của ng&amp;agrave;nh t&amp;agrave;i ch&amp;iacute;nh.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Tham khảo: The FinDate Like&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Tổng hợp bởi nh&amp;oacute;m t&amp;aacute;c giả DTSVN - Giải ph&amp;aacute;p chuyển đổi số ng&amp;agrave;nh T&amp;agrave;i ch&amp;iacute;nh - Ng&amp;acirc;n h&amp;agrave;ng.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;-------&lt;/p&gt;
+&lt;p&gt;DTSVN l&amp;agrave; C&amp;ocirc;ng ty Chuyển đổi số ti&amp;ecirc;n phong cung cấp giải ph&amp;aacute;p số h&amp;oacute;a mới nhất d&amp;agrave;nh ri&amp;ecirc;ng cho c&amp;aacute;c doanh nghiệp trong ng&amp;agrave;nh T&amp;agrave;i ch&amp;iacute;nh - Ng&amp;acirc;n h&amp;agrave;ng tại Việt Nam; gi&amp;uacute;p Ng&amp;acirc;n h&amp;agrave;ng, tổ chức t&amp;agrave;i ch&amp;iacute;nh nhanh ch&amp;oacute;ng ho&amp;agrave;n thiện hệ thống c&amp;ocirc;ng nghệ phục vụ Chuyển đổi số.&lt;/p&gt;
+&lt;p&gt;Li&amp;ecirc;n hệ ngay để được tư vấn v&amp;agrave; trải nghiệm giải ph&amp;aacute;p&amp;nbsp;&lt;a href="https://dtsvn.net/contact-us"&gt;tại đ&amp;acirc;y&lt;/a&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;</content_vi_html>
+	<content_en_html>&lt;p style="text-align: justify;"&gt;Managing risks effectively is crucial for ensuring stability and success. In order to achieve such milestone, multiple factors must be considered. One of the most transformative technologies driving risk management forward is Natural Language Processing (NLP) and Generative Applications. This article explores the significant impact of NLP and generative models in risk management processes, from sentiment analysis to fraud detection, automated report generation, and more.&lt;/p&gt;
+&lt;div&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;2.1&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;👀&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;What is NLP?&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;NLP is a branch of artificial intelligence (AI) that focuses on the interaction between computers and human language. It enables machines to understand, interpret, and generate human language, making it a powerful tool for processing vast amounts of textual data.&lt;img&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;em&gt;Natural language understanding vs. generation&lt;/em&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;2.2&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;💡&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;Importance of NLP in Risk Management&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;In risk management, access to relevant information is vital. NLP allows financial institutions to analyze unstructured data, such as news articles, social media, and customer feedback, to extract valuable insights. These insights contribute to making informed decisions and mitigating potential risks effectively.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;By 2025, almost 30% of the applications of Natural Language Processing will be carried out inside Banking, Financial Services, and Insurance. Banking has historically been the natural promoter of the application of AI, more specifically, NLP for finance, in data automation.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;em&gt;Market share by vertical - src: johnsnowlabs&lt;/em&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;NLP in Finance (BFSI sector) is already used for:&lt;/p&gt;
+&lt;ul style="text-align: justify;"&gt;
+&lt;li&gt;Automatic loan, credit applications&lt;/li&gt;
+&lt;li&gt;Automatic calculations of fees&lt;/li&gt;
+&lt;li&gt;Customer onboarding&lt;/li&gt;
+&lt;li&gt;Risk Management&lt;/li&gt;
+&lt;li&gt;Asset Management, ESG&lt;/li&gt;
+&lt;li&gt;Compliance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style="text-align: justify;"&gt;One may think that NLP will be limited to certain usages. This is completely wrong! NLP usage will revolutionize all banking/non-banking risk sectors; it will allow non-technical users to dive deep into a higher level of analysis/analytics across multiple risk dimensions.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;It is safe to say that the usage of NLP &amp;amp; AI into Risk Applications in Banking and Financial Institutions will be implemented into every single section of Risk. The chief risk officer has access to risk insight and intelligence that was more retrospective in nature, such as incident analyses focusing on understanding what happened and why.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Now, increasingly, they are gearing up with tools that allow for a look ahead that facilitates the predicting of potential risk incidents. Data mining, scenario modelling and forecasting are built-in features of most risk management solutions.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Cognitive (pattern recognition by visualising and identifying apparent and later trends in historical data) and algorithmic (establishing causal relationships between diverse events and data sets) intelligence is making way for augmented (natural language processing and machine learning) and assistive (contextual virtual intelligent assistance) intelligence that augments and accelerates decision making.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Below, are some of the currently anticipated NLP Application Delivery for Banking and Financial Institutions:&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;3.1&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;😁&lt;/strong&gt;&lt;strong&gt; Sentiment Analysis for Customer Feedback&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;em&gt;Sentimental Analysis for Customer Feedback&lt;/em&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Customer feedback plays a crucial role in shaping financial products and services. NLP-powered sentiment analysis helps institutions understand customer perceptions and satisfaction levels. Positive sentiments can highlight successful ventures, while negative sentiments can indicate potential issues that require immediate attention.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;3.2 🦹🏻♂️ Fraud Detection and Prevention&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;em&gt;NLP in Fraud Analytics&lt;/em&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Fraud is a constant concern in the financial industry. NLP algorithms can scrutinize vast amounts of transactional data and identify suspicious patterns or anomalies that indicate fraudulent activities. Utilizing NLP to analyze classified/non-classified big data for Fraud Detection is already here, and many companies are offering such products to be used to combat fraud risks. This capability enables banks to respond promptly and prevent financial losses.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;Such capabilities revolve around:&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;a. NLP Text Mining&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;The usage of NLP in Fraud Analytics for Text Mining is undervalued. NLP can label ground truth dataset, label various text datasets, and use contextual embeddings.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;b. Fraud Dictionary&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Detecting patterns is not an easy game for any analysts. but by the usage of NLP in Fraud Analytics for Fraud Dictionary, it'll help all fraud analysts to derive data-driven decisions based on the current data that they have. It'll also help them in detecting numeric, name-geo, time and casual patterns.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;c. Fraud Analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Building KRIs for Fraud Analysis is done on best-efforts-basis. Such thing varies from an institution to another, and has no definitive book to achieve. Using NLP in Fraud Analytics for Fraud Analysis will help directors and managers to establish probabilistic scores, risk-level metrics, and threat (KRI) indicators.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;d. Evaluation&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;At last but not least, NLP in Fraud Analytics will definitely help users to build AUC score analysis, and reduce false positive ratios as well as building rule-based grounds.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;3.3&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;📜&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;Automated Report Generation&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Traditional risk reports can be time-consuming and labor-intensive to create. NLP automates the report generation process, extracting relevant information from various sources and summarizing it into concise reports. This automation saves time, reduces errors, and facilitates better decision-making.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;The most famous tool that is used for such task is ChatGPT. You can give it the context of the report, and it'll generated a detailed report for you within seconds. Saving hours of work and effort to build it.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;3.4&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;🈸&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;Data Classification using Transformative Applications&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Having multiple sources of unclassified data in form of text, image, and video is not a satisfying information to know. Especially when your institution relies on it, heavily! But such thing will be a thing of the past. Using Machine Learning for Transformative Binary Applications such as Financial Image Transformers (ViT) in Spark NLP to detect receipts in both scanned and mobile images will solve it for good. Take a look at the following example:&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;4.1&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;💻&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;Generative Adversarial Networks (GANs)&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Generative Adversarial Networks (GANs) are a class of generative models used to create synthetic data. In finance, GANs can generate realistic financial data, such as stock market trends, which can aid risk analysts in stress-testing and scenario planning.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;4.2&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;🚫&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;Use Cases in Risk Management&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;GANs can simulate potential market outcomes and assess the impact of various risk factors. Financial institutions can use this capability to devise robust risk management strategies and evaluate their effectiveness in simulated scenarios.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;5.1&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;👨🏻⚖&lt;/strong&gt;&lt;strong&gt;️ Enhanced Decision-Making&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;The insights derived from NLP analysis and generative models empower risk managers to make data-driven decisions. This leads to more accurate risk assessments and proactive risk management practices.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;5.2&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;☺&lt;/strong&gt;&lt;strong&gt;️ Improved Customer Experience&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;By understanding customer sentiments through NLP, financial institutions can tailor their products and services to meet customer expectations, resulting in an enhanced overall customer experience.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;5.3&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;🔍&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;Real-time Risk Assessment&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;NLP enables real-time and near-real-time analysis of market trends and emerging risks. Paired with generative applications, institutions can respond promptly to dynamic market conditions and potential threats.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;6.1&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;🔐&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;Data Privacy and Security Concerns&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Using NLP to analyze unstructured data raises data privacy and security concerns. Institutions must implement robust data protection measures to safeguard sensitive information.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;6.2&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;🎯&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;Ensuring Model Robustness and Accuracy&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;NLP and generative models heavily rely on the quality and quantity of data. Ensuring the accuracy and robustness of these models is essential to avoid making critical decisions based on flawed information.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;7.1&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;📃&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;Fairness and Bias in Algorithms&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;NLP algorithms can inadvertently perpetuate biases present in training data. Institutions must actively address and rectify biases to ensure fair treatment of all customers and stakeholders.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;7.2&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;🧑🏻🏫&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;Transparency and Explainability&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;As AI-driven technologies become more sophisticated, explaining the rationale behind their decisions becomes crucial. Institutions must prioritize transparency and provide clear explanations for the outcomes generated by NLP and generative models.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;As technology continues to advance, the use of Natural Language Processing (NLP) and Generative Applications in risk management for banking and financial institutions becomes increasingly indispensable. The ability to extract valuable insights from vast amounts of textual data and generate contextually relevant information empowers risk managers to make informed and proactive decisions. Embracing these transformative technologies not only enhances risk assessment processes but also drives the overall efficiency and resilience of the financial sector. As the industry continues to evolve, the adoption of NLP and Generative Applications will undoubtedly be a key differentiator for successful risk management in the future.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;&lt;em&gt;Source:&amp;nbsp;&amp;nbsp;&amp;nbsp;The FinDate Like&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;strong&gt;&lt;em&gt;Collected by the author&amp;nbsp; DTSVN team - Digital transformation solutions for the Finance - Banking&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;-------------&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;DTSVN is a pioneering Digital Transformation Company providing the latest digitization solutions exclusively for businesses in the Finance - Banking field in Vietnam; helping banks and financial institutions quickly complete the technology system for Digital Transformation.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Contact us now and experience our significant software solution here.&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;</content_en_html>
+	<time_create_dt>2025-06-13T08:41:52.000Z</time_create_dt>
+	<createdDate>2025-08-25T08:41:51.344Z</createdDate>
+	<createdDate_dt>2025-08-25T08:41:51.344Z</createdDate_dt>
+	<lastModifiedDate>2025-08-25T08:41:51.344Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-25T08:41:51.344Z</lastModifiedDate_dt>
+	<time_create_dt_tz>Asia/Jakarta</time_create_dt_tz>
+</page>
