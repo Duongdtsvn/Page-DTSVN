@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-07T03:42:51.585Z</createdDate>
 	<createdDate_dt>2025-07-07T03:42:51.585Z</createdDate_dt>
-	<lastModifiedDate>2025-08-25T03:13:09.125Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-25T03:13:09.125Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-25T03:17:15.588Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-25T03:17:15.588Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</key>
 	<value>Banner Giới thiệu</value>
 	<include>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</include>
@@ -67,7 +67,6 @@
 	<disableFlattening>false</disableFlattening>
 	</item></partner_o>
 	<customer_section_subtitle_s>Quan hệ khách hàng</customer_section_subtitle_s>
-	<nidungtiu_s>DTSVN đã và đang kết nối tới nhiều tổ chức tín dụn</nidungtiu_s>
 	<link_s>Khách hàng của DTSVN</link_s>
 	<client_partner_s/>
 	<customer_section_image_s/>
@@ -84,4 +83,5 @@
 	<title_s>Doanh nghiệp nước ngoài</title_s>
 	<description_s/>
 	</item></customer_partnerships_o>
+	<customer_section_title_s>DTSVN đã và đang kết nối tới nhiều tổ chức tín dụn</customer_section_title_s>
 </page>
