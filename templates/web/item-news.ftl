@@ -116,6 +116,20 @@
   </div>
 
   <script src="/static-assets/js/language-switcher.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Chọn tất cả section, div, p...
+  const elements = document.querySelectorAll("section, div, p, span");
+
+  elements.forEach(el => {
+    // Nếu không có nội dung text và cũng không có con nào khác
+    if (!el.textContent.trim() && el.children.length === 0) {
+      el.remove(); // Xóa phần tử khỏi DOM
+    }
+  });
+});
+</script>
+
   <@crafter.body_bottom />
 </body>
 </html>
