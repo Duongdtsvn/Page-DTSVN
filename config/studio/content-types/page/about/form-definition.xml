@@ -801,7 +801,7 @@
 						</property>
 						<property>
 							<name>imageManager</name>
-							<value></value>
+							<value>upload,select</value>
 							<type>datasource:image</type>
 						</property>
 						<property>
