@@ -724,7 +724,7 @@
 				</field>
 				<field>
 					<type>input</type>
-					<id>nidungtiu_s</id>
+					<id>customer_section_title_s</id>
 					<iceId></iceId>
 					<title>Nội dung tiêu đề</title>
 					<description></description>
