@@ -690,7 +690,7 @@
 						</property>
 						<property>
 							<name>maxlength</name>
-							<value>50</value>
+							<value>5000</value>
 							<type>int</type>
 						</property>
 						<property>
@@ -738,7 +738,7 @@
 						</property>
 						<property>
 							<name>maxlength</name>
-							<value>50</value>
+							<value>5000</value>
 							<type>int</type>
 						</property>
 						<property>
@@ -834,7 +834,7 @@
 						</property>
 						<property>
 							<name>maxlength</name>
-							<value>50</value>
+							<value>5000</value>
 							<type>int</type>
 						</property>
 						<property>
@@ -882,7 +882,7 @@
 						</property>
 						<property>
 							<name>maxlength</name>
-							<value>50</value>
+							<value>5000</value>
 							<type>int</type>
 						</property>
 						<property>
@@ -999,7 +999,7 @@
 						</property>
 						<property>
 							<name>maxlength</name>
-							<value>50</value>
+							<value>5000</value>
 							<type>int</type>
 						</property>
 						<property>
@@ -1047,7 +1047,7 @@
 						</property>
 						<property>
 							<name>maxlength</name>
-							<value>50</value>
+							<value>5000</value>
 							<type>int</type>
 						</property>
 						<property>
@@ -1461,6 +1461,37 @@
 							<name>type</name>
 							<value></value>
 								<type>string</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>img-desktop-upload</type>
+					<id>upload</id>
+					<title>upload</title>
+					<interface>image</interface>
+					<properties>
+						<property>
+							<name>repoPath</name>
+							<value>/static-assets/images</value>
+								<type>content-path-input</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>img-repository-upload</type>
+					<id>select</id>
+					<title>select</title>
+					<interface>image</interface>
+					<properties>
+						<property>
+							<name>repoPath</name>
+							<value>/static-assets/images</value>
+								<type>content-path-input</type>
+						</property>
+						<property>
+							<name>useSearch</name>
+							<value>false</value>
+								<type>boolean</type>
 						</property>
 					</properties>
 				</datasource>
