@@ -1,6 +1,6 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
 
-<section class="section sec-clientList pb-0">
+<section class="section sec-clientList ">
   <div class="container-custom">
     <div class="row">
       <div class="col-md-8 col-lg-6 col-xl-6">
