@@ -18,6 +18,7 @@
 
     <main class="page-content">
         <@crafter.renderComponentCollection $field="header_o" />
+        <@crafter.renderComponentCollection $field="banner_o" />
         <@crafter.renderComponentCollection $field="challenge_o" />
         <@crafter.renderComponentCollection $field="importance_o" />
         
