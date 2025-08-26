@@ -92,7 +92,7 @@
                     <#if totalPages?? && (totalPages > 1)>
                         <div class="pagination">
                             <nav class="navigation pagination" aria-label="Phân trang dự án">
-                                <h2 class="screen-reader-text">Phân trang dự án</h2>
+                                
                                 <div class="nav-links">
                                     <#-- Nút Previous -->
                                     <#if hasPrevPage?? && hasPrevPage>
