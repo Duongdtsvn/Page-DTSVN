@@ -14169,3 +14169,6 @@ html.mobile.landscape .menuMobile__info li + li {
 .pagination-info{
     color: #c6e2f7;
 }
+.service{
+    .width: 50% ;
+}
