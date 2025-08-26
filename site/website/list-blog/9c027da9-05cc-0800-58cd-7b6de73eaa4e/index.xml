@@ -16,8 +16,6 @@
 	<title_en_s>Discover how AI creates effective Bank marketing messages</title_en_s>
 	<categorys_o>	<item>	<key>Blog</key>
 	<value_smv>Blog</value_smv>
-	</item>	<item>	<key>Business-News</key>
-	<value_smv>Tin kinh doanh</value_smv>
 	</item></categorys_o>
 	<img_main_s>/static-assets/images/acrolinx-blog-1141771061.jpg</img_main_s>
 	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
@@ -109,7 +107,7 @@
 	<time_create_dt>2025-08-14T02:51:41.000Z</time_create_dt>
 	<createdDate>2025-08-15T02:51:38.721Z</createdDate>
 	<createdDate_dt>2025-08-15T02:51:38.721Z</createdDate_dt>
-	<lastModifiedDate>2025-08-15T02:51:38.721Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-15T02:51:38.721Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-26T10:25:50.399Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-26T10:25:50.399Z</lastModifiedDate_dt>
 	<time_create_dt_tz>Asia/Jakarta</time_create_dt_tz>
 </page>
