@@ -23,7 +23,7 @@
         <div class="productbox-list">
             <#if contentModel.service_o.item?? && contentModel.service_o.item?has_content>
                 <#list contentModel.service_o.item as service>
-                    <div class="item">
+                    <div class="item service">
                         <div class="productbox hover">
                             <div class="productbox__inner">
                                 <div class="group">
