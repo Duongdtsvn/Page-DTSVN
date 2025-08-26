@@ -14170,5 +14170,5 @@ html.mobile.landscape .menuMobile__info li + li {
     color: #c6e2f7;
 }
 .service{
-    width: 50% ;
+    width: 50% !important ;
 }
