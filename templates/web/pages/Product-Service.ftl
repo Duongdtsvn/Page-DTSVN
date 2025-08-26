@@ -20,7 +20,7 @@
   <@crafter.renderComponentCollection $field="product_orientation_o" />
    <@crafter.renderComponentCollection $field="list_service_o" />
   <@crafter.renderComponentCollection $field="customer_stalk_about_o" />
-  <@crafter.renderComponentCollection $field="software_development_o" />
+  
   <@crafter.renderComponentCollection $field="reasons_choosing_o" />
   <@crafter.renderComponentCollection $field="footer_o" />
   <@crafter.body_bottom />
