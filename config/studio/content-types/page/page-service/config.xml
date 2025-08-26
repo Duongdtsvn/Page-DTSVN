@@ -1,5 +1,5 @@
 <content-type name="/page/page-service" is-wcm-type="true">
-	<label>page -service</label>
+	<label>Page -service</label>
 	<form>/page/page-service</form>
 	<form-path>simple</form-path>
 	<model-instance-path>NOT-USED-BY-SIMPLE-FORM-ENGINE</model-instance-path>
