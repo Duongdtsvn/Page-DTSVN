@@ -23,12 +23,16 @@
 	<disableFlattening>false</disableFlattening>
 	</item></banner_o>
 	<challenge_o item-list="true"/>
-	<importance_o item-list="true"/>
+	<importance_o item-list="true">	<item datasource="tmquantrng">	<key>/site/423df920-5394-fad8-8712-5842d8172959.xml</key>
+	<value>Tầm quan trọng</value>
+	<include>/site/423df920-5394-fad8-8712-5842d8172959.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></importance_o>
 	<custom_o item-list="true"/>
 	<partner_o item-list="true"/>
 	<footer_o item-list="true"/>
 	<createdDate>2025-08-26T09:48:45.962Z</createdDate>
 	<createdDate_dt>2025-08-26T09:48:45.962Z</createdDate_dt>
-	<lastModifiedDate>2025-08-26T09:48:45.962Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-26T09:48:45.962Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-26T10:29:01.359Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-26T10:29:01.359Z</lastModifiedDate_dt>
 </page>
