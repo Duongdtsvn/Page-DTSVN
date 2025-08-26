@@ -5,7 +5,7 @@
       <div class="sec-strength__wrap">
          
           <div class="sec-strength__list owl-carousel">
-          <div class="titlebox item">
+          <div class="titlebox ">
               <h2 class="titlebox__title fz-44 ">${contentModel.who_studies_s!''}</h2>
                 </div>
               <#if contentModel.who_studies_o.item?? && contentModel.who_studies_o.item?has_content>
