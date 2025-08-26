@@ -48,10 +48,7 @@
 	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></footer_EN_o>
-	<content_vi_html>&lt;section&gt;
-&lt;div&gt;&amp;nbsp;&lt;/div&gt;
-&lt;div&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/section&gt;
+	<content_vi_html>&lt;section&gt;&lt;/section&gt;
 &lt;section&gt;
 &lt;p style="text-align: justify;"&gt;Tr&amp;iacute; tuệ nh&amp;acirc;n tạo tạo sinh (GenAI) đang mở ra một kỷ nguy&amp;ecirc;n mới cho ng&amp;agrave;nh ng&amp;acirc;n h&amp;agrave;ng, nơi c&amp;aacute;c giải ph&amp;aacute;p c&amp;ocirc;ng nghệ h&amp;agrave;ng đầu được ưu ti&amp;ecirc;n để đ&amp;aacute;p ứng kỳ vọng của kh&amp;aacute;ch h&amp;agrave;ng. GenAI với c&amp;aacute;c ưu điểm ri&amp;ecirc;ng biệt mang đến luồng gi&amp;oacute; mới v&amp;agrave; trở th&amp;agrave;nh c&amp;ocirc;ng nghệ kh&amp;ocirc;ng thể thiếu gi&amp;uacute;p ng&amp;acirc;n h&amp;agrave;ng th&amp;iacute;ch ứng với sự thay đổi li&amp;ecirc;n tục của thị trường, chuy&amp;ecirc;n m&amp;ocirc;n ho&amp;aacute; dịch vụ kh&amp;aacute;ch h&amp;agrave;ng, n&amp;acirc;ng cao hiệu suất hoạt động của doanh nghiệp.&amp;nbsp;&lt;/p&gt;
 &lt;div&gt;
@@ -148,7 +145,7 @@
 	<time_create_dt>2025-04-29T04:35:38.000Z</time_create_dt>
 	<createdDate>2025-08-26T04:35:36.317Z</createdDate>
 	<createdDate_dt>2025-08-26T04:35:36.317Z</createdDate_dt>
-	<lastModifiedDate>2025-08-26T04:35:36.317Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-26T04:35:36.317Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-26T04:43:12.856Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-26T04:43:12.856Z</lastModifiedDate_dt>
 	<time_create_dt_tz>Asia/Jakarta</time_create_dt_tz>
 </page>
