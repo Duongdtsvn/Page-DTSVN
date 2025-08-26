@@ -127,7 +127,7 @@
             <#if totalPages?? && (totalPages > 1)>
                 <div class="pagination">
                     <nav class="navigation pagination" aria-label="News pagination">
-                        <h2 class="screen-reader-text">News pagination</h2>
+                        
                         <div class="nav-links">
                             <#if hasPrevPage?? && hasPrevPage>
                                 <a class="prev page-numbers" href="?tab=${selectedTab!''}&page=${(currentPage!1) - 1}<#if searchParams.title??>&title=${searchParams.title}</#if><#if searchParams.content??>&content=${searchParams.content}</#if><#if sort??>&sort=${sort}</#if>">← Previous</a>
