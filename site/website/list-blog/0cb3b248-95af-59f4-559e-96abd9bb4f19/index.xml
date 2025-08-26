@@ -17,7 +17,7 @@
 	<categorys_o>	<item>	<key>Blog</key>
 	<value_smv>Blog</value_smv>
 	</item></categorys_o>
-	<img_main_s/>
+	<img_main_s>/static-assets/images/1-chuyen-doi-xanh-la-gi.jpg</img_main_s>
 	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
 	<value>Contact Form - VN</value>
 	<include>/site/components/contact-form/vn.xml</include>
@@ -107,7 +107,7 @@
 	<time_create_dt>2025-05-07T03:51:33.000Z</time_create_dt>
 	<createdDate>2025-08-26T03:51:32.148Z</createdDate>
 	<createdDate_dt>2025-08-26T03:51:32.148Z</createdDate_dt>
-	<lastModifiedDate>2025-08-26T03:51:32.148Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-26T03:51:32.148Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-26T04:08:06.346Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-26T04:08:06.346Z</lastModifiedDate_dt>
 	<time_create_dt_tz>Asia/Jakarta</time_create_dt_tz>
 </page>
