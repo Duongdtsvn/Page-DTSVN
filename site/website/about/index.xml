@@ -24,8 +24,8 @@
 	</item></footer_o>
 	<createdDate>2025-07-07T03:42:51.585Z</createdDate>
 	<createdDate_dt>2025-07-07T03:42:51.585Z</createdDate_dt>
-	<lastModifiedDate>2025-08-25T03:36:34.480Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-25T03:36:34.480Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-26T08:28:32.391Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-26T08:28:32.391Z</lastModifiedDate_dt>
 	<banner_o item-list="true">	<item datasource="banner">	<key>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</key>
 	<value>Banner Giới thiệu</value>
 	<include>/site/components/47b8ce98-56e3-df8d-1ebe-19c04b1da27f.xml</include>
@@ -36,9 +36,9 @@
 	<include>/site/components/b47ab75f-f4c6-d533-64d2-979c32819300.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></solution_o>
-	<strengths_o item-list="true">	<item datasource="thmnhcaDTSVN">	<key>/site/components/21b22ee6-b1c8-89dd-254b-6a257e284434.xml</key>
+	<strengths_o item-list="true">	<item datasource="thmnhcaDTSVN">	<key>/site/components/7d77b528-c451-fe02-3e8d-ce6929861858.xml</key>
 	<value>Thế mạnh của DTSVN</value>
-	<include>/site/components/21b22ee6-b1c8-89dd-254b-6a257e284434.xml</include>
+	<include>/site/components/7d77b528-c451-fe02-3e8d-ce6929861858.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></strengths_o>
 	<achievements_o item-list="true">	<item>	<key>/site/components/8770ee00-bc20-15c1-00f3-53b1470eef8f.xml</key>
