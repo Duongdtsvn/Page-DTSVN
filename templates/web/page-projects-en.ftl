@@ -92,7 +92,7 @@
                     <#if totalPages?? && (totalPages > 1)>
                         <div class="pagination">
                             <nav class="navigation pagination" aria-label="Project pagination">
-                                <h2 class="screen-reader-text">Project pagination</h2>
+                                
                                 <div class="nav-links">
                                     <#-- Nút Previous -->
                                     <#if hasPrevPage?? && hasPrevPage>
