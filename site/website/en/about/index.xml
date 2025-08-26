@@ -64,6 +64,41 @@
 	</item></partner_o>
 	<createdDate>2025-07-08T03:26:13.073Z</createdDate>
 	<createdDate_dt>2025-07-08T03:26:13.073Z</createdDate_dt>
-	<lastModifiedDate>2025-08-05T04:18:56.800Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-05T04:18:56.800Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-26T04:27:31.176Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-26T04:27:31.176Z</lastModifiedDate_dt>
+	<customer_section_subtitle_s>CUSTOMER</customer_section_subtitle_s>
+	<customer_section_title_s>DTSVN has been connecting with many credit institutions, large, medium and small businesses</customer_section_title_s>
+	<client_partner_s>DTSVN Client</client_partner_s>
+	<customer_section_link_s/>
+	<strategic_section_subtitle_s>Typical partners of DTSVN</strategic_section_subtitle_s>
+	<strategic_section_title_s>DTSVN has been a strategic partner of the world's leading MarTech platforms, with long-term cooperative relationships with reputable businesses and organizations in many fields.</strategic_section_title_s>
+	<strategic_section_link_s/>
+	<customer_section_image_s>/static-assets/images/dtkh.jpg</customer_section_image_s>
+	<strategic_section_image_s>/static-assets/images/lxt.jpg</strategic_section_image_s>
+	<customer_partnerships_o item-list="true">	<item>	<number_s>01</number_s>
+	<title_s>Goverment Agencies </title_s>
+	<description_s>National Assembly Office; Department of Defense; The Ministry of Finance; Insurance Supervision Administration; General Department of Customs; Customs &amp; Technical Department</description_s>
+	</item>	<item>	<number_s>02</number_s>
+	<title_s>Small and medium-sized banks and financial institutions</title_s>
+	<description_s>VietCapital Bank, Pinetree, LotteFinance...</description_s>
+	</item>	<item>	<number_s>03</number_s>
+	<title_s>Banks, large-scale financial institutions</title_s>
+	<description_s>Vietinbank, BIDV, BaovietLife, EVNFinance, MSB, NCB, PVCom Bank, VNPayment.</description_s>
+	</item>	<item>	<number_s>04</number_s>
+	<title_s>Foreign enterprises </title_s>
+	<description_s>VIETFUN CORPORATION, POLYCOM, AVAY, Fujitsu, HP, DELL.</description_s>
+	</item></customer_partnerships_o>
+	<strategic_partnerships_o item-list="true">	<item>	<number_s>01</number_s>
+	<title_s>INSIDER </title_s>
+	<description_s>Insider: Insider is a platform that collects data from various channels and helps improve user experiences in real-time. It uses this data to personalize interactions with users, making their experience smoother and more enjoyable.</description_s>
+	</item>	<item>	<number_s>02</number_s>
+	<title_s>ADJUST</title_s>
+	<description_s>Adjust is a platform designed to help businesses analyze and measure how effective their mobile app advertising campaigns are. </description_s>
+	</item>	<item>	<number_s>03</number_s>
+	<title_s>NUCLENT </title_s>
+	<description_s>Nuclent is a platform that simplifies the process of building and managing applications. It also helps automate workflows, making tasks quicker and easier to handle, which saves time and increases efficiency.</description_s>
+	</item>	<item>	<number_s>04</number_s>
+	<title_s>ORTHER PARTNERS </title_s>
+	<description_s>Clerver Tap, Odoo, BEAU, eNAO, Meeyland.</description_s>
+	</item></strategic_partnerships_o>
 </page>
