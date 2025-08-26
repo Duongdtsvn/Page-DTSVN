@@ -18,8 +18,11 @@
 
     <main class="page-content">
         <@crafter.renderComponentCollection $field="header_o" />
+        <@crafter.renderComponentCollection $field="challenge_o" />
+        <@crafter.renderComponentCollection $field="importance_o" />
         
-        <@crafter.renderComponentCollection $field="member_o" />
+        <@crafter.renderComponentCollection $field="custom_o" />
+        <@crafter.renderComponentCollection $field="partner_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
     </main>
     
