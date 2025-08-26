@@ -16,6 +16,8 @@
 	<title_en_s>“Digitalizing the banking industry: the will of the Board of Directors and the Executive Board is the most important factor”</title_en_s>
 	<categorys_o>	<item>	<key>Blog</key>
 	<value_smv>Blog</value_smv>
+	</item>	<item>	<key>Business-News</key>
+	<value_smv>Tin kinh doanh</value_smv>
 	</item></categorys_o>
 	<img_main_s>/static-assets/images/trach-nhiem-cua-giam-doc-dieu-hanh.jpg</img_main_s>
 	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
@@ -114,7 +116,7 @@
 	<time_create_dt>2025-05-09T03:32:08.000Z</time_create_dt>
 	<createdDate>2025-08-26T03:32:07.018Z</createdDate>
 	<createdDate_dt>2025-08-26T03:32:07.018Z</createdDate_dt>
-	<lastModifiedDate>2025-08-26T03:32:07.018Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-26T03:32:07.018Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-26T04:11:53.097Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-26T04:11:53.097Z</lastModifiedDate_dt>
 	<time_create_dt_tz>Asia/Jakarta</time_create_dt_tz>
 </page>
