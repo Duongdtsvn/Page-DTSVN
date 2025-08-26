@@ -5,7 +5,7 @@
         <div class="sec-strength__wrap">
             
             <div class="sec-strength__list owl-carousel">
-            <div class="titlebox ">
+            <div class="titlebox item">
                 <span class="titlebox__title">${contentModel.title_s!''}</span>
                 <h2 class="titlebox__title fz-44" >${contentModel.subtitle_s!''}</h2>
             </div>
