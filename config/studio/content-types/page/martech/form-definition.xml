@@ -686,9 +686,9 @@
 			<fields>
 				<field>
 					<type>input</type>
-					<id>description_s</id>
+					<id>title1_s</id>
 					<iceId></iceId>
-					<title>tiêu fđề phụ</title>
+					<title>tiêu đề</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -734,9 +734,9 @@
 				</field>
 				<field>
 					<type>input</type>
-					<id>title_s</id>
+					<id>description1_s</id>
 					<iceId></iceId>
-					<title>tiêu đề</title>
+					<title>tiêu fđề phụ</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
