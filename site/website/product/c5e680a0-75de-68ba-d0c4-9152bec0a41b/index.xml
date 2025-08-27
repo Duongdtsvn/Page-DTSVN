@@ -10,7 +10,7 @@
 	<navLabel>DTSVN – Phần mềm Quản lý mẫu in tập trung  </navLabel>
 	<key_main_s>DTSVN - Quản lý mẫu in</key_main_s>
 	<title_vi_s>DTSVN – Phần mềm Quản lý mẫu in tập trung  </title_vi_s>
-	<title_en_s/>
+	<title_en_s>DTSVN - Centralized Print Management Software</title_en_s>
 	<file-name>index.xml</file-name>
 	<folder-name>c5e680a0-75de-68ba-d0c4-9152bec0a41b</folder-name>
 	<placeInNav>false</placeInNav>
@@ -129,8 +129,8 @@
 &lt;/ul&gt;</content_en_html>
 	<createdDate>2025-08-12T02:49:54.255Z</createdDate>
 	<createdDate_dt>2025-08-12T02:49:54.255Z</createdDate_dt>
-	<lastModifiedDate>2025-08-27T16:53:15.767Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-27T16:53:15.767Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-27T16:59:09.647Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-27T16:59:09.647Z</lastModifiedDate_dt>
 	<time_create_dt>2025-08-12T02:49:55.000Z</time_create_dt>
 	<time_create_dt_tz>Asia/Bangkok</time_create_dt_tz>
 </page>
