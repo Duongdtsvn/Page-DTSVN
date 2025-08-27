@@ -40,8 +40,8 @@
 	</item></footer_o>
 	<createdDate>2025-08-26T09:48:45.962Z</createdDate>
 	<createdDate_dt>2025-08-26T09:48:45.962Z</createdDate_dt>
-	<lastModifiedDate>2025-08-27T03:53:12.431Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-27T03:53:12.431Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-27T04:37:28.811Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-27T04:37:28.811Z</lastModifiedDate_dt>
 	<title_s>Tại sao bạn nên chọn chúng tôi?</title_s>
 	<text_s>Cơ hội để tăng trưởng hiệu suất kinh doanh cho Doanh nghiệp của bạn hơn bao giờ hết</text_s>
 	<orientation_o item-list="true">	<item>	<number_s>01</number_s>
@@ -63,4 +63,23 @@
 	</item>	<item>	<title_s>Tiết Kiệm Chi Phí Cho Doanh Nghiệp</title_s>
 	<text_s>Bằng việc tận dụng nguồn lực tập trung và chuyên môn hóa cao, chúng tôi giúp Doanh nghiệp tối ưu chi phí vận hành nền tảng.</text_s>
 	</item></list_o>
+	<customer_section_title_s>Những vấn đề &amp; thách thức</customer_section_title_s>
+	<customer_section_subtitle_s/>
+	<client_partner_s>Doanh nghiệp của bạn có đang gặp phải những khó khăn dưới đây?</client_partner_s>
+	<customer_section_link_s/>
+	<image1_s/>
+	<customer_section_image_s>/static-assets/images/partnerships-bg.jpg</customer_section_image_s>
+	<customer_partnerships_o item-list="true">	<item>	<number_s>01</number_s>
+	<title_s>Khó Khăn Trong Việc Lựa Chọn Nền Tảng Phù Hợp</title_s>
+	<description_s>Nhiều nền tảng Martech khác nhau trên thị trường khiến Doanh nghiệp loay hoay trong việc đánh giá nền tảng phù hợp với chỉ phi và nguồn lực hiện cô</description_s>
+	</item>	<item>	<number_s>02</number_s>
+	<title_s>Mất Nhiều Thời Gian Để Nghiên Cứu Nền Tảng</title_s>
+	<description_s>Doanh nghiệp đã chọn được nền tảng phủ hợp nhưng phải mất nhiều thời gian và công sức trong việc hiểu hệ thống và đào tạo nhân sự vận hành.</description_s>
+	</item>	<item>	<number_s>03</number_s>
+	<title_s>Chuyển Đổi Dữ Liệu Gặp Nhiều Khó Khăn</title_s>
+	<description_s>Các dữ liệu liên quan đến Digital Marketing và hệ thống kinh doanh của Doanh nghiệp không đồng nhất, khiến cho đội Marketing không thể ra quyết định kịp thời.</description_s>
+	</item>	<item>	<number_s>04</number_s>
+	<title_s>Không Có Nhiều Chi Phí Cho Nhân Sự Chuyên Môn Cao</title_s>
+	<description_s>Khó khăn trong quá trình đào tạo nhân sự nội bộ để vận hành hệ thống, thiếu hụt nhân sự có chuyên môn liên quan đến MarTech.</description_s>
+	</item></customer_partnerships_o>
 </page>
