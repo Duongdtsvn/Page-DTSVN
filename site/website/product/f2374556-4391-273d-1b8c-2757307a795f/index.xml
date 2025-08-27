@@ -14,7 +14,7 @@
 	<navLabel>D-DF – Phần mềm quản lý hồ sơ biểu mẫu cho Bank</navLabel>
 	<key_main_s>DTSVN – DOCUMENT FORM (D-DF)</key_main_s>
 	<title_vi_s>D-DF – Phần mềm quản lý hồ sơ biểu mẫu cho Bank</title_vi_s>
-	<title_en_s/>
+	<title_en_s>D-DF - Form document management software for Bank</title_en_s>
 	<info_main_t/>
 	<img_main_s/>
 	<contact_VN_o item-list="true">	<item>	<key>/site/components/contact-form/vn.xml</key>
@@ -79,11 +79,44 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/figure&gt;</content_vi_html>
-	<content_en_html/>
+	<content_en_html>&lt;p style="text-align: justify;"&gt;The software helps centrally manage information, forms, and professional customer profiles, making operations convenient and scientific&lt;/p&gt;
+&lt;div style="text-align: justify;"&gt;
+&lt;h4 style="text-align: justify;"&gt;What problem does D-DF solve?&lt;/h4&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Problems encountered&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;D-DF&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Updating and changing the system-wide profile form is difficult because of complexity, too many templates and manual work.&lt;/td&gt;
+&lt;td&gt;The automatic update and change process is easily applied to the entire system&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Must search and select the desired profile form in a large sample warehouse according to memory or complex instructions&lt;/td&gt;
+&lt;td&gt;Scientific structure for storing, inputting and exporting files, simple process&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Errors and corrections are completely up to humans&lt;/td&gt;
+&lt;td&gt;Automatically correct or alert when entering incorrect data; Export standard file files that are easy to control and approve.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Documents, records, and forms do not comply with international standards&lt;/td&gt;
+&lt;td&gt;Final document quality is standardized according to international standards with professional visual and visual quality.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Poor security of storage and mining systems&lt;/td&gt;
+&lt;td&gt;Storage and mining ensure a highly secure process&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p style="text-align: justify;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Call us or leave your information for free consultation and product trial&lt;/p&gt;
+&lt;/div&gt;</content_en_html>
 	<createdDate>2025-08-12T09:24:01.904Z</createdDate>
 	<createdDate_dt>2025-08-12T09:24:01.904Z</createdDate_dt>
-	<lastModifiedDate>2025-08-12T09:24:01.904Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-12T09:24:01.904Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-27T16:33:30.850Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-27T16:33:30.850Z</lastModifiedDate_dt>
 	<time_create_dt>2025-08-12T09:24:02.000Z</time_create_dt>
 	<time_create_dt_tz>Asia/Bangkok</time_create_dt_tz>
 </page>
