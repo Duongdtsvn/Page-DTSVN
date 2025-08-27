@@ -70,12 +70,12 @@
     <div class="container-custom">
         <div class="row">
             <div class="col-xl-7 col-xxl-6 col-xxxl-5">
-                <#if contentModel.title_s?? && contentModel.title_s?has_content>
+                
                     <h2 class="item-quote">${contentModel.title1_s!''}</h2>
-                </#if>
-                <#if contentModel.description_s?? && contentModel.description_s?has_content>
+               
+                
                     <p style="color:white">${contentModel.description1_s!''}</p>
-                </#if>
+                
             </div>
         </div>
         <div class="row">
@@ -83,19 +83,19 @@
                 <div class="sec-vision__list">
                     <div class="row">
                         <#if contentModel.list_o.item?? && contentModel.list_o.item?has_content>
-                        <#list contentModel.list_o.item as item>
+                        <#list contentModel.list_o.item as list>
                                 <div class="col-lg-7">
                                     <div class="item">
                                         <label class="item__label">
                                             <input type="checkbox">
-                                            <#if item.title_s?? && item.title_s?has_content>
-                                                <h3 class="item__title">${item.title_s!''}</h3>
-                                            </#if>
-                                            <#if item.text_s?? && item.text_s?has_content>
+                                            
+                                                <h3 class="item__title">${list.title_s!''}</h3>
+                                           
+                                           
                                                 <div class="item__content">
-                                                    <p class="item__text">${item.text_s!''}</p>
+                                                    <p class="item__text">${list.text_s!''}</p>
                                                 </div>
-                                            </#if>
+                                            
                                         </label>
                                     </div>
                                 </div>
