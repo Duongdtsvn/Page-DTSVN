@@ -23,7 +23,6 @@
 	<disableFlattening>false</disableFlattening>
 	</item></banner_o>
 	<challenge_o item-list="true"/>
-	<importance_o item-list="true"/>
 	<custom_o item-list="true">	<item>	<key>/site/components/600b3a14-498b-59b9-abb2-f32db29d1280.xml</key>
 	<value>50+ Khách hàng đã đồng hành cùng chúng tôi</value>
 	<include>/site/components/600b3a14-498b-59b9-abb2-f32db29d1280.xml</include>
@@ -41,6 +40,11 @@
 	</item></footer_o>
 	<createdDate>2025-08-26T09:48:45.962Z</createdDate>
 	<createdDate_dt>2025-08-26T09:48:45.962Z</createdDate_dt>
-	<lastModifiedDate>2025-08-27T01:56:57.603Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-27T01:56:57.603Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-27T02:49:29.929Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-27T02:49:29.929Z</lastModifiedDate_dt>
+	<title_s>Tầm quan trọng của việc áp dụng CEP cho Doanh nghiệp</title_s>
+	<text_s>Cơ hội để tăng trưởng hiệu suất kinh doanh cho Doanh nghiệp của bạn hơn bao giờ hết</text_s>
+	<orientation_o item-list="true">	<item>	<number_s>01</number_s>
+	<title_s>Công nghệ hiện đại giúp hiệu suất Marketing tăng t</title_s>
+	</item></orientation_o>
 </page>
