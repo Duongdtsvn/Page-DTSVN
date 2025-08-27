@@ -71,10 +71,10 @@
         <div class="row">
             <div class="col-xl-7 col-xxl-6 col-xxxl-5">
                 <#if contentModel.title_s?? && contentModel.title_s?has_content>
-                    <h2 class="item-quote">${contentModel.title_s!''}</h2>
+                    <h2 class="item-quote">${contentModel.title1_s!''}</h2>
                 </#if>
                 <#if contentModel.description_s?? && contentModel.description_s?has_content>
-                    <p style="color:white">${contentModel.description_s!''}</p>
+                    <p style="color:white">${contentModel.description1_s!''}</p>
                 </#if>
             </div>
         </div>
@@ -82,8 +82,8 @@
             <div class="col-xl-8 offset-xl-4 col-xxl-6 offset-xxl-6">
                 <div class="sec-vision__list">
                     <div class="row">
-                        <#if contentModel.list_item_o?? && contentModel.list_item_o.item?? && contentModel.list_item_o.item?size > 0>
-                            <#list contentModel.list_item_o.item as item>
+                        <#if contentModel.list_o.item?? && contentModel.list_o.item?has_content>
+                        <#list contentModel.list_o.item as item>
                                 <div class="col-lg-7">
                                     <div class="item">
                                         <label class="item__label">
