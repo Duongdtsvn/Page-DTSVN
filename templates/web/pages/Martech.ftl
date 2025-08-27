@@ -63,18 +63,18 @@
         </div>
     </div>
 </section>
-<#import "/templates/system/common/crafter.ftl" as crafter />
-
 <section class="section sec-vision">
+    <#if contentModel.background_s?? && contentModel.background_s?has_content>
         <div class="bg" style="background-image: url(${contentModel.background_s!''});"></div>
+    </#if>
     <div class="container-custom">
         <div class="row">
             <div class="col-xl-7 col-xxl-6 col-xxxl-5">
-                <#if contentModel.title?? && contentModel.title?has_content>
-                    <h2 class="item-quote">${contentModel.title}</h2>
+                <#if contentModel.title_s?? && contentModel.title_s?has_content>
+                    <h2 class="item-quote">${contentModel.title_s!''}</h2>
                 </#if>
-                <#if contentModel.description?? && contentModel.description?has_content>
-                    <p style="color:white">${contentModel.description}</p>
+                <#if contentModel.description_s?? && contentModel.description_s?has_content>
+                    <p style="color:white">${contentModel.description_s!''}</p>
                 </#if>
             </div>
         </div>
@@ -88,12 +88,12 @@
                                     <div class="item">
                                         <label class="item__label">
                                             <input type="checkbox">
-                                            <#if item.title?? && item.title?has_content>
-                                                <h3 class="item__title">${item.title}</h3>
+                                            <#if item.title_s?? && item.title_s?has_content>
+                                                <h3 class="item__title">${item.title_s!''}</h3>
                                             </#if>
-                                            <#if item.text?? && item.text?has_content>
+                                            <#if item.text_s?? && item.text_s?has_content>
                                                 <div class="item__content">
-                                                    <p class="item__text">${item.text}</p>
+                                                    <p class="item__text">${item.text_s!''}</p>
                                                 </div>
                                             </#if>
                                         </label>
@@ -107,8 +107,6 @@
         </div>
     </div>
 </section>
-
-        
         <@crafter.renderComponentCollection $field="custom_o" />
         <@crafter.renderComponentCollection $field="partner_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
