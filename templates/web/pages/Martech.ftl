@@ -20,7 +20,49 @@
         <@crafter.renderComponentCollection $field="header_o" />
         <@crafter.renderComponentCollection $field="banner_o" />
         <@crafter.renderComponentCollection $field="challenge_o" />
-        <@crafter.renderComponentCollection $field="importance_o" />
+        <#import "/templates/system/common/crafter.ftl" as crafter />
+
+<section class="section sec-productOrien">
+    <div class="container-custom">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="titlebox">
+                    <!-- Tiêu đề -->
+                    <h2 class="titlebox__title fz-32">
+                        ${contentModel.title_s!''}
+                    </h2>
+                    <!-- Mô tả -->
+                    <p>${contentModel.text_s!''}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec-productOrien__header">
+            <div class="numberBox-list">
+                <div class="row">
+                    <#if contentModel.orientation_o.item?? && contentModel.orientation_o.item?has_content>
+                        <#list contentModel.orientation_o.item as item>
+                            <div class="col-md-6 col-xl-5">
+                                <div class="numberBox">
+                                    <div class="numberBox__inner">
+                                        <!-- Số thứ tự -->
+                                        <span class="numberBox__number">
+                                            ${item.number_s!''}
+                                        </span>
+                                        <!-- Nội dung -->
+                                        <h3 class="numberBox__title">
+                                            ${item.title_s!''}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </#list>
+                    </#if>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         
         <@crafter.renderComponentCollection $field="custom_o" />
         <@crafter.renderComponentCollection $field="partner_o" />
