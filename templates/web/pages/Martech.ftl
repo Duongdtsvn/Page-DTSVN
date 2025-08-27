@@ -82,8 +82,8 @@
             <div class="col-xl-8 offset-xl-4 col-xxl-6 offset-xxl-6">
                 <div class="sec-vision__list">
                     <div class="row">
-                        <#if contentModel.list_o.item?? && contentModel.list_o.item?has_content>
-                        <#list contentModel.list_o.item as list>
+                        <#if contentModel.list_o?? && contentModel.list_o.item?? && contentModel.list_o.item?has_content>
+  <#list contentModel.list_o.item as list>
                                 <div class="col-lg-7">
                                     <div class="item">
                                         <label class="item__label">
