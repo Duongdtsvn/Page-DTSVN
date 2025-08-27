@@ -66,9 +66,7 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
 
 <section class="section sec-vision">
-    <#if contentModel.background?? && contentModel.background?has_content>
-        <div class="bg" style="background-image: url(${contentModel.background?url});"></div>
-    </#if>
+        <div class="bg" style="background-image: url(${contentModel.background_s!''});"></div>
     <div class="container-custom">
         <div class="row">
             <div class="col-xl-7 col-xxl-6 col-xxxl-5">
