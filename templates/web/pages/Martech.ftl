@@ -107,6 +107,15 @@
         </div>
     </div>
 </section>
+<section class="section pb-0">
+  <div class="container-custom">
+    <div class="row">
+      <div class="col-xl-12">
+        <img src="${contentModel.image1_s!''}" alt="">
+      </div>
+    </div>
+  </div>
+</section>
         <@crafter.renderComponentCollection $field="custom_o" />
         <@crafter.renderComponentCollection $field="partner_o" />
         <@crafter.renderComponentCollection $field="footer_o" />
