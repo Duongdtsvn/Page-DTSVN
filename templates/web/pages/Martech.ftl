@@ -63,6 +63,53 @@
         </div>
     </div>
 </section>
+<#import "/templates/system/common/crafter.ftl" as crafter />
+
+<section class="section sec-vision">
+    <#if contentModel.background?? && contentModel.background?has_content>
+        <div class="bg" style="background-image: url(${contentModel.background?url});"></div>
+    </#if>
+    <div class="container-custom">
+        <div class="row">
+            <div class="col-xl-7 col-xxl-6 col-xxxl-5">
+                <#if contentModel.title?? && contentModel.title?has_content>
+                    <h2 class="item-quote">${contentModel.title}</h2>
+                </#if>
+                <#if contentModel.description?? && contentModel.description?has_content>
+                    <p style="color:white">${contentModel.description}</p>
+                </#if>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-8 offset-xl-4 col-xxl-6 offset-xxl-6">
+                <div class="sec-vision__list">
+                    <div class="row">
+                        <#if contentModel.list_item_o?? && contentModel.list_item_o.item?? && contentModel.list_item_o.item?size > 0>
+                            <#list contentModel.list_item_o.item as item>
+                                <div class="col-lg-7">
+                                    <div class="item">
+                                        <label class="item__label">
+                                            <input type="checkbox">
+                                            <#if item.title?? && item.title?has_content>
+                                                <h3 class="item__title">${item.title}</h3>
+                                            </#if>
+                                            <#if item.text?? && item.text?has_content>
+                                                <div class="item__content">
+                                                    <p class="item__text">${item.text}</p>
+                                                </div>
+                                            </#if>
+                                        </label>
+                                    </div>
+                                </div>
+                            </#list>
+                        </#if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         
         <@crafter.renderComponentCollection $field="custom_o" />
         <@crafter.renderComponentCollection $field="partner_o" />
