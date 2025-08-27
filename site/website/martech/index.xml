@@ -1,40 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page>
-  <content-type>/page/martech</content-type>
-  <display-template>/templates/web/pages/Martech.ftl</display-template>
-  <no-template-required/>
-  <merge-strategy>inherit-levels</merge-strategy>
-  <objectGroupId>b3cc</objectGroupId>
-  <objectId>b3cc0202-6cc4-cf7a-f757-3c9a96f41c2d</objectId>
-  <internal-name>Martech</internal-name>
-  <navLabel>Martech</navLabel>
-  <placeInNav>false</placeInNav>
-  <orderDefault_f>-1</orderDefault_f>
-  <file-name>index.xml</file-name>
-  <folder-name>martech</folder-name>
-  <header_o item-list="true">
-    <item>
-      <key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
-      <value>header</value>
-      <include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
-      <disableFlattening>false</disableFlattening>
-    </item>
-  </header_o>
-  <banner_o item-list="true">
-    <item datasource="banner">
-      <key>/site/0f492ffd-91f0-1643-f56a-530fe39d713e.xml</key>
-      <value>Banner martech</value>
-      <include>/site/0f492ffd-91f0-1643-f56a-530fe39d713e.xml</include>
-      <disableFlattening>false</disableFlattening>
-    </item>
-  </banner_o>
-  <challenge_o item-list="true"/>
-  <importance_o item-list="true"/>
-  <custom_o item-list="true"/>
-  <partner_o item-list="true"/>
-  <footer_o item-list="true"/>
-  <createdDate>2025-08-26T09:48:45.962Z</createdDate>
-  <createdDate_dt>2025-08-26T09:48:45.962Z</createdDate_dt>
-  <lastModifiedDate>2025-08-26T10:31:24.491Z</lastModifiedDate>
-  <lastModifiedDate_dt>2025-08-26T10:31:24.491Z</lastModifiedDate_dt>
+	<content-type>/page/martech</content-type>
+	<display-template>/templates/web/pages/Martech.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>b3cc</objectGroupId>
+	<objectId>b3cc0202-6cc4-cf7a-f757-3c9a96f41c2d</objectId>
+	<internal-name>Martech</internal-name>
+	<navLabel>Martech</navLabel>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<file-name>index.xml</file-name>
+	<folder-name>martech</folder-name>
+	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
+	<value>header</value>
+	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header_o>
+	<banner_o item-list="true">	<item datasource="banner">	<key>/site/0f492ffd-91f0-1643-f56a-530fe39d713e.xml</key>
+	<value>Banner martech</value>
+	<include>/site/0f492ffd-91f0-1643-f56a-530fe39d713e.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></banner_o>
+	<challenge_o item-list="true"/>
+	<importance_o item-list="true"/>
+	<custom_o item-list="true">	<item>	<key>/site/components/80dfe4db-54f9-9a02-f028-42e260b6eae2.xml</key>
+	<value>Đối tác</value>
+	<include>/site/components/80dfe4db-54f9-9a02-f028-42e260b6eae2.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></custom_o>
+	<partner_o item-list="true">	<item>	<key>/site/components/80dfe4db-54f9-9a02-f028-42e260b6eae2.xml</key>
+	<value>Đối tác</value>
+	<include>/site/components/80dfe4db-54f9-9a02-f028-42e260b6eae2.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></partner_o>
+	<footer_o item-list="true">	<item>	<key>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</key>
+	<value>footer</value>
+	<include>/site/components/footer/b875201d-2633-6e74-ae3d-e18e000aaf33.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer_o>
+	<createdDate>2025-08-26T09:48:45.962Z</createdDate>
+	<createdDate_dt>2025-08-26T09:48:45.962Z</createdDate_dt>
+	<lastModifiedDate>2025-08-26T10:33:08.911Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-26T10:33:08.911Z</lastModifiedDate_dt>
 </page>
