@@ -12,7 +12,7 @@
 	<file-name>f19480d0-1451-fc91-06d0-0b44d23f2342.xml</file-name>
 	<folder-name/>
 	<products_o item-list="true">	<item>	<slogan_s>DTSVN - CEP</slogan_s>
-	<url_s>https://dtsvn.net/martech/</url_s>
+	<url_s>/martech/</url_s>
 	<product_name_s>Dịch vụ vận hành Martech</product_name_s>
 	</item>	<item>	<slogan_s>DTSVN - D@DI</slogan_s>
 	<url_s/>
@@ -35,6 +35,6 @@
 	</item></products_o>
 	<createdDate>2025-06-25T09:47:40.404Z</createdDate>
 	<createdDate_dt>2025-06-25T09:47:40.404Z</createdDate_dt>
-	<lastModifiedDate>2025-08-12T02:47:50.665Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-12T02:47:50.665Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-28T01:32:56.774Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-28T01:32:56.774Z</lastModifiedDate_dt>
 </component>
