@@ -260,7 +260,7 @@
 				</field>
 				<field>
 					<type>input</type>
-					<id>url_s</id>
+					<id>link_s</id>
 					<iceId></iceId>
 					<title>link sp</title>
 					<description></description>
