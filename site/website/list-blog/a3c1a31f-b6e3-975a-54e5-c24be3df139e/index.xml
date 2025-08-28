@@ -48,9 +48,7 @@
 	<include>/site/components/footer/2d6d877e-25d8-c943-73db-fe6477d760f9.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></footer_EN_o>
-	<content_vi_html>&lt;section&gt;
-&lt;div&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/section&gt;
+	<content_vi_html>&lt;section&gt;&lt;/section&gt;
 &lt;section&gt;
 &lt;div&gt;
 &lt;div&gt;
@@ -130,7 +128,7 @@
 	<time_create_dt>2025-04-21T02:58:47.000Z</time_create_dt>
 	<createdDate>2025-08-28T02:58:45.656Z</createdDate>
 	<createdDate_dt>2025-08-28T02:58:45.656Z</createdDate_dt>
-	<lastModifiedDate>2025-08-28T02:58:45.656Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-28T02:58:45.656Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-28T03:10:54.266Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-28T03:10:54.266Z</lastModifiedDate_dt>
 	<time_create_dt_tz>Asia/Jakarta</time_create_dt_tz>
 </page>
