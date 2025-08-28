@@ -55,8 +55,8 @@
                         <select name="sort" class="form-select">
                             <option value="newest" <#if sort == "newest">selected</#if>>Newest to Oldest</option>
                             <option value="oldest" <#if sort == "oldest">selected</#if>>Oldest to Newest</option>
-                            <option value="a_to_z" <#if sort == "a_to_z">selected</#if>>A to Z</option>
-                            <option value="z_to_a" <#if sort == "z_to_a">selected</#if>>Z to A</option>
+                           <#-- <option value="a_to_z" <#if sort == "a_to_z">selected</#if>>A to Z</option>-->
+                           <#-- <option value="z_to_a" <#if sort == "z_to_a">selected</#if>>Z to A</option>-->
                         </select>
                     </div>
                 </form>
