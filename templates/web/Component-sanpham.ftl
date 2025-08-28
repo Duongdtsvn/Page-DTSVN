@@ -20,9 +20,9 @@
                                         <div class="fix">
                                             <span class="productFeatured__subtitle">${products.slogan_s!''}</span>
                                             <h3 class="productFeatured__title"><a
-                                                    href="https://dtsvn.net/node/67">${products.product_name_s!''}</a></h3>
+                                                    href="${products.link_s!''}">${products.product_name_s!''}</a></h3>
                                             <div class="productFeatured__btn">
-                                                <a href="https://dev.dtsvn.net/martech/" class="btn-text">Learn more
+                                                <a href="${products.link_s!''}" class="btn-text">Learn more
                                                     <span></span></a>
                                             </div>
                                         </div>
