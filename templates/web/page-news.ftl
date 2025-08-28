@@ -57,8 +57,8 @@
                         <select name="sort" class="form-select">
                             <option value="newest" <#if sort == "newest">selected</#if>>Mới nhất đến cũ nhất</option>
                             <option value="oldest" <#if sort == "oldest">selected</#if>>Cũ nhất đến mới nhất</option>
-                            <option value="a_to_z" <#if sort == "a_to_z">selected</#if>>A đến Z</option>
-                            <option value="z_to_a" <#if sort == "z_to_a">selected</#if>>Z đến A</option>
+                           <#-- <option value="a_to_z" <#if sort == "a_to_z">selected</#if>>A đến Z</option>-->
+                           <#-- <option value="z_to_a" <#if sort == "z_to_a">selected</#if>>Z đến A</option>-->
                         </select>
                     </div>
                 </form>
