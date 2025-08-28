@@ -15,8 +15,8 @@
 	</item>	<item>	<title_category_s>DTSVN Tuyển dụng</title_category_s>
 	<item_s_s>DTSVN-Careers</item_s_s>
 	<key_search_s/>
-	</item>	<item>	<title_category_s>Business Analytics</title_category_s>
-	<item_s_s>Business-Analytics</item_s_s>
+	</item>	<item>	<title_category_s>Hoạt động DTSVN</title_category_s>
+	<item_s_s>activeDtsvn</item_s_s>
 	<key_search_s/>
 	</item>	<item>	<title_category_s>Blog</title_category_s>
 	<item_s_s>Blog</item_s_s>
@@ -30,8 +30,8 @@
 	<orderDefault_f>-1</orderDefault_f>
 	<createdDate>2025-07-04T03:54:54.893Z</createdDate>
 	<createdDate_dt>2025-07-04T03:54:54.893Z</createdDate_dt>
-	<lastModifiedDate>2025-07-11T07:14:00.305Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-07-11T07:14:00.305Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-28T06:45:56.779Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-28T06:45:56.779Z</lastModifiedDate_dt>
 	<header_o item-list="true">	<item>	<key>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</key>
 	<value>header</value>
 	<include>/site/components/headers/fdaa20d7-d5d3-5d79-455c-5cf3eab41fba.xml</include>
