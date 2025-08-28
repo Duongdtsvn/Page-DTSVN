@@ -10,7 +10,7 @@
 	<navLabel>D-ECS – Phần mềm cảnh báo rủi ro nợ sớm và theo dõi nhắc nợ</navLabel>
 	<key_main_s>DTSVN – (D-ECS)</key_main_s>
 	<title_vi_s>D-ECS – Phần mềm cảnh báo rủi ro nợ sớm và theo dõi nhắc nợ</title_vi_s>
-	<title_en_s/>
+	<title_en_s>D-ECS - Early warning system</title_en_s>
 	<file-name>index.xml</file-name>
 	<folder-name>45535a4b-2a9d-5828-49bc-e709460fe846</folder-name>
 	<placeInNav>false</placeInNav>
@@ -48,12 +48,12 @@
 	<disableFlattening>false</disableFlattening>
 	</item></footer_EN_o>
 	<content_vi_html>&lt;div&gt;
-&lt;p&gt;Hệ thống cảnh b&amp;aacute;o sớm rủi ro nợ sớm v&amp;agrave; theo d&amp;otilde;i nhắc nợ gi&amp;uacute;p c&amp;aacute;c đơn vị chủ động kiểm so&amp;aacute;t, dễ d&amp;agrave;ng theo d&amp;otilde;i, gi&amp;aacute;m s&amp;aacute;t v&amp;agrave; tự động đề xuất biện ph&amp;aacute;p kịp thời với những khoản vay c&amp;oacute; khả năng chuyển th&amp;agrave;nh nợ xấu.&lt;/p&gt;
-&lt;figure&gt;
+&lt;p style="text-align: justify;"&gt;Hệ thống cảnh b&amp;aacute;o sớm rủi ro nợ sớm v&amp;agrave; theo d&amp;otilde;i nhắc nợ gi&amp;uacute;p c&amp;aacute;c đơn vị chủ động kiểm so&amp;aacute;t, dễ d&amp;agrave;ng theo d&amp;otilde;i, gi&amp;aacute;m s&amp;aacute;t v&amp;agrave; tự động đề xuất biện ph&amp;aacute;p kịp thời với những khoản vay c&amp;oacute; khả năng chuyển th&amp;agrave;nh nợ xấu.&lt;/p&gt;
+&lt;figure style="text-align: justify;"&gt;
 &lt;p&gt;&lt;iframe title="YouTube video player" src="https://www.youtube.com/embed/q5ALw_ysqF0?si=wBjWr8Z41D5J0zup" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" referrerpolicy="strict-origin-when-cross-origin"&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;/figure&gt;
-&lt;p&gt;D-ECS giải quyết vấn đề g&amp;igrave;?&lt;/p&gt;
-&lt;figure&gt;
+&lt;p style="text-align: justify;"&gt;D-ECS giải quyết vấn đề g&amp;igrave;?&lt;/p&gt;
+&lt;figure style="text-align: justify;"&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -103,14 +103,73 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/figure&gt;
-&lt;p&gt;Gọi ch&amp;uacute;ng t&amp;ocirc;i hoặc để lại th&amp;ocirc;ng tin để được tư vấn miễn ph&amp;iacute; v&amp;agrave; d&amp;ugrave;ng thử sản phẩm&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;Gọi ch&amp;uacute;ng t&amp;ocirc;i hoặc để lại th&amp;ocirc;ng tin để được tư vấn miễn ph&amp;iacute; v&amp;agrave; d&amp;ugrave;ng thử sản phẩm&lt;/p&gt;
 &lt;/div&gt;
-&lt;div&gt;Chia sẻ:&amp;nbsp;&lt;/div&gt;</content_vi_html>
-	<content_en_html/>
+&lt;div style="text-align: justify;"&gt;Chia sẻ:&amp;nbsp;&lt;/div&gt;</content_vi_html>
+	<content_en_html>&lt;p style="text-align: justify;"&gt;The credit risk early warning system helps units proactively control, easily track, monitor and automatically propose timely measures for loans that are likely to turn into bad debt.&lt;/p&gt;
+&lt;figure style="text-align: justify;"&gt;
+&lt;div&gt;&lt;iframe sandbox=""&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;h4 style="text-align: justify;"&gt;What problem does D-ECS solve?&lt;/h4&gt;
+&lt;figure style="text-align: justify;"&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Problems encountered&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;With D-CES&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Creating and managing debtor customer lists manually is time-consuming and ineffective.&lt;/td&gt;
+&lt;td&gt;Create and manage customer debt automatically and scientifically&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Not being proactive or automatically updating debt classification and debt status control&lt;/td&gt;
+&lt;td&gt;Automatically update debt classification and control warnings of bad debt status&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;There is no early reminder or warning mechanism, leading to missed debts that need to be zoned&lt;/td&gt;
+&lt;td&gt;Reminders and warnings not to miss debts&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Depends on employees/people for reporting, reviewing or predicting debt&lt;/td&gt;
+&lt;td&gt;Automated system, easy to manage and monitor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lack of data checking Risk of customer debt&lt;/td&gt;
+&lt;td&gt;Centralized data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Information management and debt reminders are manual, unfocused, and incomplete&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Information management and debt reminders are manual, unfocused, and incomplete&lt;/td&gt;
+&lt;td&gt;Centralized information management with automatic debt reminder function&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;It is difficult to control, trace, and monitor debtors and monitoring staff to provide timely debt collection solutions&lt;/td&gt;
+&lt;td&gt;Control, trace and monitor customer and employee activities and suggest timely solutions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Time consuming when looking up and extracting customer debt information according to desired fields/types of information&lt;/td&gt;
+&lt;td&gt;Professional and scientific information structure helps search and extract according to desired fields/types&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Difficulty in transparency in managing, reporting, and operating customer debt information&lt;/td&gt;
+&lt;td&gt;Completely transparent and automated in management and reporting&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;There is no automatic reminder mechanism leading to forgotten tasks and missed tasks in debt collection&lt;/td&gt;
+&lt;td&gt;There is a mechanism to remind each step without missing anything&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/figure&gt;
+&lt;p style="text-align: justify;"&gt;Call us or leave your information for free consultation and product trial&lt;/p&gt;</content_en_html>
 	<createdDate>2025-08-28T07:39:38.205Z</createdDate>
 	<createdDate_dt>2025-08-28T07:39:38.205Z</createdDate_dt>
-	<lastModifiedDate>2025-08-28T07:39:38.205Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-28T07:39:38.205Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-28T07:44:10.534Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-28T07:44:10.534Z</lastModifiedDate_dt>
 	<time_create_dt>2025-08-28T07:39:39.000Z</time_create_dt>
 	<time_create_dt_tz>Asia/Bangkok</time_create_dt_tz>
 </page>
