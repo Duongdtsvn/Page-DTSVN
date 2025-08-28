@@ -14,7 +14,7 @@
 	<products_o item-list="true">	<item>	<slogan_s>DTSVN - CEP</slogan_s>
 	<url_s>/martech</url_s>
 	<product_name_s>Dịch vụ vận hành Martech</product_name_s>
-	<link_s/>
+	<link_s>http://192.168.2.149:8080/martech</link_s>
 	</item>	<item>	<slogan_s>DTSVN - D@DI</slogan_s>
 	<url_s>http://192.168.2.149:8080/product/785b01e1-0d5f-9026-6a6e-01e4e60d465e</url_s>
 	<product_name_s>Phần mềm thông tin kết nối giao dịch mua bán tài sản bảo đảm</product_name_s>
@@ -42,6 +42,6 @@
 	</item></products_o>
 	<createdDate>2025-06-25T09:47:40.404Z</createdDate>
 	<createdDate_dt>2025-06-25T09:47:40.404Z</createdDate_dt>
-	<lastModifiedDate>2025-08-28T07:24:16.027Z</lastModifiedDate>
-	<lastModifiedDate_dt>2025-08-28T07:24:16.027Z</lastModifiedDate_dt>
+	<lastModifiedDate>2025-08-28T07:30:25.994Z</lastModifiedDate>
+	<lastModifiedDate_dt>2025-08-28T07:30:25.994Z</lastModifiedDate_dt>
 </component>
